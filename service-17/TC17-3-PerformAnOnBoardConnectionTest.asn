@@ -1,0 +1,9 @@
+TC17-3-PerformAnOnBoardConnectionTest DEFINITIONS ::= BEGIN
+
+TC-17-3-PerformAnOnBoardConnectionTest ::= SEQUENCE
+{
+    applicationProcessId APPLICATION-PROCESS-ID
+}
+
+END
+

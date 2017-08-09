@@ -1,0 +1,6 @@
+TC17-1-PerformAreYouAliveConnectionTest DEFINITIONS ::= BEGIN
+
+TC-17-1-PerformAreYouAliveConnectionTest ::= NULL
+
+END
+
