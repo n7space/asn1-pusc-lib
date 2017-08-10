@@ -1,0 +1,8 @@
+TM17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
+
+TM17-4-OnBoardConnectionTestReport
+{
+    applicationProcessId []
+}
+
+END
