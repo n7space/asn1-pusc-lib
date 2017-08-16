@@ -3,7 +3,7 @@
     <submodule name="Time reporting subservice">
         <element name="Time reporting in CUC format">
             <models>
-            <file location="TM9-2-CucTimeReport.asn" />
+            <file location="TM-9-2-CucTimeReport.asn" />
             </models>
             <requires></requires>
             <conflicts>
@@ -11,7 +11,7 @@
             </conflicts>
         </element>
         <element name="Time reporting in CDS format">
-            <file location="TM9-3-CdsTimeReport.asn" />
+            <file location="TM-9-3-CdsTimeReport.asn" />
             <requires></requires>
             <conflicts>
                 <element name="Time reporting in CUC format" />
@@ -21,7 +21,7 @@
     <submodule name="Time reporting control subservice">
         <element name="Set the time report generation">
             <models>
-                <file location="TC9-1-SetTheTimeReportGenerationRate.asn" />
+                <file location="TC-9-1-SetTheTimeReportGenerationRate.asn" />
             </models>
             <requires></requires>
             <conflicts></conflicts>

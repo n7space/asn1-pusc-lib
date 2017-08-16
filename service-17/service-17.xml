@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module name="Service 17">
     <submodule name="Test subservice">
-        <element name="Are-you-alive connection test">
+        <element name="Perform an are-you-alive connection test">
             <models>
-                <file location="TC17-1-PerformAnAreYouAliveConnectionTest.asn" />
-                <file location="TM17-2-AreYouAliveConnectionReport.asn" />
+                <file location="TC-17-1-PerformAnAreYouAliveConnectionTest.asn" />
+                <file location="TM-17-2-AreYouAliveConnectionReport.asn" />
             </models>
             <requires></requires>
             <conflicts></conflicts>
         </element>
-        <element name="On-board connection test">
+        <element name="Perform an on-board connection test">
             <models>
-                <file location="TC17-3-PerformAnOnBoardConnectionTest.asn" />
-                <file location="TM17-4-OnBoardeConnectionTestReport.asn" />
+                <file location="TC-17-3-PerformAnOnBoardConnectionTest.asn" />
+                <file location="TM-17-4-OnBoardeConnectionTestReport.asn" />
                 <import from="APPLICATION-PROCESS-ID" name="APPLICATION-PROCESS-ID" />
             </models>
             <requires></requires>

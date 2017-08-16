@@ -21,8 +21,11 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TM17-2-AreYouAliveConnectionTestReport DEFINITIONS ::= BEGIN
+TM-17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
 
-TM17-2-AreYouAliveConnectionTestReport []
+TM-17-4-OnBoardConnectionTestReport ::= SEQUENCE
+{
+    applicationProcessId APPLICATION-PROCESS-ID
+}
 
 END
