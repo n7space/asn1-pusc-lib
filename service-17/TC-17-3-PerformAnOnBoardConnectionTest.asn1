@@ -23,9 +23,14 @@
 
 TC-17-3-PerformAnOnBoardConnectionTest DEFINITIONS ::= BEGIN
 
+IMPORTS
+    ApplicationProcess-ID
+      FROM ApplicationProcess
+    ;
+
 TC-17-3-PerformAnOnBoardConnectionTest ::= SEQUENCE
 {
-    applicationProcessId APPLICATION-PROCESS-ID
+    applicationProcessId ApplicationProcess-ID
 }
 
 END

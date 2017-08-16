@@ -13,7 +13,7 @@
             <models>
                 <file location="TC-17-3-PerformAnOnBoardConnectionTest.asn" />
                 <file location="TM-17-4-OnBoardeConnectionTestReport.asn" />
-                <import from="APPLICATION-PROCESS-ID" name="APPLICATION-PROCESS-ID" />
+                <import from="ApplicationProcess" name="ApplicationProcess-ID" />
             </models>
             <requires></requires>
             <conflicts></conflicts>

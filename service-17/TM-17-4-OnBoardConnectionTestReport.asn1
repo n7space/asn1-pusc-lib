@@ -23,9 +23,14 @@
 
 TM-17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
 
+IMPORTS
+    ApplicationProcess-ID
+      FROM ApplicationProcess
+    ;
+
 TM-17-4-OnBoardConnectionTestReport ::= SEQUENCE
 {
-    applicationProcessId APPLICATION-PROCESS-ID
+    applicationProcessId ApplicationProcess-ID
 }
 
 END

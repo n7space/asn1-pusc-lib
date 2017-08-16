@@ -23,9 +23,6 @@
 
 TM-17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
 
-TM-17-4-OnBoardConnectionTestReport
-{
-    applicationProcessId []
-}
+TM-17-4-OnBoardConnectionTestReport []
 
 END

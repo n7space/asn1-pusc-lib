@@ -29,12 +29,4 @@ PUSC-UINT [size 64, encoding pos-int]
 
 PUSC-INT [size 64, encoding twos-complement]
 
-PUSC-REAL []
-
-PUSC-BIT-STRING []
-
-PUSC-OCTET-STRING []
-
---PUSC-CHARACTER-STRING []
-
 END
