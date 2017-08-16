@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="Service 1">
+<module name="ST[01] request verification">
     <submodule name="Routing and reporting subservice">
         <element name="Routing verification of a request">
             <models></models>

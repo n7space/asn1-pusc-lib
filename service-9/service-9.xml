@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="Service 9">
+<module name="ST[09] time management">
     <submodule name="Time reporting subservice">
         <element name="Time reporting in CUC format">
             <models>

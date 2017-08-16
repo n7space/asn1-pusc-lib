@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="Service 17">
+<module name="ST[17] test">
     <submodule name="Test subservice">
         <element name="Perform an are-you-alive connection test">
             <models>
