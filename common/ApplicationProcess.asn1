@@ -23,6 +23,8 @@
 
 ApplicationProcess DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
 ApplicationProcess-ID ::= INTEGER((1)) -- TODO
 
 END

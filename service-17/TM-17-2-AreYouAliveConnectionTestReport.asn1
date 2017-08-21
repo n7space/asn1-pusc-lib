@@ -23,6 +23,8 @@
 
 TM-17-2-AreYouAliveConnectionTestReport DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
 TM-17-2-AreYouAliveConnectionTestReport ::= NULL
 
 END

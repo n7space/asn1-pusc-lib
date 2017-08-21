@@ -23,6 +23,10 @@
 
 BasicTypes DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
+-- TODO PTC PFC!
+
 PUSC-BOOL ::= BOOLEAN
 
 PUSC-UINT ::= INTEGER (0 .. 9223372036854775807)--(0 .. 18446744073709551615) --max value not supported by asn1scc

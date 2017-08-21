@@ -23,6 +23,8 @@
 
 TC-17-1-PerformAnAreYouAliveConnectionTest DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
 TC-17-1-PerformAnAreYouAliveConnectionTest ::= NULL
 
 END

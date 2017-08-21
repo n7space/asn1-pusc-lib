@@ -23,6 +23,8 @@
 
 TM-17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
 IMPORTS
     ApplicationProcess-ID
       FROM ApplicationProcess

@@ -23,6 +23,8 @@
 
 TC-17-3-PerformAnOnBoardConnectionTest DEFINITIONS ::= BEGIN
 
+EXPORTS ALL;
+
 IMPORTS
     ApplicationProcess-ID
       FROM ApplicationProcess
