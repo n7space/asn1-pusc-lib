@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TM-17-4-OnBoardConnectionTestReport DEFINITIONS ::= BEGIN
+TM-17-4-OnBoardConnectionTestReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 EXPORTS ALL;
 

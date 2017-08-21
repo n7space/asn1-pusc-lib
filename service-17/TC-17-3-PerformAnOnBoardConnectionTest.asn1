@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TC-17-3-PerformAnOnBoardConnectionTest DEFINITIONS ::= BEGIN
+TC-17-3-PerformAnOnBoardConnectionTest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 EXPORTS ALL;
 

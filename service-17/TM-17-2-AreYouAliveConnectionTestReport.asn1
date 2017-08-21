@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TM-17-2-AreYouAliveConnectionTestReport DEFINITIONS ::= BEGIN
+TM-17-2-AreYouAliveConnectionTestReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 EXPORTS ALL;
 
