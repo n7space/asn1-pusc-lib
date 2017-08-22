@@ -10,11 +10,13 @@ lib-dir
  |- service-NN
  |- common
  |- system-objects
+ |- ccsds
 ```
 
 * `service-NN` -- folder containing models of messages defined by PUS Service NN (separate folder for each service included in libary)
 * `common` -- folder containing models used by more than one service
 * `system-objects` -- folder containing models of types defined as System Objects or their properties in ECSS 
+* `ccsds` -- models representing CCSDS packets
 
 ## Service folder structure
 ```
