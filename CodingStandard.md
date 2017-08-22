@@ -3,7 +3,7 @@ ASN.1/ACN PUS-C Library -- Coding Standard
 
 ## Folders structure
 ```
-lib-dir
+asn1-pusc-lib
  |- service-01
  |- service-02
  |- ...
