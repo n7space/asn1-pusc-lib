@@ -1,5 +1,5 @@
-ASN.1/ACN PUS-C Library -- Coding Standard
-==========================================
+ASN.1 PUS-C Types Library -- Coding Standard
+============================================
 
 ## Folders structure
 ```
