@@ -13,7 +13,7 @@ asn1-pusc-lib
  |- ccsds
 ```
 
-* `service-NN` - folder containing models of messages defined by PUS Service NN (separate folder for each service included in libary)
+* `service-NN` - folder containing models of messages defined by PUS Service NN (separate folder for each service included in library)
 * `common` - folder containing models used by more than one service
 * `system-objects` - folder containing models of types defined as System Objects or their properties in ECSS 
 * `ccsds` - models representing CCSDS packets
@@ -30,7 +30,7 @@ service-NN
  |- meta.TODO
 ```
 
-* `PUS-NN-MM.asn1` and `PUS-NN-MM.acn` - files containing models of message number MM from service NN (separate files for each message type modelled from service)
+* `PUS-NN-MM.asn1` and `PUS-NN-MM.acn` - files containing models of message number MM from service NN (separate files for each message type modeled from service)
 * `ServiceCommonObjectX.asn1` and `ServiceCommonObjectX.acn` - optional files defining objects used by more than one message in service (if required there can be more than one pair of such files, names should describe what models are included in that file).
 * `meta.TODO` - file containing metadata describing service NN
 
@@ -52,6 +52,6 @@ Each file should contain only single `DEFINITIONS` block, named after file name.
 
 Type assignments and definitions block names should follow `CamelCaseStartingWithUpperCase`, if required - with prefixes defined in previous paragraphs.
 
-Type fileds should follow `camelCaseStartingWithLowerCase`.
+Type fields should follow `camelCaseStartingWithLowerCase`.
 
-`-` is allowed to separate numbers in names or upper-cased abbrieviations (like ID).
+Hyphen (`-`) is allowed to separate numbers in names or upper-cased abbreviations (like ID).
