@@ -18,7 +18,7 @@
             "name": "Acceptance and reporting subservice",
             "elements": [
                 {
-                    "name": "Acceptance verification of a request",
+                    "name": "Acceptance verification of a request"
                 },
                 {
                     "name": "Reporting successful acceptance",
