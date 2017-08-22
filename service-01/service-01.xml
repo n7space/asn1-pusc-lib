@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="ST[01] request verification">
+    <submodule name="Routing and reporting subservice">
+        <element name="Routing verification of a request">
+            <models></models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting failed routing">
+            <models>
+                <file location="TC-1-10-FailedRoutingVerificationReport.asn" />
+            </models>
+            <requires>
+                <element name="Routing verification of a request" />
+            </requires>
+            <conflicts></conflicts>
+        </element>
+    </submodule>
+    <submodule name="Acceptance and reporting subservice">
+        <element name="Acceptance verification of a request">
+            <models></models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting successful acceptance">
+            <models>
+                <file location="TM-1-1-SuccessfulAcceptanceVerificationReport.asn" />
+            </models>
+            <requires>
+                <element name="Acceptance verification of a request" />
+            </requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting failed acceptance">
+            <models>
+                <file location="TM-1-2-FailedAcceptanceVerificationReport.asn" />
+            </models>
+            <requires>
+                <element name="Acceptance verification of a request" />
+            </requires>
+            <conflicts></conflicts>
+        </element>
+    </submodule>
+    <submodule name="Execution reporting subservice">
+        <element name="Reporting successful start of execution">
+            <models>
+                <file location="TM-1-3-SuccessfulStartOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting failed start of execution">
+            <models>
+                <file location="TM-1-4-FailedStartOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting successful progress of execution">
+            <models>
+                <file location="TM-1-5-SuccessfulProgressOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting failed progress of execution">
+            <models>
+                <file location="TM-1-6-FailedProgressOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting successful completion of execution">
+            <models>
+                <file location="TM-1-7-SuccessfulCompletionOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Reporting failed completion of execution">
+            <models>
+                <file location="TM-1-8-FailedCompletionOfExecutionVerificationReport.asn" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+    </submodule>
+</module>

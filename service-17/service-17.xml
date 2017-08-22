@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="ST[17] test">
+    <submodule name="Test subservice">
+        <element name="Perform an are-you-alive connection test">
+            <models>
+                <file location="PUS-17-1.asn1" />
+                <file location="PUS-17-2.asn1" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+        <element name="Perform an on-board connection test">
+            <models>
+                <file location="PUS-17-3.asn1" />
+                <file location="PUS-17-4.asn1" />
+                <import from="ApplicationProcess" name="ApplicationProcess-ID" />
+            </models>
+            <requires></requires>
+            <conflicts></conflicts>
+        </element>
+    </submodule>
+</module>

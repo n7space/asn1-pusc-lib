@@ -1,0 +1,15 @@
+language: csharp
+
+os: linux
+dist: trusty
+sudo: required
+
+env:
+  - ASN1SCC_VERSION="3.3.22"
+
+install:
+  - wget https://github.com/n7mobile/3rdparty-deps/releases/download/asn1scc-${ASN1SCC_VERSION}/asn1scc-${ASN1SCC_VERSION}.tar.bz2
+  - tar -xvf asn1scc-${ASN1SCC_VERSION}.tar.bz2
+
+script:
+  - PATH=./asn1scc/:$PATH ./generate-all.sh
