@@ -21,8 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TM-17-2-AreYouAliveConnectionTestReport DEFINITIONS ::= BEGIN
+PUS-17-3 DEFINITIONS ::= BEGIN
 
-TM-17-2-AreYouAliveConnectionTestReport []
+TC-17-3-PerformAnOnBoardConnectionTest []
 
 END

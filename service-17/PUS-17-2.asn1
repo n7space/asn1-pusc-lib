@@ -21,8 +21,10 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TC-17-1-PerformAnAreYouAliveConnectionTest DEFINITIONS ::= BEGIN
+PUS-17-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
-TC-17-1-PerformAnAreYouAliveConnectionTest []
+EXPORTS ALL;
+
+TM-17-2-AreYouAliveConnectionTestReport ::= NULL
 
 END

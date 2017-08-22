@@ -21,18 +21,10 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TC-17-3-PerformAnOnBoardConnectionTest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-17-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 EXPORTS ALL;
 
-IMPORTS
-    ApplicationProcess-ID
-      FROM ApplicationProcess
-    ;
-
-TC-17-3-PerformAnOnBoardConnectionTest ::= SEQUENCE
-{
-    applicationProcessId ApplicationProcess-ID
-}
+TC-17-1-PerformAnAreYouAliveConnectionTest ::= NULL
 
 END

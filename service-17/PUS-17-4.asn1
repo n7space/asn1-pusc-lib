@@ -21,10 +21,18 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-TM-17-2-AreYouAliveConnectionTestReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-17-4 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 EXPORTS ALL;
 
-TM-17-2-AreYouAliveConnectionTestReport ::= NULL
+IMPORTS
+    ApplicationProcess-ID
+      FROM ApplicationProcess
+    ;
+
+TM-17-4-OnBoardConnectionTestReport ::= SEQUENCE
+{
+    applicationProcessId ApplicationProcess-ID
+}
 
 END
