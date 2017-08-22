@@ -54,4 +54,4 @@ Type assignments and definitions block names should follow `CamelCaseStartingWit
 
 Type fileds should follow `camelCaseStartingWithLowerCase`.
 
-`-` is allowed to separate numbers in names.
+`-` is allowed to separate numbers in names or upper-cased abbrieviations (like ID).
