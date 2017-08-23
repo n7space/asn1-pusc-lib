@@ -7,9 +7,20 @@ sudo: required
 env:
   - ASN1SCC_VERSION="3.3.22"
 
+addons:
+  apt:
+    sources:
+    - sourceline: "ppa:beineri/opt-qt59-trusty"
+    packages:
+    - qt59base
+
+
 install:
+  - cd $HOME
   - wget https://github.com/n7mobile/3rdparty-deps/releases/download/asn1scc-${ASN1SCC_VERSION}/asn1scc-${ASN1SCC_VERSION}.tar.bz2
   - tar -xvf asn1scc-${ASN1SCC_VERSION}.tar.bz2
+  - cd -
 
 script:
-  - PATH=./asn1scc/:$PATH ./generate-all.sh
+  - . /opt/qt59/bin/qt59-env.sh
+  - PATH=$HOME/asn1scc/:$PATH ./sanity-check.sh
