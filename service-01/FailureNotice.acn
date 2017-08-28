@@ -21,18 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-17-4 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+FailureNotice DEFINITIONS ::= BEGIN
 
-EXPORTS ALL;
-
-IMPORTS
-    ApplicationProcess-ID
-      FROM ApplicationProcess
-    ;
-
-TM-17-4-OnBoardConnectionTestReport ::= SEQUENCE
-{
-    applicationProcessId ApplicationProcess-ID
-}
+FailureNotice []
 
 END

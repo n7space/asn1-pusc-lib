@@ -21,18 +21,11 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-1-3 DEFINITIONS ::= BEGIN
 
-EXPORTS ALL;
-
--- TODO PTC PFC!
-
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT ::= INTEGER (0 .. 9223372036854775807)--(0 .. 18446744073709551615) --max value not supported by asn1scc
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-PUSC-BITSTR ::= BIT STRING
+TM-1-3-SuccessfulStartOfExecutionVerificationReport []
+{
+    request-ID []
+}
 
 END

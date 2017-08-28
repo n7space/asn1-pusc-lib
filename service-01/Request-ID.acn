@@ -21,18 +21,23 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Request-ID DEFINITIONS ::= BEGIN
 
-EXPORTS ALL;
+Request-ID []
+{
+    packetVersionNumber [size 3],
+    packet-ID []
+    {
+        packetType [size 1],
+        secondaryHeaderFlag [false-value '0'B],
+        applicationProcess-ID [size 11]
+    },
+    packetSequenceControl []
+    {
+        sequenceFlags [size 2],
+        packetSequenceCount [size 14]
+    }
+}
 
--- TODO PTC PFC!
-
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT ::= INTEGER (0 .. 9223372036854775807)--(0 .. 18446744073709551615) --max value not supported by asn1scc
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-PUSC-BITSTR ::= BIT STRING
 
 END

@@ -22,9 +22,10 @@
 --!
 
 ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-
 EXPORTS ALL;
+IMPORTS
+    PUSC-UINT FROM BasicTypes;
 
-ApplicationProcess-ID ::= INTEGER((1)) -- TODO
+ApplicationProcess-ID ::= PUSC-UINT -- TODO
 
 END

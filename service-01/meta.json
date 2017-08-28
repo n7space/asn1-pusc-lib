@@ -10,6 +10,16 @@
         {
           "name": "Reporting failed routing",
           "asn1Files": ["PUS-1-10.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "FailureNotice",
+              "type": "FailureNotice"
+            }
+          ],
           "requires": ["Routing verification of a request"]
         }
       ]
@@ -23,11 +33,27 @@
         {
           "name": "Reporting successful acceptance",
           "asn1Files": ["PUS-1-1.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            }
+          ],
           "requires": ["Acceptance verification of a request"]
         },
         {
           "name": "Reporting failed acceptance",
           "asn1Files": ["PUS-1-2.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "FailureNotice",
+              "type": "FailureNotice"
+            }
+          ],
           "requires": ["Acceptance verification of a request"]
         }
       ]
@@ -37,27 +63,147 @@
       "elements": [
         {
           "name": "Reporting successful start of execution",
-          "asn1Files": ["PUS-1-3.asn"]
+          "asn1Files": ["PUS-1-3.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            }
+          ]
         },
         {
           "name": "Reporting failed start of execution",
-          "asn1Files": ["PUS-1-4.asn"]
+          "asn1Files": ["PUS-1-4.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "FailureNotice",
+              "type": "FailureNotice"
+            }
+          ]
         },
         {
           "name": "Reporting successful progress of execution",
-          "asn1Files": ["PUS-1-5.asn"]
+          "asn1Files": ["PUS-1-5.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "Step-ID",
+              "type": "Step-ID"
+            }
+          ]
         },
         {
           "name": "Reporting failed progress of execution",
-          "asn1Files": ["PUS-1-6.asn"]
+          "asn1Files": ["PUS-1-6.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "FailureNotice",
+              "type": "FailureNotice"
+            },
+            {
+              "from": "Step-ID",
+              "type": "Step-ID"
+            }
+          ]
         },
         {
           "name": "Reporting successful completion of execution",
-          "asn1Files": ["PUS-1-7.asn"]
+          "asn1Files": ["PUS-1-7.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            }
+          ]
         },
         {
           "name": "Reporting failed completion of execution",
-          "asn1Files": ["PUS-1-8.asn"]
+          "asn1Files": ["PUS-1-8.asn"],
+          "imports": [
+            {
+              "from": "Request-ID",
+              "type": "Request-ID"
+            },
+            {
+              "from": "FailureNotice",
+              "type": "FailureNotice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "elements": [
+        {
+          "name": "Request ID",
+          "asn1Files": ["Request-ID.asn1"],
+
+          "imports": [
+            {
+              "from": "Service-01-Definitions",
+              "type": "PacketVersionNumber"
+            },
+            {
+              "from": "Service-01-Definitions",
+              "type": "PacketType"
+            },
+            {
+              "from": "ApplicationProcess",
+              "type": "ApplicationProcess-ID"
+            },
+            {
+              "from": "Service-01-Definitions",
+              "type": "SequenceFlags"
+            },
+            {
+              "from": "BasicTypes",
+              "type": "PUSC-BOOL"
+            },
+            {
+              "from": "BasicTypes",
+              "type": "PUSC-UINT"
+            }
+          ]
+        },
+        {
+          "name": "Failure Notice",
+          "asn1Files": ["FailureNotice.asn1"],
+          "imports": [
+            {
+              "from": "Service-01-Definitions",
+              "type": "Code"
+            },
+            {
+              "from": "BasicTypes",
+              "type": "PUSC-UINT"
+            },
+            {
+              "from": "BasicTypes",
+              "type": "PUSC-BITSTR"
+            }
+          ]
+        },
+        {
+          "name": "Service 01 definitions",
+          "asn1Files": ["Service-01-Definitions.asn1"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "type": "PUSC-UINT"
+            }
+          ]
         }
       ]
     }

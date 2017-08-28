@@ -1,0 +1,14 @@
+Service-01-Definitions DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT FROM BasicTypes;
+
+-- Request-ID types
+PacketVersionNumber ::= PUSC-UINT --TODO
+PacketType ::= PUSC-UINT --TODO
+SequenceFlags ::= PUSC-UINT --TODO
+
+-- FailureNotice types
+Code ::= PUSC-UINT --TODO
+
+END
