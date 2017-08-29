@@ -6,7 +6,7 @@
       "elements": [
         {
           "name": "Basic types",
-          "asn1Files": ["BasicTypes.asn"]
+          "asn1Files": ["BasicTypes.asn1"]
         }
       ]
     },
@@ -15,7 +15,11 @@
       "elements": [
         {
           "name": "Application Process",
-          "asn1Files": ["ApplicationProcess.asn"]
+          "asn1Files": ["ApplicationProcess.asn1"]
+        },
+        {
+          "name": "Step ID",
+          "asn1Files": ["Step-ID.asn1"]
         }
       ]
     }
