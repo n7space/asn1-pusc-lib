@@ -20,6 +20,7 @@ install:
   - wget https://github.com/n7mobile/3rdparty-deps/releases/download/asn1scc-${ASN1SCC_VERSION}/asn1scc-${ASN1SCC_VERSION}.tar.bz2
   - tar -xvf asn1scc-${ASN1SCC_VERSION}.tar.bz2
   - cd -
+  - sudo pip install jsonschema
 
 script:
   - . /opt/qt59/bin/qt59-env.sh

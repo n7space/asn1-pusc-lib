@@ -1,0 +1,23 @@
+{
+  "name": "Common Types",
+  "submodules": [
+    {
+      "name": "PTC/PFC Types",
+      "elements": [
+        {
+          "name": "Basic types",
+          "asn1Files": ["BasicTypes.asn"]
+        }
+      ]
+    },
+    {
+      "name": "Mission Objects",
+      "elements": [
+        {
+          "name": "Application Process",
+          "asn1Files": ["ApplicationProcess.asn"]
+        }
+      ]
+    }
+  ]
+}
