@@ -1,4 +1,4 @@
-Service-01-Definitions DEFINITIONS ::= BEGIN
+Service-01-MissionObjects DEFINITIONS ::= BEGIN
 
 -- FailureNotice types
 Code [] --TODO

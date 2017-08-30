@@ -176,10 +176,6 @@
             {
               "from": "BasicTypes",
               "type": "PUSC-UINT"
-            },
-            {
-              "from": "BasicTypes",
-              "type": "PUSC-BITSTR"
             }
           ]
         },
