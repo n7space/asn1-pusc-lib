@@ -1,0 +1,29 @@
+PacketTypes DEFINITIONS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT, PUSC-BOOL FROM BasicTypes
+    ApplicationProcess-ID FROM ApplicationProcess;
+
+
+ApplicationProcess-ID-Packet ::= ApplicationProcess-ID
+SecondaryHeaderFlag ::= PUSC-BOOL
+
+Packet-ID {PacketType} ::= SEQUENCE
+{
+    packetType PacketType,
+    secondaryHeaderFlag SecondaryHeaderFlag,
+    applicationProcess-ID ApplicationProcess-ID-Packet
+}
+
+TM-Packet-ID ::= Packet-ID {NULL}
+TC-Packet-ID ::= Packet-ID {NULL}
+
+PacketSequenceControl ::= SEQUENCE
+{
+    sequenceFlags NULL,
+    packetSequenceCount PUSC-UINT (0 .. 16383)
+}
+
+PacketVersionNumber ::= NULL
+
+END

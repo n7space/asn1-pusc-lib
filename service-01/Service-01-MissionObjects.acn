@@ -1,9 +1,5 @@
 Service-01-Definitions DEFINITIONS ::= BEGIN
 
-PacketVersionNumber [] --TODO
-PacketType [] --TODO
-SequenceFlags [] --TODO
-
 -- FailureNotice types
 Code [] --TODO
 

@@ -25,18 +25,9 @@ Request-ID DEFINITIONS ::= BEGIN
 
 Request-ID []
 {
-    packetVersionNumber [size 3],
-    packet-ID []
-    {
-        packetType [size 1],
-        secondaryHeaderFlag [false-value '0'B],
-        applicationProcess-ID [size 11]
-    },
+    packetVersionNumber [],
+    packet-ID [],
     packetSequenceControl []
-    {
-        sequenceFlags [size 2],
-        packetSequenceCount [size 14]
-    }
 }
 
 

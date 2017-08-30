@@ -24,24 +24,13 @@
 Request-ID DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PacketVersionNumber, PacketType, SequenceFlags FROM Service-01-Definitions
-    ApplicationProcess-ID FROM ApplicationProcess
-    PUSC-BOOL, PUSC-UINT FROM BasicTypes;
+    PacketVersionNumber, TC-Packet-ID, PacketSequenceControl FROM PacketTypes;
 
 Request-ID ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumber,
-    packet-ID SEQUENCE
-    {
-        packetType PacketType,
-        secondaryHeaderFlag PUSC-BOOL,
-        applicationProcess-ID ApplicationProcess-ID
-    },
-    packetSequenceControl SEQUENCE
-    {
-        sequenceFlags SequenceFlags,
-        packetSequenceCount PUSC-UINT
-    }
+    packet-ID TC-Packet-ID,
+    packetSequenceControl PacketSequenceControl
 }
 
 END
