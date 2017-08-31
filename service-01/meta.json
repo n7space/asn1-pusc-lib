@@ -174,8 +174,8 @@
               "type": "FailureCode"
             },
             {
-              "from": "BasicTypes",
-              "type": "PUSC-UINT"
+              "from": "ErrorCodes",
+              "type": "FailureData"
             }
           ]
         },
