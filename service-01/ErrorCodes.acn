@@ -24,9 +24,9 @@
 ErrorCodes DEFINITIONS ::= BEGIN
 
 -- FailureNotice types
-ErrorCode [] --TODO
+FailureCode [] --TODO
 
-ErrorData<ErrorCode:code> [] --TODO
+FailureData<FailureCode:code> [] --TODO
 {
     error1 [present-when code==1]
 }

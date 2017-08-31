@@ -24,7 +24,8 @@
 Request-ID DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PacketVersionNumber, TC-Packet-ID, PacketSequenceControl FROM PacketTypes;
+    PacketVersionNumber, PacketSequenceControl FROM PacketTypes
+    TC-Packet-ID FROM TC-Packet;
 
 Request-ID ::= SEQUENCE
 {
