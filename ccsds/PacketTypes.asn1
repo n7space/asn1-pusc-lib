@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+PacketTypes DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
 --    PUSC-UINT, PUSC-BOOL FROM BasicTypes      --needs to be added in JSON if uncommented
