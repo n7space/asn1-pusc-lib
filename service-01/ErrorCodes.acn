@@ -23,10 +23,37 @@
 
 ErrorCodes DEFINITIONS ::= BEGIN
 
--- FailureNotice types
-FailureCode [] --TODO
+AcceptanceFailureCode [] --TODO
 
-FailureData<FailureCode:code> [] --TODO
+AcceptanceFailureData<AcceptanceFailureCode:code> [] --TODO
+{
+    error1 [present-when code==1]
+}
+
+ExecutionStartFailureCode [] --TODO
+
+ExecutionStartFailureData<ExecutionStartFailureCode:code> [] --TODO
+{
+    error1 [present-when code==1]
+}
+
+ExecutionProgressFailureCode [] --TODO
+
+ExecutionProgressFailureData<ExecutionProgressFailureCode:code> [] --TODO
+{
+    error1 [present-when code==1]
+}
+
+ExecutionCompletionFailureCode [] --TODO
+
+ExecutionCompletionFailureData<ExecutionCompletionFailureCode:code> [] --TODO
+{
+    error1 [present-when code==1]
+}
+
+RoutingFailureCode [] --TODO
+
+RoutingFailureData<RoutingFailureCode:code> [] --TODO
 {
     error1 [present-when code==1]
 }

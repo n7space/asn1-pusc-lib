@@ -25,12 +25,12 @@ PUS-1-4 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    FailureNotice FROM FailureNotice;
+    ExecutionStartFailureNotice FROM FailureNotice;
 
 TM-1-4-FailedStartOfExecutionVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
-    failureNotice FailureNotice
+    failureNotice ExecutionStartFailureNotice
 }
 
 END

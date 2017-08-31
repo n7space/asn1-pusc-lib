@@ -25,12 +25,12 @@ PUS-1-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    FailureNotice FROM FailureNotice;
+    RoutingFailureNotice FROM FailureNotice;
 
 TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE
 {
     request-ID Request-ID,
-    failureNotice FailureNotice
+    failureNotice RoutingFailureNotice
 }
 
 END

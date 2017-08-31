@@ -25,12 +25,12 @@ PUS-1-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    FailureNotice FROM FailureNotice;
+    AcceptanceFailureNotice FROM FailureNotice;
 
 TM-1-2-FailedAcceptanceVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
-    failureNotice FailureNotice
+    failureNotice AcceptanceFailureNotice
 }
 
 END

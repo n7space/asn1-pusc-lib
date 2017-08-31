@@ -23,9 +23,33 @@
 
 FailureNotice DEFINITIONS ::= BEGIN
 
-FailureNotice []
+AcceptanceFailureNotice []
 {
-    code ErrorCodes.FailureCode [],
+    code ErrorCodes.AcceptanceFailureCode[],
+    data <code> []
+}
+
+ExecutionStartFailureNotice []
+{
+    code ErrorCodes.ExecutionStartFailureCode[],
+    data <code> []
+}
+
+ExecutionProgressFailureNotice []
+{
+    code ErrorCodes.ExecutionProgressFailureCode[],
+    data <code> []
+}
+
+ExecutionCompletionFailureNotice []
+{
+    code ErrorCodes.ExecutionCompletionFailureCode[],
+    data <code> []
+}
+
+RoutingFailureNotice []
+{
+    code ErrorCodes.RoutingFailureCode[],
     data <code> []
 }
 

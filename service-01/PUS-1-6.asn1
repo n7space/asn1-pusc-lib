@@ -26,13 +26,13 @@ EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
     ExecutionStep-ID FROM ExecutionStep
-    FailureNotice FROM FailureNotice;
+    ExecutionProgressFailureNotice FROM FailureNotice;
 
 TM-1-6-FailedProgressOfExecutionVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
     step-ID ExecutionStep-ID,
-    failureNotice FailureNotice
+    failureNotice ExecutionProgressFailureNotice
 }
 
 

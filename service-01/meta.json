@@ -17,7 +17,7 @@
             },
             {
               "from": "FailureNotice",
-              "type": "FailureNotice"
+              "type": "RoutingFailureNotice"
             }
           ],
           "requires": ["Routing verification of a request"]
@@ -51,7 +51,7 @@
             },
             {
               "from": "FailureNotice",
-              "type": "FailureNotice"
+              "type": "AcceptanceFailureNotice"
             }
           ],
           "requires": ["Acceptance verification of a request"]
@@ -81,7 +81,7 @@
             },
             {
               "from": "FailureNotice",
-              "type": "FailureNotice"
+              "type": "ExecutionStartFailureNotice"
             }
           ]
         },
@@ -109,7 +109,7 @@
             },
             {
               "from": "FailureNotice",
-              "type": "FailureNotice"
+              "type": "ExecutionProgressFailureNotice"
             },
             {
               "from": "ExecutionStep",
@@ -136,7 +136,7 @@
               "type": "Request-ID"
             },
             {
-              "from": "FailureNotice",
+              "from": "ExecutionCompletionFailureNotice",
               "type": "FailureNotice"
             }
           ]

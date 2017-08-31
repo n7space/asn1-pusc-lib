@@ -28,9 +28,39 @@ EXPORTS ALL;
 
 -- FailureNotice types
 --FailureCode ::= PUSC-UINT
-FailureCode ::= INTEGER ((1)) --TODO
+AcceptanceFailureCode ::= INTEGER ((1)) --TODO
 
-FailureData ::= CHOICE --TODO
+AcceptanceFailureData ::= CHOICE --TODO
+{
+    error1 BIT STRING (SIZE(1))
+}
+
+
+ExecutionStartFailureCode ::= INTEGER ((1)) --TODO
+
+ExecutionStartFailureData ::= CHOICE --TODO
+{
+    error1 BIT STRING (SIZE(1))
+}
+
+ExecutionProgressFailureCode ::= INTEGER ((1)) --TODO
+
+ExecutionProgressFailureData ::= CHOICE --TODO
+{
+    error1 BIT STRING (SIZE(1))
+}
+
+ExecutionCompletionFailureCode ::= INTEGER ((1)) --TODO
+
+ExecutionCompletionFailureData ::= CHOICE --TODO
+{
+    error1 BIT STRING (SIZE(1))
+}
+
+
+RoutingFailureCode ::= INTEGER ((1)) --TODO
+
+RoutingFailureData ::= CHOICE --TODO
 {
     error1 BIT STRING (SIZE(1))
 }

@@ -24,12 +24,40 @@
 FailureNotice DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    FailureCode, FailureData FROM ErrorCodes;
+    AcceptanceFailureCode, AcceptanceFailureData,
+    ExecutionStartFailureCode, ExecutionStartFailureData,
+    ExecutionProgressFailureCode, ExecutionProgressFailureData,
+    ExecutionCompletionFailureCode, ExecutionCompletionFailureData,
+    RoutingFailureCode, RoutingFailureData FROM ErrorCodes;
 
-FailureNotice ::= SEQUENCE
+AcceptanceFailureNotice ::= SEQUENCE
 {
-    --code FailureCode,     --needs to be declared inside acn file (asn1scc restriction)
-    data FailureData
+    --code AcceptanceFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data AcceptanceFailureData
+}
+
+ExecutionStartFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionStartFailureData
+}
+
+ExecutionProgressFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionProgressFailureData
+}
+
+ExecutionCompletionFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionCompletionFailureData
+}
+
+RoutingFailureNotice ::= SEQUENCE
+{
+    --code RoutingFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data RoutingFailureData
 }
 
 END
