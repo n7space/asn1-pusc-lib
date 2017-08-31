@@ -23,27 +23,12 @@
 
 PacketTypes DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID-Packet [size 11]
 SecondaryHeaderFlag [false-value '0'B]
-
-TM-Packet-ID []
-{
-    packetType [pattern '0'B],
-    secondaryHeaderFlag [],
-    applicationProcess-ID []
-}
-
-TC-Packet-ID []
-{
-    packetType [pattern '1'B],
-    secondaryHeaderFlag [],
-    applicationProcess-ID []
-}
 
 PacketSequenceControl []
 {
     sequenceFlags [pattern '11'B],
-    packetSequenceCount [size 14]
+    packetSequenceCount [size 14, encoding pos-int]
 }
 
 PacketVersionNumber [pattern '000'B]

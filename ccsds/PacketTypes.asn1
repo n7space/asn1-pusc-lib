@@ -24,27 +24,24 @@
 PacketTypes DEFINITIONS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PUSC-UINT, PUSC-BOOL FROM BasicTypes
+--    PUSC-UINT, PUSC-BOOL FROM BasicTypes      --needs to be added in JSON if uncommented
     ApplicationProcess-ID FROM ApplicationProcess;
 
 
-ApplicationProcess-ID-Packet ::= ApplicationProcess-ID
-SecondaryHeaderFlag ::= PUSC-BOOL
+SecondaryHeaderFlag ::= BOOLEAN
 
 Packet-ID {PacketType} ::= SEQUENCE
 {
     packetType PacketType,
     secondaryHeaderFlag SecondaryHeaderFlag,
-    applicationProcess-ID ApplicationProcess-ID-Packet
+    applicationProcess-ID ApplicationProcess-ID
 }
-
-TM-Packet-ID ::= Packet-ID {NULL}
-TC-Packet-ID ::= Packet-ID {NULL}
 
 PacketSequenceControl ::= SEQUENCE
 {
     sequenceFlags NULL,
-    packetSequenceCount PUSC-UINT (0 .. 16383)
+    --packetSequenceCount PUSC-UINT (0 .. 16383)
+    packetSequenceCount INTEGER (0 .. 16383)
 }
 
 PacketVersionNumber ::= NULL

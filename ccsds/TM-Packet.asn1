@@ -1,0 +1,10 @@
+TM-Packet DEFINITIONS AUTOMATIC TAGS::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    Packet-ID FROM PacketTypes;
+
+TM-PacketTypeValue ::= NULL
+
+TM-Packet-ID ::= Packet-ID {TM-PacketTypeValue}
+
+END

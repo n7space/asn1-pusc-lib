@@ -1,0 +1,13 @@
+TC-Packet DEFINITIONS ::= BEGIN
+
+TC-PacketTypeValue [pattern '1'B]
+
+TC-Packet-ID []
+{
+    packetType [],
+    secondaryHeaderFlag [],
+    applicationProcess-ID []
+}
+
+
+END

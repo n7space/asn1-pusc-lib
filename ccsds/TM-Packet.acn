@@ -1,0 +1,13 @@
+TM-Packet DEFINITIONS ::= BEGIN
+
+TM-PacketTypeValue [pattern '0'B]
+
+TM-Packet-ID []
+{
+    packetType [],
+    secondaryHeaderFlag [],
+    applicationProcess-ID []
+}
+
+
+END
