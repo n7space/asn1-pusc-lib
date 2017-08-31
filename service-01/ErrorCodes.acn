@@ -21,9 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Service-01-MissionObjects DEFINITIONS ::= BEGIN
+ErrorCodes DEFINITIONS ::= BEGIN
 
 -- FailureNotice types
-Code [] --TODO
+ErrorCode [] --TODO
+
+ErrorData<ErrorCode:code> [] --TODO
+{
+    error1 [present-when code==1]
+}
 
 END

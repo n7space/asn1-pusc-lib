@@ -21,12 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Service-01-MissionObjects DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+ErrorCodes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
-IMPORTS
-    PUSC-UINT FROM BasicTypes;
+--IMPORTS
+--    PUSC-UINT FROM BasicTypes;
 
 -- FailureNotice types
-Code ::= PUSC-UINT --TODO
+--FailureCode ::= PUSC-UINT
+FailureCode ::= INTEGER ((1)) --TODO
+
+FailureData ::= CHOICE --TODO
+{
+    error1 BIT STRING (SIZE(1))
+}
+
 
 END

@@ -24,13 +24,12 @@
 FailureNotice DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Code FROM Service-01-MissionObjects
-    PUSC-BITSTR, PUSC-UINT FROM BasicTypes;
+    FailureCode, FailureData FROM ErrorCodes;
 
 FailureNotice ::= SEQUENCE
 {
-    code Code,
-    data BIT STRING
+    code FailureCode,
+    data FailureData
 }
 
 END

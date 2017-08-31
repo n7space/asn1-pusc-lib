@@ -170,8 +170,8 @@
           "asn1Files": ["FailureNotice.asn1"],
           "imports": [
             {
-              "from": "ST[01] mission objects",
-              "type": "Code"
+              "from": "ErrorCodes",
+              "type": "FailureCode"
             },
             {
               "from": "BasicTypes",
@@ -180,14 +180,8 @@
           ]
         },
         {
-          "name": "ST[01] mission objects",
-          "asn1Files": ["Service-01-MissionObjects.asn1"],
-          "imports": [
-            {
-              "from": "BasicTypes",
-              "type": "PUSC-UINT"
-            }
-          ]
+          "name": "Error Codes",
+          "asn1Files": ["ErrorCodes.asn1"]
         }
       ]
     }
