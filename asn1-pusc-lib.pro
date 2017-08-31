@@ -41,17 +41,7 @@ DISTFILES += \
     service-01/PUS-1-8.asn1 \
     service-01/Request-ID.acn \
     service-01/Request-ID.asn1 \
-    service-09/meta.json \
-    service-17/meta.json \
-    service-17/PUS-17-1.acn \
-    service-17/PUS-17-1.asn1 \
-    service-17/PUS-17-2.acn \
-    service-17/PUS-17-2.asn1 \
-    service-17/PUS-17-3.acn \
-    service-17/PUS-17-3.asn1 \
-    service-17/PUS-17-4.acn \
-    service-17/PUS-17-4.asn1 \
-    system-objects/meta.json \
+    service-09/meta.json \ 
     ccsds/meta.json
 
 
