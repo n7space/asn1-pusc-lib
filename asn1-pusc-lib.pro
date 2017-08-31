@@ -2,7 +2,7 @@ TEMPLATE = lib
 CONFIG += static
 CONFIG -= qt
 
-DISTFILES += \ 
+DISTFILES += \
     service-17/meta.json \
     service-17/PUS-17-1.acn \
     service-17/PUS-17-1.asn1 \
