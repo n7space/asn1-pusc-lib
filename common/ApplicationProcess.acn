@@ -23,7 +23,7 @@
 
 ApplicationProcess DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID [size 11 encoding pos-int]
+ApplicationProcess-ID [size 11, encoding pos-int]
 
 
 END
