@@ -1,0 +1,23 @@
+{
+  "name": "CCSDS",
+  "submodules": [
+    {
+      "name": "CCSDS Types",
+      "elements": [
+        {
+          "name": "Packet Types",
+          "asn1Files": ["PacketTypes.asn1"]
+        },
+        {
+          "name": "TC Packet",
+          "asn1Files": ["TC-Packet.asn1"]
+        },
+        {
+          "name": "TM Packet",
+          "asn1Files": ["TM-Packet.asn1"]
+        }
+
+      ]
+    }
+  ]
+}

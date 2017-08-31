@@ -51,7 +51,8 @@ DISTFILES += \
     service-17/PUS-17-3.asn1 \
     service-17/PUS-17-4.acn \
     service-17/PUS-17-4.asn1 \
-    system-objects/meta.json
+    system-objects/meta.json \
+    ccsds/meta.json
 
 
 include(.qmake/handleAsn1AcnBuild.pri)
