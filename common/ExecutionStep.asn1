@@ -21,11 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Step-ID DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+ExecutionStep DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
-IMPORTS
-    PUSC-UINT FROM BasicTypes;
+--IMPORTS
+--    PUSC-UINT FROM BasicTypes;
 
-Step-ID ::= PUSC-UINT --TODO
+--ExecutionStep-ID ::= PUSC-UINT --TODO
+ExecutionStep-ID ::= INTEGER ((1)) --TODO
 
 END

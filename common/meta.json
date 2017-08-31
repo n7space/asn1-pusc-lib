@@ -18,8 +18,8 @@
           "asn1Files": ["ApplicationProcess.asn1"]
         },
         {
-          "name": "Step ID",
-          "asn1Files": ["Step-ID.asn1"]
+          "name": "Execution Step",
+          "asn1Files": ["ExecutionStep.asn1"]
         }
       ]
     }

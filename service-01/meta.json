@@ -94,8 +94,8 @@
               "type": "Request-ID"
             },
             {
-              "from": "Step-ID",
-              "type": "Step-ID"
+              "from": "ExecutionStep",
+              "type": "ExecutionStep-ID"
             }
           ]
         },
@@ -112,8 +112,8 @@
               "type": "FailureNotice"
             },
             {
-              "from": "Step-ID",
-              "type": "Step-ID"
+              "from": "ExecutionStep",
+              "type": "ExecutionStep-ID"
             }
           ]
         },

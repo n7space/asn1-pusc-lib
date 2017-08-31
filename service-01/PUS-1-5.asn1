@@ -25,12 +25,12 @@ PUS-1-5 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    Step-ID FROM Step-ID;
+    ExecutionStep-ID FROM ExecutionStep;
 
 TM-1-5-SuccessfulProgressOfExecutionVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
-    step-ID Step-ID
+    step-ID ExecutionStep-ID
 }
 
 

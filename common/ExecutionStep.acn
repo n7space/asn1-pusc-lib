@@ -21,8 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Step-ID DEFINITIONS ::= BEGIN
+ExecutionStep DEFINITIONS ::= BEGIN
 
-Step-ID []
+ExecutionStep-ID []
 
 END
