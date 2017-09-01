@@ -29,4 +29,10 @@ TM-1-4-FailedStartOfExecutionVerificationReport []
     failureNotice []
 }
 
+ExecutionStartFailureNotice []
+{
+    code ErrorCodes.ExecutionStartFailureCode[],
+    data <code> []
+}
+
 END

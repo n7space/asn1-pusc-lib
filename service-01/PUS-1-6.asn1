@@ -26,7 +26,7 @@ EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
     ExecutionStep-ID FROM ExecutionStep
-    ExecutionProgressFailureNotice FROM FailureNotice;
+    ExecutionProgressFailureCode, ExecutionProgressFailureData FROM ErrorCodes;
 
 TM-1-6-FailedProgressOfExecutionVerificationReport ::= SEQUENCE
 {
@@ -35,5 +35,10 @@ TM-1-6-FailedProgressOfExecutionVerificationReport ::= SEQUENCE
     failureNotice ExecutionProgressFailureNotice
 }
 
+ExecutionProgressFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionProgressFailureData
+}
 
 END

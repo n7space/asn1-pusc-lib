@@ -29,4 +29,11 @@ TM-1-10-FailedRoutingVerificatrionReport []
     failureNotice []
 }
 
+RoutingFailureNotice []
+{
+    code ErrorCodes.RoutingFailureCode[],
+    data <code> []
+}
+
+
 END

@@ -25,12 +25,18 @@ PUS-1-8 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    ExecutionCompletionFailureNotice FROM FailureNotice;
+    ExecutionCompletionFailureCode, ExecutionCompletionFailureData FROM ErrorCodes;
 
 TM-1-8-FailedCompletionOfExecutionVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
     failureNotice ExecutionCompletionFailureNotice
+}
+
+ExecutionCompletionFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionCompletionFailureData
 }
 
 END

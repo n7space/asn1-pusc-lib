@@ -30,4 +30,10 @@ TM-1-6-FailedProgressOfExecutionVerificationReport []
     failureNotice []
 }
 
+ExecutionProgressFailureNotice []
+{
+    code ErrorCodes.ExecutionProgressFailureCode[],
+    data <code> []
+}
+
 END

@@ -18,8 +18,6 @@ DISTFILES += \
     common/meta.json \
     service-01/ErrorCodes.acn \
     service-01/ErrorCodes.asn1 \
-    service-01/FailureNotice.acn \
-    service-01/FailureNotice.asn1 \
     service-01/meta.json \
     service-01/PUS-1-10.acn \
     service-01/PUS-1-10.asn1 \

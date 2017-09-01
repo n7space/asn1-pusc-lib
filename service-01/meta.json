@@ -16,8 +16,12 @@
               "type": "Request-ID"
             },
             {
-              "from": "FailureNotice",
-              "type": "RoutingFailureNotice"
+              "from": "ErrorCodes",
+              "type": "RoutingFailureCode"
+            },
+            {
+              "from": "ErrorCodes",
+              "type": "RoutingFailureData"
             }
           ],
           "requires": ["Routing verification of a request"]
@@ -50,8 +54,12 @@
               "type": "Request-ID"
             },
             {
-              "from": "FailureNotice",
-              "type": "AcceptanceFailureNotice"
+              "from": "ErrorCodes",
+              "type": "AcceptanceFailureCode"
+            },
+            {
+              "from": "ErrorCodes",
+              "type": "AcceptanceFailureData"
             }
           ],
           "requires": ["Acceptance verification of a request"]
@@ -80,8 +88,12 @@
               "type": "Request-ID"
             },
             {
-              "from": "FailureNotice",
-              "type": "ExecutionStartFailureNotice"
+              "from": "ErrorCodes",
+              "type": "ExecutionStartFailureCode"
+            },
+            {
+              "from": "ErrorCodes",
+              "type": "ExecutionStartFailureData"
             }
           ]
         },
@@ -108,8 +120,12 @@
               "type": "Request-ID"
             },
             {
-              "from": "FailureNotice",
-              "type": "ExecutionProgressFailureNotice"
+              "from": "ErrorCodes",
+              "type": "ExecutionProgressFailureCode"
+            },
+            {
+              "from": "ErrorCodes",
+              "type": "ExecutionProgressFailureData"
             },
             {
               "from": "ExecutionStep",
@@ -136,8 +152,12 @@
               "type": "Request-ID"
             },
             {
-              "from": "ExecutionCompletionFailureNotice",
-              "type": "FailureNotice"
+              "from": "ErrorCodes",
+              "type": "ExecutionCompletionFailureCode"
+            },
+            {
+              "from": "ErrorCodes",
+              "type": "ExecutionCompletionFailureData"
             }
           ]
         }
@@ -162,20 +182,6 @@
             {
               "from": "PacketTypes",
               "type": "PacketSequenceControl"
-            }
-          ]
-        },
-        {
-          "name": "Failure Notice",
-          "asn1Files": ["FailureNotice.asn1"],
-          "imports": [
-            {
-              "from": "ErrorCodes",
-              "type": "FailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "FailureData"
             }
           ]
         },

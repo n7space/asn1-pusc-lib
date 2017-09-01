@@ -25,12 +25,18 @@ PUS-1-4 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    ExecutionStartFailureNotice FROM FailureNotice;
+    ExecutionStartFailureCode, ExecutionStartFailureData FROM ErrorCodes;
 
 TM-1-4-FailedStartOfExecutionVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
     failureNotice ExecutionStartFailureNotice
+}
+
+ExecutionStartFailureNotice ::= SEQUENCE
+{
+    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data ExecutionStartFailureData
 }
 
 END

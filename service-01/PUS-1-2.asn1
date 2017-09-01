@@ -25,12 +25,18 @@ PUS-1-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    AcceptanceFailureNotice FROM FailureNotice;
+    AcceptanceFailureCode, AcceptanceFailureData FROM ErrorCodes;
 
 TM-1-2-FailedAcceptanceVerificationReport ::= SEQUENCE
 {
     request-ID Request-ID,
     failureNotice AcceptanceFailureNotice
+}
+
+AcceptanceFailureNotice ::= SEQUENCE
+{
+    --code AcceptanceFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    data AcceptanceFailureData
 }
 
 END

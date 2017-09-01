@@ -29,4 +29,11 @@ TM-1-2-FailedAcceptanceVerificationReport []
     failureNotice []
 }
 
+AcceptanceFailureNotice []
+{
+    code ErrorCodes.AcceptanceFailureCode[],
+    data <code> []
+}
+
+
 END
