@@ -33,7 +33,7 @@ TM-1-6-FailedProgressOfExecutionVerificationReport []
 ExecutionProgressFailureNotice []
 {
     code ErrorCodes.ExecutionProgressFailureCode[],
-    data <code> []
+    data [determinant code]
 }
 
 END

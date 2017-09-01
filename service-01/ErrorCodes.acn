@@ -25,37 +25,37 @@ ErrorCodes DEFINITIONS ::= BEGIN
 
 AcceptanceFailureCode [] --TODO
 
-AcceptanceFailureData<AcceptanceFailureCode:code> [] --TODO
+AcceptanceFailureData [] --TODO
 {
-    error1 [present-when code==1]
+    error1 []
 }
 
 ExecutionStartFailureCode [] --TODO
 
-ExecutionStartFailureData<ExecutionStartFailureCode:code> [] --TODO
+ExecutionStartFailureData[] --TODO
 {
-    error1 [present-when code==1]
+    error1 []
 }
 
 ExecutionProgressFailureCode [] --TODO
 
-ExecutionProgressFailureData<ExecutionProgressFailureCode:code> [] --TODO
+ExecutionProgressFailureData [] --TODO
 {
-    error1 [present-when code==1]
+    error1 []
 }
 
 ExecutionCompletionFailureCode [] --TODO
 
-ExecutionCompletionFailureData<ExecutionCompletionFailureCode:code> [] --TODO
+ExecutionCompletionFailureData [] --TODO
 {
-    error1 [present-when code==1]
+    error1 []
 }
 
 RoutingFailureCode [] --TODO
 
-RoutingFailureData<RoutingFailureCode:code> [] --TODO
+RoutingFailureData [] --TODO
 {
-    error1 [present-when code==1]
+    error1 []
 }
 
 END

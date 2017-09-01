@@ -32,7 +32,7 @@ TM-1-10-FailedRoutingVerificatrionReport []
 RoutingFailureNotice []
 {
     code ErrorCodes.RoutingFailureCode[],
-    data <code> []
+    data [determinant code]
 }
 
 

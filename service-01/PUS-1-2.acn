@@ -31,8 +31,8 @@ TM-1-2-FailedAcceptanceVerificationReport []
 
 AcceptanceFailureNotice []
 {
-    code ErrorCodes.AcceptanceFailureCode[],
-    data <code> []
+    code ErrorCodes.AcceptanceFailureCode [],
+    data [determinant code]
 }
 
 

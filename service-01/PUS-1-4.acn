@@ -31,8 +31,8 @@ TM-1-4-FailedStartOfExecutionVerificationReport []
 
 ExecutionStartFailureNotice []
 {
-    code ErrorCodes.ExecutionStartFailureCode[],
-    data <code> []
+    code ErrorCodes.ExecutionStartFailureCode [],
+    data [determinant code]
 }
 
 END

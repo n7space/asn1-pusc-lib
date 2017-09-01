@@ -37,7 +37,7 @@ TM-1-6-FailedProgressOfExecutionVerificationReport ::= SEQUENCE
 
 ExecutionProgressFailureNotice ::= SEQUENCE
 {
-    --code ExecutionFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
+    --code ExecutionProgressFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
     data ExecutionProgressFailureData
 }
 

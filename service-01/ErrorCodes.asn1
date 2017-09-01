@@ -28,7 +28,7 @@ EXPORTS ALL;
 
 -- FailureNotice types
 --FailureCode ::= PUSC-UINT
-AcceptanceFailureCode ::= INTEGER ((1)) --TODO
+AcceptanceFailureCode ::= ENUMERATED {error1} --TODO
 
 AcceptanceFailureData ::= CHOICE --TODO
 {
@@ -36,21 +36,21 @@ AcceptanceFailureData ::= CHOICE --TODO
 }
 
 
-ExecutionStartFailureCode ::= INTEGER ((1)) --TODO
+ExecutionStartFailureCode ::= ENUMERATED {error1} --TODO
 
 ExecutionStartFailureData ::= CHOICE --TODO
 {
     error1 BIT STRING (SIZE(1))
 }
 
-ExecutionProgressFailureCode ::= INTEGER ((1)) --TODO
+ExecutionProgressFailureCode ::= ENUMERATED {error1} --TODO
 
 ExecutionProgressFailureData ::= CHOICE --TODO
 {
     error1 BIT STRING (SIZE(1))
 }
 
-ExecutionCompletionFailureCode ::= INTEGER ((1)) --TODO
+ExecutionCompletionFailureCode ::= ENUMERATED {error1} --TODO
 
 ExecutionCompletionFailureData ::= CHOICE --TODO
 {
@@ -58,7 +58,7 @@ ExecutionCompletionFailureData ::= CHOICE --TODO
 }
 
 
-RoutingFailureCode ::= INTEGER ((1)) --TODO
+RoutingFailureCode ::= ENUMERATED {error1} --TODO
 
 RoutingFailureData ::= CHOICE --TODO
 {
