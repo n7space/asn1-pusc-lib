@@ -23,7 +23,33 @@
 
 TC-Packet DEFINITIONS ::= BEGIN
 
-TC-PacketTypeValue [pattern '1'B]
+
+TC-CCSDS-Packet []
+{
+    packetPrimaryHeader [],
+    packetDataField []
+}
+
+TC-PacketPrimaryHeader []
+{
+    packetVersionNumber [],
+    packet-ID [],
+    packetSequenceControl [],
+    packetDataLength []
+}
+
+TC-PacketDataField []
+{
+    packetSecondaryHeader [],
+    userData [align-to-next byte]
+}
+
+TC-UserDataField <INTEGER:service, INTEGER:message> []
+{
+    data <service, message> [],
+    --spare [],
+    packetErrorContol []
+}
 
 TC-Packet-ID []
 {
@@ -31,6 +57,26 @@ TC-Packet-ID []
     secondaryHeaderFlag [],
     applicationProcess-ID []
 }
+
+TC-PacketSecondaryHeader []
+{
+    tcPacketPusVersionNumber [],
+    acknowledgementFlags [],
+    messageType-ID [],
+    source-ID [size 16]
+    --spare []
+}
+
+AcknowledgementFlags []
+{
+    ackExecutionCompletion [true-value '1'B],
+    ackExecutionProgress [true-value '1'B],
+    ackExecutionStart [true-value '1'B],
+    ackAcceptance [true-value '1'B]
+}
+
+TC-PacketTypeValue [pattern '1'B]
+
 
 
 END

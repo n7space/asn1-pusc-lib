@@ -21,33 +21,11 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+TM-Payload DEFINITIONS ::= BEGIN
 
-CONSTANT ERROR-CONTROL-ENABLED ::= 16
-CONSTANT ERROR-CONTROL-DISABLED ::= 0
-
-PacketVersionNumberValue [pattern '000'B]
-
-SecondaryHeaderFlag [false-value '0'B]
-
-PacketSequenceControl []
+TM-Data <INTEGER:service, INTEGER:message> []
 {
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int]
+    tm-17-2 [present-when service==17 message==2] --TODO
 }
-
-PacketDataLength [size 16, encoding pos-int]
-
-PacketErrorControl [size PACKET-ERROR-CONTROL, align-to-next byte]
-
-MessageType-ID []
-{
-    serviceType-ID [size 8],
-    messageSubtype-ID [size 8]
-}
-
-ServiceType-ID [size 8, encoding pos-int]
-MessageSubtype-ID [size 8, encoding pos-int]
-
 
 END

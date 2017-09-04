@@ -24,26 +24,67 @@
 PacketTypes DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
---    PUSC-UINT, PUSC-BOOL FROM BasicTypes      --needs to be added in JSON if uncommented
     ApplicationProcess-ID FROM ApplicationProcess;
 
+CCSDS-Packet {PacketPrimaryHeader, PacketDataField} ::= SEQUENCE
+{
+    packetPrimaryHeader PacketPrimaryHeader,
+    packetDataField PacketDataField
+}
 
-SecondaryHeaderFlag ::= BOOLEAN
+--Packet primary header--
+PacketPrimaryHeader {Packet-ID} ::= SEQUENCE
+{
+    packetVersionNumber PacketVersionNumberValue,
+    packet-ID Packet-ID,
+    packetSequenceControl PacketSequenceControl,
+    packetDataLength PacketDataLength
+}
+
+PacketVersionNumberValue ::= NULL
 
 Packet-ID {PacketType} ::= SEQUENCE
 {
     packetType PacketType,
-    secondaryHeaderFlag SecondaryHeaderFlag,
+    secondaryHeaderFlag BOOLEAN,
     applicationProcess-ID ApplicationProcess-ID
 }
+
+SecondaryHeaderFlag ::= BOOLEAN
 
 PacketSequenceControl ::= SEQUENCE
 {
     sequenceFlags NULL,
-    --packetSequenceCount PUSC-UINT (0 .. 16383)
-    packetSequenceCount INTEGER (0 .. 16383)
+    packetSequenceCountOrName INTEGER (0 .. 16383)
 }
 
-PacketVersionNumber ::= NULL
+PacketDataLength ::= INTEGER (0 .. 65535)
+-------------------------
+
+--Packet data field--
+PacketDataField {SecondaryHeaderField, UserDataField} ::= SEQUENCE
+{
+    packetSecondaryHeader SecondaryHeaderField,
+    userData UserDataField
+}
+
+UserDataField {Data} ::= SEQUENCE
+{
+    data Data,
+    --spare NULL,   --defined as align-to-next acn encoding
+    packetErrorContol PacketErrorControl
+}
+
+PacketErrorControl ::= BIT STRING (SIZE(16))
+
+-----------------------------
+MessageType-ID ::= SEQUENCE
+{
+    serviceType-ID ServiceType-ID,
+    messageSubtype-ID MessageSubtype-ID
+}
+
+ServiceType-ID ::= INTEGER (0 .. 127)
+MessageSubtype-ID ::= INTEGER (1 .. 255)
 
 END

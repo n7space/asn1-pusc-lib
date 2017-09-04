@@ -21,33 +21,9 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+ApplicationProcessUser DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
 
-CONSTANT ERROR-CONTROL-ENABLED ::= 16
-CONSTANT ERROR-CONTROL-DISABLED ::= 0
-
-PacketVersionNumberValue [pattern '000'B]
-
-SecondaryHeaderFlag [false-value '0'B]
-
-PacketSequenceControl []
-{
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int]
-}
-
-PacketDataLength [size 16, encoding pos-int]
-
-PacketErrorControl [size PACKET-ERROR-CONTROL, align-to-next byte]
-
-MessageType-ID []
-{
-    serviceType-ID [size 8],
-    messageSubtype-ID [size 8]
-}
-
-ServiceType-ID [size 8, encoding pos-int]
-MessageSubtype-ID [size 8, encoding pos-int]
-
+ApplicationProcessUser-ID ::= INTEGER (0 .. 65535) --TODO
 
 END

@@ -23,7 +23,33 @@
 
 TM-Packet DEFINITIONS ::= BEGIN
 
-TM-PacketTypeValue [pattern '0'B]
+
+TM-CCSDS-Packet []
+{
+    packetPrimaryHeader [],
+    packetDataField []
+}
+
+TM-PacketPrimaryHeader []
+{
+    packetVersionNumber [],
+    packet-ID [],
+    packetSequenceControl [],
+    packetDataLength []
+}
+
+TM-PacketDataField []
+{
+    packetSecondaryHeader [],
+    userData [align-to-next byte]
+}
+
+TM-UserDataField <INTEGER:service, INTEGER:message> []
+{
+    data <service, message> [],
+    --spare [],
+    packetErrorContol []
+}
 
 TM-Packet-ID []
 {
@@ -32,5 +58,17 @@ TM-Packet-ID []
     applicationProcess-ID []
 }
 
+TM-PacketSecondaryHeader []
+{
+    tmPacketPusVersionNumber [],
+    spacecraftTimeReferenceStatus [size 4, encoding pos-int],
+    messageType-ID [],
+    messageTimeCounter [size 16, encoding pos-int],
+    destination-ID [size 16],
+    time []
+    --spare NULL        --defined as align-to-next in acn file
+}
+
+TM-PacketTypeValue [pattern '0'B]
 
 END

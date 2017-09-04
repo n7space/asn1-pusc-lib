@@ -24,10 +24,44 @@
 TC-Packet DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Packet-ID FROM PacketTypes;
+    CCSDS-Packet,
+    PacketDataField,
+    Packet-ID,
+    PacketSequenceControl,
+    MessageType-ID,
+    PacketPrimaryHeader,
+    UserDataField FROM PacketTypes
+    ApplicationProcessUser-ID FROM ApplicationProcessUser
+    TC-Data FROM TC-Payload;
 
-TC-PacketTypeValue ::= NULL
+TC-CCSDS-Packet ::= CCSDS-Packet {TC-PacketPrimaryHeader, TC-PacketDataField}
+
+TC-PacketPrimaryHeader ::= PacketPrimaryHeader {TC-Packet-ID}
+
+TC-PacketDataField ::= PacketDataField {TC-PacketSecondaryHeader, TC-UserDataField}
+
+TC-UserDataField ::= UserDataField {TC-Data}
 
 TC-Packet-ID ::= Packet-ID {TC-PacketTypeValue}
+
+TC-PacketSecondaryHeader ::=  SEQUENCE
+{
+    tcPacketPusVersionNumber NULL,
+    acknowledgementFlags AcknowledgementFlags,
+    messageType-ID MessageType-ID,
+    source-ID ApplicationProcessUser-ID
+    --spare NULL        --defined as align-to-next in acn file
+}
+
+AcknowledgementFlags ::= SEQUENCE
+{
+    -- True when TC requests certain acknowledgement.
+    ackExecutionCompletion BOOLEAN,
+    ackExecutionProgress BOOLEAN,
+    ackExecutionStart BOOLEAN,
+    ackAcceptance BOOLEAN
+}
+
+TC-PacketTypeValue ::= NULL
 
 END

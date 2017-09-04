@@ -24,10 +24,51 @@
 TM-Packet DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Packet-ID FROM PacketTypes;
+    CCSDS-Packet,
+    PacketDataField,
+    Packet-ID,
+    PacketSequenceControl,
+    MessageType-ID,
+    PacketPrimaryHeader,
+    UserDataField FROM PacketTypes
+    ApplicationProcessUser-ID FROM ApplicationProcessUser
+    AbsoluteTime FROM BasicTypes
+    TM-Data FROM TM-Payload;
 
-TM-PacketTypeValue ::= NULL
+
+TM-CCSDS-Packet ::= CCSDS-Packet {TM-PacketPrimaryHeader, TM-PacketDataField}
+
+TM-PacketPrimaryHeader ::= PacketPrimaryHeader {TM-Packet-ID}
+
+TM-PacketDataField ::= PacketDataField {TM-PacketSecondaryHeader, TM-UserDataField}
+
+TM-UserDataField ::= UserDataField {TM-Data}
 
 TM-Packet-ID ::= Packet-ID {TM-PacketTypeValue}
+
+TM-PacketSecondaryHeader ::=  SEQUENCE
+{
+    tmPacketPusVersionNumber NULL,
+    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus,
+    messageType-ID MessageType-ID,
+    messageTimeCounter INTEGER (0 .. 65535),
+    destination-ID ApplicationProcessUser-ID,
+    time AbsoluteTime
+    --spare NULL        --defined as align-to-next in acn file
+}
+
+SpacecraftTimeReferenceStatus ::= ENUMERATED {
+    not-supported,
+    x1-rate,
+    x2-rate,
+    x4-rate,
+    x8-rate,
+    x16-rate,
+    x32-rate,
+    x64-rate,
+    x128-rate,
+    x256-rate
+}
+TM-PacketTypeValue ::= NULL
 
 END
