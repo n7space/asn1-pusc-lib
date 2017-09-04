@@ -7,24 +7,130 @@
         {
           "name": "Packet Types",
           "asn1Files": ["PacketTypes.asn1"],
-          "imports"
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "type": "ApplicationProcess-ID"
+            },
+            {
+              "from": "PacketErrorControl",
+              "type": "PlaceholderType"
+            }
+          ]
         },
         {
           "name": "TC Packet",
-          "asn1Files": ["TC-Packet.asn1"]
+          "asn1Files": ["TC-Packet.asn1"],
+          "imports": [
+            {
+              "from": "PacketTypes",
+              "type": "CCSDS-Packet"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "PacketDataField"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "Packet-ID"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "MessageType-ID"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "PacketPrimaryHeader"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "UserDataField"
+            },
+            {
+              "from": "ApplicationProcessUser",
+              "type": "ApplicationProcessUser-ID"
+            },
+            {
+              "from": "TC-Payload",
+              "type": "TC-Data"
+            }
+          ]
         },
         {
           "name": "TM Packet",
-          "asn1Files": ["TM-Packet.asn1"]
+          "asn1Files": ["TM-Packet.asn1"],
+          "imports": [
+            {
+              "from": "PacketTypes",
+              "type": "CCSDS-Packet"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "PacketDataField"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "Packet-ID"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "MessageType-ID"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "PacketPrimaryHeader"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "UserDataField"
+            },
+            {
+              "from": "ApplicationProcessUser",
+              "type": "ApplicationProcessUser-ID"
+            },
+            {
+              "from": "BasicTypes",
+              "type": "AbsoluteTime"
+            },
+            {
+              "from": "TM-Payload",
+              "type": "TM-Data"
+            }
+          ]
         }
       ]
     },
     {
       "name": "Mission Objects",
       "elements": [
-          {
-            "name": "TM"
-          }
+        {
+          "name": "Application Process User",
+          "asn1Files": ["ApplicationProcessUser.asn1"]
+        },
+        {
+          "name": "Packet Error Control",
+          "asn1Files": ["PacketErrorControl.asn1"]
+        },
+        {
+          "name": "TM Payload",
+          "asn1Files": ["TM-Payload.asn1"],
+          "imports": [
+            {
+              "from": "PacketTypes",
+              "type": "MessageType-ID"
+            }
+          ]
+        },
+        {
+          "name": "TC Payload",
+          "asn1Files": ["TC-Payload.asn1"],
+          "imports": [
+            {
+              "from": "PacketTypes",
+              "type": "MessageType-ID"
+            }
+          ]
+        }
       ]
     }
   ]

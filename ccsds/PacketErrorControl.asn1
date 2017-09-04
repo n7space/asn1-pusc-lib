@@ -24,6 +24,7 @@
 PacketErrorControl DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 
+PlaceholderType ::= NULL
 --Modify the acn file to enable/disable Packet Error Control
 
 END

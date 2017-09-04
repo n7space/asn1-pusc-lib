@@ -27,7 +27,6 @@ IMPORTS
     CCSDS-Packet,
     PacketDataField,
     Packet-ID,
-    PacketSequenceControl,
     MessageType-ID,
     PacketPrimaryHeader,
     UserDataField FROM PacketTypes
