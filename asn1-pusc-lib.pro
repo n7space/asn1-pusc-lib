@@ -52,8 +52,6 @@ DISTFILES += \
     ccsds/meta.json \
     ccsds/ApplicationProcessUser.acn \
     ccsds/ApplicationProcessUser.asn1 \
-    ccsds/PacketErrorControl.acn \
-    ccsds/PacketErrorControl.asn1 \
     ccsds/TM-Payload.asn1 \
     ccsds/TM-Payload.acn \
     ccsds/TC-Payload.acn \

@@ -23,6 +23,14 @@
 
 PacketTypes DEFINITIONS ::= BEGIN
 
+-------------------------------------
+--choose size of CONSTANT below
+----> ERROR-CONTROL-ENABLED for enabled error contol
+----> ERROR-CONTROL-DISABLED for disabled error control
+
+CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-ENABLED
+--CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-DISABLED
+
 CONSTANT ERROR-CONTROL-ENABLED ::= 16
 CONSTANT ERROR-CONTROL-DISABLED ::= 0
 
