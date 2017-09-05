@@ -36,8 +36,6 @@ CONSTANT ERROR-CONTROL-DISABLED ::= 0
 
 PacketVersionNumberValue [pattern '000'B]
 
-SecondaryHeaderFlag [false-value '0'B]
-
 PacketSequenceControl []
 {
     sequenceFlags [pattern '11'B],

@@ -45,11 +45,9 @@ PacketVersionNumberValue ::= NULL
 Packet-ID {PacketType} ::= SEQUENCE
 {
     packetType PacketType,
-    secondaryHeaderFlag BOOLEAN,
+--! secondaryHeaderFlag BOOLEAN, --! moved to ACN files
     applicationProcess-ID ApplicationProcess-ID
 }
-
-SecondaryHeaderFlag ::= BOOLEAN
 
 PacketSequenceControl ::= SEQUENCE
 {
@@ -62,7 +60,7 @@ PacketDataLength ::= INTEGER (0 .. 65535)
 
 PacketDataField {SecondaryHeaderField, UserDataField} ::= SEQUENCE
 {
-    packetSecondaryHeader SecondaryHeaderField,
+    packetSecondaryHeader SecondaryHeaderField OPTIONAL,
     userData UserDataField
 }
 

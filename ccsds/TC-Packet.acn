@@ -27,7 +27,7 @@ TC-Packet DEFINITIONS ::= BEGIN
 TC-CCSDS-Packet []
 {
     packetPrimaryHeader [],
-    packetDataField []
+    packetDataField <packetPrimaryHeader.packet-ID.secondaryHeaderFlag> []
 }
 
 TC-PacketPrimaryHeader []
@@ -38,23 +38,23 @@ TC-PacketPrimaryHeader []
     packetDataLength []
 }
 
-TC-PacketDataField []
+TC-PacketDataField <BOOLEAN:secondaryHeaderFlag> []
 {
-    packetSecondaryHeader [],
+    packetSecondaryHeader [present-when secondaryHeaderFlag],
     userData [align-to-next byte]
 }
 
 TC-UserDataField <INTEGER:service, INTEGER:message> []
 {
     data <service, message> [],
-    --spare [],
+--! spare [],
     packetErrorContol []
 }
 
 TC-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag [],
+    secondaryHeaderFlag BOOLEAN [true-value '1'B],
     applicationProcess-ID []
 }
 
@@ -64,7 +64,7 @@ TC-PacketSecondaryHeader []
     acknowledgementFlags [],
     messageType-ID [],
     source-ID [size 16]
-    --spare []
+--! spare []
 }
 
 AcknowledgementFlags []
