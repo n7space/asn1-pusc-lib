@@ -53,7 +53,7 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
     messageTimeCounter INTEGER (0 .. 65535),
     destination-ID ApplicationProcessUser-ID,
     time AbsoluteTime
-    --spare NULL        --defined as align-to-next in acn file
+--! spare NULL        --! defined as align-to-next in acn file
 }
 
 SpacecraftTimeReferenceStatus ::= ENUMERATED {

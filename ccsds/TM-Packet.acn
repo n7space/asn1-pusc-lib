@@ -47,7 +47,7 @@ TM-PacketDataField []
 TM-UserDataField <INTEGER:service, INTEGER:message> []
 {
     data <service, message> [],
-    --spare [],
+--! spare [],
     packetErrorContol []
 }
 
@@ -66,7 +66,7 @@ TM-PacketSecondaryHeader []
     messageTimeCounter [size 16, encoding pos-int],
     destination-ID [size 16],
     time []
-    --spare NULL        --defined as align-to-next in acn file
+--! spare NULL        --! defined as align-to-next in acn file
 }
 
 TM-PacketTypeValue [pattern '0'B]

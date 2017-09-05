@@ -32,7 +32,6 @@ CCSDS-Packet {PacketPrimaryHeader, PacketDataField} ::= SEQUENCE
     packetDataField PacketDataField
 }
 
---Packet primary header--
 PacketPrimaryHeader {Packet-ID} ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
@@ -59,9 +58,8 @@ PacketSequenceControl ::= SEQUENCE
 }
 
 PacketDataLength ::= INTEGER (0 .. 65535)
--------------------------
 
---Packet data field--
+
 PacketDataField {SecondaryHeaderField, UserDataField} ::= SEQUENCE
 {
     packetSecondaryHeader SecondaryHeaderField,
@@ -71,7 +69,7 @@ PacketDataField {SecondaryHeaderField, UserDataField} ::= SEQUENCE
 UserDataField {Data} ::= SEQUENCE
 {
     data Data,
-    --spare NULL,   --defined as align-to-next acn encoding
+--! spare NULL,   --! defined as align-to-next acn encoding
     packetErrorContol PacketErrorControl
 }
 
