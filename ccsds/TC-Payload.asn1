@@ -29,7 +29,7 @@ IMPORTS
 
 TC-Data ::= CHOICE --TODO
 {
-    tm-17-1 TC-17-1-PerformAnAreYouAliveConnectionTest --TODO
+    tc-17-1 TC-17-1-PerformAnAreYouAliveConnectionTest --TODO
 }
 
 END
