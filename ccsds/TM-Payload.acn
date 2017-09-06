@@ -23,9 +23,9 @@
 
 TM-Payload DEFINITIONS ::= BEGIN
 
-TM-Data <INTEGER:service, INTEGER:message, INTEGER:secondaryHeaderFlag> []
+TM-Data <INTEGER:service, INTEGER:message> []
 {
-    tm-17-2 [present-when service==17 message==2 secondaryHeaderFlag==1] --TODO
+    tm-17-2 [present-when service==17 message==2] --TODO
 }
 
 

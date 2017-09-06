@@ -23,9 +23,9 @@
 
 TC-Payload DEFINITIONS ::= BEGIN
 
-TC-Data <INTEGER:service, INTEGER:message, INTEGER:secondaryHeaderFlag> []
+TC-Data <INTEGER:service, INTEGER:message> []
 {
-    tc-17-1 [present-when service==17 message==1 secondaryHeaderFlag==1] --TODO
+    tc-17-1 [present-when service==17 message==1] --TODO
 }
 
 TC-NoHeaderData []

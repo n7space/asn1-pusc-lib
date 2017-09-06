@@ -45,8 +45,7 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
     {
         secondaryHeader [],
         userData <secondaryHeader.messageType-ID.serviceType-ID,
-                  secondaryHeader.messageType-ID.messageSubtype-ID,
-                  secondaryHeaderFlag> []
+                  secondaryHeader.messageType-ID.messageSubtype-ID> []
     },
     dataNoSecondaryHeader [present-when secondaryHeaderFlag==0]
     {
@@ -54,9 +53,9 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
     }
 }
 
-TC-UserDataField <INTEGER:service, INTEGER:message, INTEGER:secondaryHeaderFlag> []
+TC-UserDataField <INTEGER:service, INTEGER:message> []
 {
-    data <service, message, secondaryHeaderFlag> [],
+    data <service, message> [],
 --! spare [],
     packetErrorContol []
 }
