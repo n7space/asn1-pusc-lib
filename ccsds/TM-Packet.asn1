@@ -59,18 +59,7 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
 --! spare NULL        --! defined as align-to-next in acn file
 }
 
-SpacecraftTimeReferenceStatus ::= ENUMERATED {
-    not-supported,
-    x1-rate,
-    x2-rate,
-    x4-rate,
-    x8-rate,
-    x16-rate,
-    x32-rate,
-    x64-rate,
-    x128-rate,
-    x256-rate
-}
+SpacecraftTimeReferenceStatus ::= INTEGER (0 ..15)
 TM-PacketTypeValue ::= NULL
 
 END

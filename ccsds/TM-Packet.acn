@@ -80,6 +80,8 @@ TM-PacketSecondaryHeader []
 --! spare NULL        --! defined as align-to-next in acn file
 }
 
+SpacecraftTimeReferenceStatus [size 4, encoding pos-int]
+
 TM-PacketTypeValue [pattern '0'B]
 
 END
