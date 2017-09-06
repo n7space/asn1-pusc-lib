@@ -42,18 +42,19 @@ PacketSequenceControl []
     packetSequenceCountOrName [size 14, encoding pos-int]
 }
 
+SecondaryHeaderFlag [size 1, encoding pos-int]
+
 PacketDataLength [size 16, encoding pos-int]
 
 PacketErrorControl [size PACKET-ERROR-CONTROL, align-to-next byte]
 
 MessageType-ID []
 {
-    serviceType-ID [size 8],
-    messageSubtype-ID [size 8]
+    serviceType-ID ServiceType-ID  [],
+    messageSubtype-ID MessageSubtype-ID  []
 }
 
-ServiceType-ID [size 8, encoding pos-int]
-MessageSubtype-ID [size 8, encoding pos-int]
-
+ServiceType-ID  [size 8, encoding pos-int]
+MessageSubtype-ID  [size 8, encoding pos-int]
 
 END

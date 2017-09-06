@@ -32,4 +32,6 @@ TM-Data ::= CHOICE --TODO
     tm-17-2 TM-17-2-AreYouAliveConnectionTestReport --TODO
 }
 
+TM-NoHeaderData ::= NULL --TODO
+
 END

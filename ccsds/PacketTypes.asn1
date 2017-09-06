@@ -45,9 +45,11 @@ PacketVersionNumberValue ::= NULL
 Packet-ID {PacketType} ::= SEQUENCE
 {
     packetType PacketType,
---! secondaryHeaderFlag BOOLEAN, --! moved to ACN files
+--! secondaryHeaderFlag INTEGER (0 .. 1), --! moved to ACN
     applicationProcess-ID ApplicationProcess-ID
 }
+
+SecondaryHeaderFlag ::= INTEGER (0 .. 1)
 
 PacketSequenceControl ::= SEQUENCE
 {
@@ -58,10 +60,17 @@ PacketSequenceControl ::= SEQUENCE
 PacketDataLength ::= INTEGER (0 .. 65535)
 
 
-PacketDataField {SecondaryHeaderField, UserDataField} ::= SEQUENCE
+PacketDataField {SecondaryHeaderField, UserDataField, StandaloneUserDataField} ::= CHOICE
 {
-    packetSecondaryHeader SecondaryHeaderField OPTIONAL,
-    userData UserDataField
+    dataWithSecondaryHeader SEQUENCE
+    {
+        secondaryHeader SecondaryHeaderField,
+        userData UserDataField
+    },
+    dataNoSecondaryHeader SEQUENCE
+    {
+        userData StandaloneUserDataField
+    }
 }
 
 UserDataField {Data} ::= SEQUENCE
@@ -73,14 +82,13 @@ UserDataField {Data} ::= SEQUENCE
 
 PacketErrorControl ::= BIT STRING (SIZE(16))
 
------------------------------
 MessageType-ID ::= SEQUENCE
 {
-    serviceType-ID ServiceType-ID,
-    messageSubtype-ID MessageSubtype-ID
+--! ServiceType-ID INTEGER (1 .. 255),
+--! MessageSubtype-ID INTEGER (1 .. 255) --! moved to ACN
 }
 
-ServiceType-ID ::= INTEGER (0 .. 127)
+ServiceType-ID ::= INTEGER (1 .. 255)
 MessageSubtype-ID ::= INTEGER (1 .. 255)
 
 END

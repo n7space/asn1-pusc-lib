@@ -38,15 +38,32 @@ TC-PacketPrimaryHeader []
     packetDataLength []
 }
 
-TC-PacketDataField <BOOLEAN:secondaryHeaderFlag> []
+TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 {
-    packetSecondaryHeader [present-when secondaryHeaderFlag],
-    userData [align-to-next byte]
+--! packetSecondaryHeader [present-when secondaryHeaderFlag],
+    dataWithSecondaryHeader [present-when secondaryHeaderFlag==1]
+    {
+        secondaryHeader [],
+        userData <secondaryHeader.messageType-ID.serviceType-ID,
+                  secondaryHeader.messageType-ID.messageSubtype-ID,
+                  secondaryHeaderFlag> []
+    },
+    dataNoSecondaryHeader [present-when secondaryHeaderFlag==0]
+    {
+        userData []
+    }
 }
 
-TC-UserDataField <INTEGER:service, INTEGER:message> []
+TC-UserDataField <INTEGER:service, INTEGER:message, INTEGER:secondaryHeaderFlag> []
 {
-    data <service, message> [],
+    data <service, message, secondaryHeaderFlag> [],
+--! spare [],
+    packetErrorContol []
+}
+
+TC-NoHeaderUserDataField []
+{
+    data [],
 --! spare [],
     packetErrorContol []
 }
@@ -54,7 +71,7 @@ TC-UserDataField <INTEGER:service, INTEGER:message> []
 TC-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag BOOLEAN [true-value '1'B],
+    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
     applicationProcess-ID []
 }
 
@@ -76,7 +93,5 @@ AcknowledgementFlags []
 }
 
 TC-PacketTypeValue [pattern '1'B]
-
-
 
 END

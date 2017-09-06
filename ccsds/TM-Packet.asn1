@@ -29,19 +29,22 @@ IMPORTS
     Packet-ID,
     MessageType-ID,
     PacketPrimaryHeader,
-    UserDataField FROM PacketTypes
+    UserDataField,
+    SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcessUser-ID FROM ApplicationProcessUser
     AbsoluteTime FROM BasicTypes
-    TM-Data FROM TM-Payload;
+    TM-Data, TM-NoHeaderData FROM TM-Payload;
 
 
 TM-CCSDS-Packet ::= CCSDS-Packet {TM-PacketPrimaryHeader, TM-PacketDataField}
 
 TM-PacketPrimaryHeader ::= PacketPrimaryHeader {TM-Packet-ID}
 
-TM-PacketDataField ::= PacketDataField {TM-PacketSecondaryHeader, TM-UserDataField}
+TM-PacketDataField ::= PacketDataField {TM-PacketSecondaryHeader, TM-UserDataField, TM-NoHeaderUserDataField}
 
 TM-UserDataField ::= UserDataField {TM-Data}
+
+TM-NoHeaderUserDataField ::= UserDataField {TM-NoHeaderData}
 
 TM-Packet-ID ::= Packet-ID {TM-PacketTypeValue}
 

@@ -32,4 +32,5 @@ TC-Data ::= CHOICE --TODO
     tc-17-1 TC-17-1-PerformAnAreYouAliveConnectionTest --TODO
 }
 
+TC-NoHeaderData ::= NULL --TODO
 END
