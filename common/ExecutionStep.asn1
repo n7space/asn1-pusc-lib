@@ -23,10 +23,7 @@
 
 ExecutionStep DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
---IMPORTS
---    PUSC-UINT FROM BasicTypes;
 
---ExecutionStep-ID ::= PUSC-UINT --TODO
 ExecutionStep-ID ::= INTEGER ((1)) --TODO
 
 END

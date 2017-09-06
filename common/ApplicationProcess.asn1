@@ -23,10 +23,7 @@
 
 ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
---IMPORTS
---   PUSC-UINT FROM BasicTypes;     --needs to be added to JSON file if uncommented
 
---ApplicationProcess-ID ::= PUSC-UINT (0 .. 2047)
 ApplicationProcess-ID ::= INTEGER (0 .. 2047)
 
 END

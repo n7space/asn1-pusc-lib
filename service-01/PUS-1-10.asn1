@@ -33,5 +33,4 @@ TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE
     failureNotice RoutingFailureNotice
 }
 
-
 END

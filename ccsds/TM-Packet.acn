@@ -76,7 +76,7 @@ TM-PacketSecondaryHeader []
     messageTimeCounter [size 16, encoding pos-int],
     destination-ID [size 16],
     time []
---! spare NULL        --! defined as align-to-next in acn file
+--! spare NULL         defined as align-to-next in acn file
 }
 
 SpacecraftTimeReferenceStatus [size 4, encoding pos-int]

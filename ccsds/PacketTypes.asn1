@@ -45,7 +45,7 @@ PacketVersionNumberValue ::= NULL
 Packet-ID {PacketType} ::= SEQUENCE
 {
     packetType PacketType,
---! secondaryHeaderFlag INTEGER (0 .. 1), --! moved to ACN
+--! secondaryHeaderFlag INTEGER (0 .. 1),  moved to ACN
     applicationProcess-ID ApplicationProcess-ID
 }
 
@@ -76,7 +76,7 @@ PacketDataField {SecondaryHeaderField, UserDataField, StandaloneUserDataField} :
 UserDataField {Data} ::= SEQUENCE
 {
     data Data,
---! spare NULL,   --! defined as align-to-next acn encoding
+--! spare NULL,    defined as align-to-next acn encoding
     packetErrorContol PacketErrorControl
 }
 
@@ -85,7 +85,7 @@ PacketErrorControl ::= BIT STRING (SIZE(16))
 MessageType-ID ::= SEQUENCE
 {
 --! ServiceType-ID INTEGER (1 .. 255),
---! MessageSubtype-ID INTEGER (1 .. 255) --! moved to ACN
+--! MessageSubtype-ID INTEGER (1 .. 255)  moved to ACN
 }
 
 ServiceType-ID ::= INTEGER (1 .. 255)
