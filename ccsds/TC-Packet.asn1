@@ -44,7 +44,7 @@ TC-UserDataField ::= UserDataField {TC-Data}
 
 TC-NoHeaderUserDataField ::= UserDataField {TC-NoHeaderData}
 
-TC-Packet-ID ::= Packet-ID {TC-PacketTypeValue}
+TC-Packet-ID ::= Packet-ID {TC-PacketType}
 
 TC-PacketSecondaryHeader ::=  SEQUENCE
 {
@@ -63,6 +63,6 @@ AcknowledgementFlags ::= SEQUENCE
     ackAcceptance BOOLEAN
 }
 
-TC-PacketTypeValue ::= NULL
+TC-PacketType ::= NULL
 
 END

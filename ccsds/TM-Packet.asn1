@@ -46,7 +46,7 @@ TM-UserDataField ::= UserDataField {TM-Data}
 
 TM-NoHeaderUserDataField ::= UserDataField {TM-NoHeaderData}
 
-TM-Packet-ID ::= Packet-ID {TM-PacketTypeValue}
+TM-Packet-ID ::= Packet-ID {TM-PacketType}
 
 TM-PacketSecondaryHeader ::=  SEQUENCE
 {
@@ -60,6 +60,6 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
 }
 
 SpacecraftTimeReferenceStatus ::= INTEGER (0 ..15)
-TM-PacketTypeValue ::= NULL
+TM-PacketType ::= NULL
 
 END

@@ -82,6 +82,6 @@ TM-PacketSecondaryHeader []
 
 SpacecraftTimeReferenceStatus [size 4, encoding pos-int]
 
-TM-PacketTypeValue [pattern '0'B]
+TM-PacketType [pattern '0'B]
 
 END

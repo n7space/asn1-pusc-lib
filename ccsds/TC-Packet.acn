@@ -92,6 +92,6 @@ AcknowledgementFlags []
     ackAcceptance [true-value '1'B]
 }
 
-TC-PacketTypeValue [pattern '1'B]
+TC-PacketType [pattern '1'B]
 
 END
