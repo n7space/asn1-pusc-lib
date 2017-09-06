@@ -11,16 +11,13 @@
             {
               "from": "ApplicationProcess",
               "type": "ApplicationProcess-ID"
-            },
-            {
-              "from": "PacketErrorControl",
-              "type": "PlaceholderType"
             }
           ]
         },
         {
           "name": "TC Packet",
           "asn1Files": ["TC-Packet.asn1"],
+          "requires": ["Packet Types"],
           "imports": [
             {
               "from": "PacketTypes",
@@ -45,6 +42,10 @@
             {
               "from": "PacketTypes",
               "type": "UserDataField"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "SecondaryHeaderFlag"
             },
             {
               "from": "ApplicationProcessUser",
@@ -53,12 +54,17 @@
             {
               "from": "TC-Payload",
               "type": "TC-Data"
+            },
+            {
+              "from": "TC-Payload",
+              "type": "TC-NoHeaderData"
             }
           ]
         },
         {
           "name": "TM Packet",
           "asn1Files": ["TM-Packet.asn1"],
+          "requires": ["Packet Types"],
           "imports": [
             {
               "from": "PacketTypes",
@@ -83,6 +89,10 @@
             {
               "from": "PacketTypes",
               "type": "UserDataField"
+            },
+            {
+              "from": "PacketTypes",
+              "type": "SecondaryHeaderFlag"
             },
             {
               "from": "ApplicationProcessUser",
@@ -95,6 +105,10 @@
             {
               "from": "TM-Payload",
               "type": "TM-Data"
+            },
+            {
+              "from": "TM-Payload",
+              "type": "TM-NoHeaderData"
             }
           ]
         }
