@@ -79,7 +79,7 @@ TC-PacketSecondaryHeader []
     tcPacketPusVersionNumber [],
     acknowledgementFlags [],
     messageType-ID [],
-    source-ID [size 16]
+    source-ID [size 16, encoding pos-int]
 --! spare []
 }
 
