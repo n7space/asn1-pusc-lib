@@ -29,11 +29,4 @@ TM-1-8-FailedCompletionOfExecutionVerificationReport []
     failureNotice []
 }
 
-ExecutionCompletionFailureNotice []
-{
-    code ErrorCodes.ExecutionCompletionFailureCode[],
-    data [determinant code]
-}
-
-
 END

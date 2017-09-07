@@ -25,7 +25,7 @@ PUS-1-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request-ID
-    RoutingFailureCode, RoutingFailureData FROM ErrorCodes;
+    RoutingFailureNotice FROM ErrorCodes;
 
 TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE
 {
@@ -33,10 +33,5 @@ TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE
     failureNotice RoutingFailureNotice
 }
 
-RoutingFailureNotice ::= SEQUENCE
-{
-    --code RoutingFailureCode,     --needs to be declared inside acn file (asn1scc restriction)
-    data RoutingFailureData
-}
 
 END

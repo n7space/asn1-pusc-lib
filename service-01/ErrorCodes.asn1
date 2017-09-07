@@ -23,47 +23,57 @@
 
 ErrorCodes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
---IMPORTS
---    PUSC-UINT FROM BasicTypes;
 
--- FailureNotice types
---FailureCode ::= PUSC-UINT
 AcceptanceFailureCode ::= ENUMERATED {error1} --TODO
-
-AcceptanceFailureData ::= CHOICE --TODO
+AcceptanceFailureNotice ::= SEQUENCE --TODO
 {
-    error1 BIT STRING (SIZE(1))
+--! code RoutingFailureCode,     moved to ACN
+    data CHOICE --TODO
+    {
+        error1 BIT STRING (SIZE(1))
+    }
 }
 
 
 ExecutionStartFailureCode ::= ENUMERATED {error1} --TODO
-
-ExecutionStartFailureData ::= CHOICE --TODO
+ExecutionStartFailureNotice ::= SEQUENCE --TODO
 {
-    error1 BIT STRING (SIZE(1))
+--! code RoutingFailureCode,     moved to ACN
+    data CHOICE --TODO
+    {
+        error1 BIT STRING (SIZE(1))
+    }
 }
 
 ExecutionProgressFailureCode ::= ENUMERATED {error1} --TODO
-
-ExecutionProgressFailureData ::= CHOICE --TODO
+ExecutionProgressFailureNotice::= SEQUENCE --TODO
 {
-    error1 BIT STRING (SIZE(1))
+--! code RoutingFailureCode,     moved to ACN
+    data CHOICE --TODO
+    {
+        error1 BIT STRING (SIZE(1))
+    }
 }
 
 ExecutionCompletionFailureCode ::= ENUMERATED {error1} --TODO
-
-ExecutionCompletionFailureData ::= CHOICE --TODO
+ExecutionCompletionFailureNotice ::= SEQUENCE --TODO
 {
-    error1 BIT STRING (SIZE(1))
+--! code RoutingFailureCode,     moved to ACN
+    data CHOICE --TODO
+    {
+        error1 BIT STRING (SIZE(1))
+    }
 }
 
 
 RoutingFailureCode ::= ENUMERATED {error1} --TODO
-
-RoutingFailureData ::= CHOICE --TODO
+RoutingFailureNotice ::= SEQUENCE --TODO
 {
-    error1 BIT STRING (SIZE(1))
+--! code RoutingFailureCode,     moved to ACN
+    data CHOICE --TODO
+    {
+        error1 BIT STRING (SIZE(1))
+    }
 }
-
 
 END
