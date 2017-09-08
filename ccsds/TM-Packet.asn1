@@ -27,32 +27,30 @@ IMPORTS
     CCSDS-Packet,
     PacketDataField,
     Packet-ID,
-    MessageType-ID,
-    PacketPrimaryHeader,
-    UserDataField,
+    ServiceType-ID,
+    MessageSubtype-ID,
+    DataWithSecondaryHeader,
+    DataNoSecondaryHeader,
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcessUser-ID FROM ApplicationProcessUser
-    AbsoluteTime FROM BasicTypes
-    TM-Data, TM-NoHeaderData FROM TM-Payload;
+    TM-Payload, TM-NoHeaderPayload FROM TM-Payload
+    AbsoluteTime FROM BasicTypes;
 
+TM-CCSDS-Packet ::= CCSDS-Packet {TM-Packet-ID, TM-PacketDataField}
 
-TM-CCSDS-Packet ::= CCSDS-Packet {TM-PacketPrimaryHeader, TM-PacketDataField}
+TM-DataNoSecondaryHeader ::= DataNoSecondaryHeader {TM-NoHeaderPayload}
 
-TM-PacketPrimaryHeader ::= PacketPrimaryHeader {TM-Packet-ID}
-
-TM-PacketDataField ::= PacketDataField {TM-PacketSecondaryHeader, TM-UserDataField, TM-NoHeaderUserDataField}
-
-TM-UserDataField ::= UserDataField {TM-Data}
-
-TM-NoHeaderUserDataField ::= UserDataField {TM-NoHeaderData}
+TM-DataWithSecondaryHeader ::= DataWithSecondaryHeader {TM-PacketSecondaryHeader, TM-Payload}
 
 TM-Packet-ID ::= Packet-ID {TM-PacketType}
 
+TM-PacketDataField ::= PacketDataField {TM-DataWithSecondaryHeader, TM-DataNoSecondaryHeader}
 TM-PacketSecondaryHeader ::=  SEQUENCE
 {
     tmPacketPusVersionNumber NULL,
     spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus,
-    messageType-ID MessageType-ID,
+--! serviceType-ID ServiceType-ID,              moved to ACN
+--! messageSubtype-ID MessageSubtype-ID,        moved to ACN
     messageTimeCounter INTEGER (0 .. 65535),
     destination-ID ApplicationProcessUser-ID,
     time AbsoluteTime

@@ -24,13 +24,13 @@
 Request-ID DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PacketVersionNumberValue, PacketSequenceControl FROM PacketTypes
-    TC-Packet-ID FROM TC-Packet;
+    PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
+    TC-PacketType FROM TC-Packet;
 
 Request-ID ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID TC-Packet-ID,
+    packet-ID Packet-ID {TC-PacketType},
     packetSequenceControl PacketSequenceControl
 }
 

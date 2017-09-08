@@ -26,45 +26,40 @@ TM-Packet DEFINITIONS ::= BEGIN
 
 TM-CCSDS-Packet []
 {
-    packetPrimaryHeader [],
-    packetDataField <packetPrimaryHeader.packet-ID.secondaryHeaderFlag> []
-}
-
-TM-PacketPrimaryHeader []
-{
     packetVersionNumber [],
     packet-ID [],
     packetSequenceControl [],
-    packetDataLength []
+    packetDataLength [],
+    packetDataField <packet-ID.secondaryHeaderFlag> []
 }
+
 
 TM-PacketDataField <INTEGER:secondaryHeaderFlag> []
 {
---! packetSecondaryHeader [present-when secondaryHeaderFlag],
-    dataWithSecondaryHeader [present-when secondaryHeaderFlag==1]
-    {
-        secondaryHeader [],
-        userData <secondaryHeader.messageType-ID.serviceType-ID,
-                  secondaryHeader.messageType-ID.messageSubtype-ID> []
-    },
+    dataWithSecondaryHeader [present-when secondaryHeaderFlag==1],
     dataNoSecondaryHeader [present-when secondaryHeaderFlag==0]
-    {
-        userData []
-    }
 }
 
-
-TM-UserDataField <INTEGER:service, INTEGER:message> []
+TM-DataWithSecondaryHeader []
 {
-    data <service, message> [],
+    secondaryHeader [],
+    data <secondaryHeader.serviceType-ID,
+          secondaryHeader.messageSubtype-ID> [align-to-next byte],
 --! spare [],
-    packetErrorContol []
+    packetErrorContol [align-to-next byte]
+}
+
+TM-DataNoSecondaryHeader []
+{
+    data [],
+--! spare [],
+    packetErrorContol [align-to-next byte]
 }
 
 TM-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [size 1, encoding pos-int],
+    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
     applicationProcess-ID []
 }
 
@@ -72,7 +67,8 @@ TM-PacketSecondaryHeader []
 {
     tmPacketPusVersionNumber [],
     spacecraftTimeReferenceStatus [size 4, encoding pos-int],
-    messageType-ID [],
+    serviceType-ID PacketTypes.ServiceType-ID [],
+    messageSubtype-ID PacketTypes.MessageSubtype-ID [],
     messageTimeCounter [size 16, encoding pos-int],
     destination-ID [size 16, encoding pos-int],
     time []

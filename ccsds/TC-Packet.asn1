@@ -27,30 +27,30 @@ IMPORTS
     CCSDS-Packet,
     PacketDataField,
     Packet-ID,
-    MessageType-ID,
-    PacketPrimaryHeader,
-    UserDataField,
+    ServiceType-ID,
+    MessageSubtype-ID,
+    DataWithSecondaryHeader,
+    DataNoSecondaryHeader,
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcessUser-ID FROM ApplicationProcessUser
-    TC-Data, TC-NoHeaderData FROM TC-Payload;
+    TC-Payload, TC-NoHeaderPayload FROM TC-Payload;
 
-TC-CCSDS-Packet ::= CCSDS-Packet {TC-PacketPrimaryHeader, TC-PacketDataField}
+TC-CCSDS-Packet ::= CCSDS-Packet {TC-Packet-ID, TC-PacketDataField}
 
-TC-PacketPrimaryHeader ::= PacketPrimaryHeader {TC-Packet-ID}
+TC-DataNoSecondaryHeader ::= DataNoSecondaryHeader {TC-NoHeaderPayload}
 
-TC-PacketDataField ::= PacketDataField {TC-PacketSecondaryHeader, TC-UserDataField, TC-NoHeaderUserDataField}
-
-TC-UserDataField ::= UserDataField {TC-Data}
-
-TC-NoHeaderUserDataField ::= UserDataField {TC-NoHeaderData}
+TC-DataWithSecondaryHeader ::= DataWithSecondaryHeader {TC-PacketSecondaryHeader, TC-Payload}
 
 TC-Packet-ID ::= Packet-ID {TC-PacketType}
+
+TC-PacketDataField ::= PacketDataField {TC-DataWithSecondaryHeader, TC-DataNoSecondaryHeader}
 
 TC-PacketSecondaryHeader ::=  SEQUENCE
 {
     tcPacketPusVersionNumber NULL,
     acknowledgementFlags AcknowledgementFlags,
-    messageType-ID MessageType-ID,
+--! serviceType-ID ServiceType-ID,              moved to ACN
+--! messageSubtype-ID MessageSubtype-ID,        moved to ACN
     source-ID ApplicationProcessUser-ID
 --! spare NULL         defined as align-to-next in acn file
 }

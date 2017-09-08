@@ -26,18 +26,13 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-CCSDS-Packet {PacketPrimaryHeader, PacketDataField} ::= SEQUENCE
-{
-    packetPrimaryHeader PacketPrimaryHeader,
-    packetDataField PacketDataField
-}
-
-PacketPrimaryHeader {Packet-ID} ::= SEQUENCE
+CCSDS-Packet {Packet-ID, PacketDataField} ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
     packet-ID Packet-ID,
     packetSequenceControl PacketSequenceControl,
-    packetDataLength PacketDataLength
+    packetDataLength PacketDataLength,
+    packetDataField PacketDataField
 }
 
 PacketVersionNumberValue ::= NULL
@@ -59,34 +54,28 @@ PacketSequenceControl ::= SEQUENCE
 
 PacketDataLength ::= INTEGER (0 .. 65535)
 
-
-PacketDataField {SecondaryHeaderField, UserDataField, StandaloneUserDataField} ::= CHOICE
+PacketDataField {PacketDataWithSecondaryHeader, PacketDataNoSecondaryHeader} ::= CHOICE
 {
-    dataWithSecondaryHeader SEQUENCE
-    {
-        secondaryHeader SecondaryHeaderField,
-        userData UserDataField
-    },
-    dataNoSecondaryHeader SEQUENCE
-    {
-        userData StandaloneUserDataField
-    }
+    dataWithSecondaryHeader PacketDataWithSecondaryHeader,
+    dataNoSecondaryHeader PacketDataNoSecondaryHeader
 }
 
-UserDataField {Data} ::= SEQUENCE
+DataWithSecondaryHeader {SecondaryHeaderField, Payload} ::= SEQUENCE
 {
-    data Data,
+    secondaryHeader SecondaryHeaderField,
+    data Payload,
+--! spare NULL,    defined as align-to-next acn encoding
+    packetErrorContol PacketErrorControl
+}
+
+DataNoSecondaryHeader {Payload} ::= SEQUENCE
+{
+    data Payload,
 --! spare NULL,    defined as align-to-next acn encoding
     packetErrorContol PacketErrorControl
 }
 
 PacketErrorControl ::= BIT STRING (SIZE(16))
-
-MessageType-ID ::= SEQUENCE
-{
---! ServiceType-ID INTEGER (1 .. 255),
---! MessageSubtype-ID INTEGER (1 .. 255)  moved to ACN
-}
 
 ServiceType-ID ::= INTEGER (1 .. 255)
 MessageSubtype-ID ::= INTEGER (1 .. 255)

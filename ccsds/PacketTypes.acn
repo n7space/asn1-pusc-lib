@@ -46,13 +46,7 @@ SecondaryHeaderFlag [size 1, encoding pos-int]
 
 PacketDataLength [size 16, encoding pos-int]
 
-PacketErrorControl [size PACKET-ERROR-CONTROL, align-to-next byte]
-
-MessageType-ID []
-{
-    serviceType-ID ServiceType-ID  [],
-    messageSubtype-ID MessageSubtype-ID  []
-}
+PacketErrorControl [size PACKET-ERROR-CONTROL]
 
 ServiceType-ID  [size 8, encoding pos-int]
 MessageSubtype-ID  [size 8, encoding pos-int]

@@ -24,13 +24,12 @@
 TC-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    MessageType-ID FROM PacketTypes
     TC-17-1-PerformAnAreYouAliveConnectionTest FROM PUS-17-1;
 
-TC-Data ::= CHOICE --TODO
+TC-Payload ::= CHOICE --TODO
 {
     tc-17-1 TC-17-1-PerformAnAreYouAliveConnectionTest --TODO
 }
 
-TC-NoHeaderData ::= NULL --TODO
+TC-NoHeaderPayload ::= NULL --TODO
 END
