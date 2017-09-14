@@ -20,7 +20,7 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "type": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
             }
           ]
         }
