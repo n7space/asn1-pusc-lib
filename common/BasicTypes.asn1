@@ -146,7 +146,8 @@ AbsoluteTime-PFC-0 {P-Field, T-Field} ::= SEQUENCE --PFC-0
     time T-Field
 }
 
-AbsoluteTime ::= CDS-AbsoluteTime-PFC-2
+AbsoluteTime ::= CDS-AbsoluteTime-PFC-2 --TODO
+
 
 CDS-RelativeTime-PFC-2 ::= SEQUENCE
 {
@@ -167,5 +168,5 @@ CUC-RelativeTime-PFC-18 ::= SEQUENCE
     fineTime OCTET STRING (SIZE(4))
 }
 
-RelativeTime ::= CDS-RelativeTime-PFC-2
+RelativeTime ::= CDS-RelativeTime-PFC-2 --TODO
 END
