@@ -41,10 +41,14 @@ then
 fi
 
 printf "\n\nValidating metadata...\n"
-find . -name meta.json -print -exec jsonschema -i {} ${OUT_DIR}/${SCHEMA_FILE} \;
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error validating metadata: : $ret"
-	exit $ret
-fi
+#find . -name meta.json -print -exec jsonschema -i {} ${OUT_DIR}/${SCHEMA_FILE} \;
+find . -name meta.json -print0 | while IFS= read -r -d $'\0' f; do
+	echo "Checking file: ${f}"
+	jsonschema -i "${f}" "${OUT_DIR}/${SCHEMA_FILE}"
+	ret=$?
+	if [ $ret != 0 ]
+	then
+		echo "Error validating metadata: : $ret"
+		exit $ret
+	fi
+done
