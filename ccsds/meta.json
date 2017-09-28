@@ -10,7 +10,7 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "type": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
             }
           ]
         },
@@ -21,43 +21,26 @@
           "imports": [
             {
               "from": "PacketTypes",
-              "type": "CCSDS-Packet"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "PacketDataField"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "Packet-ID"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "MessageType-ID"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "PacketPrimaryHeader"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "UserDataField"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "SecondaryHeaderFlag"
+              "types": [
+                "CCSDS-Packet",
+                "PacketDataField",
+                "Packet-ID",
+                "MessageType-ID",
+                "PacketPrimaryHeader",
+                "UserDataField",
+                "SecondaryHeaderFlag"
+              ]
             },
             {
               "from": "ApplicationProcessUser",
-              "type": "ApplicationProcessUser-ID"
+              "types": ["ApplicationProcessUser-ID"]
             },
             {
               "from": "TC-Payload",
-              "type": "TC-Data"
-            },
-            {
-              "from": "TC-Payload",
-              "type": "TC-NoHeaderData"
+              "types": [
+                "TC-Data",
+                "TC-NoHeaderData"
+              ]
             }
           ]
         },
@@ -68,47 +51,30 @@
           "imports": [
             {
               "from": "PacketTypes",
-              "type": "CCSDS-Packet"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "PacketDataField"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "Packet-ID"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "MessageType-ID"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "PacketPrimaryHeader"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "UserDataField"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "SecondaryHeaderFlag"
+              "types": [
+                "CCSDS-Packet",
+                "PacketDataField",
+                "Packet-ID",
+                "MessageType-ID",
+                "PacketPrimaryHeader",
+                "UserDataField",
+                "SecondaryHeaderFlag"
+              ]
             },
             {
               "from": "ApplicationProcessUser",
-              "type": "ApplicationProcessUser-ID"
+              "types": ["ApplicationProcessUser-ID"]
             },
             {
               "from": "BasicTypes",
-              "type": "AbsoluteTime"
+              "types": ["AbsoluteTime"]
             },
             {
               "from": "TM-Payload",
-              "type": "TM-Data"
-            },
-            {
-              "from": "TM-Payload",
-              "type": "TM-NoHeaderData"
+              "types": [
+                "TM-Data",
+                "TM-NoHeaderData"
+              ]
             }
           ]
         }
@@ -131,7 +97,7 @@
           "imports": [
             {
               "from": "PacketTypes",
-              "type": "MessageType-ID"
+              "types": ["MessageType-ID"]
             }
           ]
         },
@@ -141,7 +107,7 @@
           "imports": [
             {
               "from": "PacketTypes",
-              "type": "MessageType-ID"
+              "types": ["MessageType-ID"]
             }
           ]
         }

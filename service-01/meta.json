@@ -13,15 +13,14 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             },
             {
               "from": "ErrorCodes",
-              "type": "RoutingFailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "RoutingFailureData"
+              "types": [
+                "RoutingFailureCode",
+                "RoutingFailureData"
+              ]
             }
           ],
           "requires": ["Routing verification of a request"]
@@ -40,7 +39,7 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             }
           ],
           "requires": ["Acceptance verification of a request"]
@@ -51,15 +50,14 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": "Request-ID"
             },
             {
               "from": "ErrorCodes",
-              "type": "AcceptanceFailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "AcceptanceFailureData"
+              "types": [
+                "AcceptanceFailureCode",
+                "AcceptanceFailureData"
+              ]
             }
           ],
           "requires": ["Acceptance verification of a request"]
@@ -75,7 +73,7 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             }
           ]
         },
@@ -85,15 +83,14 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             },
             {
               "from": "ErrorCodes",
-              "type": "ExecutionStartFailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "ExecutionStartFailureData"
+              "types": [
+                "ExecutionStartFailureCode",
+                "ExecutionStartFailureData"
+              ]
             }
           ]
         },
@@ -103,11 +100,11 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             },
             {
               "from": "ExecutionStep",
-              "type": "ExecutionStep-ID"
+              "types": ["ExecutionStep-ID"]
             }
           ]
         },
@@ -117,19 +114,18 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": "Request-ID"
             },
             {
               "from": "ErrorCodes",
-              "type": "ExecutionProgressFailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "ExecutionProgressFailureData"
+              "types": [
+                "ExecutionProgressFailureCode",
+                "ExecutionProgressFailureData"
+              ]
             },
             {
               "from": "ExecutionStep",
-              "type": "ExecutionStep-ID"
+              "types": ["ExecutionStep-ID"]
             }
           ]
         },
@@ -139,7 +135,7 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": ["Request-ID"]
             }
           ]
         },
@@ -149,15 +145,14 @@
           "imports": [
             {
               "from": "Request-ID",
-              "type": "Request-ID"
+              "types": "Request-ID"
             },
             {
               "from": "ErrorCodes",
-              "type": "ExecutionCompletionFailureCode"
-            },
-            {
-              "from": "ErrorCodes",
-              "type": "ExecutionCompletionFailureData"
+              "types": [
+                "ExecutionCompletionFailureCode",
+                "ExecutionCompletionFailureData"
+              ]
             }
           ]
         }
@@ -169,19 +164,14 @@
         {
           "name": "Request ID",
           "asn1Files": ["Request-ID.asn1"],
-
           "imports": [
             {
               "from": "PacketTypes",
-              "type": "PacketVersionNumber"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "TC-Packet-ID"
-            },
-            {
-              "from": "PacketTypes",
-              "type": "PacketSequenceControl"
+              "types": [
+                "PacketVersionNumber",
+                "TC-Packet-ID",
+                "PacketSequenceControl"
+              ]
             }
           ]
         },
