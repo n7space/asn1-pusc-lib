@@ -24,7 +24,7 @@
 PUS-1-5 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID
+    Request-ID FROM Request
     ExecutionStep-ID FROM ExecutionStep;
 
 TM-1-5-SuccessfulProgressOfExecutionVerificationReport ::= SEQUENCE

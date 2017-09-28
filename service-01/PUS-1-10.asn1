@@ -24,7 +24,7 @@
 PUS-1-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID
+    Request-ID FROM Request
     RoutingFailureNotice FROM ErrorCodes;
 
 TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE

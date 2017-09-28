@@ -37,8 +37,6 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-01/Request-ID.acn \
-    service-01/Request-ID.asn1 \
     service-09/meta.json \ 
     service-17/meta.json \
     service-17/PUS-17-1.acn \
@@ -55,7 +53,9 @@ DISTFILES += \
     ccsds/TM-Payload.asn1 \
     ccsds/TM-Payload.acn \
     ccsds/TC-Payload.acn \
-    ccsds/TC-Payload.asn1
+    ccsds/TC-Payload.asn1 \
+    service-01/Request.acn \
+    service-01/Request.asn1
 
 
 include(.qmake/handleAsn1AcnBuild.pri)

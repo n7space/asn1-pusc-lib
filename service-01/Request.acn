@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Request-ID DEFINITIONS ::= BEGIN
+Request DEFINITIONS ::= BEGIN
 
 Request-ID []
 {
