@@ -10,20 +10,11 @@
         {
           "name": "Reporting failed routing",
           "asn1Files": ["PUS-1-10.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": ["Request-ID"]
-            },
-            {
-              "from": "ErrorCodes",
-              "types": [
-                "RoutingFailureCode",
-                "RoutingFailureData"
-              ]
-            }
-          ],
-          "requires": ["Routing verification of a request"]
+          "requires": [
+            "Request",
+            "ErrorCodes",
+            "Routing verification of a request"
+          ]
         }
       ]
     },
@@ -36,31 +27,19 @@
         {
           "name": "Reporting successful acceptance",
           "asn1Files": ["PUS-1-1.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": ["Request-ID"]
-            }
-          ],
-          "requires": ["Acceptance verification of a request"]
+          "requires": [
+            "Request",
+            "Acceptance verification of a request"
+          ]
         },
         {
           "name": "Reporting failed acceptance",
           "asn1Files": ["PUS-1-2.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": "Request-ID"
-            },
-            {
-              "from": "ErrorCodes",
-              "types": [
-                "AcceptanceFailureCode",
-                "AcceptanceFailureData"
-              ]
-            }
-          ],
-          "requires": ["Acceptance verification of a request"]
+          "requires": [
+            "Request",
+            "Error Codes",
+            "Acceptance verification of a request"
+          ]
         }
       ]
     },
@@ -70,28 +49,14 @@
         {
           "name": "Reporting successful start of execution",
           "asn1Files": ["PUS-1-3.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": ["Request-ID"]
-            }
-          ]
+          "requires": ["Requires"]
         },
         {
           "name": "Reporting failed start of execution",
           "asn1Files": ["PUS-1-4.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": ["Request-ID"]
-            },
-            {
-              "from": "ErrorCodes",
-              "types": [
-                "ExecutionStartFailureCode",
-                "ExecutionStartFailureData"
-              ]
-            }
+          "requires": [
+            "Request",
+            "Error Codes"
           ]
         },
         {
@@ -99,61 +64,37 @@
           "asn1Files": ["PUS-1-5.asn1"],
           "imports": [
             {
-              "from": "Request",
-              "types": ["Request-ID"]
-            },
-            {
               "from": "ExecutionStep",
               "types": ["ExecutionStep-ID"]
             }
-          ]
+          ],
+          "requires": ["Request"]
         },
         {
           "name": "Reporting failed progress of execution",
           "asn1Files": ["PUS-1-6.asn1"],
           "imports": [
             {
-              "from": "Request",
-              "types": "Request-ID"
-            },
-            {
-              "from": "ErrorCodes",
-              "types": [
-                "ExecutionProgressFailureCode",
-                "ExecutionProgressFailureData"
-              ]
-            },
-            {
               "from": "ExecutionStep",
               "types": ["ExecutionStep-ID"]
             }
+          ],
+          "requires": [
+            "Request",
+            "Error Codes"
           ]
         },
         {
           "name": "Reporting successful completion of execution",
           "asn1Files": ["PUS-1-7.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": ["Request-ID"]
-            }
-          ]
+          "requires": ["Request"]
         },
         {
           "name": "Reporting failed completion of execution",
           "asn1Files": ["PUS-1-8.asn1"],
-          "imports": [
-            {
-              "from": "Request",
-              "types": "Request-ID"
-            },
-            {
-              "from": "ErrorCodes",
-              "types": [
-                "ExecutionCompletionFailureCode",
-                "ExecutionCompletionFailureData"
-              ]
-            }
+          "requires": [
+            "Request",
+            "Error Codes"
           ]
         }
       ]
@@ -162,7 +103,7 @@
       "name": "Components",
       "elements": [
         {
-          "name": "Request ID",
+          "name": "Request",
           "asn1Files": ["Request.asn1"],
           "imports": [
             {
