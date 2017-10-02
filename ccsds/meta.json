@@ -17,50 +17,25 @@
         {
           "name": "TC Packet",
           "asn1Files": ["TC-Packet.asn1"],
-          "requires": ["Packet Types"],
+          "requires": [
+            "Packet Types",
+            "TC-Payload"
+          ],
           "imports": [
-            {
-              "from": "PacketTypes",
-              "types": [
-                "CCSDS-Packet",
-                "PacketDataField",
-                "Packet-ID",
-                "MessageType-ID",
-                "PacketPrimaryHeader",
-                "UserDataField",
-                "SecondaryHeaderFlag"
-              ]
-            },
             {
               "from": "ApplicationProcessUser",
               "types": ["ApplicationProcessUser-ID"]
-            },
-            {
-              "from": "TC-Payload",
-              "types": [
-                "TC-Data",
-                "TC-NoHeaderData"
-              ]
             }
           ]
         },
         {
           "name": "TM Packet",
           "asn1Files": ["TM-Packet.asn1"],
-          "requires": ["Packet Types"],
+          "requires": [
+            "Packet Types",
+            "TM-Payload"
+          ],
           "imports": [
-            {
-              "from": "PacketTypes",
-              "types": [
-                "CCSDS-Packet",
-                "PacketDataField",
-                "Packet-ID",
-                "MessageType-ID",
-                "PacketPrimaryHeader",
-                "UserDataField",
-                "SecondaryHeaderFlag"
-              ]
-            },
             {
               "from": "ApplicationProcessUser",
               "types": ["ApplicationProcessUser-ID"]
@@ -68,13 +43,6 @@
             {
               "from": "BasicTypes",
               "types": ["AbsoluteTime"]
-            },
-            {
-              "from": "TM-Payload",
-              "types": [
-                "TM-Data",
-                "TM-NoHeaderData"
-              ]
             }
           ]
         }
@@ -94,22 +62,12 @@
         {
           "name": "TM Payload",
           "asn1Files": ["TM-Payload.asn1"],
-          "imports": [
-            {
-              "from": "PacketTypes",
-              "types": ["MessageType-ID"]
-            }
-          ]
+          "requires": ["Packet Types"]
         },
         {
           "name": "TC Payload",
           "asn1Files": ["TC-Payload.asn1"],
-          "imports": [
-            {
-              "from": "PacketTypes",
-              "types": ["MessageType-ID"]
-            }
-          ]
+          "requires": ["Packet Types"]
         }
       ]
     }

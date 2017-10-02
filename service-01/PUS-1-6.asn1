@@ -24,7 +24,7 @@
 PUS-1-6 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID
+    Request-ID FROM Request
     ExecutionStep-ID FROM ExecutionStep
     ExecutionProgressFailureNotice FROM ErrorCodes;
 

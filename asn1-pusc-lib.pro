@@ -37,8 +37,6 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-01/Request-ID.acn \
-    service-01/Request-ID.asn1 \
     service-09/meta.json \ 
     service-09/PUS-9-1.acn \
     service-09/PUS-9-1.asn1 \
@@ -65,7 +63,9 @@ DISTFILES += \
     service-09/RateExponentialValue.acn \
     service-09/RateExponentialValue.asn1 \
     service-09/SpacecraftTimeReferenceStatus.acn \
-    service-09/SpacecraftTimeReferenceStatus.asn1
+    service-09/SpacecraftTimeReferenceStatus.asn1 \
+    service-01/Request.acn \
+    service-01/Request.asn1
 
 
 include(.qmake/handleAsn1AcnBuild.pri)

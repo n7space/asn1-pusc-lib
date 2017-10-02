@@ -24,7 +24,7 @@
 PUS-1-3 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID;
+    Request-ID FROM Request;
 
 TM-1-3-SuccessfulStartOfExecutionVerificationReport ::= SEQUENCE
 {

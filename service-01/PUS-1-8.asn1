@@ -24,7 +24,7 @@
 PUS-1-8 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID
+    Request-ID FROM Request
     ExecutionCompletionFailureNotice FROM ErrorCodes;
 
 TM-1-8-FailedCompletionOfExecutionVerificationReport ::= SEQUENCE

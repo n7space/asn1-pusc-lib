@@ -24,7 +24,7 @@
 PUS-1-7 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request-ID;
+    Request-ID FROM Request;
 
 TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= SEQUENCE
 {
