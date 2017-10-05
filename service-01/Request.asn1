@@ -21,9 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Request DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
+    TC-PacketType FROM TC-Packet;
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+Request-ID ::= SEQUENCE
+{
+    packetVersionNumber PacketVersionNumberValue,
+    packet-ID Packet-ID {TC-PacketType},
+    packetSequenceControl PacketSequenceControl
+}
 
 END

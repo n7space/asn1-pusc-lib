@@ -21,9 +21,43 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+ErrorCodes DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+AcceptanceFailureCode [] --TODO
+AcceptanceFailureNotice [] --TODO
+{
+    code ErrorCodes.AcceptanceFailureCode [],
+    data [determinant code]
+}
+
+ExecutionStartFailureCode [] --TODO
+ExecutionStartFailureNotice [] --TODO
+{
+    code ErrorCodes.ExecutionStartFailureCode [],
+    data [determinant code]
+}
+
+ExecutionProgressFailureCode [] --TODO
+ExecutionProgressFailureNotice [] --TODO
+{
+    code ErrorCodes.ExecutionProgressFailureCode[],
+    data [determinant code]
+}
+
+ExecutionCompletionFailureCode [] --TODO
+ExecutionCompletionFailureNotice [] --TODO
+{
+    code ErrorCodes.ExecutionCompletionFailureCode[],
+    data [determinant code]
+}
+
+
+
+RoutingFailureCode [] --TODO
+RoutingFailureNotice [] --TODO
+{
+    code ErrorCodes.RoutingFailureCode [],
+    data [determinant code]
+}
 
 END

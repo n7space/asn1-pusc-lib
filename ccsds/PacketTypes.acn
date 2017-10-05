@@ -21,9 +21,34 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+PacketTypes DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+-------------------------------------
+--choose size of CONSTANT below
+----> ERROR-CONTROL-ENABLED for enabled error contol
+----> ERROR-CONTROL-DISABLED for disabled error control
+
+CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-ENABLED
+--CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-DISABLED
+
+CONSTANT ERROR-CONTROL-ENABLED ::= 16
+CONSTANT ERROR-CONTROL-DISABLED ::= 0
+
+PacketVersionNumberValue [pattern '000'B]
+
+PacketSequenceControl []
+{
+    sequenceFlags [pattern '11'B],
+    packetSequenceCountOrName [size 14, encoding pos-int]
+}
+
+SecondaryHeaderFlag [size 1, encoding pos-int]
+
+PacketDataLength [size 16, encoding pos-int]
+
+PacketErrorControl [size PACKET-ERROR-CONTROL]
+
+ServiceType-ID  [size 8, encoding pos-int]
+MessageSubtype-ID  [size 8, encoding pos-int]
 
 END

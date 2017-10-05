@@ -1,0 +1,86 @@
+--!
+--! Copyright (C) 2017 N7 Mobile sp. z o. o.
+--! Contact: http://n7mobile.pl/Space
+--!
+--! This file is part of ASN.1/ACN PUS-C Components Library.
+--!
+--! Library was developed under a programme and funded by
+--! European Space Agency.
+--!
+--! This Library is free software: you can redistribute it and/or modify
+--! it under the terms of the GNU General Public License as published by
+--! the Free Software Foundation, either version 3 of the License, or
+--! (at your option) any later version.
+--!
+--! This Library is distributed in the hope that it will be useful,
+--! but WITHOUT ANY WARRANTY; without even the implied warranty of
+--! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--! GNU General Public License for more details.
+--!
+--! You should have received a copy of the GNU General Public License
+--! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--!
+
+TC-Packet DEFINITIONS ::= BEGIN
+
+
+TC-CCSDS-Packet []
+{
+    packetVersionNumber [],
+    packet-ID [],
+    packetSequenceControl [],
+    packetDataLength [],
+    packetDataField <packet-ID.secondaryHeaderFlag> []
+}
+
+
+TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
+{
+    dataWithSecondaryHeader [present-when secondaryHeaderFlag==1],
+    dataNoSecondaryHeader [present-when secondaryHeaderFlag==0]
+}
+
+TC-DataWithSecondaryHeader []
+{
+    secondaryHeader [],
+    data <secondaryHeader.serviceType-ID,
+          secondaryHeader.messageSubtype-ID> [align-to-next byte],
+--! spare [],
+    packetErrorContol [align-to-next byte]
+}
+
+TC-DataNoSecondaryHeader []
+{
+    data [],
+--! spare [],
+    packetErrorContol [align-to-next byte]
+}
+
+TC-Packet-ID []
+{
+    packetType [],
+    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+    applicationProcess-ID []
+}
+
+TC-PacketSecondaryHeader []
+{
+    tcPacketPusVersionNumber [],
+    acknowledgementFlags [],
+    serviceType-ID PacketTypes.ServiceType-ID [],
+    messageSubtype-ID PacketTypes.MessageSubtype-ID [],
+    source-ID [size 16, encoding pos-int]
+--! spare []
+}
+
+AcknowledgementFlags []
+{
+    ackExecutionCompletion [true-value '1'B],
+    ackExecutionProgress [true-value '1'B],
+    ackExecutionStart [true-value '1'B],
+    ackAcceptance [true-value '1'B]
+}
+
+TC-PacketType [pattern '1'B]
+
+END

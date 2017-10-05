@@ -21,9 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+TM-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    TM-17-2-AreYouAliveConnectionTestReport FROM PUS-17-2;
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+TM-Payload ::= CHOICE --TODO
+{
+    tm-17-2 TM-17-2-AreYouAliveConnectionTestReport --TODO
+}
+
+TM-NoHeaderPayload ::= NULL --TODO
 
 END

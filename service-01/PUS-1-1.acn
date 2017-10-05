@@ -21,9 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+PUS-1-1 DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+
+TM-1-1-SuccessfulAcceptanceVerificationReport []
+{
+    request-ID []
+}
 
 END

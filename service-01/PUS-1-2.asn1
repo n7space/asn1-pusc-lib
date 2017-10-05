@@ -21,9 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-1-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    Request-ID FROM Request
+    AcceptanceFailureNotice FROM ErrorCodes;
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+TM-1-2-FailedAcceptanceVerificationReport ::= SEQUENCE
+{
+    request-ID Request-ID,
+    failureNotice AcceptanceFailureNotice
+}
 
 END

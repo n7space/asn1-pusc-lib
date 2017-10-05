@@ -21,9 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+TM-Payload DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+TM-Payload <INTEGER:service, INTEGER:message> []
+{
+    tm-17-2 [present-when service==17 message==2] --TODO
+}
+
+
+TM-NoHeaderPayload [] --TODO
 
 END

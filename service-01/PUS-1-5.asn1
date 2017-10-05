@@ -21,9 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-1-5 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    Request-ID FROM Request
+    ExecutionStep-ID FROM ExecutionStep;
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+TM-1-5-SuccessfulProgressOfExecutionVerificationReport ::= SEQUENCE
+{
+    request-ID Request-ID,
+    step-ID ExecutionStep-ID
+}
+
 
 END

@@ -21,9 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ApplicationProcess DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+Request DEFINITIONS ::= BEGIN
 
-ApplicationProcess-ID ::= INTEGER (0 .. 2047)
+Request-ID []
+{
+    packetVersionNumber [],
+    packet-ID [],
+    packetSequenceControl []
+}
+
 
 END
