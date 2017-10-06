@@ -21,13 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-6-RegisterDumpReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    Register FROM Registers;
 
-PUSC-BOOL [false-value '0'B]
-
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+TM-2-6-RegisterDumpReport ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    registerDumps SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+}
 
 END

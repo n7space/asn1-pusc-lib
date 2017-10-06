@@ -21,13 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-12-LogicalDeviceDataReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    Transaction-ID, TransactionExecutionStatus FROM Transaction;
 
-PUSC-BOOL [false-value '0'B]
-
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+TM-2-12-LogicalDeviceDataReport ::= SEQUENCE
+{
+    transaction-ID Transaction-ID,
+    transactionExecutionStatus TransactionExecutionStatus
+    --parameterValue
+}
 
 END

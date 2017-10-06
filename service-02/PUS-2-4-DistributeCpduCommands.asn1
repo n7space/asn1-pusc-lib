@@ -21,13 +21,45 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-4-DistributeCpduCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes;
 
-PUSC-BOOL [false-value '0'B]
+PUS-2-4-DistributeCpduCommands ::= SEQUENCE
+{
+--! n2 PUSC-UINT32, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+PUS-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
+{
+--! n1 PUSC-UINT32, moved to acn
+    cpdu SEQUENCE (SIZE (0 .. 2)) OF CPDU
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+CPDU ::= SEQUENCE
+{
+    cpdu-ID CPDU-ID,
+--! n2 PUSC-UINT32, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
+}
 
+CpduCommand ::= SEQUENCE
+{
+    outputLine-ID OutputLine-ID,
+    reserved BIT STRING (SIZE(1)),
+    durationExponentialValue INTEGER (0 .. 7)
+}
+
+CPDU-ID ::= ENUMERATED --TODO
+{
+    cpdu0 (0)
+}
+
+OutputLine-ID ::= ENUMERATED --TODO
+{
+    out1 (1)
+}
 
 END

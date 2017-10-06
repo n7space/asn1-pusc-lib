@@ -21,13 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PhysicalDevice DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+PhysicalDevice-ID [size 32, encoding pos-int] --TODO
 
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+ProtocolSpecificData <PhysicalDevice-ID: device> [determinant device] --TODO
+{
+    dev1 [size 8, encoding pos-int]
+}
 
 END

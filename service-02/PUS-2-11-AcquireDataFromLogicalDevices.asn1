@@ -21,13 +21,29 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-11-AcquireDataFromLogicalDevices DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    LogicalDevice-ID FROM LogicalDevice
+    Transaction-ID FROM Transaction
+    PUSC-UINT32 FROM BasicTypes;
 
-PUSC-BOOL [false-value '0'B]
+TC-2-11-AcquireDataFromLogicalDevices ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    dataAcquireRequests SEQUENCE (SIZE(0 .. 2147483647)) OF DataAcquireRequest
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+DataAcquireRequest ::= SEQUENCE
+{
+    transaction-ID Transaction-ID,
+    logicalDevice-ID LogicalDevice-ID,
+    parameter-ID Parameter-ID
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
-
+Parameter-ID ::= ENUMERATED
+{
+    param1 (0)
+}
 
 END

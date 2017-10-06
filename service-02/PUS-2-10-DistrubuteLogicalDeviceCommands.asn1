@@ -21,13 +21,43 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-10-DistrubuteLogicalDeviceCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    LogicalDevice-ID FROM LogicalDevice;
 
-PUSC-BOOL [false-value '0'B]
+TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    logicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF LogicalDeviceCommand
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+LogicalDeviceCommand ::= SEQUENCE
+{
+--! logicalDevice-ID LogicalDevice-ID, moved to acn
+    command Command
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+Command ::= CHOICE --TODO
+{
+    ldev1 Ldev1
+}
 
+Ldev1 ::= SEQUENCE --TODO
+{
+--! command-ID Ldev1-Commands,
+    commandArguments Ldev1-Arguments
+}
+
+Ldev1-Commands ::= ENUMERATED --TODO
+{
+    command1 (0)
+}
+
+Ldev1-Arguments ::= CHOICE --TODO
+{
+    command1 INTEGER (0 .. 255)
+}
 
 END

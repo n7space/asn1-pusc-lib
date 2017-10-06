@@ -21,13 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+LogicalDevice DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
-
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+LogicalDevice-ID [size 32, encoding pos-int] --TODO
 
 END

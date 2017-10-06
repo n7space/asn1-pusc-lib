@@ -21,13 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+Registers DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+Register []
+{
+    registerAddress Registers.RegisterAddress [],
+    registerData <registerAddress> []
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+RegisterAddress [size 32, encoding pos-int] --TODO
 
-PUSC-INT32 [size 32, encoding twos-complement]
-
+RegisterData <RegisterAddress: registerAddress> [determinant registerAddress] --TODO
+{
+    reg1 [],
+    reg2 []
+}
 
 END

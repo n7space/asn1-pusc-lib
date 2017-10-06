@@ -21,13 +21,36 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-4-DistributeCpduCommands DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+PUS-2-4-DistributeCpduCommands []
+{
+    n2 BasicTypes.PUSC-UINT32 [],
+    cpduCommands [size n2]
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+PUS-2-4-DistrubiteCpduCommands-MultipleCpdu []
+{
+    n1 BasicTypes.PUSC-UINT32 [],
+    cpdu [size n1]
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+CPDU []
+{
+    cpdu-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    cpduCommands [size n2]
+}
 
+CpduCommand []
+{
+    outputLine-ID [],
+    reserved [size 1],
+    durationExponentialValue [size 3, encoding pos-int]
+}
+
+CPDU-ID  [size 32, encoding pos-int] --TODO
+
+OutputLine-ID [size 12, encoding pos-int] --TODO
 
 END

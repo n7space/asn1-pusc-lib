@@ -21,13 +21,36 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-10-DistrubuteLogicalDeviceCommands DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+TC-2-10-DistributeLogicalDeviceCommands []
+{
+    n BasicTypes.PUSC-UINT32 [],
+    logicalDeviceCommands [size n]
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+LogicalDeviceCommand []
+{
+    logicalDevice-ID LogicalDevice.LogicalDevice-ID [],
+    command <logicalDevice-ID> []
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+Command <LogicalDevice.LogicalDevice-ID: device> [determinant device] --TODO
+{
+    ldev1 []
+}
 
+Ldev1 [] --TODO
+{
+    command-ID Ldev1-Commands [],
+    commandArguments <command-ID> []
+}
+
+Ldev1-Commands [size 32, encoding pos-int] --TODO
+
+Ldev1-Arguments <Ldev1-Commands: command> [determinant command] --TODO
+{
+    command1 [size 8, encoding pos-int]
+}
 
 END

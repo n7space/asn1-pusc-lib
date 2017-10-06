@@ -21,13 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-1-DistributeOnOffDeviceCommands DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+TC-2-1-DistributeOnOffDeviceCommands []
+{
+    n BasicTypes.PUSC-UINT32 [],
+    onOffDeviceAddresses [size n]
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+DeviceAddress [size 32, encoding pos-int]
 
 END

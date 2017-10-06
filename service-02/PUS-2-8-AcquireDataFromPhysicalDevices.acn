@@ -21,13 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-8-AcquireDataFromPhysicalDevices DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+TC-2-8-AcquireDataFromPhysicalDevices []
+{
+    n BasicTypes.PUSC-UINT32 [],
+    deviceDataRequests [size n]
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+DeviceDataRequest []
+{
+    transaction-ID [],
+    physicalDevice-ID PhysicalDevice.PhysicalDevice-ID [],
+    protocolSpecificData <physicalDevice-ID> []
+}
 
 END

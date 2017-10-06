@@ -21,13 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-9-PhysicalDeviceDataReport DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
-
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+TM-2-9-PhysicalDeviceDataReport []
+{
+    transaction-ID [],
+    transactionExecutionStatus []
+--    dataBlock
+}
 
 END

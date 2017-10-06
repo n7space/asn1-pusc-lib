@@ -21,13 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-6-RegisterDumpReport DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+TM-2-6-RegisterDumpReport []
+{
+    n BasicTypes.PUSC-UINT32 [],
+    registerDumps [size n]
 
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+}
 
 END

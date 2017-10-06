@@ -21,13 +21,21 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+Transaction DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+Transaction-ID []
 
-PUSC-UINT32 [size 32, encoding pos-int]
+TransactionExecutionStatus []
+{
+    dataAcquisitionReturnCode DataAcquisitionReturnCode [],
+    auxiliaryData <dataAcquisitionReturnCode> []
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+DataAcquisitionReturnCode [encoding pos-int, size 32] --TODO
 
+AuxiliaryData <DataAcquisitionReturnCode: code> [determinant code] --TODO
+{
+    ret1 []
+}
 
 END

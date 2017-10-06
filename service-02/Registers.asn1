@@ -21,13 +21,25 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+Registers DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
 
-PUSC-BOOL [false-value '0'B]
+Register ::= SEQUENCE
+{
+--! registerAddress RegisterAddress, moved to acn
+    registerData RegisterData
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
+RegisterAddress ::= ENUMERATED --TODO
+{
+    reg1 (1),
+    reg2 (2)
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
-
+RegisterData ::= CHOICE --TODO
+{
+    reg1 INTEGER (0 .. 255),
+    reg2 INTEGER (0 .. 65535)
+}
 
 END

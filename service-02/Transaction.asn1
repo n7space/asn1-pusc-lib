@@ -21,13 +21,27 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+Transaction DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes;
 
-PUSC-BOOL [false-value '0'B]
+Transaction-ID ::= PUSC-UINT32
 
-PUSC-UINT32 [size 32, encoding pos-int]
+TransactionExecutionStatus ::= SEQUENCE
+{
+--! dataAcquisitionReturnCode DataAcquisitionReturnCode, moved to acn
+    auxiliaryData AuxiliaryData
+}
 
-PUSC-INT32 [size 32, encoding twos-complement]
+DataAcquisitionReturnCode ::= ENUMERATED --TODO
+{
+    ret1 (0)
+}
 
+AuxiliaryData ::= CHOICE --TODO
+{
+    ret1 NULL
+}
 
 END

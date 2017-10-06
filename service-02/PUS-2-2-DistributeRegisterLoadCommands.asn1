@@ -21,13 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-2-DistributeRegisterLoadCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    Register FROM Registers;
 
-PUSC-BOOL [false-value '0'B]
+TC-2-2-DistributeRegisterCommands ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    registerCommands SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
 
-PUSC-INT32 [size 32, encoding twos-complement]
+
 
 
 END

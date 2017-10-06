@@ -21,13 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PUS-2-5-DistributeRegisterDumpCommands DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
-
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+TC-2-5-DistributeRegisterDumpCommands []
+{
+    n BasicTypes.PUSC-UINT32 [],
+    registerAddresses [size n]
+}
 
 END

@@ -1,0 +1,115 @@
+{
+  "name": "ST[02] device access",
+  "submodules": [
+    {
+      "name": "Device access subservice",
+      "elements": [
+        {
+          "name": "Distribute on/off device commands",
+          "asn1Files": ["PUS-2-1-DistributeOnOffDeviceCommands.asn1"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Distribute register load commands",
+          "asn1Files": [
+            "PUS-2-2-DistributeRegisterLoadCommands.asn1",
+            "Registers.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": "PUS-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Distribute register dump commands",
+          "asn1Files": [
+            "PUS-2-5-DistributeRegisterDumpCommands.asn1",
+            "PUS-2-6-RegisterDumpReport.asn1",
+            "Registers.asn1"
+          ],
+          "requires": ["Distribute register load commands"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Distribute CPDU commands",
+          "asn1Files": ["PUS-2-4-DistributeCpduCommands.asn1"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Distribute physical device commands",
+          "asn1Files": [
+            "PUS-2-7-DistributePhysicalDeviceCommands.asn1",
+            "PhysicalDevice.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Acquire data from physical devices",
+          "asn1Files": [
+            "PUS-2-8-AcquireDataFromPhysicalDevices.asn1",
+            "PUS-2-9-PhysicalDeviceDataReport.asn1",
+            "PhysicalDevice.asn1",
+            "Transaction.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Distribute logical device commands",
+          "asn1Files": [
+            "PUS-2-10-DistributeLogicalDeviceCommands.asn1",
+            "LogicalDevice.asn1"
+          ],
+          "requires": ["Distribute physical device commands"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Acquire data from logical devices",
+          "asn1Files": [
+            "PUS-2-11-AcquireDataFromLogicalDevices.asn1",
+            "PUS-2-12-LogicalDeviceDataReport.asn1",
+            "LogicalDevice.asn1",
+            "Transaction"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

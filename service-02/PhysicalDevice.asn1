@@ -21,13 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS ::= BEGIN
+PhysicalDevice DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
 
-PUSC-BOOL [false-value '0'B]
+PhysicalDevice-ID ::= ENUMERATED --TODO
+{
+    dev1 (1)
+}
 
-PUSC-UINT32 [size 32, encoding pos-int]
-
-PUSC-INT32 [size 32, encoding twos-complement]
-
+ProtocolSpecificData ::= CHOICE --TODO
+{
+    dev1 INTEGER (0 .. 255)
+}
 
 END
