@@ -25,9 +25,9 @@ PUS-9-2 DEFINITIONS ::= BEGIN
 
 TM-9-2-CucTimeReport []
 {
-    rateExponentialValue [], --TODO - OPTIONAL
+    rateExponentialValue [],
     spacecraftTime [],
-    spacecraftTimeReferenceStatus [] --TODO - OPTIONAL
+    spacecraftTimeReferenceStatus []
 }
 
 END

@@ -30,9 +30,9 @@ IMPORTS
 
 TM-9-2-CucTimeReport ::= SEQUENCE
 {
-    rateExponentialValue RateExponentialValue, --TODO - OPTIONAL
+    rateExponentialValue RateExponentialValue OPTIONAL, --TODO
     spacecraftTime AbsoluteTime,
-    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus --TODO - OPTIONAL
+    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus OPTIONAL --TODO
 }
 
 END
