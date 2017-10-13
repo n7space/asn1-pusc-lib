@@ -21,17 +21,25 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-
+PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
+    PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
+    CollectionInterval FROM CollectionInterval
+    PUSC-UINT32 FROM BasicTypes;
 
--- TODO PTC PFC!
+TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    periodicGenerationProperties SEQUENCE (SIZE(0 .. 2147483647)) OF PeriodicGenerationProperties
+}
 
-PUSC-BOOL ::= BOOLEAN
+PeriodicGenerationProperties ::= SEQUENCE
+{
+    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus,
+    collectionInterval CollectionInterval
+}
 
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END

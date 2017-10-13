@@ -21,17 +21,23 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-
+PUS-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
+    CollectionInterval FROM CollectionInterval;
 
--- TODO PTC PFC!
+PC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    housekeepingParamererReportStructureIntervals SEQUENCE (SIZE(0 .. 2147483647)) OF HousekeepingParameterReportStructureIntervals
+}
 
-PUSC-BOOL ::= BOOLEAN
+HousekeepingParameterReportStructureIntervals ::= SEQUENCE
+{
+    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID,
+    collectionInterval CollectionInterval
+}
 
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END

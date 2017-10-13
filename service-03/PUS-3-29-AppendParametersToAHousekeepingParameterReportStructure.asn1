@@ -21,17 +21,26 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-3-29-AppendParametersToAHousekeepingParameterReportStructure DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+IMPORTS
+    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
+    Parameter-ID FROM Parameter
+    PUSC-UINT32 FROM BasicTypes;
 
-EXPORTS ALL;
+TC-3-29-AppendParametersToAHousekeepingParameterReportStructure ::= SEQUENCE
+{
+    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID,
+--! n1 PUSC-UINT32, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. 2147483647)) OF Parameter-ID,
+--! nfa PUSC-UINT32, moved to acn
+    superCommutatedParameterSet SEQUENCE (SIZE(0 .. 536870911)) OF SuperCommutatedParameterSet
+}
 
--- TODO PTC PFC!
+SuperCommutatedParameterSet ::= SEQUENCE
+{
+    superCommutatedSampleRepetitionNumber PUSC-UINT32,
+--! n2 PUSC-UINT32, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. 1073741823)) OF Parameter-ID
+}
 
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END

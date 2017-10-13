@@ -55,7 +55,42 @@ DISTFILES += \
     ccsds/TC-Payload.acn \
     ccsds/TC-Payload.asn1 \
     service-01/Request.acn \
-    service-01/Request.asn1
+    service-01/Request.asn1 \
+    service-03/meta.json \
+    service-03/PUS-3-25-HouseKeepingParameterReport.acn \
+    service-03/PUS-3-25-HouseKeepingParameterReport.asn1 \
+    service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.acn \
+    service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.asn1 \
+    service-03/PUS-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport.acn \
+    service-03/PUS-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport.asn1 \
+    service-03/PUS-3-1-CreateAHousekeepingParameterReportStructure.acn \
+    service-03/PUS-3-1-CreateAHousekeepingParameterReportStructure.asn1 \
+    service-03/DiagnosticParameterReportStructure.acn \
+    service-03/DiagnosticParameterReportStructure.asn1 \
+    service-03/HousekeepingParameterReportStructure.acn \
+    service-03/HousekeepingParameterReportStructure.asn1 \
+    service-03/Parameter.acn \
+    service-03/Parameter.asn1 \
+    service-03/PUS-3-3-DeleteHousekeepingParameterReportStructures.acn \
+    service-03/PUS-3-3-DeleteHousekeepingParameterReportStructures.asn1 \
+    service-03/PUS-3-9-ReportHousekeepingParameterReportStructures.acn \
+    service-03/PUS-3-9-ReportHousekeepingParameterReportStructures.asn1 \
+    service-03/PUS-3-10-HousekeepingParameterReportStructureReport.acn \
+    service-03/PUS-3-10-HousekeepingParameterReportStructureReport.asn1 \
+    service-03/PeriodicGenerationActionStatus.acn \
+    service-03/PeriodicGenerationActionStatus.asn1 \
+    service-03/PUS-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures.acn \
+    service-03/PUS-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures.asn1 \
+    service-03/PUS-3-29-AppendParametersToAHousekeepingParameterReportStructure.acn \
+    service-03/PUS-3-29-AppendParametersToAHousekeepingParameterReportStructure.asn1 \
+    service-03/PUS-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures.acn \
+    service-03/PUS-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures.asn1 \
+    service-03/CollectionInterval.acn \
+    service-03/CollectionInterval.asn1 \
+    service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.acn \
+    service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.asn1 \
+    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.acn \
+    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.asn1
 
 
 include(.qmake/handleAsn1AcnBuild.pri)

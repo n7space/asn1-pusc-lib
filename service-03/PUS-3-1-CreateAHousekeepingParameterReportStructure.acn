@@ -21,17 +21,23 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-3-1-CreateAHousekeepingParameterReportStructure DEFINITIONS ::= BEGIN
 
-EXPORTS ALL;
+TC-3-1-CreateAHousekeepingParameterReportStructure []
+{
+    housekeepingParameterReportStructure-ID [],
+    collectionInterval [],
+    n1 BasicTypes.PUSC-UINT32 [],
+    parameter-ID [size n1],
+    nfa BasicTypes.PUSC-UINT32 [],
+    superCommutatedParameterSet [size nfa]
+}
 
--- TODO PTC PFC!
+SuperCommutatedParameterSet []
+{
+    superCommutatedSampleRepetitionNumber [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    parameter-ID [size n2]
+}
 
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END

@@ -21,17 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-
+PUS-3-3-DeleteHousekeepingParameterReportStructures DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
+    PUSC-UINT32 FROM BasicTypes;
 
--- TODO PTC PFC!
+TC-3-3-DeleteHousekeepingParameterReportStructures ::= SEQUENCE
+{
+--! n PUSC-UINT32, moved to acn
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(0 .. 2147483647)) OF HousekeepingParameterReportStructure-ID
+}
 
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END

@@ -21,17 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-BasicTypes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Parameter DEFINITIONS ::= BEGIN
 
-EXPORTS ALL;
+Parameter-ID [size 32, encoding pos-int]
 
--- TODO PTC PFC!
-
-PUSC-BOOL ::= BOOLEAN
-
-PUSC-UINT32 ::= INTEGER (0 .. 4294967295)
-
-PUSC-INT ::= INTEGER (-9223372036854775808 .. 9223372036854775807)
-
-AbsoluteTime ::= INTEGER ((0))
 END
