@@ -76,7 +76,7 @@
             "PUS-3-10-HousekeepingParameterReportStructureReport.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "Parameter.asn1",
-            "PeriodicGenerationActionStatusi.asn1",
+            "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1"
           ],
           "requires": ["Create a housekeeping parameter report structure"],
@@ -136,8 +136,8 @@
             "PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.asn1",
             "PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.asn1",
             "HousekeepingParameterReportStructure.asn1",
-            "CollectionInterval",
-            "PeriodicGenerationActionStatus"
+            "CollectionInterval.asn1",
+            "PeriodicGenerationActionStatus.asn1"
           ],
           "imports": [
             {
@@ -153,51 +153,140 @@
       "elements": [
         {
           "name": "Diagnostic parameter report",
-          "asn1Files": ["PUS-3-26-DiagnosticParameterReport.asn1"]
+          "asn1Files": [
+            "PUS-3-26-DiagnosticParameterReport.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ]
         },
         {
           "name": "Enable the periodic generation of diagnostic parameter reports",
-          "asn1Files": ["PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.asn1"]
+          "asn1Files": [
+            "PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ],
+          "imports": [
+             {
+               "from": "BasicTypes",
+               "types": ["PUSC-UINT32"]
+             }
+          ]
         },
         {
           "name": "Disable the periodic generation of diagnostic parameter reports",
-          "asn1Files": ["PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.asn1"]
+          "asn1Files": [
+            "PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ],
+          "imports": [
+             {
+               "from": "BasicTypes",
+               "types": ["PUSC-UINT32"]
+             }
+          ]
         },
         {
           "name": "Create a diagnostic parameter report structure",
-          "asn1Files": ["PUS-3-2-CreateADiagnosticParameterReportStructure.asn1"]
+          "asn1Files": [
+            "PUS-3-2-CreateADiagnosticParameterReportStructure.asn1",
+            "Parameter.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "CollectionInterval.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Delete diagnostic parameter report structures",
-          "asn1Files": ["PUS-3-4-DeleteDiagnosticParameterReportStructures.asn1"]
+          "asn1Files": [
+            "PUS-3-4-DeleteDiagnosticParameterReportStructures.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BaqsicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Report diagnostic parameter report structures",
           "asn1Files": [
             "PUS-3-11-ReportDiagnosticParameterReportStructures.asn1",
-            "PUS-3-12-DiagnosticParameterReportStructureReport.asn1"
+            "PUS-3-12-DiagnosticParameterReportStructureReport.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "Parameter.asn1",
+            "PeriodicGenerationActionStatus.asn1",
+            "CollectionInterval.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+
           ]
         },
         {
           "name": "Generate a one shot report for diagnostic parameter report structures",
           "asn1Files": [
             "PUS-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures.asn1",
-            "PUS-3-26-DiagnosticParameterReport.asn1"
+            "PUS-3-26-DiagnosticParameterReport.asn1",
+            "HousekeepingParameterReportStructure.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
           ]
         },
         {
           "name": "Append parameters to a diagnostic parameter report structure",
-          "asn1Files": ["PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.asn1"]
+          "asn1Files": [
+            "PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.asn1",
+            "Parameter.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ],
+          "requires": ["Create diagnostic parameter report structure"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
         },
         {
           "name": "Modify the collection interval of diagnostic parameter report structures",
-          "asn1Files": ["PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.asn1"]
+          "asn1Files": [
+            "PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.asn1",
+            "CollectionInterval.asn1",
+            "DiagnosticParameterReportStructure.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
         },
         {
           "name": "Report the periodic generation properties of diagnostic parameter report structures",
           "asn1Files": [
             "PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.asn1",
-            "PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1"
+            "PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "CollectionInterval.asn1",
+            "PeriodicGenerationActionStatusDiagnostics.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
           ]
         }
       ]

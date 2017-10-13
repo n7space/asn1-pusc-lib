@@ -21,16 +21,15 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-25-HouseKeepingParameterReport DEFINITIONS AUTOMATIC TAGS::= BEGIN
+PUS-3-4-DeleteDiagnosticParameterReportStructures DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    HousekeepingParameterReportStructure-ID,
-    HousekeepingParameterValues FROM HousekeepingParameterReportStructure;
+    DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
+    PUSC-UINT32 FROM BasicTypes;
 
-TM-3-25-HouseKeepingParameterReport ::= SEQUENCE
+TC-3-4-DeleteDiagnosticParameterReportStructures ::= SEQUENCE
 {
---! housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID, moved to acn
-    parameterValue HousekeepingParameterValues
+--! n PUSC-UINT32, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE(0 .. 2147483647)) OF DiagnosticParameterReportStructure-ID
 }
-
 END

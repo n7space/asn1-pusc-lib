@@ -57,8 +57,6 @@ DISTFILES += \
     service-01/Request.acn \
     service-01/Request.asn1 \
     service-03/meta.json \
-    service-03/PUS-3-25-HouseKeepingParameterReport.acn \
-    service-03/PUS-3-25-HouseKeepingParameterReport.asn1 \
     service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.acn \
     service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.asn1 \
     service-03/PUS-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport.acn \
@@ -90,7 +88,33 @@ DISTFILES += \
     service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.acn \
     service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.asn1 \
     service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.acn \
-    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.asn1
+    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.asn1 \
+    service-03/PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.acn \
+    service-03/PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.asn1 \
+    service-03/PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.acn \
+    service-03/PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.asn1 \
+    service-03/PUS-3-2-CreateADiagnosticParameterReportStructure.acn \
+    service-03/PUS-3-2-CreateADiagnosticParameterReportStructure.asn1 \
+    service-03/PUS-3-4-DeleteDiagnosticParameterReportStructures.acn \
+    service-03/PUS-3-4-DeleteDiagnosticParameterReportStructures.asn1 \
+    service-03/PUS-3-11-ReportDiagnosticParameterReportStructures.acn \
+    service-03/PUS-3-11-ReportDiagnosticParameterReportStructures.asn1 \
+    service-03/PUS-3-12-DiagnosticParameterReportStructureReport.acn \
+    service-03/PUS-3-12-DiagnosticParameterReportStructureReport.asn1 \
+    service-03/PUS-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures.acn \
+    service-03/PUS-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures.asn1 \
+    service-03/PUS-3-26-DiagnosticParameterReport.acn \
+    service-03/PUS-3-26-DiagnosticParameterReport.asn1 \
+    service-03/PUS-3-25-HousekeepingParameterReport.acn \
+    service-03/PUS-3-25-HousekeepingParameterReport.asn1 \
+    service-03/PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.acn \
+    service-03/PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.asn1 \
+    service-03/PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.acn \
+    service-03/PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.asn1 \
+    service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.acn \
+    service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.asn1 \
+    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.acn \
+    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1
 
 
 include(.qmake/handleAsn1AcnBuild.pri)

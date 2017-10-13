@@ -21,12 +21,11 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-25-HouseKeepingParameterReport DEFINITIONS ::= BEGIN
+PUS-3-26-DiagnosticParameterReport DEFINITIONS ::= BEGIN
 
-TM-3-25-HouseKeepingParameterReport []
+TM-3-26-DiagnosticParameterReport []
 {
-    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure.HousekeepingParameterReportStructure-ID [],
-    parameterValue <housekeepingParameterReportStructure-ID> []
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure.DiagnosticParameterReportStructure-ID [],
+    parameterValue <diagnosticParameterReportStructure-ID> []
 }
-
 END
