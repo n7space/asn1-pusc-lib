@@ -23,11 +23,141 @@
 
 BasicTypes DEFINITIONS ::= BEGIN
 
-PUSC-BOOL [false-value '0'B]
+PUSC-BOOL1 [false-value '0'B]
+PUSC-BOOL8 [false-value '00000000'B]
+PUSC-BOOL16 [false-value '0000000000000000'B]
+PUSC-BOOL32 [false-value '00000000000000000000000000000000'B]
 
-PUSC-UINT [size 64, encoding pos-int]
+PUSC-UINT4 [size 4, encoding pos-int]
+PUSC-UINT5 [size 5, encoding pos-int]
+PUSC-UINT6 [size 6, encoding pos-int]
+PUSC-UINT7 [size 7, encoding pos-int]
+PUSC-UINT8 [size 8, encoding pos-int]
+PUSC-UINT9 [size 9, encoding pos-int]
+PUSC-UINT10 [size 10, encoding pos-int]
+PUSC-UINT11 [size 11, encoding pos-int]
+PUSC-UINT12 [size 12, encoding pos-int]
+PUSC-UINT13 [size 13, encoding pos-int]
+PUSC-UINT14 [size 14, encoding pos-int]
+PUSC-UINT15 [size 15, encoding pos-int]
+PUSC-UINT16 [size 16, encoding pos-int]
+PUSC-UINT24 [size 24, encoding pos-int]
+PUSC-UINT32 [size 32, encoding pos-int]
+PUSC-UINT48 [size 48, encoding pos-int]
+PUSC-UINT64 [size 64, encoding pos-int]
+PUSC-UINT1 [size 1, encoding pos-int]
+PUSC-UINT2 [size 2, encoding pos-int]
+PUSC-UINT3 [size 3, encoding pos-int]
 
-PUSC-INT [size 64, encoding twos-complement]
+PUSC-INT4 [size 4, encoding twos-complement]
+PUSC-INT5 [size 5, encoding twos-complement]
+PUSC-INT6 [size 6, encoding twos-complement]
+PUSC-INT7 [size 7, encoding twos-complement]
+PUSC-INT8 [size 8, encoding twos-complement]
+PUSC-INT9 [size 9, encoding twos-complement]
+PUSC-INT10 [size 10, encoding twos-complement]
+PUSC-INT11 [size 11, encoding twos-complement]
+PUSC-INT12 [size 12, encoding twos-complement]
+PUSC-INT13 [size 13, encoding twos-complement]
+PUSC-INT14 [size 14, encoding twos-complement]
+PUSC-INT15 [size 15, encoding twos-complement]
+PUSC-INT16 [size 16, encoding twos-complement]
+PUSC-INT24 [size 24, encoding twos-complement]
+PUSC-INT32 [size 32, encoding twos-complement]
+PUSC-INT48 [size 48, encoding twos-complement]
+PUSC-INT64 [size 64, encoding twos-complement]
 
+PUSC-FLOAT32 [encoding IEEE754-1985-32]
+PUSC-FLOAT64 [encoding IEEE754-1985-64]
+PUSC-MIL-FLOAT32 []
+{
+    mant [size 24],
+    exp [size 8, encoding twos-complement]
+}
+
+PUSC-MIL-FLOAT48 []
+{
+    mant-MSB [size 24],
+    exp [size 8, encoding twos-complement],
+    mant-LSB [size 16]
+}
+
+PUSC-BITSTR-VARIABLE-LEN []
+{
+    length BasicTypes.PUSC-UINT32 [],
+    data [size length]
+}
+
+PUSC-OCTSTR-VARIABLE-LEN []
+{
+    length BasicTypes.PUSC-UINT32 [],
+    data [size length]
+}
+
+PUSC-CHARSTR-VARIABLE-LEN []
+{
+    length BasicTypes.PUSC-UINT32 [],
+    data [size length]
+}
+
+CDS-AbsoluteTime-PFC-1 []
+{
+    day [size 16, encoding pos-int],
+    msOfDay [size 32, encoding pos-int]
+}
+
+CDS-AbsoluteTime-PFC-2 []
+{
+    day [size 16, encoding pos-int],
+    msOfDay [size 32, encoding pos-int],
+    usOfDay [size 16, encoding pos-int]
+}
+
+CUC-AbsoluteTime-PFC-3 []
+{
+    coarseTime [size 1],
+    fineTime [size 1]
+}
+
+CUC-AbsoluteTime-PFC-18 []
+{
+    coarseTime [size 4],
+    fineTime [size 4]
+}
+
+CUC-AbsoluteTime-PFC-19 []
+{
+    coarseTime [size 1],
+    fineTime [size 5]
+}
+
+CUC-AbsoluteTime-PFC-46 []
+{
+    coarseTime [size 4],
+    fineTime [size 8]
+}
+
+AbsoluteTime []
+
+CDS-RelativeTime-PFC-2 []
+{
+    day [size 16, encoding pos-int],
+    msOfDay [size 32, encoding pos-int],
+    usOfDay [size 16, encoding pos-int]
+}
+
+CUC-RelativeTime-PFC-3 []
+{
+    coarseTime [size 1],
+    fineTime [size 1]
+}
+
+CUC-RelativeTime-PFC-18 []
+{
+    coarseTime [size 4],
+    fineTime [size 4]
+}
+
+RelativeTime []
 
 END
