@@ -29,8 +29,8 @@ IMPORTS
 TM-2-9-PhysicalDeviceDataReport ::= SEQUENCE
 {
     transaction-ID Transaction-ID,
-    transactionExecutionStatus TransactionExecutionStatus
---    dataBlock
+    transactionExecutionStatus TransactionExecutionStatus,
+    dataBlock OCTET STRING (SIZE(4))
 }
 
 END

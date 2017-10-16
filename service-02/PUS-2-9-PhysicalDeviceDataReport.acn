@@ -26,8 +26,8 @@ PUS-2-9-PhysicalDeviceDataReport DEFINITIONS ::= BEGIN
 TM-2-9-PhysicalDeviceDataReport []
 {
     transaction-ID [],
-    transactionExecutionStatus []
---    dataBlock
+    transactionExecutionStatus [],
+    dataBlock [size 4]
 }
 
 END

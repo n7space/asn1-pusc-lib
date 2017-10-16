@@ -29,8 +29,8 @@ IMPORTS
 TM-2-12-LogicalDeviceDataReport ::= SEQUENCE
 {
     transaction-ID Transaction-ID,
-    transactionExecutionStatus TransactionExecutionStatus
-    --parameterValue
+    transactionExecutionStatus TransactionExecutionStatus,
+    parameterValue OCTET STRING (SIZE(4)) --TODO
 }
 
 END

@@ -32,8 +32,8 @@ TC-2-1-DistributeOnOffDeviceCommands ::= SEQUENCE
     onOffDeviceAddresses SEQUENCE (SIZE(0 .. 2147483647)) OF DeviceAddress
 }
 
-DeviceAddress ::= ENUMERATED
-{ --TODO
+DeviceAddress ::= ENUMERATED --TODO
+{
     addr0 (1)
 }
 

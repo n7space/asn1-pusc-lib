@@ -26,8 +26,8 @@ PUS-2-12-LogicalDeviceDataReport DEFINITIONS ::= BEGIN
 TM-2-12-LogicalDeviceDataReport []
 {
     transaction-ID [],
-    transactionExecutionStatus []
-    --parameterValue
+    transactionExecutionStatus [],
+    parameterValue [size 4]
 }
 
 END
