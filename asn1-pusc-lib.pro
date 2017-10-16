@@ -57,84 +57,84 @@ DISTFILES += \
     service-01/Request.acn \
     service-01/Request.asn1 \
     service-03/meta.json \
-    service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.acn \
-    service-03/PUS-3-5-EnableThePeriodicGenerationOfHousekeepingReports.asn1 \
-    service-03/PUS-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport.acn \
-    service-03/PUS-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport.asn1 \
-    service-03/PUS-3-1-CreateAHousekeepingParameterReportStructure.acn \
-    service-03/PUS-3-1-CreateAHousekeepingParameterReportStructure.asn1 \
     service-03/DiagnosticParameterReportStructure.acn \
     service-03/DiagnosticParameterReportStructure.asn1 \
     service-03/HousekeepingParameterReportStructure.acn \
     service-03/HousekeepingParameterReportStructure.asn1 \
     service-03/Parameter.acn \
     service-03/Parameter.asn1 \
-    service-03/PUS-3-3-DeleteHousekeepingParameterReportStructures.acn \
-    service-03/PUS-3-3-DeleteHousekeepingParameterReportStructures.asn1 \
-    service-03/PUS-3-9-ReportHousekeepingParameterReportStructures.acn \
-    service-03/PUS-3-9-ReportHousekeepingParameterReportStructures.asn1 \
-    service-03/PUS-3-10-HousekeepingParameterReportStructureReport.acn \
-    service-03/PUS-3-10-HousekeepingParameterReportStructureReport.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
     service-03/PeriodicGenerationActionStatus.asn1 \
-    service-03/PUS-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures.acn \
-    service-03/PUS-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures.asn1 \
-    service-03/PUS-3-29-AppendParametersToAHousekeepingParameterReportStructure.acn \
-    service-03/PUS-3-29-AppendParametersToAHousekeepingParameterReportStructure.asn1 \
-    service-03/PUS-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures.acn \
-    service-03/PUS-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures.asn1 \
     service-03/CollectionInterval.acn \
     service-03/CollectionInterval.asn1 \
-    service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.acn \
-    service-03/PUS-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures.asn1 \
-    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.acn \
-    service-03/PUS-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport.asn1 \
-    service-03/PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.acn \
-    service-03/PUS-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports.asn1 \
-    service-03/PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.acn \
-    service-03/PUS-3-8-DisableThePeriodicGenerationOfDiagnosticParameterReports.asn1 \
-    service-03/PUS-3-2-CreateADiagnosticParameterReportStructure.acn \
-    service-03/PUS-3-2-CreateADiagnosticParameterReportStructure.asn1 \
-    service-03/PUS-3-4-DeleteDiagnosticParameterReportStructures.acn \
-    service-03/PUS-3-4-DeleteDiagnosticParameterReportStructures.asn1 \
-    service-03/PUS-3-11-ReportDiagnosticParameterReportStructures.acn \
-    service-03/PUS-3-11-ReportDiagnosticParameterReportStructures.asn1 \
-    service-03/PUS-3-12-DiagnosticParameterReportStructureReport.acn \
-    service-03/PUS-3-12-DiagnosticParameterReportStructureReport.asn1 \
-    service-03/PUS-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures.acn \
-    service-03/PUS-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures.asn1 \
-    service-03/PUS-3-26-DiagnosticParameterReport.acn \
-    service-03/PUS-3-26-DiagnosticParameterReport.asn1 \
-    service-03/PUS-3-25-HousekeepingParameterReport.acn \
-    service-03/PUS-3-25-HousekeepingParameterReport.asn1 \
-    service-03/PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.acn \
-    service-03/PUS-3-30-AppendParametersToADiagnosticParameterReportStructure.asn1 \
-    service-03/PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.acn \
-    service-03/PUS-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures.asn1 \
-    service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.acn \
-    service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.asn1 \
-    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.acn \
-    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1 \
-    service-03/PUS-3-37-ApplyParameterFunctionalReportingConfigurations.acn \
-    service-03/PUS-3-37-ApplyParameterFunctionalReportingConfigurations.asn1 \
     service-03/ParameterReportStructureType.acn \
     service-03/ParameterReportStructureType.asn1 \
     service-03/ParameterFunctionalReportingDefinition.acn \
     service-03/ParameterFunctionalReportingDefinition.asn1 \
-    service-03/PUS-3-38-CreateAParameterFunctionalReportingDefinition.acn \
-    service-03/PUS-3-38-CreateAParameterFunctionalReportingDefinition.asn1 \
-    service-03/PUS-3-39-DeleteParameterFunctionalReportingDefinitions.acn \
-    service-03/PUS-3-39-DeleteParameterFunctionalReportingDefinitions.asn1 \
-    service-03/PUS-3-40-ReportParameterFunctionalReportingDefinitions.acn \
-    service-03/PUS-3-40-ReportParameterFunctionalReportingDefinitions.asn1 \
-    service-03/PUS-3-41-ParameterFunctionalReportingDefinitionReport.acn \
-    service-03/PUS-3-41-ParameterFunctionalReportingDefinitionReport.asn1 \
-    service-03/PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.acn \
-    service-03/PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.asn1 \
-    service-03/PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition.acn \
-    service-03/PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition.asn1 \
-    service-03/PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.acn \
-    service-03/PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.asn
+    service-03/PUS-3-1.acn \
+    service-03/PUS-3-1.asn1 \
+    service-03/PUS-3-10.acn \
+    service-03/PUS-3-10.asn1 \
+    service-03/PUS-3-11.acn \
+    service-03/PUS-3-11.asn1 \
+    service-03/PUS-3-12.acn \
+    service-03/PUS-3-12.asn1 \
+    service-03/PUS-3-2.acn \
+    service-03/PUS-3-2.asn1 \
+    service-03/PUS-3-25.acn \
+    service-03/PUS-3-25.asn1 \
+    service-03/PUS-3-26.acn \
+    service-03/PUS-3-26.asn1 \
+    service-03/PUS-3-27.acn \
+    service-03/PUS-3-27.asn1 \
+    service-03/PUS-3-28.acn \
+    service-03/PUS-3-28.asn1 \
+    service-03/PUS-3-29.acn \
+    service-03/PUS-3-29.asn1 \
+    service-03/PUS-3-3.acn \
+    service-03/PUS-3-3.asn1 \
+    service-03/PUS-3-30.acn \
+    service-03/PUS-3-30.asn1 \
+    service-03/PUS-3-31.acn \
+    service-03/PUS-3-31.asn1 \
+    service-03/PUS-3-32.acn \
+    service-03/PUS-3-32.asn1 \
+    service-03/PUS-3-33.acn \
+    service-03/PUS-3-33.asn1 \
+    service-03/PUS-3-34.acn \
+    service-03/PUS-3-34.asn1 \
+    service-03/PUS-3-35.acn \
+    service-03/PUS-3-35.asn1 \
+    service-03/PUS-3-36.acn \
+    service-03/PUS-3-36.asn1 \
+    service-03/PUS-3-37.acn \
+    service-03/PUS-3-37.asn1 \
+    service-03/PUS-3-38.acn \
+    service-03/PUS-3-38.asn1 \
+    service-03/PUS-3-39.acn \
+    service-03/PUS-3-39.asn1 \
+    service-03/PUS-3-4.acn \
+    service-03/PUS-3-4.asn1 \
+    service-03/PUS-3-40.acn \
+    service-03/PUS-3-40.asn1 \
+    service-03/PUS-3-41.acn \
+    service-03/PUS-3-41.asn1 \
+    service-03/PUS-3-42.acn \
+    service-03/PUS-3-42.asn1 \
+    service-03/PUS-3-43.acn \
+    service-03/PUS-3-43.asn1 \
+    service-03/PUS-3-44.acn \
+    service-03/PUS-3-44.asn \
+    service-03/PUS-3-5.acn \
+    service-03/PUS-3-5.asn1 \
+    service-03/PUS-3-6.acn \
+    service-03/PUS-3-6.asn1 \
+    service-03/PUS-3-7.acn \
+    service-03/PUS-3-7.asn1 \
+    service-03/PUS-3-8.acn \
+    service-03/PUS-3-8.asn1 \
+    service-03/PUS-3-9.acn \
+    service-03/PUS-3-9.asn1
 
 
 
