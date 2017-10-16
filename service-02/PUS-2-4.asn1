@@ -21,20 +21,45 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-1-DistributeOnOffDeviceCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-2-4 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-TC-2-1-DistributeOnOffDeviceCommands ::= SEQUENCE
+PUS-2-4-DistributeCpduCommands ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    onOffDeviceAddresses SEQUENCE (SIZE(0 .. 2147483647)) OF DeviceAddress
+--! n2 PUSC-UINT32, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
 }
 
-DeviceAddress ::= ENUMERATED --TODO
+PUS-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
 {
-    addr0 (1)
+--! n1 PUSC-UINT32, moved to acn
+    cpdu SEQUENCE (SIZE (0 .. 2)) OF CPDU
+}
+
+CPDU ::= SEQUENCE
+{
+    cpdu-ID CPDU-ID,
+--! n2 PUSC-UINT32, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
+}
+
+CpduCommand ::= SEQUENCE
+{
+    outputLine-ID OutputLine-ID,
+    reserved BIT STRING (SIZE(1)),
+    durationExponentialValue INTEGER (0 .. 7)
+}
+
+CPDU-ID ::= ENUMERATED --TODO
+{
+    cpdu0 (0)
+}
+
+OutputLine-ID ::= ENUMERATED --TODO
+{
+    out1 (1)
 }
 
 END

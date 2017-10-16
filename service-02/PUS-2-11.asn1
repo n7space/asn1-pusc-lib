@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-11-AcquireDataFromLogicalDevices DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-2-11 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     LogicalDevice-ID FROM LogicalDevice

@@ -21,36 +21,43 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-4-DistributeCpduCommands DEFINITIONS ::= BEGIN
+PUS-2-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    LogicalDevice-ID FROM LogicalDevice;
 
-PUS-2-4-DistributeCpduCommands []
+TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
 {
-    n2 BasicTypes.PUSC-UINT32 [],
-    cpduCommands [size n2]
+--! n PUSC-UINT32, moved to acn
+    logicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF LogicalDeviceCommand
 }
 
-PUS-2-4-DistrubiteCpduCommands-MultipleCpdu []
+LogicalDeviceCommand ::= SEQUENCE
 {
-    n1 BasicTypes.PUSC-UINT32 [],
-    cpdu [size n1]
+--! logicalDevice-ID LogicalDevice-ID, moved to acn
+    command Command
 }
 
-CPDU []
+Command ::= CHOICE --TODO
 {
-    cpdu-ID [],
-    n2 BasicTypes.PUSC-UINT32 [],
-    cpduCommands [size n2]
+    ldev1 Ldev1
 }
 
-CpduCommand []
+Ldev1 ::= SEQUENCE --TODO
 {
-    outputLine-ID [],
-    reserved [size 1],
-    durationExponentialValue [size 3, encoding pos-int]
+--! command-ID Ldev1-Commands,
+    commandArguments Ldev1-Arguments
 }
 
-CPDU-ID  [size 32, encoding pos-int] --TODO
+Ldev1-Commands ::= ENUMERATED --TODO
+{
+    command1 (0)
+}
 
-OutputLine-ID [size 12, encoding pos-int] --TODO
+Ldev1-Arguments ::= CHOICE --TODO
+{
+    command1 INTEGER (0 .. 255)
+}
 
 END

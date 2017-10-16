@@ -21,14 +21,21 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-1-DistributeOnOffDeviceCommands DEFINITIONS ::= BEGIN
+PUS-2-11 DEFINITIONS ::= BEGIN
 
-TC-2-1-DistributeOnOffDeviceCommands []
+TC-2-11-AcquireDataFromLogicalDevices []
 {
     n BasicTypes.PUSC-UINT32 [],
-    onOffDeviceAddresses [size n]
+    dataAcquireRequests [size n]
 }
 
-DeviceAddress [size 32, encoding pos-int]
+DataAcquireRequest []
+{
+    transaction-ID [],
+    logicalDevice-ID [],
+    parameter-ID []
+}
+
+Parameter-ID [size 32, encoding pos-int]
 
 END

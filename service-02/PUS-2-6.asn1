@@ -21,45 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-4-DistributeCpduCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-2-6 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PUSC-UINT32 FROM BasicTypes;
+    PUSC-UINT32 FROM BasicTypes
+    Register FROM Registers;
 
-PUS-2-4-DistributeCpduCommands ::= SEQUENCE
+TM-2-6-RegisterDumpReport ::= SEQUENCE
 {
---! n2 PUSC-UINT32, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
-}
-
-PUS-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
-{
---! n1 PUSC-UINT32, moved to acn
-    cpdu SEQUENCE (SIZE (0 .. 2)) OF CPDU
-}
-
-CPDU ::= SEQUENCE
-{
-    cpdu-ID CPDU-ID,
---! n2 PUSC-UINT32, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
-}
-
-CpduCommand ::= SEQUENCE
-{
-    outputLine-ID OutputLine-ID,
-    reserved BIT STRING (SIZE(1)),
-    durationExponentialValue INTEGER (0 .. 7)
-}
-
-CPDU-ID ::= ENUMERATED --TODO
-{
-    cpdu0 (0)
-}
-
-OutputLine-ID ::= ENUMERATED --TODO
-{
-    out1 (1)
+--! n PUSC-UINT32, moved to acn
+    registerDumps SEQUENCE (SIZE(0 .. 2147483647)) OF Register
 }
 
 END

@@ -21,24 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-8-AcquireDataFromPhysicalDevices DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    PUSC-UINT32 FROM BasicTypes
-    PhysicalDevice-ID, ProtocolSpecificData FROM PhysicalDevice
-    Transaction-ID FROM Transaction;
+PUS-2-5 DEFINITIONS ::= BEGIN
 
-TC-2-8-AcquireDataFromPhysicalDevices ::= SEQUENCE
+TC-2-5-DistributeRegisterDumpCommands []
 {
---! n PUSC-UINT32, moved to acn
-    deviceDataRequests SEQUENCE (SIZE(0 .. 2147483647)) OF DeviceDataRequest
-}
-
-DeviceDataRequest ::= SEQUENCE
-{
-    transaction-ID Transaction-ID,
---! physicalDevice-ID PhysicalDevice-ID, moved to acn
-    protocolSpecificData ProtocolSpecificData
+    n BasicTypes.PUSC-UINT32 [],
+    registerAddresses [size n]
 }
 
 END

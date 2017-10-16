@@ -21,16 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-6-RegisterDumpReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-2-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PUSC-UINT32 FROM BasicTypes
-    Register FROM Registers;
+    PUSC-UINT32 FROM BasicTypes;
 
-TM-2-6-RegisterDumpReport ::= SEQUENCE
+TC-2-1-DistributeOnOffDeviceCommands ::= SEQUENCE
 {
 --! n PUSC-UINT32, moved to acn
-    registerDumps SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+    onOffDeviceAddresses SEQUENCE (SIZE(0 .. 2147483647)) OF DeviceAddress
+}
+
+DeviceAddress ::= ENUMERATED --TODO
+{
+    addr0 (1)
 }
 
 END

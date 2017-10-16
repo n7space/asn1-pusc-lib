@@ -21,19 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-8-AcquireDataFromPhysicalDevices DEFINITIONS ::= BEGIN
+PUS-2-9 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    Transaction-ID, TransactionExecutionStatus FROM Transaction;
 
-TC-2-8-AcquireDataFromPhysicalDevices []
+TM-2-9-PhysicalDeviceDataReport ::= SEQUENCE
 {
-    n BasicTypes.PUSC-UINT32 [],
-    deviceDataRequests [size n]
-}
-
-DeviceDataRequest []
-{
-    transaction-ID [],
-    physicalDevice-ID PhysicalDevice.PhysicalDevice-ID [],
-    protocolSpecificData <physicalDevice-ID> []
+    transaction-ID Transaction-ID,
+    transactionExecutionStatus TransactionExecutionStatus,
+    dataBlock OCTET STRING (SIZE(4))
 }
 
 END

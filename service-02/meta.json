@@ -6,7 +6,7 @@
       "elements": [
         {
           "name": "Distribute on/off device commands",
-          "asn1Files": ["PUS-2-1-DistributeOnOffDeviceCommands.asn1"],
+          "asn1Files": ["PUS-2-1.asn1"],
           "imports": [
             {
               "from": "BasicTypes",
@@ -17,7 +17,7 @@
         {
           "name": "Distribute register load commands",
           "asn1Files": [
-            "PUS-2-2-DistributeRegisterLoadCommands.asn1",
+            "PUS-2-2.asn1",
             "Registers.asn1"
           ],
           "imports":[
@@ -30,8 +30,8 @@
         {
           "name": "Distribute register dump commands",
           "asn1Files": [
-            "PUS-2-5-DistributeRegisterDumpCommands.asn1",
-            "PUS-2-6-RegisterDumpReport.asn1",
+            "PUS-2-5.asn1",
+            "PUS-2-6.asn1",
             "Registers.asn1"
           ],
           "requires": ["Distribute register load commands"],
@@ -44,7 +44,7 @@
         },
         {
           "name": "Distribute CPDU commands",
-          "asn1Files": ["PUS-2-4-DistributeCpduCommands.asn1"],
+          "asn1Files": ["PUS-2-4.asn1"],
           "imports": [
             {
               "from": "BasicTypes",
@@ -55,7 +55,7 @@
         {
           "name": "Distribute physical device commands",
           "asn1Files": [
-            "PUS-2-7-DistributePhysicalDeviceCommands.asn1",
+            "PUS-2-7.asn1",
             "PhysicalDevice.asn1"
           ],
           "imports": [
@@ -68,8 +68,8 @@
         {
           "name": "Acquire data from physical devices",
           "asn1Files": [
-            "PUS-2-8-AcquireDataFromPhysicalDevices.asn1",
-            "PUS-2-9-PhysicalDeviceDataReport.asn1",
+            "PUS-2-8.asn1",
+            "PUS-2-9.asn1",
             "PhysicalDevice.asn1",
             "Transaction.asn1"
           ],
@@ -83,7 +83,7 @@
         {
           "name": "Distribute logical device commands",
           "asn1Files": [
-            "PUS-2-10-DistributeLogicalDeviceCommands.asn1",
+            "PUS-2-10.asn1",
             "LogicalDevice.asn1"
           ],
           "requires": ["Distribute physical device commands"],
@@ -97,8 +97,8 @@
         {
           "name": "Acquire data from logical devices",
           "asn1Files": [
-            "PUS-2-11-AcquireDataFromLogicalDevices.asn1",
-            "PUS-2-12-LogicalDeviceDataReport.asn1",
+            "PUS-2-11.asn1",
+            "PUS-2-12.asn1",
             "LogicalDevice.asn1",
             "Transaction"
           ],

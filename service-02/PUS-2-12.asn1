@@ -21,20 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-2-DistributeRegisterLoadCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-2-12 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PUSC-UINT32 FROM BasicTypes
-    Register FROM Registers;
+    Transaction-ID, TransactionExecutionStatus FROM Transaction;
 
-TC-2-2-DistributeRegisterCommands ::= SEQUENCE
+TM-2-12-LogicalDeviceDataReport ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    registerCommands SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+    transaction-ID Transaction-ID,
+    transactionExecutionStatus TransactionExecutionStatus,
+    parameterValue OCTET STRING (SIZE(4)) --TODO
 }
-
-
-
-
 
 END

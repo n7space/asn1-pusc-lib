@@ -21,13 +21,16 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-6-RegisterDumpReport DEFINITIONS ::= BEGIN
+PUS-2-5 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    RegisterAddress FROM Registers;
 
-TM-2-6-RegisterDumpReport []
+TC-2-5-DistributeRegisterDumpCommands ::= SEQUENCE
 {
-    n BasicTypes.PUSC-UINT32 [],
-    registerDumps [size n]
-
+--! n PUSC-UINT32, moved to acn
+    registerAddresses SEQUENCE (SIZE(0 .. 2147483647)) OF RegisterAddress
 }
 
 END

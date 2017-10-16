@@ -21,12 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-5-DistributeRegisterDumpCommands DEFINITIONS ::= BEGIN
+PUS-2-1 DEFINITIONS ::= BEGIN
 
-TC-2-5-DistributeRegisterDumpCommands []
+TC-2-1-DistributeOnOffDeviceCommands []
 {
     n BasicTypes.PUSC-UINT32 [],
-    registerAddresses [size n]
+    onOffDeviceAddresses [size n]
 }
+
+DeviceAddress [size 32, encoding pos-int]
 
 END

@@ -21,21 +21,28 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-11-AcquireDataFromLogicalDevices DEFINITIONS ::= BEGIN
+PUS-2-7 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    PhysicalDevice-ID, ProtocolSpecificData FROM PhysicalDevice;
 
-TC-2-11-AcquireDataFromLogicalDevices []
+TC-2-7-DistributePhysicalDeviceCommands ::= SEQUENCE
 {
-    n BasicTypes.PUSC-UINT32 [],
-    dataAcquireRequests [size n]
+--! n PUSC-UINT32, moved to acn
+    physicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF PhysicalDeviceCommand
 }
 
-DataAcquireRequest []
+PhysicalDeviceCommand ::= SEQUENCE
 {
-    transaction-ID [],
-    logicalDevice-ID [],
-    parameter-ID []
+--! physicalDevice-ID PhysicalDevice-ID, moved to acn
+    protocolSpecificData ProtocolSpecificData,
+    commandData CommandData
 }
 
-Parameter-ID [size 32, encoding pos-int]
+CommandData ::= CHOICE
+{
+    dev1 INTEGER (0 .. 255)
+}
 
 END

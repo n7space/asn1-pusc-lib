@@ -21,16 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-9-PhysicalDeviceDataReport DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    Transaction-ID, TransactionExecutionStatus FROM Transaction;
+PUS-2-9 DEFINITIONS ::= BEGIN
 
-TM-2-9-PhysicalDeviceDataReport ::= SEQUENCE
+TM-2-9-PhysicalDeviceDataReport []
 {
-    transaction-ID Transaction-ID,
-    transactionExecutionStatus TransactionExecutionStatus,
-    dataBlock OCTET STRING (SIZE(4))
+    transaction-ID [],
+    transactionExecutionStatus [],
+    dataBlock [size 4]
 }
 
 END

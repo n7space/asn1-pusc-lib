@@ -21,28 +21,24 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-7-DistributePhysicalDeviceCommands DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    PUSC-UINT32 FROM BasicTypes
-    PhysicalDevice-ID, ProtocolSpecificData FROM PhysicalDevice;
+PUS-2-7 DEFINITIONS ::= BEGIN
 
-TC-2-7-DistributePhysicalDeviceCommands ::= SEQUENCE
+TC-2-7-DistributePhysicalDeviceCommands []
 {
---! n PUSC-UINT32, moved to acn
-    physicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF PhysicalDeviceCommand
+    n BasicTypes.PUSC-UINT32 [],
+    physicalDeviceCommands [size n]
 }
 
-PhysicalDeviceCommand ::= SEQUENCE
+PhysicalDeviceCommand []
 {
---! physicalDevice-ID PhysicalDevice-ID, moved to acn
-    protocolSpecificData ProtocolSpecificData,
-    commandData CommandData
+    physicalDevice-ID PhysicalDevice.PhysicalDevice-ID [],
+    protocolSpecificData <physicalDevice-ID> [],
+    commandData <physicalDevice-ID> []
 }
 
-CommandData ::= CHOICE
+CommandData <PhysicalDevice.PhysicalDevice-ID: device> [determinant device]
 {
-    dev1 INTEGER (0 .. 255)
+    dev1 [size 8, encoding pos-int]
 }
 
 END
