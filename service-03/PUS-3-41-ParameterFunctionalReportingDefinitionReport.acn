@@ -21,16 +21,35 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-HousekeepingParameterReportStructure DEFINITIONS AUTOMATIC TAGS::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    PUSC-UINT32 FROM BasicTypes;
+PUS-3-41-ParameterFunctionalReportingDefinitionReport DEFINITIONS ::= BEGIN
 
-HousekeepingParameterReportStructure-ID ::= INTEGER (0 .. 4294967295) --TODO
-
-HousekeepingParameterValues ::= CHOICE --TODO
+TM-3-41-ParameterFunctionalReportingDefinitionReportMultipleApid []
 {
-    struct1 INTEGER (0 .. 255)
+    parameterFunctionalReportingDefinition-ID [],
+    n1 BasicTypes.PUSC-UINT32 [],
+    apidParameterReportingEntries [size n1]
+}
+
+TM-3-41-ParameterFunctionalReportingDefinitionReport []
+{
+    parameterFunctionalReportingDefinition-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    parameterReportingEntries [size n2]
+}
+
+ApidParameterReportingEntries []
+{
+    applicationProcess-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    parameterReportingEntries [size n2]
+}
+
+ParameterReportingEntries []
+{
+    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
+    parameterReportStructure-ID <parameterReportStructureType> [],
+    periodicGenerationActionStatus [],
+    collectionInterval []
 }
 
 END

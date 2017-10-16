@@ -296,34 +296,142 @@
       "elements": [
         {
           "name": "Apply parameter functional reporting configurations",
-          "asn1Files": ["PUS-3-37-ApplyParameterFunctionalReportingConfigurations.asn1"]
+          "asn1Files": [
+            "PUS-3-37-ApplyParameterFunctionalReportingConfigurations.asn1",
+            "ParameterFunctionalReportingDefinition.asn1" 
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
-          "name": "Managing parameter functional reporting definitions",
-          "asn1Files": ["PUS-3-38-CreateAParameterfunctionalReportingDefinition"]
+          "name": "Create a parameter functional reporting definition",
+          "asn1Files": [
+            "PUS-3-38-CreateAParameterfunctionalReportingDefinition",
+            "ParameterReportStructureType.asn1",
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "PeriodicGenerationActionStatus.asn1",
+            "CollectionInterval.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Delete parameter functional reporting definitions",
-          "asn1Files": ["PUS-3-39-DeleteParameterFunctionalReportingDefinitions.asn1"]
+          "asn1Files": [
+            "PUS-3-39-DeleteParameterFunctionalReportingDefinitions.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "requires": ["Create a parameter functional reporting definition"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Report parameter functional reporting definitions",
           "asn1Files": [
             "PUS-3-40-ReportParameterFunctionalReportingDefinitions.asn1",
-            "PUS-3-41-ParameterFunctionalReportingDefinitionReport.asn1"
+            "PUS-3-41-ParameterFunctionalReportingDefinitionReport.asn1",
+            "ParameterReportStructureType.asn1",
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "PeriodicGenerationActionStatus.asn1",
+            "CollectionInterval.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "requires": ["Create a parameter functional reporting definition"],
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
           ]
         },
         {
           "name": "Add parameter report definitions to a parameter functional reporting definition",
-          "asn1Files": ["PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.asn1"]
+          "asn1Files": [
+            "PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportStructureType.asn1",
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "PeriodicGenerationActionStatus.asn1",
+            "CollectionInterval.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "requires": ["Create a parameter functional reporting definition"],
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Remove parameter report definitions from a parameter functional reporting definition",
-          "asn1Files": ["PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReporingDefinition.asn1"]
+          "asn1Files": [
+            "PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReporingDefinition.asn1",
+            "ParameterReportStructureType.asn1",
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "requires": ["Add parameter report definitions to a parameter functional reporting definition"],
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Modify the periodic generation properties of parameter report definitions of a parameter functional reporting definition",
-          "asn1Files": ["PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.asn1"]
+          "asn1Files": [
+            "PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportStructureType.asn1",
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1",
+            "PeriodicGenerationActionStatus.asn1",
+            "CollectionInterval.asn1",
+            "ParameterFunctionalReportingDefinition.asn1"
+          ],
+          "imports": [
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         }
       ]
     }

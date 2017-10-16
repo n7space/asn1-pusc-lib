@@ -37,7 +37,7 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-09/meta.json \ 
+    service-09/meta.json \
     service-17/meta.json \
     service-17/PUS-17-1.acn \
     service-17/PUS-17-1.asn1 \
@@ -114,7 +114,28 @@ DISTFILES += \
     service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.acn \
     service-03/PUS-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructures.asn1 \
     service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.acn \
-    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1
+    service-03/PUS-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport.asn1 \
+    service-03/PUS-3-37-ApplyParameterFunctionalReportingConfigurations.acn \
+    service-03/PUS-3-37-ApplyParameterFunctionalReportingConfigurations.asn1 \
+    service-03/ParameterReportStructureType.acn \
+    service-03/ParameterReportStructureType.asn1 \
+    service-03/ParameterFunctionalReportingDefinition.acn \
+    service-03/ParameterFunctionalReportingDefinition.asn1 \
+    service-03/PUS-3-38-CreateAParameterFunctionalReportingDefinition.acn \
+    service-03/PUS-3-38-CreateAParameterFunctionalReportingDefinition.asn1 \
+    service-03/PUS-3-39-DeleteParameterFunctionalReportingDefinitions.acn \
+    service-03/PUS-3-39-DeleteParameterFunctionalReportingDefinitions.asn1 \
+    service-03/PUS-3-40-ReportParameterFunctionalReportingDefinitions.acn \
+    service-03/PUS-3-40-ReportParameterFunctionalReportingDefinitions.asn1 \
+    service-03/PUS-3-41-ParameterFunctionalReportingDefinitionReport.acn \
+    service-03/PUS-3-41-ParameterFunctionalReportingDefinitionReport.asn1 \
+    service-03/PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.acn \
+    service-03/PUS-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition.asn1 \
+    service-03/PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition.acn \
+    service-03/PUS-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition.asn1 \
+    service-03/PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.acn \
+    service-03/PUS-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition.asn
+
 
 
 include(.qmake/handleAsn1AcnBuild.pri)
