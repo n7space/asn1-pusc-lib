@@ -37,7 +37,13 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-09/meta.json \
+    service-09/meta.json \ 
+    service-09/PUS-9-1.acn \
+    service-09/PUS-9-1.asn1 \
+    service-09/PUS-9-2.acn \
+    service-09/PUS-9-2.asn1 \
+    service-09/PUS-9-3.acn \
+    service-09/PUS-9-3.asn1 \
     service-17/meta.json \
     service-17/PUS-17-1.acn \
     service-17/PUS-17-1.asn1 \
@@ -54,6 +60,10 @@ DISTFILES += \
     ccsds/TM-Payload.acn \
     ccsds/TC-Payload.acn \
     ccsds/TC-Payload.asn1 \
+    service-09/RateExponentialValue.acn \
+    service-09/RateExponentialValue.asn1 \
+    service-09/SpacecraftTimeReferenceStatus.acn \
+    service-09/SpacecraftTimeReferenceStatus.asn1 \
     service-01/Request.acn \
     service-01/Request.asn1 \
     service-03/meta.json \
