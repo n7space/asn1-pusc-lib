@@ -6,12 +6,20 @@
       "elements": [
         {
           "name": "Time reporting in CUC format",
-          "asn1Files": ["TM-9-2-CucTimeReport.asn1"],
+          "asn1Files": [
+            "PUS-9-2-CucTimeReport.asn1",
+            "RateExponentialValue.asn1",
+            "SpacecraftTimeReferenceStatus.asn1"
+          ],
           "conflicts": ["Time reporting in CDS format"]
         },
         {
           "name": "Time reporting in CDS format",
-          "asn1Files": ["TM-9-3-CdsTimeReport.asn1"],
+          "asn1Files": [
+            "PUS-9-3-CdsTimeReport.asn1",
+            "RateExponentialValue.asn1",
+            "SpacecraftTimeReferenceStatus.asn1"
+          ],
           "conflicts": ["Time reporting in CUC format"]
         }
       ]
@@ -21,7 +29,10 @@
       "elements": [
         {
           "name": "Set the time report generation",
-          "asn1Files": ["TC-9-1-SetTheTimeReportGenerationRate.asn1"]
+          "asn1Files": [
+            "PUS-9-1-SetTheTimeReportGenerationRate.asn1",
+            "RateExponentialValue.asn1"
+          ]
         }
       ]
     }
