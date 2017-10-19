@@ -33,8 +33,4 @@ TC-2-2-DistributeRegisterCommands ::= SEQUENCE
     registerCommands SEQUENCE (SIZE(0 .. 2147483647)) OF Register
 }
 
-
-
-
-
 END

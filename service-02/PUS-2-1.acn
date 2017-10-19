@@ -29,6 +29,6 @@ TC-2-1-DistributeOnOffDeviceCommands []
     onOffDeviceAddresses [size n]
 }
 
-DeviceAddress [size 32, encoding pos-int]
+DeviceAddress [size 32, encoding pos-int, encode-values]
 
 END

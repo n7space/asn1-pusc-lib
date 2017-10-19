@@ -23,7 +23,7 @@
 
 PhysicalDevice DEFINITIONS ::= BEGIN
 
-PhysicalDevice-ID [size 32, encoding pos-int] --TODO
+PhysicalDevice-ID [size 32, encoding pos-int, encode-values] --TODO
 
 ProtocolSpecificData <PhysicalDevice-ID: device> [determinant device] --TODO
 {

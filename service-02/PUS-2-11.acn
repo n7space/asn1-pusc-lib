@@ -36,6 +36,6 @@ DataAcquireRequest []
     parameter-ID []
 }
 
-Parameter-ID [size 32, encoding pos-int]
+Parameter-ID [size 32, encoding pos-int, encode-values]
 
 END
