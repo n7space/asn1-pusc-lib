@@ -20,6 +20,10 @@
         {
           "name": "Execution Step",
           "asn1Files": ["ExecutionStep.asn1"]
+        },
+        {
+          "name": "Dummy type",
+          "asn1Files": ["Dummy.asn1"]
         }
       ]
     }

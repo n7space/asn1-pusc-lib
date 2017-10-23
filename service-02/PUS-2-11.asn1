@@ -28,17 +28,21 @@ IMPORTS
     Transaction-ID FROM Transaction
     PUSC-UINT32 FROM BasicTypes;
 
+maxTC-2-11-DataAcquireRequestCount INTEGER ::= 2147483647
+
 TC-2-11-AcquireDataFromLogicalDevices ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    dataAcquireRequests SEQUENCE (SIZE(0 .. 2147483647)) OF DataAcquireRequest
+--! n UnsignedInteger, moved to acn
+    dataAcquireRequests SEQUENCE (SIZE(0 .. maxTC-2-11-DataAcquireRequestCount)) OF DataAcquireRequest
 }
 
-DataAcquireRequest ::= SEQUENCE
+DataAcquireRequest ::= DataAcquireRequestGeneric {Transaction-ID, LogicalDevice-ID, Parameter-ID}
+
+DataAcquireRequestGeneric {TTransaction-ID, TLogicalDevice-ID, TParameter-ID} ::= SEQUENCE
 {
-    transaction-ID Transaction-ID,
-    logicalDevice-ID LogicalDevice-ID,
-    parameter-ID Parameter-ID
+    transaction-ID TTransaction-ID,
+    logicalDevice-ID TLogicalDevice-ID,
+    parameter-ID TParameter-ID
 }
 
 Parameter-ID ::= ENUMERATED

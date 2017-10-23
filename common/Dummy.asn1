@@ -21,24 +21,9 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Dummy DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
-IMPORTS
-    PUSC-UINT32 FROM BasicTypes;
 
-maxTC-2-1-OnOffDeviceAdressesCount INTEGER ::= 2147483647
-
-TC-2-1-DistributeOnOffDeviceCommands ::= TC-2-1-DistributeOnOffDeviceCommandsGeneric {DeviceAddress}
-
-DeviceAddress ::= ENUMERATED --TODO
-{
-    addr0 (1)
-}
-
-TC-2-1-DistributeOnOffDeviceCommandsGeneric {TDeviceAddress} ::= SEQUENCE
-{
---! n TUnsignedInteger, moved to acn
-    onOffDeviceAddresses SEQUENCE (SIZE(0 .. maxTC-2-1-OnOffDeviceAdressesCount)) OF TDeviceAddress
-}
+DummyType ::= INTEGER (15)
 
 END

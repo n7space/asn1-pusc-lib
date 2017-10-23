@@ -27,10 +27,14 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     Register FROM Registers;
 
-TM-2-6-RegisterDumpReport ::= SEQUENCE
+maxTC-2-6-RegisterDumpCount INTEGER ::= 2147483647
+
+TM-2-6-RegisterDumpReport ::= TM-2-6-RegisterDumpReportGeneric {Register}
+
+TM-2-6-RegisterDumpReportGeneric {TRegister} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    registerDumps SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+--! n UnsignedInteger, moved to acn
+    registerDumps SEQUENCE (SIZE(0 .. maxTC-2-6-RegisterDumpCount)) OF TRegister
 }
 
 END

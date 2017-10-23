@@ -27,10 +27,14 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     Register FROM Registers;
 
-TC-2-2-DistributeRegisterCommands ::= SEQUENCE
+maxTC-2-2-RegisterCommandCount INTEGER ::= 2147483647
+
+TC-2-2-DistributeRegisterCommands ::= TC-2-2-DistributeRegisterCommandsGeneric {Register}
+
+TC-2-2-DistributeRegisterCommandsGeneric {TRegister} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    registerCommands SEQUENCE (SIZE(0 .. 2147483647)) OF Register
+--! n UnsignedInteger, moved to acn
+    registerCommands SEQUENCE (SIZE(0 .. maxTC-2-2-RegisterCommandCount)) OF Register
 }
 
 END

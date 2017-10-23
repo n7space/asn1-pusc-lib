@@ -26,28 +26,35 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-PUS-2-4-DistributeCpduCommands ::= SEQUENCE
+maxTC-2-4-CpduCommandsCount INTEGER ::= 1073741823
+maxTC-2-4-CpduCount INTEGER ::= 536870911
+
+TC-2-4-DistributeCpduCommands ::= SEQUENCE
 {
---! n2 PUSC-UINT32, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
+--! n2 UnsignedInteger, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
 }
 
-PUS-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
+TC-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
 {
---! n1 PUSC-UINT32, moved to acn
-    cpdu SEQUENCE (SIZE (0 .. 2)) OF CPDU
+--! n1 UnsignedInteger, moved to acn
+    cpdu SEQUENCE (SIZE (0 .. maxTC-2-4-CpduCount)) OF CPDU
 }
 
-CPDU ::= SEQUENCE
+CPDU ::= CPDU-Generic {CPDU-ID}
+
+CPDU-Generic {TCPDU-ID} ::= SEQUENCE
 {
-    cpdu-ID CPDU-ID,
---! n2 PUSC-UINT32, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. 2147483647)) OF CpduCommand
+    cpdu-ID TCPDU-ID,
+--! n2 UnsignedInteger, moved to acn
+    cpduCommands SEQUENCE (SIZE(0 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
 }
 
-CpduCommand ::= SEQUENCE
+CpduCommand ::= CpduCommandGeneric {OutputLine-ID}
+
+CpduCommandGeneric {TOutputLine-ID} ::= SEQUENCE
 {
-    outputLine-ID OutputLine-ID,
+    outputLine-ID TOutputLine-ID,
     reserved BIT STRING (SIZE(1)),
     durationExponentialValue INTEGER (0 .. 7)
 }

@@ -24,13 +24,16 @@
 PUS-2-12 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Transaction-ID, TransactionExecutionStatus FROM Transaction;
+    Transaction-ID, TransactionExecutionStatus FROM Transaction
+    DummyType FROM Dummy;
 
-TM-2-12-LogicalDeviceDataReport ::= SEQUENCE
+TM-2-12-LogicalDeviceDataReport ::= TM-2-12-LogicalDeviceDataReportGeneric {Transaction-ID, TransactionExecutionStatus, DummyType}
+
+TM-2-12-LogicalDeviceDataReportGeneric {TTransaction-ID, TTransactionExecutionStatus, TParameterValue} ::= SEQUENCE
 {
-    transaction-ID Transaction-ID,
-    transactionExecutionStatus TransactionExecutionStatus,
-    parameterValue OCTET STRING (SIZE(4)) --TODO
+    transaction-ID TTransaction-ID,
+    transactionExecutionStatus TTransactionExecutionStatus,
+    parameterValue TParameterValue
 }
 
 END

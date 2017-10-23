@@ -23,13 +23,13 @@
 
 PUS-2-4 DEFINITIONS ::= BEGIN
 
-PUS-2-4-DistributeCpduCommands []
+TC-2-4-DistributeCpduCommands []
 {
     n2 BasicTypes.PUSC-UINT32 [],
     cpduCommands [size n2]
 }
 
-PUS-2-4-DistrubiteCpduCommands-MultipleCpdu []
+TC-2-4-DistrubiteCpduCommands-MultipleCpdu []
 {
     n1 BasicTypes.PUSC-UINT32 [],
     cpdu [size n1]

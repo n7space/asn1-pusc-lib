@@ -96,7 +96,9 @@ DISTFILES += \
     service-02/PUS-2-8.acn \
     service-02/PUS-2-8.asn1 \
     service-02/PUS-2-9.acn \
-    service-02/PUS-2-9.asn1
+    service-02/PUS-2-9.asn1 \
+    common/Dummy.acn \
+    common/Dummy.asn1
 
 
 include(.qmake/handleAsn1AcnBuild.pri)

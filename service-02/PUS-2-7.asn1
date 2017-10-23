@@ -27,17 +27,21 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     PhysicalDevice-ID, ProtocolSpecificData FROM PhysicalDevice;
 
+maxTC-2-7-PhysicalDeviceCommandCount INTEGER ::= 2147483647
+
 TC-2-7-DistributePhysicalDeviceCommands ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    physicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF PhysicalDeviceCommand
+--! n UnsignedInteger, moved to acn
+    physicalDeviceCommands SEQUENCE (SIZE(0 .. maxTC-2-7-PhysicalDeviceCommandCount)) OF PhysicalDeviceCommand
 }
 
-PhysicalDeviceCommand ::= SEQUENCE
+PhysicalDeviceCommand ::= PhysicalDeviceCommandGeneric {ProtocolSpecificData, CommandData}
+
+    PhysicalDeviceCommandGeneric {TProtocolSpecificData, TCommandData} ::= SEQUENCE
 {
---! physicalDevice-ID PhysicalDevice-ID, moved to acn
-    protocolSpecificData ProtocolSpecificData,
-    commandData CommandData
+--! physicalDevice-ID TPhysicalDevice-ID, moved to acn
+    protocolSpecificData TProtocolSpecificData,
+    commandData TCommandData
 }
 
 CommandData ::= CHOICE

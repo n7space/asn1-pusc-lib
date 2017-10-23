@@ -27,16 +27,20 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     LogicalDevice-ID FROM LogicalDevice;
 
+maxTC-2-10-LogicalDeviceCommandCount INTEGER ::= 2147483647
+
 TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    logicalDeviceCommands SEQUENCE (SIZE(0 .. 2147483647)) OF LogicalDeviceCommand
+--! n TUnsignedInteger, moved to acn
+    logicalDeviceCommands SEQUENCE (SIZE(0 .. maxTC-2-10-LogicalDeviceCommandCount)) OF LogicalDeviceCommand
 }
 
-LogicalDeviceCommand ::= SEQUENCE
+LogicalDeviceCommand ::= LogicalDeviceCommandGeneric {Command}
+
+LogicalDeviceCommandGeneric {TCommand} ::= SEQUENCE
 {
---! logicalDevice-ID LogicalDevice-ID, moved to acn
-    command Command
+--! logicalDevice-ID TLogicalDevice-ID, moved to acn
+    command TCommand
 }
 
 Command ::= CHOICE --TODO

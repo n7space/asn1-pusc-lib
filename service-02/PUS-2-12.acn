@@ -27,7 +27,7 @@ TM-2-12-LogicalDeviceDataReport []
 {
     transaction-ID [],
     transactionExecutionStatus [],
-    parameterValue [size 4]
+    parameterValue []
 }
 
 END

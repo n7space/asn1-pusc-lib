@@ -27,7 +27,7 @@ TM-2-9-PhysicalDeviceDataReport []
 {
     transaction-ID [],
     transactionExecutionStatus [],
-    dataBlock [size 4]
+    dataBlock []
 }
 
 END
