@@ -27,10 +27,12 @@ IMPORTS
     HousekeepingParameterReportStructure-ID,
     HousekeepingParameterValues FROM HousekeepingParameterReportStructure;
 
-TM-3-25-HousekeepingParameterReport ::= SEQUENCE
+TM-3-25-HousekeepingParameterReport ::= TM-3-25-HousekeepingParameterReportGeneric {HousekeepingParameterValues}
+
+TM-3-25-HousekeepingParameterReportGeneric {THousekeepingParameterValues} ::= SEQUENCE
 {
---! housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID, moved to acn
-    parameterValue HousekeepingParameterValues
+--! housekeepingParameterReportStructure-ID THousekeepingParameterReportStructure-ID, moved to acn
+    parameterValue THousekeepingParameterValues
 }
 
 END

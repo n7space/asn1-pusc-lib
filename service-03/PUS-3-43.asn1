@@ -30,31 +30,42 @@ IMPORTS
     ParameterReportStructureType,
     ParameterReportStructure-ID FROM ParameterReportStructureType;
 
-TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApid ::= SEQUENCE
+maxTC-3-43-ParameterReportingDefinitionCount INTEGER ::= 536870911
+maxTC-3-43-ApidParameterReportingDefinitionCount INTEGER ::= 536870911
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApid ::= TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID,
+    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
 --! n1 PUSC-UINT32, moved to acn
-    apidParameterReportingDefinitions SEQUENCE (SIZE(0 .. 536870911)) OF ApidParameterReporingDefinitions
+    apidParameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ApidParameterReportingDefinitionCount)) OF ApidParameterReporingDefinitions
 }
 
-TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition ::= SEQUENCE
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition ::= TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinitions-ID ParameterFunctionalReportingDefinition-ID,
---! n2 PUSC-UINT32, moved to acn
-    parameterReportingDefinitions SEQUENCE (SIZE(0 .. 536870911)) OF ParameterReportingDefiniton
+    parameterFunctionalReportingDefinitions-ID TParameterFunctionalReportingDefinition-ID,
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
 }
 
-ApidParameterReporingDefinitions ::= SEQUENCE
+ApidParameterReporingDefinitions ::= ApidParameterReporingDefinitionsGeneric {ApplicationProcess-ID}
+
+ApidParameterReporingDefinitionsGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
-    applicationProcess-ID ApplicationProcess-ID,
---! n2 PUSC-UINT32, moved to acn
-    parameterReportingDefinitions SEQUENCE (SIZE(0 .. 536870911)) OF ParameterReportingDefiniton
+    applicationProcess-ID TApplicationProcess-ID,
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
 }
 
-ParameterReportingDefiniton ::= SEQUENCE
+ParameterReportingDefiniton ::= ParameterReportingDefinitonGeneric {ParameterReportStructure-ID}
+
+ParameterReportingDefinitonGeneric {TParameterReportStructure-ID} ::= SEQUENCE
 {
---! parameterReportStructureType ParameterReportStructureType, moved to acn
-    parameterReportStructure-ID ParameterReportStructure-ID
+--! parameterReportStructureType TParameterReportStructureType, moved to acn
+    parameterReportStructure-ID TParameterReportStructure-ID
 }
 
 END

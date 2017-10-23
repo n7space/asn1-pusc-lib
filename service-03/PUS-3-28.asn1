@@ -27,10 +27,12 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     PUSC-UINT32 FROM BasicTypes;
 
-TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures ::= SEQUENCE
+TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures ::= TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID}
+
+TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructuresGeneric {TDiagnosticParameterReportStructure-ID} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. 2147483647)) OF DiagnosticParameterReportStructure-ID
+--! n UnsignedInteger, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. 2147483647)) OF TDiagnosticParameterReportStructure-ID
 }
 
 END

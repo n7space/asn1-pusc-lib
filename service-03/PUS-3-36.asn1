@@ -29,17 +29,21 @@ IMPORTS
     CollectionInterval FROM CollectionInterval
     PUSC-UINT32 FROM BasicTypes;
 
+maxTM-3-36-PeriodicGenerationProperties INTEGER ::= 2147483647
+
 TM-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    periodicGenerationProperties SEQUENCE (SIZE(0 .. 2147483647)) OF PeriodicGenerationProperties
+--! n UnsignedInteger, moved to acn
+    periodicGenerationProperties SEQUENCE (SIZE(0 .. maxTM-3-36-PeriodicGenerationProperties)) OF PeriodicGenerationProperties
 }
 
-PeriodicGenerationProperties ::= SEQUENCE
+PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
+
+PeriodicGenerationPropertiesGeneric {TDiagnosticParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus,
-    collectionInterval CollectionInterval
+    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
+    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
+    collectionInterval TCollectionInterval
 }
 
 END

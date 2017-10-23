@@ -32,33 +32,44 @@ IMPORTS
     CollectionInterval FROM CollectionInterval
     ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition;
 
-TC-3-38-CreateAParameterFunctionalReportingDefinitionMultipleApid ::= SEQUENCE
+macTC-38-ParameterReportingEntryCount INTEGER ::= 536870911
+maxTC-38-ApidParameterReportingEntryCount INTEGER ::= 536870911
+
+TC-3-38-CreateAParameterFunctionalReportingDefinitionMultipleApid ::= TC-3-38-CreateAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-38-CreateAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID,
---! n1 PUSC-UINT32, moved to acn
-    apidParameterReportingEntries SEQUENCE (SIZE(0 .. 536870911)) OF ApidParameterReportingEntries
+    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
+--! n1 UnsignedInteger, moved to acn
+    apidParameterReportingEntries SEQUENCE (SIZE(0 .. maxTC-38-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
 }
 
-TC-3-38-CreateAParameterFunctionalReportingDefinition ::= SEQUENCE
+TC-3-38-CreateAParameterFunctionalReportingDefinition ::= TC-3-38-CreateAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-38-CreateAParameterFunctionalReportingDefinitionGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID,
---! n2 PUSC-UINT32, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. 536870911)) OF ParameterReportingEntries
+    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-38-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
-ApidParameterReportingEntries ::= SEQUENCE
+ApidParameterReportingEntries ::= ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
+
+ApidParameterReportingEntriesGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
     applicationProcess-ID ApplicationProcess-ID,
---! n2 PUSC-UINT32, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. 536870911)) OF ParameterReportingEntries
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-38-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
-ParameterReportingEntries ::= SEQUENCE
+ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructureType, ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
+
+ParameterReportingEntriesGeneric {TParameterReportStructureType, TParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
 {
---! parameterReportStructureType ParameterReportStructureType, moved to acn
-    parameterReportStructure-ID ParameterReportStructure-ID,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus,
-    collectionInterval CollectionInterval
+--! parameterReportStructureType TParameterReportStructureType, moved to acn
+    parameterReportStructure-ID TParameterReportStructure-ID,
+    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
+    collectionInterval TCollectionInterval
 }
 
 END

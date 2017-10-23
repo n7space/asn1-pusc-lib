@@ -27,9 +27,13 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     PUSC-UINT32 FROM BasicTypes;
 
-TC-3-4-DeleteDiagnosticParameterReportStructures ::= SEQUENCE
+maxTC-3-4-DiagnosticParameterStructureReport-ID-Count INTEGER ::= 2147483647
+
+TC-3-4-DeleteDiagnosticParameterReportStructures ::= TC-3-4-DeleteDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID}
+
+TC-3-4-DeleteDiagnosticParameterReportStructuresGeneric {TDiagnosticParameterReportStructure-ID} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE(0 .. 2147483647)) OF DiagnosticParameterReportStructure-ID
+--! n UnsignedInteger, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-4-DiagnosticParameterStructureReport-ID-Count)) OF TDiagnosticParameterReportStructure-ID
 }
 END

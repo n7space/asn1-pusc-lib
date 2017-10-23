@@ -28,16 +28,20 @@ IMPORTS
     HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
     CollectionInterval FROM CollectionInterval;
 
-PC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures ::= SEQUENCE
+maxTC-3-31-HousekeepingParamterStructureIntervalCount INTEGER ::= 2147483647
+
+TC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    housekeepingParamererReportStructureIntervals SEQUENCE (SIZE(0 .. 2147483647)) OF HousekeepingParameterReportStructureIntervals
+--! n UnsignedInteger, moved to acn
+    housekeepingParamererReportStructureIntervals SEQUENCE (SIZE(0 .. maxTC-3-31-HousekeepingParamterStructureIntervalCount)) OF HousekeepingParameterReportStructureIntervals
 }
 
-HousekeepingParameterReportStructureIntervals ::= SEQUENCE
+HousekeepingParameterReportStructureIntervals ::= HousekeepingParameterReportStructureIntervalsGeneric {HousekeepingParameterReportStructure-ID, CollectionInterval}
+
+HousekeepingParameterReportStructureIntervalsGeneric {THousekeepingParameterReportStructure-ID, TCollectionInterval} ::= SEQUENCE
 {
-    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID,
-    collectionInterval CollectionInterval
+    housekeepingParameterReportStructure-ID THousekeepingParameterReportStructure-ID,
+    collectionInterval TCollectionInterval
 }
 
 END

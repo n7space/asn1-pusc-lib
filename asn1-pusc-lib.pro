@@ -134,7 +134,7 @@ DISTFILES += \
     service-03/PUS-3-43.acn \
     service-03/PUS-3-43.asn1 \
     service-03/PUS-3-44.acn \
-    service-03/PUS-3-44.asn \
+    service-03/PUS-3-44.asn1 \
     service-03/PUS-3-5.acn \
     service-03/PUS-3-5.asn1 \
     service-03/PUS-3-6.acn \

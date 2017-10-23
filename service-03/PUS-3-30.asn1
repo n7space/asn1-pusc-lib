@@ -28,20 +28,27 @@ IMPORTS
     Parameter-ID FROM Parameter
     PUSC-UINT32 FROM BasicTypes;
 
-TC-3-30-AppendParametersToADiagnosticParameterReportStructure ::= SEQUENCE
+maxTC-3-30-Parameter-ID-Count INTEGER ::= 1073741823
+maxTC-3-30-SuperComutatedParameterSetCount INTEGER ::= 536870911
+
+TC-3-30-AppendParametersToADiagnosticParameterReportStructure ::= TC-3-30-AppendParametersToADiagnosticParameterReportStructureGeneric {DiagnosticParameterReportStructure-ID, Parameter-ID} 
+
+TC-3-30-AppendParametersToADiagnosticParameterReportStructureGeneric {TDiagnosticParameterReportStructure-ID, TParameter-ID} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID,
---! n1 PUSC-UINT32, moved to acn
-    parameter-ID SEQUENCE (SIZE(0 .. 2147483647)) OF Parameter-ID,
---! nfa PUSC-UINT32, moved to acn
-    superCommutatedParameterSet SEQUENCE (SIZE(0 .. 536870911)) OF SuperCommutatedParameterSet
+    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
+--! n1 UnsignedInteger, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-30-Parameter-ID-Count)) OF TParameter-ID,
+--! nfa UnsignedInteger, moved to acn
+    superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTC-3-30-SuperComutatedParameterSetCount)) OF SuperCommutatedParameterSet
 }
 
-SuperCommutatedParameterSet ::= SEQUENCE
+SuperCommutatedParameterSet ::= SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
+
+SuperCommutatedParameterSetGeneric {UnsignedInteger, TParameter-ID} ::= SEQUENCE
 {
-    superCommutatedSampleRepetitionNumber PUSC-UINT32,
---! n2 PUSC-UINT32, moved to acn
-    parameter-ID SEQUENCE (SIZE(0 .. 1073741823)) OF Parameter-ID
+    superCommutatedSampleRepetitionNumber UnsignedInteger,
+--! n2 UnsignedInteger, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-30-Parameter-ID-Count)) OF TParameter-ID
 }
 
 END

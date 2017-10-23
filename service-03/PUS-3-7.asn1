@@ -27,9 +27,13 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     PUSC-UINT32 FROM BasicTypes;
 
-TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports ::= SEQUENCE
+maxTC-3-7-DiagnosticParameterReportStructure-ID-Count INTEGER ::= 2147483647
+
+TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports ::= TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReportsGeneric {DiagnosticParameterReportStructure-ID} 
+
+TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReportsGeneric {TDiagnosticParameterReportStructure-ID} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. 2147483647)) OF DiagnosticParameterReportStructure-ID
+--! n UnsignedInteger, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-7-DiagnosticParameterReportStructure-ID-Count)) OF TDiagnosticParameterReportStructure-ID
 }
 END

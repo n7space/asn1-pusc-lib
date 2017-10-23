@@ -23,7 +23,7 @@
 
 PUS-3-32 DEFINITIONS ::= BEGIN
 
-PC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures []
+TC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures []
 {
     n BasicTypes.PUSC-UINT32 [],
     diagnosticParamererReportStructureIntervals [size n]

@@ -23,7 +23,7 @@
 
 PUS-3-31 DEFINITIONS ::= BEGIN
 
-PC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures []
+TC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures []
 {
     n BasicTypes.PUSC-UINT32 [],
     housekeepingParamererReportStructureIntervals [size n]

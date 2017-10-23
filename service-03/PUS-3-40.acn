@@ -23,7 +23,7 @@
 
 PUS-3-40 DEFINITIONS ::= BEGIN
 
-PUS-3-40-ReportParameterFunctionalReportingDefinitions []
+TC-3-40-ReportParameterFunctionalReportingDefinitions []
 {
     n BasicTypes.PUSC-UINT32 [],
     parameterFunctionalReportingDefinition-ID [size n]

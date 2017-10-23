@@ -23,14 +23,14 @@
 
 PUS-3-44 DEFINITIONS ::= BEGIN
 
-TM-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApid []
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApid []
 {
     parameterFunctionalReportingDefinition-ID [],
     n1 BasicTypes.PUSC-UINT32 [],
     apidParameterReportingEntries [size n1]
 }
 
-TM-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition []
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition []
 {
     parameterFunctionalReportingDefinition-ID [],
     n2 BasicTypes.PUSC-UINT32 [],

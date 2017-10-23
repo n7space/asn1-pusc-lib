@@ -28,16 +28,20 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     CollectionInterval FROM CollectionInterval;
 
-PC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures ::= SEQUENCE
+maxTC-3-32-DiagnosticParameterReportStructureIntervalCount INTEGER ::= 2147483647
+
+TC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    diagnosticParamererReportStructureIntervals SEQUENCE (SIZE(0 .. 2147483647)) OF DiagnosticParameterReportStructureIntervals
+--! n UnsignedInteger, moved to acn
+    diagnosticParamererReportStructureIntervals SEQUENCE (SIZE(0 .. maxTC-3-32-DiagnosticParameterReportStructureIntervalCount)) OF DiagnosticParameterReportStructureIntervals
 }
 
-DiagnosticParameterReportStructureIntervals ::= SEQUENCE
+DiagnosticParameterReportStructureIntervals ::= DiagnosticParameterReportStructureIntervalsGeneric {DiagnosticParameterReportStructure-ID, CollectionInterval}
+
+DiagnosticParameterReportStructureIntervalsGeneric {TDiagnosticParameterReportStructure-ID, TCollectionInterval} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID,
-    collectionInterval CollectionInterval
+    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
+    collectionInterval TCollectionInterval
 }
 
 END

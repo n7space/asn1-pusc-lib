@@ -21,7 +21,7 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-41 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-3-44 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes
@@ -32,25 +32,25 @@ IMPORTS
     CollectionInterval FROM CollectionInterval
     ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition;
 
-macTC-41-ParameterReportingEntryCount INTEGER ::= 536870911
-maxTC-41-ApidParameterReportingEntryCount INTEGER ::= 536870911
+macTC-44-ParameterReportingEntryCount INTEGER ::= 536870911
+maxTC-44-ApidParameterReportingEntryCount INTEGER ::= 536870911
 
-TM-3-41-ParameterFunctionalReportingDefinitionReportMultipleApid ::= TM-3-41-ParameterFunctionalReportingDefinitionReportMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApid ::= TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
 
-TM-3-41-ParameterFunctionalReportingDefinitionReportMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
     parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
 --! n1 UnsignedInteger, moved to acn
-    apidParameterReportingEntries SEQUENCE (SIZE(0 .. maxTC-41-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
+    apidParameterReportingEntries SEQUENCE (SIZE(0 .. maxTC-44-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
 }
 
-TM-3-41-ParameterFunctionalReportingDefinitionReport ::= TM-3-41-ParameterFunctionalReportingDefinitionReportGeneric {ParameterFunctionalReportingDefinition-ID}
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition ::= TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
 
-TM-3-41-ParameterFunctionalReportingDefinitionReportGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
     parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
 --! n2 UnsignedInteger, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-41-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
 ApidParameterReportingEntries ::= ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
@@ -59,7 +59,7 @@ ApidParameterReportingEntriesGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
     applicationProcess-ID ApplicationProcess-ID,
 --! n2 UnsignedInteger, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-41-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
 ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructureType, ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}

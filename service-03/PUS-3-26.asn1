@@ -27,10 +27,12 @@ IMPORTS
     DiagnosticParameterReportStructure-ID,
     DiagnosticParameterValues FROM DiagnosticParameterReportStructure;
 
-TM-3-26-DiagnosticParameterReport ::= SEQUENCE
+TM-3-26-DiagnosticParameterReport ::= TM-3-26-DiagnosticParameterReportGeneric {DiagnosticParameterValues}
+
+TM-3-26-DiagnosticParameterReportGeneric {TDiagnosticParameterValues} ::= SEQUENCE
 {
---! diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID, moved to acn
-    parameterValue DiagnosticParameterValues
+--! diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID, moved to acn
+    parameterValue TDiagnosticParameterValues
 }
 
 END

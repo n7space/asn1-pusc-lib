@@ -27,9 +27,13 @@ IMPORTS
     HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
     PUSC-UINT32 FROM BasicTypes;
 
-TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport ::= SEQUENCE
+maxTC-3-6-HousekeepingParameterReportStructure-ID-Count INTEGER ::= 2147483647
+
+TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport ::= TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {HousekeepingParameterReportStructure-ID}
+
+TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {THousekeepingParameterReportStructure-ID} ::= SEQUENCE
 {
---! n PUSC-UINT32, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. 2147483647)) OF HousekeepingParameterReportStructure-ID
+--! n UnsignedInteger, moved to acn
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-6-HousekeepingParameterReportStructure-ID-Count)) OF THousekeepingParameterReportStructure-ID
 }
 END
