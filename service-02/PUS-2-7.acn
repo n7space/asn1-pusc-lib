@@ -38,7 +38,7 @@ PhysicalDeviceCommand []
 
 CommandData <PhysicalDevice.PhysicalDevice-ID: device> [determinant device]
 {
-    dev1 [size 8, encoding pos-int]
+    dev1 [size 8, encoding pos-int, endianness big]
 }
 
 END

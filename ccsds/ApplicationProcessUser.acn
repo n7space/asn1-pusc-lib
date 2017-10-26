@@ -23,6 +23,6 @@
 
 ApplicationProcessUser DEFINITIONS ::= BEGIN
 
-ApplicationProcessUser-ID [size 16, encoding pos-int]
+ApplicationProcessUser-ID [size 16, encoding pos-int, endianness big]
 
 END

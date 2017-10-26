@@ -23,7 +23,7 @@
 
 ParameterReportStructureType DEFINITIONS ::= BEGIN
 
-ParameterReportStructureType [size 5, encoding pos-int]
+ParameterReportStructureType [size 5, encoding pos-int, endianness big]
 
 ParameterReportStructure-ID <ParameterReportStructureType: structureType> [determinant structureType]
 

@@ -39,16 +39,16 @@ PacketVersionNumberValue [pattern '000'B]
 PacketSequenceControl []
 {
     sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int]
+    packetSequenceCountOrName [size 14, encoding pos-int, endianness big]
 }
 
-SecondaryHeaderFlag [size 1, encoding pos-int]
+SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
 
-PacketDataLength [size 16, encoding pos-int]
+PacketDataLength [size 16, encoding pos-int, endianness big]
 
 PacketErrorControl [size PACKET-ERROR-CONTROL]
 
-ServiceType-ID  [size 8, encoding pos-int]
-MessageSubtype-ID  [size 8, encoding pos-int]
+ServiceType-ID  [size 8, encoding pos-int, endianness big]
+MessageSubtype-ID  [size 8, encoding pos-int, endianness big]
 
 END

@@ -23,6 +23,6 @@
 
 ParameterFunctionalReportingDefinition DEFINITIONS ::= BEGIN
 
-ParameterFunctionalReportingDefinition-ID [size 32, encoding pos-int]
+ParameterFunctionalReportingDefinition-ID [size 32, encoding pos-int, endianness big]
 
 END
