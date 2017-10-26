@@ -66,6 +66,39 @@ DISTFILES += \
     service-09/SpacecraftTimeReferenceStatus.asn1 \
     service-01/Request.acn \
     service-01/Request.asn1 \
+    service-02/meta.json \
+    service-02/Registers.acn \
+    service-02/Registers.asn1 \
+    service-02/PhysicalDevice.acn \
+    service-02/PhysicalDevice.asn1 \
+    service-02/Transaction.acn \
+    service-02/Transaction.asn1 \
+    service-02/LogicalDevice.acn \
+    service-02/LogicalDevice.asn1 \
+    service-02/PUS-2-1.acn \
+    service-02/PUS-2-1.asn1 \
+    service-02/PUS-2-10.acn \
+    service-02/PUS-2-10.asn1 \
+    service-02/PUS-2-11.acn \
+    service-02/PUS-2-11.asn1 \
+    service-02/PUS-2-12.acn \
+    service-02/PUS-2-12.asn1 \
+    service-02/PUS-2-2.acn \
+    service-02/PUS-2-2.asn1 \
+    service-02/PUS-2-4.acn \
+    service-02/PUS-2-4.asn1 \
+    service-02/PUS-2-5.acn \
+    service-02/PUS-2-5.asn1 \
+    service-02/PUS-2-6.acn \
+    service-02/PUS-2-6.asn1 \
+    service-02/PUS-2-7.acn \
+    service-02/PUS-2-7.asn1 \
+    service-02/PUS-2-8.acn \
+    service-02/PUS-2-8.asn1 \
+    service-02/PUS-2-9.acn \
+    service-02/PUS-2-9.asn1 \
+    common/Dummy.acn \
+    common/Dummy.asn1 \
     service-03/meta.json \
     service-03/DiagnosticParameterReportStructure.acn \
     service-03/DiagnosticParameterReportStructure.asn1 \
@@ -145,7 +178,5 @@ DISTFILES += \
     service-03/PUS-3-8.asn1 \
     service-03/PUS-3-9.acn \
     service-03/PUS-3-9.asn1
-
-
 
 include(.qmake/handleAsn1AcnBuild.pri)
