@@ -46,11 +46,11 @@ CpduCommand []
 {
     outputLine-ID [],
     reserved [size 1],
-    durationExponentialValue [size 3, encoding pos-int]
+    durationExponentialValue [size 3, encoding pos-int, endianness big]
 }
 
-CPDU-ID  [size 32, encoding pos-int, encode-values] --TODO
+CPDU-ID  [size 32, encoding pos-int, endianness big, encode-values] --TODO
 
-OutputLine-ID [size 12, encoding pos-int, encode-values] --TODO
+OutputLine-ID [size 12, encoding pos-int, endianness big, encode-values] --TODO
 
 END

@@ -23,6 +23,6 @@
 
 PeriodicGenerationActionStatus DEFINITIONS ::= BEGIN
 
-PeriodicGenerationActionStatus [size 1, encoding pos-int] --TODO
+PeriodicGenerationActionStatus [size 1, encoding pos-int, endianness big] --TODO
 
 END

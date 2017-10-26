@@ -30,6 +30,6 @@ TC-3-37-ApplyParameterFunctionalReportingConfigurations []
     parameterFunctionalReportingDefinition-ID [size n]
 }
 
-ConfigurationExecutionFlag [size 1, encoding pos-int]
+ConfigurationExecutionFlag [size 1, encoding pos-int, endianness big]
 
 END

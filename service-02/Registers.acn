@@ -29,7 +29,7 @@ Register []
     registerData <registerAddress> []
 }
 
-RegisterAddress [size 32, encoding pos-int] --TODO
+RegisterAddress [size 32, encoding pos-int, endianness big] --TODO
 
 RegisterData <RegisterAddress: registerAddress> [determinant registerAddress] --TODO
 {

@@ -23,7 +23,7 @@
 
 DiagnosticParameterReportStructure DEFINITIONS ::= BEGIN
 
-DiagnosticParameterReportStructure-ID [size 32, encoding pos-int] --TODO
+DiagnosticParameterReportStructure-ID [size 32, encoding pos-int, endianness big] --TODO
 
 DiagnosticParameterValues <DiagnosticParameterReportStructure-ID: structure> [] --TODO
 {

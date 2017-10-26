@@ -46,11 +46,11 @@ Ldev1 [] --TODO
     commandArguments <command-ID> []
 }
 
-Ldev1-Commands [size 32, encoding pos-int, encode-values] --TODO
+Ldev1-Commands [size 32, encoding pos-int, endianness big, encode-values] --TODO
 
 Ldev1-Arguments <Ldev1-Commands: command> [determinant command] --TODO
 {
-    command1 [size 8, encoding pos-int]
+    command1 [size 8, encoding pos-int, endianness big]
 }
 
 END
