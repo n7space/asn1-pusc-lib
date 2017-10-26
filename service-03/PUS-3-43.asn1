@@ -1,0 +1,71 @@
+--!
+--! Copyright (C) 2017 N7 Mobile sp. z o. o.
+--! Contact: http://n7mobile.pl/Space
+--!
+--! This file is part of ASN.1/ACN PUS-C Components Library.
+--!
+--! Library was developed under a programme and funded by
+--! European Space Agency.
+--!
+--! This Library is free software: you can redistribute it and/or modify
+--! it under the terms of the GNU General Public License as published by
+--! the Free Software Foundation, either version 3 of the License, or
+--! (at your option) any later version.
+--!
+--! This Library is distributed in the hope that it will be useful,
+--! but WITHOUT ANY WARRANTY; without even the implied warranty of
+--! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--! GNU General Public License for more details.
+--!
+--! You should have received a copy of the GNU General Public License
+--! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--!
+
+PUS-3-43 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    ApplicationProcess-ID FROM ApplicationProcess
+    PUSC-UINT32 FROM BasicTypes
+    ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition
+    ParameterReportStructureType,
+    ParameterReportStructure-ID FROM ParameterReportStructureType;
+
+maxTC-3-43-ParameterReportingDefinitionCount INTEGER ::= 536870911
+maxTC-3-43-ApidParameterReportingDefinitionCount INTEGER ::= 536870911
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApid ::= TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+{
+    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
+--! n1 PUSC-UINT32, moved to acn
+    apidParameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ApidParameterReportingDefinitionCount)) OF ApidParameterReporingDefinitions
+}
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition ::= TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
+
+TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+{
+    parameterFunctionalReportingDefinitions-ID TParameterFunctionalReportingDefinition-ID,
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
+}
+
+ApidParameterReporingDefinitions ::= ApidParameterReporingDefinitionsGeneric {ApplicationProcess-ID}
+
+ApidParameterReporingDefinitionsGeneric {TApplicationProcess-ID} ::= SEQUENCE
+{
+    applicationProcess-ID TApplicationProcess-ID,
+--! n2 UnsignedInteger, moved to acn
+    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
+}
+
+ParameterReportingDefiniton ::= ParameterReportingDefinitonGeneric {ParameterReportStructure-ID}
+
+ParameterReportingDefinitonGeneric {TParameterReportStructure-ID} ::= SEQUENCE
+{
+--! parameterReportStructureType TParameterReportStructureType, moved to acn
+    parameterReportStructure-ID TParameterReportStructure-ID
+}
+
+END
