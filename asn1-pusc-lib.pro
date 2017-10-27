@@ -183,6 +183,20 @@ DISTFILES += \
     service-04/PUS-4-3.acn \
     service-04/PUS-4-3.asn1 \
     service-04/PUS-4-2.acn \
-    service-04/PUS-4-2.asn1
+    service-04/PUS-4-2.asn1 \
+    service-04/PUS-4-4.acn \
+    service-04/PUS-4-4.asn1 \
+    service-04/Intervals.acn \
+    service-04/Intervals.asn1 \
+    service-04/PUS-4-5.acn \
+    service-04/PUS-4-5.asn1 \
+    service-04/PUS-4-6.acn \
+    service-04/PUS-4-6.asn1 \
+    service-04/PUS-4-7.acn \
+    service-04/PUS-4-7.asn1 \
+    service-04/PUS-4-8.acn \
+    service-04/PUS-4-8.asn1 \
+    service-04/PUS-4-9.acn \
+    service-04/PUS-4-9.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)
