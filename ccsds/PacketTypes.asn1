@@ -26,20 +26,20 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-CCSDS-Packet {Packet-ID, PacketDataField} ::= SEQUENCE
+CCSDS-Packet {TPacket-ID, TPacketDataField} ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID Packet-ID,
+    packet-ID TPacket-ID,
     packetSequenceControl PacketSequenceControl,
     packetDataLength PacketDataLength,
-    packetDataField PacketDataField
+    packetDataField TPacketDataField
 }
 
 PacketVersionNumberValue ::= NULL
 
-Packet-ID {PacketType} ::= SEQUENCE
+Packet-ID {TPacketType} ::= SEQUENCE
 {
-    packetType PacketType,
+    packetType TPacketType,
 --! secondaryHeaderFlag INTEGER (0 .. 1),  moved to ACN
     applicationProcess-ID ApplicationProcess-ID
 }
@@ -54,25 +54,25 @@ PacketSequenceControl ::= SEQUENCE
 
 PacketDataLength ::= INTEGER (0 .. 65535)
 
-PacketDataField {PacketDataWithSecondaryHeader, PacketDataNoSecondaryHeader} ::= CHOICE
+PacketDataField {TPacketDataWithSecondaryHeader, TPacketDataNoSecondaryHeader} ::= CHOICE
 {
-    dataWithSecondaryHeader PacketDataWithSecondaryHeader,
-    dataNoSecondaryHeader PacketDataNoSecondaryHeader
+    dataWithSecondaryHeader TPacketDataWithSecondaryHeader,
+    dataNoSecondaryHeader TPacketDataNoSecondaryHeader
 }
 
-DataWithSecondaryHeader {SecondaryHeaderField, Payload} ::= SEQUENCE
+DataWithSecondaryHeader {TSecondaryHeaderField, TPayload} ::= SEQUENCE
 {
-    secondaryHeader SecondaryHeaderField,
-    data Payload,
+    secondaryHeader TSecondaryHeaderField,
+    data TPayload,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl
+    packetErrorContol PacketErrorControl OPTIONAL
 }
 
-DataNoSecondaryHeader {Payload} ::= SEQUENCE
+DataNoSecondaryHeader {TPayload} ::= SEQUENCE
 {
-    data Payload,
+    data TPayload,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl
+    packetErrorContol PacketErrorControl OPTIONAL
 }
 
 PacketErrorControl ::= BIT STRING (SIZE(16))

@@ -24,6 +24,7 @@
 TC-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
+    MessageSubtype-ID, ServiceType-ID FROM PacketTypes
     TC-17-1-PerformAnAreYouAliveConnectionTest FROM PUS-17-1;
 
 TC-Payload ::= CHOICE --TODO
