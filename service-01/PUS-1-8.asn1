@@ -27,10 +27,12 @@ IMPORTS
     Request-ID FROM Request
     ExecutionCompletionFailureNotice FROM ErrorCodes;
 
-TM-1-8-FailedCompletionOfExecutionVerificationReport ::= SEQUENCE
+TM-1-8-FailedCompletionOfExecutionVerificationReport ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {Request-ID, ExecutionCompletionFailureNotice}
+
+TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionCompletionFailureNotice} ::= SEQUENCE
 {
-    request-ID Request-ID,
-    failureNotice ExecutionCompletionFailureNotice
+    request-ID TRequest-ID,
+    failureNotice TExecutionCompletionFailureNotice
 }
 
 END

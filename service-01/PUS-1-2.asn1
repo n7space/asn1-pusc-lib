@@ -27,10 +27,12 @@ IMPORTS
     Request-ID FROM Request
     AcceptanceFailureNotice FROM ErrorCodes;
 
-TM-1-2-FailedAcceptanceVerificationReport ::= SEQUENCE
+TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID, AcceptanceFailureNotice}
+
+TM-1-2-FailedAcceptanceVerificationReportGeneric {TRequest-ID, TAcceptanceFailureNotice} ::= SEQUENCE
 {
-    request-ID Request-ID,
-    failureNotice AcceptanceFailureNotice
+    request-ID TRequest-ID,
+    failureNotice TAcceptanceFailureNotice
 }
 
 END

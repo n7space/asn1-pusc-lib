@@ -28,11 +28,13 @@ IMPORTS
     ExecutionStep-ID FROM ExecutionStep
     ExecutionProgressFailureNotice FROM ErrorCodes;
 
-TM-1-6-FailedProgressOfExecutionVerificationReport ::= SEQUENCE
+TM-1-6-FailedProgressOfExecutionVerificationReport ::= TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {Request-ID, ExecutionStep-ID, ExecutionProgressFailureNotice}
+
+TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionStep-ID, TExecutionProgressFailureNotice} ::= SEQUENCE
 {
-    request-ID Request-ID,
-    step-ID ExecutionStep-ID,
-    failureNotice ExecutionProgressFailureNotice
+    request-ID TRequest-ID,
+    step-ID TExecutionStep-ID,
+    failureNotice TExecutionProgressFailureNotice
 }
 
 END

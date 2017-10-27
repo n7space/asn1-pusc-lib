@@ -26,10 +26,11 @@ EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request;
 
+TM-1-1-SuccessfulAcceptanceVerificationReport ::= TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {Request-ID}
 
-TM-1-1-SuccessfulAcceptanceVerificationReport ::= SEQUENCE
+TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {TRequest-ID} ::= SEQUENCE
 {
-    request-ID Request-ID
+    request-ID TRequest-ID
 }
 
 END

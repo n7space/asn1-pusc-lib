@@ -27,10 +27,12 @@ IMPORTS
     Request-ID FROM Request
     RoutingFailureNotice FROM ErrorCodes;
 
-TM-1-10-FailedRoutingVerificatrionReport ::= SEQUENCE
+TM-1-10-FailedRoutingVerificatrionReport ::= TM-1-10-FailedRoutingVerificatrionReportGeneric {Request-ID, RoutingFailureNotice}
+
+TM-1-10-FailedRoutingVerificatrionReportGeneric {TRequest-ID, TRoutingFailureNotice} ::= SEQUENCE
 {
-    request-ID Request-ID,
-    failureNotice RoutingFailureNotice
+    request-ID TRequest-ID,
+    failureNotice TRoutingFailureNotice
 }
 
 END

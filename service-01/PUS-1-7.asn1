@@ -26,9 +26,11 @@ EXPORTS ALL;
 IMPORTS
     Request-ID FROM Request;
 
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= SEQUENCE
+TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID}
+
+TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {TRequest-ID} ::= SEQUENCE
 {
-    request-ID Request-ID
+    request-ID TRequest-ID
 }
 
 END

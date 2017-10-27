@@ -27,10 +27,12 @@ IMPORTS
     Request-ID FROM Request
     ExecutionStartFailureNotice FROM ErrorCodes;
 
-TM-1-4-FailedStartOfExecutionVerificationReport ::= SEQUENCE
+TM-1-4-FailedStartOfExecutionVerificationReport ::= TM-1-4-FailedStartOfExecutionVerificationReportGeneric {Request-ID, ExecutionStartFailureNotice}
+
+TM-1-4-FailedStartOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionStartFailureNotice} ::= SEQUENCE
 {
-    request-ID Request-ID,
-    failureNotice ExecutionStartFailureNotice
+    request-ID TRequest-ID,
+    failureNotice TExecutionStartFailureNotice
 }
 
 END
