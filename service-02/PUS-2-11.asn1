@@ -26,7 +26,8 @@ EXPORTS ALL;
 IMPORTS
     LogicalDevice-ID FROM LogicalDevice
     Transaction-ID FROM Transaction
-    PUSC-UINT32 FROM BasicTypes;
+    PUSC-UINT32 FROM BasicTypes
+    Parameter-ID FROM Parameter;
 
 maxTC-2-11-DataAcquireRequestCount INTEGER ::= 2147483647
 
@@ -43,11 +44,6 @@ DataAcquireRequestGeneric {TTransaction-ID, TLogicalDevice-ID, TParameter-ID} ::
     transaction-ID TTransaction-ID,
     logicalDevice-ID TLogicalDevice-ID,
     parameter-ID TParameter-ID
-}
-
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
 }
 
 END

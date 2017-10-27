@@ -24,6 +24,14 @@
 Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-Parameter-ID ::= INTEGER (0 .. 4294967295)
+Parameter-ID ::= ENUMERATED
+{
+    param1 (0)
+}
+
+ParameterValue ::= CHOICE
+{
+    param1 INTEGER (0 ..255)
+}
 
 END

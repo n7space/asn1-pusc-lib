@@ -23,6 +23,11 @@
 
 Parameter DEFINITIONS ::= BEGIN
 
-Parameter-ID [size 32, encoding pos-int, endianness big]
+Parameter-ID [size 32, encoding pos-int, endianness big, encode-values]
+
+ParameterValue <Parameter-ID: parameter> [determinant parameter]
+{
+    param1 [size 8, encoding pos-int, endianness big]
+}
 
 END
