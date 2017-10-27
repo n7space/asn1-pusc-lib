@@ -13,8 +13,7 @@
             "PUS-1-10.asn1",
             "Request.asn1",
             "ErrorCodes.asn1"
-          ],
-          "requires": ["Routing verification of a request"]
+          ]
         }
       ]
     },
@@ -29,8 +28,7 @@
           "asn1Files": [
             "PUS-1-1.asn1",
             "Request.asn1"
-          ],
-          "requires": ["Acceptance verification of a request"]
+          ]
         },
         {
           "name": "Reporting failed acceptance",
@@ -38,8 +36,7 @@
             "PUS-1-2.asn1",
             "Request.asn1",
             "ErrorCodes.asn1"
-          ],
-          "requires": ["Acceptance verification of a request"]
+          ]
         }
       ]
     },
