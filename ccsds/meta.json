@@ -5,8 +5,13 @@
       "name": "CCSDS Packets",
       "elements": [
         {
-          "name": "Packet Types",
-          "asn1Files": ["PacketTypes.asn1"],
+          "name": "TC Packet",
+          "asn1Files": [
+            "TC-Packet.asn1",
+            "PacketTypes.asn1",
+            "ApplicationProcessUser.asn1",
+            "TC-Payload.asn1"
+          ],
           "imports": [
             {
               "from": "ApplicationProcess",
@@ -15,59 +20,24 @@
           ]
         },
         {
-          "name": "TC Packet",
-          "asn1Files": ["TC-Packet.asn1"],
-          "requires": [
-            "Packet Types",
-            "TC-Payload"
-          ],
-          "imports": [
-            {
-              "from": "ApplicationProcessUser",
-              "types": ["ApplicationProcessUser-ID"]
-            }
-          ]
-        },
-        {
           "name": "TM Packet",
-          "asn1Files": ["TM-Packet.asn1"],
-          "requires": [
-            "Packet Types",
-            "TM-Payload"
+          "asn1Files": [
+            "TM-Packet.asn1",
+            "PacketTypes.asn1",
+            "ApplicationProcessUser.asn1",
+            "TM-Payload.asn1"
           ],
           "imports": [
-            {
-              "from": "ApplicationProcessUser",
-              "types": ["ApplicationProcessUser-ID"]
-            },
             {
               "from": "BasicTypes",
               "types": ["AbsoluteTime"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
             }
+
           ]
-        }
-      ]
-    },
-    {
-      "name": "Mission Objects",
-      "elements": [
-        {
-          "name": "Application Process User",
-          "asn1Files": ["ApplicationProcessUser.asn1"]
-        },
-        {
-          "name": "Packet Error Control",
-          "asn1Files": ["PacketErrorControl.asn1"]
-        },
-        {
-          "name": "TM Payload",
-          "asn1Files": ["TM-Payload.asn1"],
-          "requires": ["Packet Types"]
-        },
-        {
-          "name": "TC Payload",
-          "asn1Files": ["TC-Payload.asn1"],
-          "requires": ["Packet Types"]
         }
       ]
     }
