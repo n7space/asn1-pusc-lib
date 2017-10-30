@@ -177,6 +177,25 @@ DISTFILES += \
     service-03/PUS-3-8.acn \
     service-03/PUS-3-8.asn1 \
     service-03/PUS-3-9.acn \
-    service-03/PUS-3-9.asn1
+    service-03/PUS-3-9.asn1 \
+    service-05/meta.json \
+    service-05/PUS-5-1.acn \
+    service-05/PUS-5-1.asn1 \
+    service-05/EventDefinition.acn \
+    service-05/EventDefinition.asn1 \
+    service-05/PUS-5-2.acn \
+    service-05/PUS-5-2.asn1 \
+    service-05/PUS-5-3.acn \
+    service-05/PUS-5-3.asn1 \
+    service-05/PUS-5-4.acn \
+    service-05/PUS-5-4.asn1 \
+    service-05/PUS-5-5.acn \
+    service-05/PUS-5-5.asn1 \
+    service-05/PUS-5-6.acn \
+    service-05/PUS-5-6.asn1 \
+    service-05/PUS-5-7.acn \
+    service-05/PUS-5-7.asn1 \
+    service-05/PUS-5-8.acn \
+    service-05/PUS-5-8.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)
