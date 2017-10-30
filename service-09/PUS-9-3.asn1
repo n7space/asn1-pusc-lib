@@ -28,11 +28,13 @@ IMPORTS
     AbsoluteTime FROM BasicTypes
     SpacecraftTimeReferenceStatus FROM SpacecraftTimeReferenceStatus;
 
-TM-9-3-CdsTimeReport ::= SEQUENCE
+TM-9-3-CdsTimeReport ::= TM-9-3-CdsTimeReportGeneric {RateExponentialValue, AbsoluteTime, SpacecraftTimeReferenceStatus}
+
+TM-9-3-CdsTimeReportGeneric {TRateExponentialValue, TAbsoluteTime, TSpacecraftTimeReferenceStatus} ::= SEQUENCE
 {
-    rateExponentialValue RateExponentialValue, --TODO - OPTIONAL
-    spacecraftTime AbsoluteTime,
-    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus --TODO - OPTIONAL
+    rateExponentialValue TRateExponentialValue OPTIONAL, --TODO
+    spacecraftTime TAbsoluteTime,
+    spacecraftTimeReferenceStatus TSpacecraftTimeReferenceStatus OPTIONAL --TODO
 }
 
 END

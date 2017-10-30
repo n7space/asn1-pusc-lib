@@ -26,13 +26,13 @@ PUS-17-3 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
 IMPORTS
-    ApplicationProcess-ID
-      FROM ApplicationProcess
-    ;
+    ApplicationProcess-ID FROM ApplicationProcess;
 
-TC-17-3-PerformAnOnBoardConnectionTest ::= SEQUENCE
+TC-17-3-PerformAnOnBoardConnectionTest ::= TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID}
+
+TC-17-3-PerformAnOnBoardConnectionTestGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
-    applicationProcessId ApplicationProcess-ID
+    applicationProcessId TApplicationProcess-ID
 }
 
 END

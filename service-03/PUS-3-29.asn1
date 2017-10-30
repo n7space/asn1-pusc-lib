@@ -35,9 +35,9 @@ TC-3-29-AppendParametersToAHousekeepingParameterReportStructure ::= TC-3-29-Appe
 TC-3-29-AppendParametersToAHousekeepingParameterReportStructureGeneric {THousekeepingParameterReportStructure-ID, TParameter-ID} ::= SEQUENCE
 {
     housekeepingParameterReportStructure-ID THousekeepingParameterReportStructure-ID,
---! n1 PUSC-UINT32, moved to acn
+--! n1 UnsignedInteger, moved to acn
     parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-29-Parameter-ID-Count)) OF TParameter-ID,
---! nfa PUSC-UINT32, moved to acn
+--! nfa UnsignedInteger, moved to acn
     superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTC-3-29-SuperComutatedParameterSetCount)) OF SuperCommutatedParameterSet
 }
 

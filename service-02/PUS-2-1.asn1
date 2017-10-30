@@ -37,7 +37,7 @@ DeviceAddress ::= ENUMERATED --TODO
 
 TC-2-1-DistributeOnOffDeviceCommandsGeneric {TDeviceAddress} ::= SEQUENCE
 {
---! n TUnsignedInteger, moved to acn
+--! n UnsignedInteger, moved to acn
     onOffDeviceAddresses SEQUENCE (SIZE(0 .. maxTC-2-1-OnOffDeviceAdressesCount)) OF TDeviceAddress
 }
 

@@ -38,7 +38,7 @@ TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinit
 TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
 {
     parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
---! n1 PUSC-UINT32, moved to acn
+--! n1 UnsignedInteger, moved to acn
     apidParameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ApidParameterReportingDefinitionCount)) OF ApidParameterReporingDefinitions
 }
 

@@ -31,7 +31,7 @@ maxTC-2-10-LogicalDeviceCommandCount INTEGER ::= 2147483647
 
 TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
 {
---! n TUnsignedInteger, moved to acn
+--! n UnsignedInteger, moved to acn
     logicalDeviceCommands SEQUENCE (SIZE(0 .. maxTC-2-10-LogicalDeviceCommandCount)) OF LogicalDeviceCommand
 }
 

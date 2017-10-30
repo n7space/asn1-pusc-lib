@@ -26,7 +26,9 @@ EXPORTS ALL;
 IMPORTS
     RateExponentialValue FROM RateExponentialValue;
 
-TC-9-1-SetTheTimeReportGenerationRate  ::= SEQUENCE
+TC-9-1-SetTheTimeReportGenerationRate ::= TC-9-1-SetTheTimeReportGenerationRateGeneric {RateExponentialValue}
+
+TC-9-1-SetTheTimeReportGenerationRateGeneric {TRateExponentialValue} ::= SEQUENCE
 {
     rateExponentialValue RateExponentialValue
 }
