@@ -82,23 +82,11 @@ PUSC-MIL-FLOAT48 []
     mant-LSB [size 16]
 }
 
-PUSC-BITSTR-VARIABLE-LEN []
-{
-    length BasicTypes.PUSC-UINT32 [],
-    data [size length]
-}
+PUSC-BITSTR-VARIABLE-LEN <INTEGER: length> [size length]
 
-PUSC-OCTSTR-VARIABLE-LEN []
-{
-    length BasicTypes.PUSC-UINT32 [],
-    data [size length]
-}
+PUSC-OCTSTR-VARIABLE-LEN <INTEGER: length> [size length]
 
-PUSC-CHARSTR-VARIABLE-LEN []
-{
-    length BasicTypes.PUSC-UINT32 [],
-    data [size length]
-}
+PUSC-CHARSTR-VARIABLE-LEN <INTEGER: length> [size length]
 
 CDS-AbsoluteTime-PFC-1 []
 {
