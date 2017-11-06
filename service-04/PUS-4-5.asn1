@@ -21,8 +21,9 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS ::= BEGIN
+PUS-4-5 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
 
-Parameter-ID [size 32, encoding pos-int, endianness big]
+TC-4-5-DisableThePeriodicParameterStatisticsReporting ::= NULL
 
 END

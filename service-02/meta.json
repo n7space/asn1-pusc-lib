@@ -114,6 +114,10 @@
             {
               "from": "Dummy",
               "types": "DummyType"
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         }
