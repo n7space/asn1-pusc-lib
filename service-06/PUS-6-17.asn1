@@ -32,10 +32,10 @@ TC-6-17-CheckAnObjectMemoryObject ::= TC-6-17-CheckAnObjectMemoryObjectGeneric {
 
 TC-6-17-CheckAnObjectMemoryObjectMultipleMemid ::= TC-6-17-CheckAnObjectMemoryObjectGeneric {BaseMultipleMemid}
 
-TC-6-17-CheckAnObjectMemoryObjectGeneric {TBase} ::= SEQUENCE
+TC-6-17-CheckAnObjectMemoryObjectGeneric {Base-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID OPTIONAL,
-    base-ID TBase
+--! memory-ID Memory-ID-Type OPTIONAL, moved to acn
+    base-ID Base-Type
 }
 
 

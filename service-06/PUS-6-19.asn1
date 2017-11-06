@@ -35,19 +35,19 @@ TC-6-19-LoadRawMemoryDataAreasByReference ::= TC-6-19-LoadRawMemoryDataAreasByRe
 
 DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32, PUSC-UINT32}
 
-TC-6-19-LoadRawMemoryDataAreasByReferenceGeneric {TMemory-ID, TFilePath} ::= SEQUENCE
+TC-6-19-LoadRawMemoryDataAreasByReferenceGeneric {Memory-ID-Type, FilePath-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL,
-    filePath TFilePath,
---! n UnsignedInteger, moved to acn
+    memory-ID Memory-ID-Type OPTIONAL,
+    filePath FilePath-Type,
+--! n UnsignedInteger-Type, moved to acn
     dataAreas SEQUENCE (SIZE(0 .. maxTC-6-19-DataAreaCount)) OF DataArea
 }
 
-DataAreaGeneric {UnsignedInteger0, UnsignedInteger1, UnsignedInteger2} ::= SEQUENCE
+DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1, UnsignedInteger-Type2} ::= SEQUENCE
 {
-    startAddress UnsignedInteger0,
-    offsetInFile UnsignedInteger1,
-    length UnsignedInteger2,
+    startAddress UnsignedInteger-Type0,
+    offsetInFile UnsignedInteger-Type1,
+    length UnsignedInteger-Type2,
     checksum BIT STRING (SIZE(16)) OPTIONAL
 }
 

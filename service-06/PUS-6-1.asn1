@@ -37,18 +37,18 @@ TC-6-1-LoadObjectMemoryDataMultipleMemid ::= TC-6-1-LoadObjectMemoryDataGeneric 
 
 LoadObjectInstruction ::= LoadObjectInstructionGeneric {PUSC-UINT32, MemoryData}
 
-TC-6-1-LoadObjectMemoryDataGeneric {TBase} ::= SEQUENCE
+TC-6-1-LoadObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID,
-    base-ID TBase,
---! n UnsignedInteger
+--! memory-ID Memory-ID-Type, moved to acn
+    base-ID Base-Type,
+--! n UnsignedInteger-Type, moved to acn
     loadObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-1-LoadObjectInstructionCount)) OF LoadObjectInstruction
 }
 
-LoadObjectInstructionGeneric {UnsignedInteger, VariableOctetString} ::= SEQUENCE
+LoadObjectInstructionGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE
 {
-    offset UnsignedInteger,
-    dataToLoad VariableOctetString,
+    offset UnsignedInteger-Type,
+    dataToLoad VariableOctetString-Type,
     checksum BIT STRING (SIZE(16)) OPTIONAL
 }
 

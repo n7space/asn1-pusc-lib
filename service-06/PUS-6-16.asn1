@@ -28,9 +28,9 @@ IMPORTS
 
 TC-6-16-DisableTheWriteProtectionOfAMemory ::= TC-6-16-DisableTheWriteProtectionOfAMemoryGeneric {Memory-ID}
 
-TC-6-16-DisableTheWriteProtectionOfAMemoryGeneric {TMemory-ID} ::= SEQUENCE
+TC-6-16-DisableTheWriteProtectionOfAMemoryGeneric {Memory-ID-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL
+    memory-ID Memory-ID-Type OPTIONAL
 }
 
 END

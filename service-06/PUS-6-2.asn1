@@ -36,17 +36,17 @@ TC-6-2-LoadRawMemoryDataAreas ::= TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-I
 
 DataArea ::= DataAreaGeneric {BytePointer, MemoryData}
 
-TC-6-2-LoadRawMemoryDataAreasGeneric {TMemory-ID} ::= SEQUENCE
+TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL,
---! n UnsignedInteger,
+    memory-ID Memory-ID-Type OPTIONAL,
+--! n UnsignedInteger-Type,
     dataAreas SEQUENCE (SIZE(0 .. maxTC-6-2-DataAreasCount)) OF DataArea
 }
 
-DataAreaGeneric {UnsignedInteger, VariableOctetString} ::= SEQUENCE
+DataAreaGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger,
-    dataToLoad VariableOctetString,
+    startAddress UnsignedInteger-Type,
+    dataToLoad VariableOctetString-Type,
     checksum BIT STRING (SIZE (16)) OPTIONAL
 }
 

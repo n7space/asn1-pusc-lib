@@ -34,17 +34,17 @@ TM-6-10-CheckedRawMemoryDartaReport ::= TM-6-10-CheckedRawMemoryDartaReportGener
 
 DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TM-6-10-CheckedRawMemoryDartaReportGeneric {TMemory-ID} ::= SEQUENCE
+TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL,
---! n UnsignedInteger, moved to acn
+    memory-ID Memory-ID-Type OPTIONAL,
+--! n UnsignedInteger-Type, moved to acn
     dataArea SEQUENCE (SIZE(0 .. maxTM-6-10-DataAreaCount)) OF DataArea
 }
 
-DataAreaGeneric {UnsignedInteger0, UnsignedInteger1} ::= SEQUENCE
+DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
 {
-    startAddress UnsignedInteger0,
-    length UnsignedInteger1,
+    startAddress UnsignedInteger-Type0,
+    length UnsignedInteger-Type1,
     checksum BIT STRING (SIZE (16))
 }
 

@@ -35,17 +35,17 @@ TM-6-6-DumpedRawMemoryDataReport ::= TM-6-6-DumpedRawMemoryDataReportGeneric {Me
 
 DataDump ::= DataDumpGeneric {BytePointer, MemoryData}
 
-TM-6-6-DumpedRawMemoryDataReportGeneric {TMemory-ID} ::= SEQUENCE
+TM-6-6-DumpedRawMemoryDataReportGeneric {Memory-ID-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL,
---! n UnsignedInteger, moved to acn
+    memory-ID Memory-ID-Type OPTIONAL,
+--! n UnsignedInteger-Type, moved to acn
     dataDumps SEQUENCE (SIZE(0 .. maxTM-6-6-DataDumpCount)) OF DataDump
 }
 
-DataDumpGeneric {UnsignedInteger, VariableOctetString} ::= SEQUENCE
+DataDumpGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger,
-    dumpedData VariableOctetString,
+    startAddress UnsignedInteger-Type,
+    dumpedData VariableOctetString-Type,
     checksum BIT STRING (SIZE(16)) OPTIONAL
 }
 

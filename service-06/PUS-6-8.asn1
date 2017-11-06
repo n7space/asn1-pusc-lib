@@ -36,18 +36,18 @@ TM-6-8-CheckedObjectMemoryDataReportMultipleMemid ::= TM-6-8-CheckedObjectMemory
 
 CheckedObject ::= CheckedObjectGeneric {PUSC-UINT32, PUSC-UINT32}
 
-TM-6-8-CheckedObjectMemoryDataReportGeneric {TBase} ::= SEQUENCE
+TM-6-8-CheckedObjectMemoryDataReportGeneric {Base-Type} ::= SEQUENCE
 {
-    --! memory-ID TMemory-ID,
-    base-ID TBase,
-    --! n UnsignedInteger
+--! memory-ID Memory-ID-Type, moved to acn
+    base-ID Base-Type,
+--! n UnsignedInteger-Type, moved to acn
     checkedObjects SEQUENCE (SIZE(0 .. maxTM-6-8-CheckObjectCount)) OF CheckedObject
 }
 
-CheckedObjectGeneric {UnsignedInteger0, UnsignedInteger1} ::= SEQUENCE
+CheckedObjectGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
 {
-    offset UnsignedInteger0,
-    length UnsignedInteger1,
+    offset UnsignedInteger-Type0,
+    length UnsignedInteger-Type1,
     checksum BIT STRING (SIZE(16))
 }
 

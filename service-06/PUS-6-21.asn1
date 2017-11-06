@@ -37,20 +37,20 @@ TC-6-21-LoadObjectMemoryDataAreasByReferenceMultipleMemid ::= TC-6-21-LoadObject
 
 ObjectDataArea ::= ObjectDataAreaGeneric {PUSC-UINT32, PUSC-UINT32, PUSC-UINT32}
 
-TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {TBase, TFilePath} ::= SEQUENCE
+TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {Base-Type, FilePath-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID OPTIONAL,
-    base-ID TBase,
-    filePath TFilePath,
---! n UnsignedInteger, moved to acn
+--! memory-ID Memory-ID-Type OPTIONAL, moved to acn
+    base-ID Base-Type,
+    filePath FilePath-Type,
+--! n UnsignedInteger-Type, moved to acn
     objectDataAreas SEQUENCE (SIZE(0 .. maxTC-6-21-ObjectDataAreaCount)) OF ObjectDataArea
 }
 
-ObjectDataAreaGeneric {UnsignedInteger0, UnsignedInteger1, UnsignedInteger2} ::= SEQUENCE
+ObjectDataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1, UnsignedInteger-Type2} ::= SEQUENCE
 {
-    destinationOffset UnsignedInteger0,
-    offsetInFile UnsignedInteger1,
-    length UnsignedInteger2,
+    destinationOffset UnsignedInteger-Type0,
+    offsetInFile UnsignedInteger-Type1,
+    length UnsignedInteger-Type2,
     checksum BIT STRING (SIZE(16)) OPTIONAL
 }
 

@@ -36,18 +36,18 @@ TC-6-3-DumpObjectMemoryDataMultipleMemid ::= TC-6-3-DumpObjectMemoryDataGeneric 
 
 DumpObjectInstruction ::= DumpObjectInstructionGeneric {PUSC-UINT32, PUSC-UINT32}
 
-TC-6-3-DumpObjectMemoryDataGeneric {TBase} ::= SEQUENCE
+TC-6-3-DumpObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID,
-    base-ID TBase,
---! n UnsignedInteger
+--! memory-ID Memory-ID-Type,
+    base-ID Base-Type,
+--! n UnsignedInteger-Type
     dumpObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-3-DumpObjectInstructionCount)) OF DumpObjectInstruction
 }
 
-DumpObjectInstructionGeneric {UnsignedInteger0, UnsignedInteger1} ::= SEQUENCE
+DumpObjectInstructionGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
 {
-    offset UnsignedInteger0,
-    length UnsignedInteger1
+    offset UnsignedInteger-Type0,
+    length UnsignedInteger-Type1
 }
 
 END

@@ -32,11 +32,11 @@ IMPORTS
 
 TM-6-18-CheckedObjectMemoryObjectReportMultipleMemid ::= TM-6-18-CheckedObjectMemoryObjectReportGeneric {BaseMultipleMemid, PUSC-UINT32}
 
-TM-6-18-CheckedObjectMemoryObjectReportGeneric {TBase, UnsignedInteger} ::= SEQUENCE
+TM-6-18-CheckedObjectMemoryObjectReportGeneric {Base-Type, UnsignedInteger-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID, moved to acn
-    base-ID TBase,
-    length UnsignedInteger,
+--! memory-ID Memory-ID-Type, moved to acn
+    base-ID Base-Type,
+    length UnsignedInteger-Type,
     checksum BIT STRING (SIZE(16))
 }
 

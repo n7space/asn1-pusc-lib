@@ -37,18 +37,18 @@ TM-6-4-DumpedObjectMemoryDataReportMultipleMemid ::= TM-6-4-DumpedObjectMemoryDa
 
 ObjectData ::= ObjectDataGeneric {PUSC-UINT32, MemoryData}
 
-TM-6-4-DumpedObjectMemoryDataReportGeneric {TBase} ::= SEQUENCE
+TM-6-4-DumpedObjectMemoryDataReportGeneric {Base-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID,
-    base-ID TBase,
---! n UnsignedInteger
+--! memory-ID Memory-ID-Type,
+    base-ID Base-Type,
+--! n UnsignedInteger-Type
     objectData SEQUENCE (SIZE(0 .. maxTM-6-4-ObjectDataCount)) OF ObjectData
 }
 
-ObjectDataGeneric {UnsignedInteger, VariableOctetString} ::= SEQUENCE
+ObjectDataGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE
 {
-    offset UnsignedInteger,
-    dumpedData VariableOctetString,
+    offset UnsignedInteger-Type,
+    dumpedData VariableOctetString-Type,
     checksum BIT STRING (SIZE(16)) OPTIONAL
 }
 

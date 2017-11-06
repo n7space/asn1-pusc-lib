@@ -35,18 +35,18 @@ TC-6-20-DumpRawMemoryDataAreasToFile ::= TC-6-20-DumpRawMemoryDataAreasToFileGen
 
 DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TC-6-20-DumpRawMemoryDataAreasToFileGeneric {TMemory-ID, TFilePath} ::= SEQUENCE
+TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID-Type, FilePath-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL,
-    filePath TFilePath,
+    memory-ID Memory-ID-Type OPTIONAL,
+    filePath FilePath-Type,
 --! n UnsignedInteger, moved to acn
     dataAreas SEQUENCE (SIZE(0 .. maxTC-6-20-DataAreaCount)) OF DataArea
 }
 
-DataAreaGeneric {UnsignedInteger0, UnsignedInteger1} ::= SEQUENCE
+DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
 {
-    startAddress UnsignedInteger0,
-    length UnsignedInteger1
+    startAddress UnsignedInteger-Type0,
+    length UnsignedInteger-Type1
 }
 
 END

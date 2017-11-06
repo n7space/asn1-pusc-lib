@@ -36,18 +36,18 @@ TC-6-7-CheckObjectMemoryDataMultipleMemid ::= TC-6-7-CheckObjectMemoryDataGeneri
 
 CheckObjectInstruction ::= CheckObjectInstructionGeneric {PUSC-UINT32, PUSC-UINT32}
 
-TC-6-7-CheckObjectMemoryDataGeneric {TBase} ::= SEQUENCE
+TC-6-7-CheckObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 {
---! memory-ID TMemory-ID,
-    base-ID TBase,
---! n UnsignedInteger
+--! memory-ID Memory-ID-Type, moved to acn
+    base-ID Base-Type,
+--! n UnsignedInteger-Type, moved to acn
     checkObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-7-CheckObjectInstructionCount)) OF CheckObjectInstruction
 }
 
-CheckObjectInstructionGeneric {UnsignedInteger0, UnsignedInteger1} ::= SEQUENCE
+CheckObjectInstructionGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
 {
-    offset UnsignedInteger0,
-    length UnsignedInteger1
+    offset UnsignedInteger-Type0,
+    length UnsignedInteger-Type1
 }
 
 END

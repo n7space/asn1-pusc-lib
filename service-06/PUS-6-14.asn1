@@ -28,9 +28,9 @@ IMPORTS
 
 TC-6-14-DisableTheScrubbingOfAMemory ::= TC-6-14-DisableTheScrubbingOfAMemoryGeneric {Memory-ID}
 
-TC-6-14-DisableTheScrubbingOfAMemoryGeneric {TMemory-ID} ::= SEQUENCE
+TC-6-14-DisableTheScrubbingOfAMemoryGeneric {Memory-ID-Type} ::= SEQUENCE
 {
-    memory-ID TMemory-ID OPTIONAL
+    memory-ID Memory-ID-Type OPTIONAL
 }
 
 
