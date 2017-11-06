@@ -25,9 +25,9 @@ FilePath DEFINITIONS ::= BEGIN
 
 FilePath []
 {
-    repositoryPathLength BasicTypes.PUSC-UINT32 [],
+    repositoryPathLength BasicTypes.PUSC-UINT12 [],
     repositoryPath <repositoryPathLength> [],
-    fileNameLength BasicTypes.PUSC-UINT32 [],
+    fileNameLength BasicTypes.PUSC-UINT12 [],
     fileName <fileNameLength> []
 }
 
