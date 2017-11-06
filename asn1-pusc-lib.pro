@@ -104,8 +104,8 @@ DISTFILES += \
     service-03/DiagnosticParameterReportStructure.asn1 \
     service-03/HousekeepingParameterReportStructure.acn \
     service-03/HousekeepingParameterReportStructure.asn1 \
-    service-03/Parameter.acn \
-    service-03/Parameter.asn1 \
+    common/Parameter.acn \
+    common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
     service-03/PeriodicGenerationActionStatus.asn1 \
     service-03/CollectionInterval.acn \
@@ -196,6 +196,26 @@ DISTFILES += \
     service-05/PUS-5-7.acn \
     service-05/PUS-5-7.asn1 \
     service-05/PUS-5-8.acn \
-    service-05/PUS-5-8.asn1
+    service-05/PUS-5-8.asn1 \
+    service-04/PUS-4-1.acn \
+    service-04/PUS-4-1.asn1 \
+    service-04/PUS-4-3.acn \
+    service-04/PUS-4-3.asn1 \
+    service-04/PUS-4-2.acn \
+    service-04/PUS-4-2.asn1 \
+    service-04/PUS-4-4.acn \
+    service-04/PUS-4-4.asn1 \
+    service-04/Intervals.acn \
+    service-04/Intervals.asn1 \
+    service-04/PUS-4-5.acn \
+    service-04/PUS-4-5.asn1 \
+    service-04/PUS-4-6.acn \
+    service-04/PUS-4-6.asn1 \
+    service-04/PUS-4-7.acn \
+    service-04/PUS-4-7.asn1 \
+    service-04/PUS-4-8.acn \
+    service-04/PUS-4-8.asn1 \
+    service-04/PUS-4-9.acn \
+    service-04/PUS-4-9.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)

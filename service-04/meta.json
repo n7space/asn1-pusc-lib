@@ -1,0 +1,121 @@
+{
+  "name": "ST[04] parameter statistics reporting",
+  "submodules": [
+    {
+      "name": "Parameter statistics reporting subservice",
+      "elements": [
+        {
+          "name": "Reset the parameter statistics",
+          "asn1Files": ["PUS-4-3.asn1"]
+        },
+        {
+          "name": "Report the parameter statistics",
+          "asn1Files":[
+            "PUS-4-1.asn1",
+            "PUS-4-2.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-BOOL32",
+                "AbsoluteTime",
+                "PUSC-UINT32"
+              ]
+            },
+            {
+              "from": "Parameter",
+              "types": [
+                "Parameter-ID",
+                "ParameterValue"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Parameter statistics report",
+          "asn1Files": ["PUS-4-2.asn1"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "AbsoluteTime",
+                "PUSC-UINT32"
+              ]
+            },
+            {
+              "from": "Parameter",
+              "types": [
+                "Parameter-ID",
+                "ParameterValue"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Enable the periodic parameter statistics reporting",
+          "asn1Files": [
+            "PUS-4-4.asn1",
+            "Intervals.asn1"
+          ]
+        },
+        {
+          "name": "Disable the periodic parameter statistics reporting",
+          "asn1Files": ["PUS-4-5.asn1"],
+          "requires": ["Enable the periodic parameter statistics reporting"]
+        },
+        {
+          "name": "Add or update parameter statistics definitions",
+          "asn1Files": [
+            "PUS-4-6.asn1",
+            "Intervals.asn1"
+          ],
+          "imports":[
+            {
+              "from": "Parameter",
+              "types": "Parameter-ID"
+            },
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ]
+        },
+        {
+          "name": "Delete parameter statistics definitions",
+          "asn1Files": ["PUS-4-7.asn1"],
+          "imports":[
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ],
+          "requires": ["Add or update parameter statistics definitions"]
+        },
+        {
+          "name": "Report the parameter statistics definitions",
+          "asn1Files": [
+            "PUS-4-8.asn1",
+            "PUS-4-9.asn1",
+            "Intervals.asn1"
+          ],
+          "imports":[
+            {
+              "from": "Parameter",
+              "types": "Parameter-ID"
+            },
+            {
+              "from": "BasicTypes",
+              "types": "PUSC-UINT32"
+            }
+          ],
+          "requires": ["Add or update parameter statistics definitions"]
+        }
+      ]
+    }
+  ]
+}

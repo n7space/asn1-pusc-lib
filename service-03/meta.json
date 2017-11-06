@@ -43,7 +43,6 @@
           "name": "Create a housekeeping parameter report structure",
           "asn1Files": [
             "PUS-3-1.asn1",
-            "Parameter.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "CollectionInterval.asn1"
           ],
@@ -52,6 +51,10 @@
             {
               "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         },
@@ -75,7 +78,6 @@
             "PUS-3-9.asn1",
             "PUS-3-10.asn1",
             "HousekeepingParameterReportStructure.asn1",
-            "Parameter.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1"
           ],
@@ -84,6 +86,10 @@
             {
               "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         },
@@ -105,7 +111,6 @@
           "name": "Append parameters to a housekeeping parameter report structure",
           "asn1Files": [
             "PUS-3-29.asn1",
-            "Parameter.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
           "requires": ["Create a housekeeping parameter report structure"],
@@ -113,6 +118,10 @@
             {
               "from": "BasicTypes",
               "types": "PUSC-UINT32"
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         },
@@ -188,7 +197,6 @@
           "name": "Create a diagnostic parameter report structure",
           "asn1Files": [
             "PUS-3-2.asn1",
-            "Parameter.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "CollectionInterval.asn1"
           ],
@@ -196,6 +204,10 @@
             {
               "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         },
@@ -218,7 +230,6 @@
             "PUS-3-11.asn1",
             "PUS-3-12.asn1",
             "DiagnosticParameterReportStructure.asn1",
-            "Parameter.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1"
           ],
@@ -226,8 +237,11 @@
             {
               "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
-
           ]
         },
         {
@@ -248,7 +262,6 @@
           "name": "Append parameters to a diagnostic parameter report structure",
           "asn1Files": [
             "PUS-3-30.asn1",
-            "Parameter.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
           "requires": ["Create diagnostic parameter report structure"],
@@ -256,6 +269,10 @@
             {
               "from": "BasicTypes",
               "types": "PUSC-UINT32"
+            },
+            {
+              "from": "Parameter",
+              "types": ["Parameter-ID"]
             }
           ]
         },

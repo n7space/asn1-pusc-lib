@@ -21,29 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-11 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
-IMPORTS
-    LogicalDevice-ID FROM LogicalDevice
-    Transaction-ID FROM Transaction
-    PUSC-UINT32 FROM BasicTypes
-    Parameter-ID FROM Parameter;
 
-maxTC-2-11-DataAcquireRequestCount INTEGER ::= 2147483647
-
-TC-2-11-AcquireDataFromLogicalDevices ::= SEQUENCE
+Parameter-ID ::= ENUMERATED
 {
---! n UnsignedInteger, moved to acn
-    dataAcquireRequests SEQUENCE (SIZE(0 .. maxTC-2-11-DataAcquireRequestCount)) OF DataAcquireRequest
+    param1 (0)
 }
 
-DataAcquireRequest ::= DataAcquireRequestGeneric {Transaction-ID, LogicalDevice-ID, Parameter-ID}
-
-DataAcquireRequestGeneric {TTransaction-ID, TLogicalDevice-ID, TParameter-ID} ::= SEQUENCE
+ParameterValue ::= CHOICE
 {
-    transaction-ID TTransaction-ID,
-    logicalDevice-ID TLogicalDevice-ID,
-    parameter-ID TParameter-ID
+    param1 INTEGER (0 ..255)
 }
 
 END
