@@ -31,10 +31,10 @@ maxTM-5-8-EventDefinition-ID-Count INTEGER ::= 2147483647
 
 TM-5-8-DisabledEventDefinitionsListReport ::= TM-5-8-DisabledEventDefinitionsListReportGeneric {EventDefinition-ID}
 
-TM-5-8-DisabledEventDefinitionsListReportGeneric {TEventDefinition-ID} ::= SEQUENCE
+TM-5-8-DisabledEventDefinitionsListReportGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTM-5-8-EventDefinition-ID-Count)) OF TEventDefinition-ID
+--! n UnsignedInteger-Type, moved to acn
+    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTM-5-8-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
 

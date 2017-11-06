@@ -29,10 +29,10 @@ IMPORTS
 
 TM-5-2-LowSeverityAnomalyReport ::= TM-5-2-LowSeverityAnomalyReportGeneric {EventDefinition-ID, EventDefinitionAuxiliaryData}
 
-TM-5-2-LowSeverityAnomalyReportGeneric {TEventDefinition-ID, TEventDefinitionAuxiliaryData} ::= SEQUENCE
+TM-5-2-LowSeverityAnomalyReportGeneric {EventDefinition-ID-Type, EventDefinitionAuxiliaryData-Type} ::= SEQUENCE
 {
-    eventDefinition-ID TEventDefinition-ID,
-    auxiliaryData TEventDefinitionAuxiliaryData
+    eventDefinition-ID EventDefinition-ID-Type,
+    auxiliaryData EventDefinitionAuxiliaryData-Type
 }
 
 END

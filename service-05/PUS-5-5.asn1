@@ -31,10 +31,10 @@ maxTC-5-5-EventDefinition-ID-Count INTEGER ::= 2147483647
 
 TC-5-5-EnableTheReportGenerationOfEventDefinitions ::= TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID}
 
-TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {TEventDefinition-ID} ::= SEQUENCE
+TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-5-EventDefinition-ID-Count)) OF TEventDefinition-ID
+--! n UnsignedInteger-Type, moved to acn
+    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-5-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
 
