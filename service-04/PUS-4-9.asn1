@@ -30,21 +30,21 @@ IMPORTS
 
 maxTM-4-9-ParameterStatisticCount INTEGER ::= 2147483647
 
-TM-4-9-ParameterStatisticsDefinitionReport ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval, ParameterStatistics}
+TM-4-9-ParameterStatisticsDefinitionReport ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval}
 
 ParameterStatistics ::= ParameterStatisticsGeneric {Parameter-ID, SamplingInterval}
 
-TM-4-9-ParameterStatisticsDefinitionReportGeneric {TReportingInterval, TParameterStatistics} ::= SEQUENCE
+TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval-Type} ::= SEQUENCE
 {
-    reportingInterval TReportingInterval OPTIONAL,
+    reportingInterval ReportingInterval-Type OPTIONAL,
 --! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(0 .. maxTM-4-9-ParameterStatisticCount)) OF TParameterStatistics
+    parameterStatistics SEQUENCE (SIZE(0 .. maxTM-4-9-ParameterStatisticCount)) OF ParameterStatistics
 }
 
-ParameterStatisticsGeneric {TParameter-ID, TSamplingInterval} ::= SEQUENCE
+ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
 {
-    parameter-ID TParameter-ID,
-    samplingInterval TSamplingInterval OPTIONAL
+    parameter-ID Parameter-ID-Type,
+    samplingInterval SamplingInterval-Type OPTIONAL
 }
 
 END

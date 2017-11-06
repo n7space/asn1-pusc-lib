@@ -30,20 +30,18 @@ IMPORTS
 
 maxTC-4-6-ParameterStatisticCount INTEGER ::= 2147483647
 
-TC-4-6-AddOrUpdateParameterStatisticsDefinitions ::= TC-4-6-AddOrUpdateParameterStatisticsDefinitionsGeneric {ParameterStatistics}
-
 ParameterStatistics ::= ParameterStatisticsGeneric {Parameter-ID, SamplingInterval}
 
-TC-4-6-AddOrUpdateParameterStatisticsDefinitionsGeneric {TParameterStatistics} ::= SEQUENCE
+TC-4-6-AddOrUpdateParameterStatisticsDefinitions ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(0 .. maxTC-4-6-ParameterStatisticCount)) OF TParameterStatistics
+    parameterStatistics SEQUENCE (SIZE(0 .. maxTC-4-6-ParameterStatisticCount)) OF ParameterStatistics
 }
 
-ParameterStatisticsGeneric {TParameter-ID, TSamplingInterval} ::= SEQUENCE
+ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
 {
-    parameter-ID TParameter-ID,
-    samplingInterval TSamplingInterval OPTIONAL
+    parameter-ID Parameter-ID-Type,
+    samplingInterval SamplingInterval-Type OPTIONAL
 }
 
 

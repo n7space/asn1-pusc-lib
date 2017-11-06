@@ -28,9 +28,9 @@ IMPORTS
 
 TC-4-4-EnableThePeriodicParameterStatisticsReporting ::= TC-4-4-EnableThePeriodicParameterStatisticsReportingGeneric {ReportingInterval}
 
-TC-4-4-EnableThePeriodicParameterStatisticsReportingGeneric {TReportingInterval} ::= SEQUENCE
+TC-4-4-EnableThePeriodicParameterStatisticsReportingGeneric {ReportingInterval-Type} ::= SEQUENCE
 {
-    reportingIntevral TReportingInterval
+    reportingIntevral ReportingInterval-Type
 }
 
 
