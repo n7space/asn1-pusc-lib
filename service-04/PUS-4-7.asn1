@@ -31,10 +31,10 @@ maxTC-4-7-Parameter-ID-Count INTEGER ::= 2147483647
 
 TC-4-7-DeleteParameterStatisticsReporting ::= TC-4-7-DeleteParameterStatisticsReportingGeneric {Parameter-ID}
 
-TC-4-7-DeleteParameterStatisticsReportingGeneric {TParameter-ID} ::= SEQUENCE
+TC-4-7-DeleteParameterStatisticsReportingGeneric {Parameter-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger,
-    parameter-ID SEQUENCE (SIZE(0 .. maxTC-4-7-Parameter-ID-Count)) OF TParameter-ID
+    parameter-ID SEQUENCE (SIZE(0 .. maxTC-4-7-Parameter-ID-Count)) OF Parameter-ID-Type
 }
 
 

@@ -29,28 +29,28 @@ IMPORTS
 
 maxTC-4-2-StatisticsCount INTEGER ::= 2147483647
 
-TC-4-2-ParameterStatisticsReport ::= TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime, Statistics}
+TC-4-2-ParameterStatisticsReport ::= TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
 
 Statistics ::= StatisticsGeneric {Parameter-ID, PUSC-UINT32, ParameterValue, AbsoluteTime, StandardDeviation}
 
-TC-4-2-ParameterStatisticsReportGeneric {TAbsoluteTime, TStatistics} ::= SEQUENCE
+TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime-Type} ::= SEQUENCE
 {
-    startTime TAbsoluteTime,
-    endTime TAbsoluteTime,
---! n UnsignedInteger, moved to acn
-    statistics SEQUENCE (SIZE(0 .. maxTC-4-2-StatisticsCount)) OF TStatistics
+    startTime AbsoluteTime-Type,
+    endTime AbsoluteTime-Type,
+--! n UnsignedInteger-Type, moved to acn
+    statistics SEQUENCE (SIZE(0 .. maxTC-4-2-StatisticsCount)) OF Statistics
 }
 
-StatisticsGeneric {TParameter-ID, UnsignedInteger, TParameterValue, TAbsoluteTime, TStandardDeviation} ::= SEQUENCE
+StatisticsGeneric {Parameter-ID-Type, UnsignedInteger-Type, ParameterValue-Type, AbsoluteTime-Type, StandardDeviation-Type} ::= SEQUENCE
 {
 --! parameter-ID TParameter-ID, moved to acn
-    numberOfSamples UnsignedInteger,
-    maxValue TParameterValue,
-    maxTime TAbsoluteTime,
-    minValue TParameterValue,
-    minTime TAbsoluteTime,
-    meanValue TParameterValue,
-    standardDeviationValue TStandardDeviation OPTIONAL
+    numberOfSamples UnsignedInteger-Type,
+    maxValue ParameterValue-Type,
+    maxTime AbsoluteTime-Type,
+    minValue ParameterValue-Type,
+    minTime AbsoluteTime-Type,
+    meanValue ParameterValue-Type,
+    standardDeviationValue StandardDeviation-Type OPTIONAL
 }
 
 StandardDeviation ::= CHOICE

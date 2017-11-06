@@ -28,9 +28,9 @@ IMPORTS
 
 TC-4-1-ReportTheParameterStatistics ::= TC-4-1-ReportTheParameterStatisticsGeneric {PUSC-BOOL32}
 
-TC-4-1-ReportTheParameterStatisticsGeneric {Boolean} ::= SEQUENCE
+TC-4-1-ReportTheParameterStatisticsGeneric {Boolean-Type} ::= SEQUENCE
 {
-    resetFlag Boolean OPTIONAL
+    resetFlag Boolean-Type OPTIONAL
 }
 
 

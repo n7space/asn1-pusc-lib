@@ -21,27 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-4-6 DEFINITIONS AUTOMATIC TAGS::= BEGIN
+PUS-5-6 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Parameter-ID FROM Parameter
-    SamplingInterval FROM Intervals
-    PUSC-UINT32 FROM BasicTypes;
+    PUSC-UINT32 FROM BasicTypes
+    EventDefinition-ID FROM EventDefinition;
 
-maxTC-4-6-ParameterStatisticCount INTEGER ::= 2147483647
+maxTC-5-6-EventDefinition-ID-Count INTEGER ::= 2147483647
 
-ParameterStatistics ::= ParameterStatisticsGeneric {Parameter-ID, SamplingInterval}
+TC-5-6-DisableTheReportGenerationOfEventDefinitions ::= TC-5-6-DisableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID}
 
-TC-4-6-AddOrUpdateParameterStatisticsDefinitions ::= SEQUENCE
+TC-5-6-DisableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(0 .. maxTC-4-6-ParameterStatisticCount)) OF ParameterStatistics
-}
-
-ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
-{
-    parameter-ID Parameter-ID-Type,
-    samplingInterval SamplingInterval-Type OPTIONAL
+--! n UnsignedInteger-Type, moved to acn
+    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-6-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
 
