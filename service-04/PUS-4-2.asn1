@@ -1,0 +1,61 @@
+--!
+--! Copyright (C) 2017 N7 Mobile sp. z o. o.
+--! Contact: http://n7mobile.pl/Space
+--!
+--! This file is part of ASN.1/ACN PUS-C Components Library.
+--!
+--! Library was developed under a programme and funded by
+--! European Space Agency.
+--!
+--! This Library is free software: you can redistribute it and/or modify
+--! it under the terms of the GNU General Public License as published by
+--! the Free Software Foundation, either version 3 of the License, or
+--! (at your option) any later version.
+--!
+--! This Library is distributed in the hope that it will be useful,
+--! but WITHOUT ANY WARRANTY; without even the implied warranty of
+--! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--! GNU General Public License for more details.
+--!
+--! You should have received a copy of the GNU General Public License
+--! along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--!
+
+PUS-4-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    AbsoluteTime, PUSC-UINT32 FROM BasicTypes
+    Parameter-ID, ParameterValue FROM Parameter;
+
+maxTC-4-2-StatisticsCount INTEGER ::= 2147483647
+
+TC-4-2-ParameterStatisticsReport ::= TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
+
+Statistics ::= StatisticsGeneric {Parameter-ID, PUSC-UINT32, ParameterValue, AbsoluteTime, StandardDeviation}
+
+TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime-Type} ::= SEQUENCE
+{
+    startTime AbsoluteTime-Type,
+    endTime AbsoluteTime-Type,
+--! n UnsignedInteger-Type, moved to acn
+    statistics SEQUENCE (SIZE(0 .. maxTC-4-2-StatisticsCount)) OF Statistics
+}
+
+StatisticsGeneric {Parameter-ID-Type, UnsignedInteger-Type, ParameterValue-Type, AbsoluteTime-Type, StandardDeviation-Type} ::= SEQUENCE
+{
+--! parameter-ID TParameter-ID, moved to acn
+    numberOfSamples UnsignedInteger-Type,
+    maxValue ParameterValue-Type,
+    maxTime AbsoluteTime-Type,
+    minValue ParameterValue-Type,
+    minTime AbsoluteTime-Type,
+    meanValue ParameterValue-Type,
+    standardDeviationValue StandardDeviation-Type OPTIONAL
+}
+
+StandardDeviation ::= CHOICE
+{
+    param1 REAL
+}
+
+END

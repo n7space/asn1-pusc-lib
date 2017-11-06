@@ -21,29 +21,21 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-2-11 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-5-5 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    LogicalDevice-ID FROM LogicalDevice
-    Transaction-ID FROM Transaction
     PUSC-UINT32 FROM BasicTypes
-    Parameter-ID FROM Parameter;
+    EventDefinition-ID FROM EventDefinition;
 
-maxTC-2-11-DataAcquireRequestCount INTEGER ::= 2147483647
+maxTC-5-5-EventDefinition-ID-Count INTEGER ::= 2147483647
 
-TC-2-11-AcquireDataFromLogicalDevices ::= SEQUENCE
+TC-5-5-EnableTheReportGenerationOfEventDefinitions ::= TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID}
+
+TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    dataAcquireRequests SEQUENCE (SIZE(0 .. maxTC-2-11-DataAcquireRequestCount)) OF DataAcquireRequest
+--! n UnsignedInteger-Type, moved to acn
+    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-5-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
-DataAcquireRequest ::= DataAcquireRequestGeneric {Transaction-ID, LogicalDevice-ID, Parameter-ID}
-
-DataAcquireRequestGeneric {TTransaction-ID, TLogicalDevice-ID, TParameter-ID} ::= SEQUENCE
-{
-    transaction-ID TTransaction-ID,
-    logicalDevice-ID TLogicalDevice-ID,
-    parameter-ID TParameter-ID
-}
 
 END
