@@ -41,7 +41,7 @@ TM-6-8-CheckedObjectMemoryDataReportGeneric {Base-Type} ::= SEQUENCE
 --! memory-ID Memory-ID-Type, moved to acn
     base-ID Base-Type,
 --! n UnsignedInteger-Type, moved to acn
-    checkedObjects SEQUENCE (SIZE(0 .. maxTM-6-8-CheckObjectCount)) OF CheckedObject
+    checkedObjects SEQUENCE (SIZE(1 .. maxTM-6-8-CheckObjectCount)) OF CheckedObject
 }
 
 CheckedObjectGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

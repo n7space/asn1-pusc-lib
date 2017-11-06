@@ -28,7 +28,7 @@ IMPORTS
 
 Memory-ID ::= ENUMERATED --TODO
 {
-    memid1 (0)
+    memId1 (0)
 }
 
 END

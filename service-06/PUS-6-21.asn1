@@ -43,7 +43,7 @@ TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {Base-Type, FilePath-Type} :
     base-ID Base-Type,
     filePath FilePath-Type,
 --! n UnsignedInteger-Type, moved to acn
-    objectDataAreas SEQUENCE (SIZE(0 .. maxTC-6-21-ObjectDataAreaCount)) OF ObjectDataArea
+    objectDataAreas SEQUENCE (SIZE(1 .. maxTC-6-21-ObjectDataAreaCount)) OF ObjectDataArea
 }
 
 ObjectDataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1, UnsignedInteger-Type2} ::= SEQUENCE

@@ -42,12 +42,12 @@ TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {Unsig
 
 BitMaskMultipleMemid ::= CHOICE
 {
-    memid1 OCTET STRING (SIZE(4))
+    memId1 OCTET STRING (SIZE(4))
 }
 
 DataToLoadMultipleMemid ::= CHOICE
 {
-    memid1 OCTET STRING (SIZE(4))
+    memId1 OCTET STRING (SIZE(4))
 }
 
 BitMask ::= OCTET STRING (SIZE(4))

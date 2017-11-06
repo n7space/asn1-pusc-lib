@@ -42,7 +42,7 @@ TM-6-4-DumpedObjectMemoryDataReportGeneric {Base-Type} ::= SEQUENCE
 --! memory-ID Memory-ID-Type,
     base-ID Base-Type,
 --! n UnsignedInteger-Type
-    objectData SEQUENCE (SIZE(0 .. maxTM-6-4-ObjectDataCount)) OF ObjectData
+    objectData SEQUENCE (SIZE(1 .. maxTM-6-4-ObjectDataCount)) OF ObjectData
 }
 
 ObjectDataGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE

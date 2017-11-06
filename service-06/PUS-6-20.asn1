@@ -40,7 +40,7 @@ TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID-Type, FilePath-Type} ::= 
     memory-ID Memory-ID-Type OPTIONAL,
     filePath FilePath-Type,
 --! n UnsignedInteger, moved to acn
-    dataAreas SEQUENCE (SIZE(0 .. maxTC-6-20-DataAreaCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-20-DataAreaCount)) OF DataArea
 }
 
 DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

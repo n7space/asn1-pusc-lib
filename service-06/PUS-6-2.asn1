@@ -40,7 +40,7 @@ TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type,
-    dataAreas SEQUENCE (SIZE(0 .. maxTC-6-2-DataAreasCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-2-DataAreasCount)) OF DataArea
 }
 
 DataAreaGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE

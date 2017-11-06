@@ -39,12 +39,12 @@ TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionMultipleMemid 
 
 BitMaskMultipleMemid <Memory.Memory-ID: memory> [determinant memory]
 {
-    memid1 []
+    memId1 []
 }
 
 DataToLoadMultipleMemid <Memory.Memory-ID: memory> [determinant memory]
 {
-    memid1 []
+    memId1 []
 }
 
 BitMask []

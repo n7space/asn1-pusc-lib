@@ -43,7 +43,7 @@ TC-6-22-DumpObjectMemoryDataAreasToFileGeneric {Base-Type, FilePath-Type} ::= SE
     base-ID Base-Type,
     filePath FilePath-Type,
 --! n UnsignedInteger-Type, moved to acn
-    objectMemoryDump SEQUENCE (SIZE(0 .. maxTC-6-22-ObjectMemoryDumpCount)) OF ObjectMemoryDump
+    objectMemoryDump SEQUENCE (SIZE(1 .. maxTC-6-22-ObjectMemoryDumpCount)) OF ObjectMemoryDump
 }
 
 ObjectMemoryDumpGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

@@ -41,7 +41,7 @@ TC-6-7-CheckObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 --! memory-ID Memory-ID-Type, moved to acn
     base-ID Base-Type,
 --! n UnsignedInteger-Type, moved to acn
-    checkObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-7-CheckObjectInstructionCount)) OF CheckObjectInstruction
+    checkObjectInstructions SEQUENCE (SIZE(1 .. maxTC-6-7-CheckObjectInstructionCount)) OF CheckObjectInstruction
 }
 
 CheckObjectInstructionGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

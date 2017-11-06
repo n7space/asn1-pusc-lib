@@ -39,7 +39,7 @@ TM-6-6-DumpedRawMemoryDataReportGeneric {Memory-ID-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type, moved to acn
-    dataDumps SEQUENCE (SIZE(0 .. maxTM-6-6-DataDumpCount)) OF DataDump
+    dataDumps SEQUENCE (SIZE(1 .. maxTM-6-6-DataDumpCount)) OF DataDump
 }
 
 DataDumpGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE

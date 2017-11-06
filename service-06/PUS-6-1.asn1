@@ -42,7 +42,7 @@ TC-6-1-LoadObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 --! memory-ID Memory-ID-Type, moved to acn
     base-ID Base-Type,
 --! n UnsignedInteger-Type, moved to acn
-    loadObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-1-LoadObjectInstructionCount)) OF LoadObjectInstruction
+    loadObjectInstructions SEQUENCE (SIZE(1 .. maxTC-6-1-LoadObjectInstructionCount)) OF LoadObjectInstruction
 }
 
 LoadObjectInstructionGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE

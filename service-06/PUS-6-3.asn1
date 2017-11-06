@@ -41,7 +41,7 @@ TC-6-3-DumpObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 --! memory-ID Memory-ID-Type,
     base-ID Base-Type,
 --! n UnsignedInteger-Type
-    dumpObjectInstructions SEQUENCE (SIZE(0 .. maxTC-6-3-DumpObjectInstructionCount)) OF DumpObjectInstruction
+    dumpObjectInstructions SEQUENCE (SIZE(1 .. maxTC-6-3-DumpObjectInstructionCount)) OF DumpObjectInstruction
 }
 
 DumpObjectInstructionGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

@@ -38,7 +38,7 @@ TC-6-5-DumpRawMemoryDataGeneric {Memory-ID-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type
-    dataAreas SEQUENCE (SIZE(0 .. maxTC-6-5-DataAreaCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-5-DataAreaCount)) OF DataArea
 }
 
 DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE

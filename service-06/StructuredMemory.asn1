@@ -29,7 +29,7 @@ IMPORTS
 
 BaseMultipleMemid ::= CHOICE --TODO
 {
-    memid1 INTEGER (0 .. 255)
+    memId1 INTEGER (0 .. 255)
 }
 
 Base ::= INTEGER (0 .. 255)

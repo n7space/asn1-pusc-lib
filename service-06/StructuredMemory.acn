@@ -25,7 +25,7 @@ StructuredMemory DEFINITIONS ::= BEGIN
 
 BaseMultipleMemid <Memory.Memory-ID: memory> [determinant memory]
 {
-    memid1 []
+    memId1 []
 }
 
 Base []
