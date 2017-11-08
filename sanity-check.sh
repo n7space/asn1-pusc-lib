@@ -1,7 +1,8 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OUT_DIR=${DIR}/.build
-SCHEMA_FILE=asn1-lib-schema.json
+MODULE_SCHEMA_FILE=asn1-lib-module-schema.json
+GENERAL_SCHEMA_FILE=asn1-lib-general-schema.json
 URL=https://raw.githubusercontent.com/n7mobile/asn1scc.IDE/master/schemas
 
 rm -rf ${OUT_DIR}
@@ -31,24 +32,39 @@ then
 	exit $ret
 fi
 
-printf "\n\nDownloading schema...\n"
-(cd ${OUT_DIR} && wget --no-cache ${URL}/${SCHEMA_FILE})
+printf "\n\nDownloading module schema...\n"
+(cd ${OUT_DIR} && wget --no-cache ${URL}/${MODULE_SCHEMA_FILE})
 ret=$?
 if [ $ret != 0 ]
 then
-	echo "Error getting json-schema: $ret"
+	echo "Error getting module json-schema: $ret"
 	exit $ret
 fi
 
-printf "\n\nValidating metadata...\n"
-#find . -name meta.json -print -exec jsonschema -i {} ${OUT_DIR}/${SCHEMA_FILE} \;
-find . -name meta.json -print0 | while IFS= read -r -d $'\0' f; do
-	echo "Checking file: ${f}"
-	jsonschema -i "${f}" "${OUT_DIR}/${SCHEMA_FILE}"
-	ret=$?
-	if [ $ret != 0 ]
-	then
-		echo "Error validating metadata: : $ret"
-		exit $ret
-	fi
-done
+printf "\n\nDownloading general info schema...\n"
+(cd ${OUT_DIR} && wget --no-cache ${URL}/${GENERAL_SCHEMA_FILE})
+ret=$?
+if [ $ret != 0 ]
+then
+	echo "Error getting general json-schema: $ret"
+	exit $ret
+fi
+
+printf "\n\nValidating modules metadata...\n"
+find . -name meta.json -print0 \
+    | xargs --verbose -I{} -0 jsonschema -i {} ${OUT_DIR}/${MODULE_SCHEMA_FILE}
+ret=$?
+if [ $ret != 0 ]
+then
+	echo "Error validating module's metadata: $ret"
+	exit $ret
+fi
+
+printf "\n\nValidating general info...\n"
+jsonschema -i info.json ${OUT_DIR}/${GENERAL_SCHEMA_FILE}
+ret=$?
+if [ $ret != 0 ]
+then
+	echo "Error validating general metadata: $ret"
+	exit $ret
+fi
