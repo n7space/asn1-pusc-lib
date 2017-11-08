@@ -6,65 +6,27 @@ GENERAL_SCHEMA_FILE=asn1-lib-general-schema.json
 URL=https://raw.githubusercontent.com/n7mobile/asn1scc.IDE/master/schemas
 
 rm -rf ${OUT_DIR}
-mkdir -p ${OUT_DIR}
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error creating directory: $ret"
-	exit ret
-fi
+mkdir -p ${OUT_DIR} || { echo "Error creating directory" ; exit 1 ; }
 
 printf "\n\nGenerating Makefile files...\n"
-(cd ${OUT_DIR} && qmake ../)
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error generating makefile: $ret"
-	exit ret
-fi
+(cd ${OUT_DIR} && qmake ../) || { echo  "Error generating makefile" ; exit 1 ; }
 
 printf "\n\nGenerating and building C files...\n"
-make -C ${OUT_DIR}
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error building C files: $ret"
-	exit $ret
-fi
+make -C ${OUT_DIR} || { echo "Error building C files" ; exit 1 ; }
 
 printf "\n\nDownloading module schema...\n"
-(cd ${OUT_DIR} && wget --no-cache ${URL}/${MODULE_SCHEMA_FILE})
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error getting module json-schema: $ret"
-	exit $ret
-fi
+(cd ${OUT_DIR} && wget --no-cache ${URL}/${MODULE_SCHEMA_FILE}) \
+    || { echo "Error getting module json-schema" ; exit 1 ; }
 
 printf "\n\nDownloading general info schema...\n"
-(cd ${OUT_DIR} && wget --no-cache ${URL}/${GENERAL_SCHEMA_FILE})
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error getting general json-schema: $ret"
-	exit $ret
-fi
+(cd ${OUT_DIR} && wget --no-cache ${URL}/${GENERAL_SCHEMA_FILE}) \
+    || { echo "Error getting general json-schema" ; exit 1 ; }
 
 printf "\n\nValidating modules metadata...\n"
-find . -name meta.json -print0 \
-    | xargs --verbose -I{} -0 jsonschema -i {} ${OUT_DIR}/${MODULE_SCHEMA_FILE}
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error validating module's metadata: $ret"
-	exit $ret
-fi
+(find . -name meta.json -print0 \
+        | xargs --verbose -I{} -0 jsonschema -i {} ${OUT_DIR}/${MODULE_SCHEMA_FILE}) \
+    || { echo  "Error validating module's metadata" ; exit 1 ; }
 
 printf "\n\nValidating general info...\n"
-jsonschema -i info.json ${OUT_DIR}/${GENERAL_SCHEMA_FILE}
-ret=$?
-if [ $ret != 0 ]
-then
-	echo "Error validating general metadata: $ret"
-	exit $ret
-fi
+jsonschema -i info.json ${OUT_DIR}/${GENERAL_SCHEMA_FILE} \
+    || { echo "Error validating general metadata" ; exit 1 ; }
