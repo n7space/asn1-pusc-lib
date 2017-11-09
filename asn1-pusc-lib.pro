@@ -178,6 +178,61 @@ DISTFILES += \
     service-03/PUS-3-8.asn1 \
     service-03/PUS-3-9.acn \
     service-03/PUS-3-9.asn1 \
+    service-06/meta.json \
+    service-06/PUS-6-2.acn \
+    service-06/PUS-6-2.asn1 \
+    service-06/Memory.acn \
+    service-06/Memory.asn1 \
+    service-06/PUS-6-11.acn \
+    service-06/PUS-6-11.asn1 \
+    service-06/PUS-6-5.acn \
+    service-06/PUS-6-5.asn1 \
+    service-06/PUS-6-6.acn \
+    service-06/PUS-6-6.asn1 \
+    service-06/PUS-6-9.acn \
+    service-06/PUS-6-9.asn1 \
+    service-06/PUS-6-10.acn \
+    service-06/PUS-6-10.asn1 \
+    service-06/PUS-6-19.acn \
+    service-06/PUS-6-19.asn1 \
+    service-06/FilePath.acn \
+    service-06/FilePath.asn1 \
+    service-06/PUS-6-20.acn \
+    service-06/PUS-6-20.asn1 \
+    service-06/PUS-6-1.acn \
+    service-06/PUS-6-1.asn1 \
+    service-06/PUS-6-3.acn \
+    service-06/PUS-6-3.asn1 \
+    service-06/PUS-6-4.acn \
+    service-06/PUS-6-4.asn1 \
+    service-06/PUS-6-7.acn \
+    service-06/PUS-6-7.asn1 \
+    service-06/PUS-6-8.acn \
+    service-06/PUS-6-8.asn1 \
+    service-06/PUS-6-21.acn \
+    service-06/PUS-6-21.asn1 \
+    service-06/PUS-6-17.acn \
+    service-06/PUS-6-17.asn1 \
+    service-06/PUS-6-18.acn \
+    service-06/PUS-6-18.asn1 \
+    service-06/PUS-6-22.acn \
+    service-06/PUS-6-22.asn1 \
+    service-06/PUS-6-12.acn \
+    service-06/PUS-6-12.asn1 \
+    service-06/PUS-6-13.acn \
+    service-06/PUS-6-13.asn1 \
+    service-06/PUS-6-14.acn \
+    service-06/PUS-6-14.asn1 \
+    service-06/PUS-6-15.acn \
+    service-06/PUS-6-15.asn1 \
+    service-06/PUS-6-16.acn \
+    service-06/PUS-6-16.asn1 \
+    service-06/RawMemory.acn \
+    service-06/RawMemory.asn1 \
+    service-06/StructuredMemory.acn \
+    service-06/StructuredMemory.asn1 \
+    service-06/Data.acn \
+    service-06/Data.asn1 \
     service-05/meta.json \
     service-05/PUS-5-1.acn \
     service-05/PUS-5-1.asn1 \
