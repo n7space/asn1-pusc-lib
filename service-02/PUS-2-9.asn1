@@ -30,11 +30,11 @@ IMPORTS
 
 TM-2-9-PhysicalDeviceDataReport ::= TM-2-9-PhysicalDeviceDataReportGeneric {Transaction-ID, TransactionExecutionStatus, DummyType}
 
-TM-2-9-PhysicalDeviceDataReportGeneric {TTransaction-ID, TTransactionExecutionStatus, TDataBlock} ::= SEQUENCE
+TM-2-9-PhysicalDeviceDataReportGeneric {Transaction-ID-Type, TransactionExecutionStatus-Type, DataBlock-Type} ::= SEQUENCE
 {
-    transaction-ID TTransaction-ID,
-    transactionExecutionStatus TTransactionExecutionStatus,
-    dataBlock TDataBlock
+    transaction-ID Transaction-ID-Type,
+    transactionExecutionStatus TransactionExecutionStatus-Type,
+    dataBlock DataBlock-Type
 }
 
 END

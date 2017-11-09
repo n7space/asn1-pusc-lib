@@ -28,9 +28,9 @@ IMPORTS
 
 TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID}
 
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {TRequest-ID} ::= SEQUENCE
+TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID
+    request-ID Request-ID-Type
 }
 
 END

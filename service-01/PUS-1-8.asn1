@@ -29,10 +29,10 @@ IMPORTS
 
 TM-1-8-FailedCompletionOfExecutionVerificationReport ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {Request-ID, ExecutionCompletionFailureNotice}
 
-TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionCompletionFailureNotice} ::= SEQUENCE
+TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionCompletionFailureNotice-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    failureNotice TExecutionCompletionFailureNotice
+    request-ID Request-ID-Type,
+    failureNotice ExecutionCompletionFailureNotice-Type
 }
 
 END

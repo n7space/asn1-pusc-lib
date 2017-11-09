@@ -39,11 +39,11 @@ TM-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 
 PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
 
-PeriodicGenerationPropertiesGeneric {TDiagnosticParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
+PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
-    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
-    collectionInterval TCollectionInterval
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

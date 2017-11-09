@@ -35,10 +35,10 @@ DeviceAddress ::= ENUMERATED --TODO
     addr0 (1)
 }
 
-TC-2-1-DistributeOnOffDeviceCommandsGeneric {TDeviceAddress} ::= SEQUENCE
+TC-2-1-DistributeOnOffDeviceCommandsGeneric {DeviceAddress-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    onOffDeviceAddresses SEQUENCE (SIZE(0 .. maxTC-2-1-OnOffDeviceAdressesCount)) OF TDeviceAddress
+--! n UnsignedInteger-Type, moved to acn
+    onOffDeviceAddresses SEQUENCE (SIZE(0 .. maxTC-2-1-OnOffDeviceAdressesCount)) OF DeviceAddress-Type
 }
 
 END

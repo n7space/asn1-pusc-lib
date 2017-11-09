@@ -31,9 +31,9 @@ maxTC-3-7-DiagnosticParameterReportStructure-ID-Count INTEGER ::= 2147483647
 
 TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReports ::= TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReportsGeneric {DiagnosticParameterReportStructure-ID} 
 
-TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReportsGeneric {TDiagnosticParameterReportStructure-ID} ::= SEQUENCE
+TC-3-7-EnableThePeriodicGenerationOfDiagnosticParameterReportsGeneric {DiagnosticParameterReportStructure-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-7-DiagnosticParameterReportStructure-ID-Count)) OF TDiagnosticParameterReportStructure-ID
+--! n UnsignedInteger-Type, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-7-DiagnosticParameterReportStructure-ID-Count)) OF DiagnosticParameterReportStructure-ID-Type
 }
 END

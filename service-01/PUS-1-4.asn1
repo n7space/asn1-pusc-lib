@@ -29,10 +29,10 @@ IMPORTS
 
 TM-1-4-FailedStartOfExecutionVerificationReport ::= TM-1-4-FailedStartOfExecutionVerificationReportGeneric {Request-ID, ExecutionStartFailureNotice}
 
-TM-1-4-FailedStartOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionStartFailureNotice} ::= SEQUENCE
+TM-1-4-FailedStartOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionStartFailureNotice-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    failureNotice TExecutionStartFailureNotice
+    request-ID Request-ID-Type,
+    failureNotice ExecutionStartFailureNotice-Type
 }
 
 END

@@ -29,11 +29,11 @@ IMPORTS
 
 TM-2-12-LogicalDeviceDataReport ::= TM-2-12-LogicalDeviceDataReportGeneric {Transaction-ID, TransactionExecutionStatus, DummyType}
 
-TM-2-12-LogicalDeviceDataReportGeneric {TTransaction-ID, TTransactionExecutionStatus, TParameterValue} ::= SEQUENCE
+TM-2-12-LogicalDeviceDataReportGeneric {Transaction-ID-Type, TransactionExecutionStatus-Type, ParameterValue-Type} ::= SEQUENCE
 {
-    transaction-ID TTransaction-ID,
-    transactionExecutionStatus TTransactionExecutionStatus,
-    parameterValue TParameterValue
+    transaction-ID Transaction-ID-Type,
+    transactionExecutionStatus TransactionExecutionStatus-Type,
+    parameterValue ParameterValue-Type
 }
 
 END

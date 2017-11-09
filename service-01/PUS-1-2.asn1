@@ -29,10 +29,10 @@ IMPORTS
 
 TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID, AcceptanceFailureNotice}
 
-TM-1-2-FailedAcceptanceVerificationReportGeneric {TRequest-ID, TAcceptanceFailureNotice} ::= SEQUENCE
+TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID-Type, AcceptanceFailureNotice-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    failureNotice TAcceptanceFailureNotice
+    request-ID Request-ID-Type,
+    failureNotice AcceptanceFailureNotice-Type
 }
 
 END

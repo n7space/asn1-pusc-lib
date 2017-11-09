@@ -31,10 +31,10 @@ maxTC-2-2-RegisterCommandCount INTEGER ::= 2147483647
 
 TC-2-2-DistributeRegisterCommands ::= TC-2-2-DistributeRegisterCommandsGeneric {Register}
 
-TC-2-2-DistributeRegisterCommandsGeneric {TRegister} ::= SEQUENCE
+TC-2-2-DistributeRegisterCommandsGeneric {Register-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    registerCommands SEQUENCE (SIZE(0 .. maxTC-2-2-RegisterCommandCount)) OF Register
+    registerCommands SEQUENCE (SIZE(0 .. maxTC-2-2-RegisterCommandCount)) OF Register-Type
 }
 
 END

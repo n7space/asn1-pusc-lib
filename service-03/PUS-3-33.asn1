@@ -31,10 +31,10 @@ maxTC-3-33-HousekeepingParameterReportStructure-ID-Count INTEGER ::= 2147483647
 
 TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructures ::= TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID}
 
-TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructuresGeneric {THousekeepingParameterReportStructure-ID} ::= SEQUENCE
+TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-33-HousekeepingParameterReportStructure-ID-Count)) OF THousekeepingParameterReportStructure-ID
+--! n UnsignedInteger-Type, moved to acn
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-33-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
 }
 
 END

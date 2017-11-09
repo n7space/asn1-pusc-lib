@@ -28,9 +28,9 @@ IMPORTS
 
 TM-1-3-SuccessfulStartOfExecutionVerificationReport ::= TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {Request-ID}
 
-TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {TRequest-ID} ::= SEQUENCE
+TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID
+    request-ID Request-ID-Type
 }
 
 END

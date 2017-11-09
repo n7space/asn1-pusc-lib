@@ -30,9 +30,9 @@ IMPORTS
 
 TC-17-3-PerformAnOnBoardConnectionTest ::= TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID}
 
-TC-17-3-PerformAnOnBoardConnectionTestGeneric {TApplicationProcess-ID} ::= SEQUENCE
+TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {
-    applicationProcessId TApplicationProcess-ID
+    applicationProcessId ApplicationProcess-ID-Type
 }
 
 END

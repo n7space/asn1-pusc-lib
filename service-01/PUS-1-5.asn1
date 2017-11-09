@@ -29,10 +29,10 @@ IMPORTS
 
 TM-1-5-SuccessfulProgressOfExecutionVerificationReport ::= TM-1-5-SuccessfulProgressOfExecutionVerificationReportGeneric {Request-ID, ExecutionStep-ID}
 
-TM-1-5-SuccessfulProgressOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionStep-ID} ::= SEQUENCE
+TM-1-5-SuccessfulProgressOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionStep-ID-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    step-ID TExecutionStep-ID
+    request-ID Request-ID-Type,
+    step-ID ExecutionStep-ID-Type
 }
 
 

@@ -30,9 +30,9 @@ IMPORTS
 
     TM-17-4-OnBoardConnectionTestReport ::= TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID}
 
-TM-17-4-OnBoardConnectionTestReportGeneric {TApplicationProcess-ID} ::= SEQUENCE
+TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {
-    applicationProcessId TApplicationProcess-ID
+    applicationProcessId ApplicationProcess-ID-Type
 }
 
 END

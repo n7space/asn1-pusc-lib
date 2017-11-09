@@ -31,9 +31,9 @@ maxTC-3-6-HousekeepingParameterReportStructure-ID-Count INTEGER ::= 2147483647
 
 TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport ::= TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {HousekeepingParameterReportStructure-ID}
 
-TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {THousekeepingParameterReportStructure-ID} ::= SEQUENCE
+TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-6-HousekeepingParameterReportStructure-ID-Count)) OF THousekeepingParameterReportStructure-ID
+--! n UnsignedInteger-Type, moved to acn
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-6-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
 }
 END

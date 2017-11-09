@@ -36,24 +36,24 @@ maxTC-3-12-SuperComutatedParameterSetCount INTEGER ::= 536870911
 
 TC-3-12-DiagnosticParameterReportStructureReport ::= TC-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval, Parameter-ID}
 
-TC-3-12-DiagnosticParameterReportStructureReportGeneric {TDiagnosticParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval, TParameter-ID} ::= SEQUENCE
+TC-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type, Parameter-ID-Type} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
-    periodicGenerationActionStatus TPeriodicGenerationActionStatus OPTIONAL, --TODO
-    collectionInterval TCollectionInterval,
---! n1 UnsignedInteger, moved to acn
-    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-12-Parameter-ID-Count)) OF TParameter-ID,
---! nfa UnsignedInteger, moved to acn
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL, --TODO
+    collectionInterval CollectionInterval-Type,
+--! n1 UnsignedInteger-Type, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-12-Parameter-ID-Count)) OF Parameter-ID-Type,
+--! nfa UnsignedInteger-Type, moved to acn
     superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTC-3-12-SuperComutatedParameterSetCount)) OF SuperCommutatedParameterSet
 }
 
 SuperCommutatedParameterSet ::= SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
 
-SuperCommutatedParameterSetGeneric {UnsignedInteger, TParameter-ID} ::= SEQUENCE
+SuperCommutatedParameterSetGeneric {UnsignedInteger-Type, Parameter-ID-Type} ::= SEQUENCE
 {
-    superCommutatedSampleRepetitionNumber UnsignedInteger,
---! n2 UnsignedInteger, moved to acn
-    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-12-Parameter-ID-Count)) OF TParameter-ID
+    superCommutatedSampleRepetitionNumber UnsignedInteger-Type,
+--! n2 UnsignedInteger-Type, moved to acn
+    parameter-ID SEQUENCE (SIZE(0 .. maxTC-3-12-Parameter-ID-Count)) OF Parameter-ID-Type
 }
 
 END

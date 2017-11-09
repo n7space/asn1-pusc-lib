@@ -30,11 +30,11 @@ IMPORTS
 
 TM-1-6-FailedProgressOfExecutionVerificationReport ::= TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {Request-ID, ExecutionStep-ID, ExecutionProgressFailureNotice}
 
-TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {TRequest-ID, TExecutionStep-ID, TExecutionProgressFailureNotice} ::= SEQUENCE
+TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionStep-ID-Type, ExecutionProgressFailureNotice-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    step-ID TExecutionStep-ID,
-    failureNotice TExecutionProgressFailureNotice
+    request-ID Request-ID-Type,
+    step-ID ExecutionStep-ID-Type,
+    failureNotice ExecutionProgressFailureNotice-Type
 }
 
 END

@@ -26,20 +26,20 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-CCSDS-Packet {TPacket-ID, TPacketDataField} ::= SEQUENCE
+CCSDS-Packet {Packet-ID-Type, PacketDataField-Type} ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID TPacket-ID,
+    packet-ID Packet-ID-Type,
     packetSequenceControl PacketSequenceControl,
     packetDataLength PacketDataLength,
-    packetDataField TPacketDataField
+    packetDataField PacketDataField-Type
 }
 
 PacketVersionNumberValue ::= NULL
 
-Packet-ID {TPacketType} ::= SEQUENCE
+Packet-ID {PacketType-Type} ::= SEQUENCE
 {
-    packetType TPacketType,
+    packetType PacketType-Type,
 --! secondaryHeaderFlag INTEGER (0 .. 1),  moved to ACN
     applicationProcess-ID ApplicationProcess-ID
 }
@@ -54,23 +54,23 @@ PacketSequenceControl ::= SEQUENCE
 
 PacketDataLength ::= INTEGER (0 .. 65535)
 
-PacketDataField {TPacketDataWithSecondaryHeader, TPacketDataNoSecondaryHeader} ::= CHOICE
+PacketDataField {PacketDataWithSecondaryHeader-Type, PacketDataNoSecondaryHeader-Type} ::= CHOICE
 {
-    dataWithSecondaryHeader TPacketDataWithSecondaryHeader,
-    dataNoSecondaryHeader TPacketDataNoSecondaryHeader
+    dataWithSecondaryHeader PacketDataWithSecondaryHeader-Type,
+    dataNoSecondaryHeader PacketDataNoSecondaryHeader-Type
 }
 
-DataWithSecondaryHeader {TSecondaryHeaderField, TPayload} ::= SEQUENCE
+DataWithSecondaryHeader {SecondaryHeaderField-Type, Payload-Type} ::= SEQUENCE
 {
-    secondaryHeader TSecondaryHeaderField,
-    data TPayload,
+    secondaryHeader SecondaryHeaderField-Type,
+    data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
     packetErrorContol PacketErrorControl OPTIONAL
 }
 
-DataNoSecondaryHeader {TPayload} ::= SEQUENCE
+DataNoSecondaryHeader {Payload-Type} ::= SEQUENCE
 {
-    data TPayload,
+    data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
     packetErrorContol PacketErrorControl OPTIONAL
 }

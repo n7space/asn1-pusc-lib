@@ -30,11 +30,11 @@ IMPORTS
 
 TM-9-2-CucTimeReport ::= TM-9-2-CucTimeReportGeneric {RateExponentialValue, AbsoluteTime, SpacecraftTimeReferenceStatus}
 
-TM-9-2-CucTimeReportGeneric {TRateExponentialValue, TAbsoluteTime, TSpacecraftTimeReferenceStatus} ::= SEQUENCE
+TM-9-2-CucTimeReportGeneric {RateExponentialValue-Type, AbsoluteTime-Type, SpacecraftTimeReferenceStatus-Type} ::= SEQUENCE
 {
-    rateExponentialValue TRateExponentialValue OPTIONAL, --TODO
-    spacecraftTime TAbsoluteTime,
-    spacecraftTimeReferenceStatus TSpacecraftTimeReferenceStatus OPTIONAL --TODO
+    rateExponentialValue RateExponentialValue-Type OPTIONAL, --TODO
+    spacecraftTime AbsoluteTime-Type,
+    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus-Type OPTIONAL --TODO
 }
 
 END

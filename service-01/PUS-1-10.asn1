@@ -29,10 +29,10 @@ IMPORTS
 
 TM-1-10-FailedRoutingVerificatrionReport ::= TM-1-10-FailedRoutingVerificatrionReportGeneric {Request-ID, RoutingFailureNotice}
 
-TM-1-10-FailedRoutingVerificatrionReportGeneric {TRequest-ID, TRoutingFailureNotice} ::= SEQUENCE
+TM-1-10-FailedRoutingVerificatrionReportGeneric {Request-ID-Type, RoutingFailureNotice-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID,
-    failureNotice TRoutingFailureNotice
+    request-ID Request-ID-Type,
+    failureNotice RoutingFailureNotice-Type
 }
 
 END

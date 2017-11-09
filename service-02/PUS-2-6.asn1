@@ -31,10 +31,10 @@ maxTC-2-6-RegisterDumpCount INTEGER ::= 2147483647
 
 TM-2-6-RegisterDumpReport ::= TM-2-6-RegisterDumpReportGeneric {Register}
 
-TM-2-6-RegisterDumpReportGeneric {TRegister} ::= SEQUENCE
+TM-2-6-RegisterDumpReportGeneric {Register-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    registerDumps SEQUENCE (SIZE(0 .. maxTC-2-6-RegisterDumpCount)) OF TRegister
+    registerDumps SEQUENCE (SIZE(0 .. maxTC-2-6-RegisterDumpCount)) OF Register-Type
 }
 
 END

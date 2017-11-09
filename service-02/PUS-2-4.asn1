@@ -43,18 +43,18 @@ TC-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
 
 CPDU ::= CPDU-Generic {CPDU-ID}
 
-CPDU-Generic {TCPDU-ID} ::= SEQUENCE
+CPDU-Generic {CPDU-ID-Type} ::= SEQUENCE
 {
-    cpdu-ID TCPDU-ID,
+    cpdu-ID CPDU-ID-Type,
 --! n2 UnsignedInteger, moved to acn
     cpduCommands SEQUENCE (SIZE(0 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
 }
 
 CpduCommand ::= CpduCommandGeneric {OutputLine-ID}
 
-CpduCommandGeneric {TOutputLine-ID} ::= SEQUENCE
+CpduCommandGeneric {OutputLine-ID-Type} ::= SEQUENCE
 {
-    outputLine-ID TOutputLine-ID,
+    outputLine-ID OutputLine-ID-Type,
     reserved BIT STRING (SIZE(1)),
     durationExponentialValue INTEGER (0 .. 7)
 }

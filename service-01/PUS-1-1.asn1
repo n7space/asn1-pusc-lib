@@ -28,9 +28,9 @@ IMPORTS
 
 TM-1-1-SuccessfulAcceptanceVerificationReport ::= TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {Request-ID}
 
-TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {TRequest-ID} ::= SEQUENCE
+TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {
-    request-ID TRequest-ID
+    request-ID Request-ID-Type
 }
 
 END

@@ -31,16 +31,16 @@ maxTC-2-10-LogicalDeviceCommandCount INTEGER ::= 2147483647
 
 TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
+--! n UnsignedInteger-Type, moved to acn
     logicalDeviceCommands SEQUENCE (SIZE(0 .. maxTC-2-10-LogicalDeviceCommandCount)) OF LogicalDeviceCommand
 }
 
 LogicalDeviceCommand ::= LogicalDeviceCommandGeneric {Command}
 
-LogicalDeviceCommandGeneric {TCommand} ::= SEQUENCE
+LogicalDeviceCommandGeneric {Command-Type} ::= SEQUENCE
 {
---! logicalDevice-ID TLogicalDevice-ID, moved to acn
-    command TCommand
+--! logicalDevice-ID LogicalDevice-ID-Type, moved to acn
+    command Command-Type
 }
 
 Command ::= CHOICE --TODO
@@ -50,7 +50,7 @@ Command ::= CHOICE --TODO
 
 Ldev1 ::= SEQUENCE --TODO
 {
---! command-ID Ldev1-Commands,
+--! command-ID Ldev1-Commands, moved to acn
     commandArguments Ldev1-Arguments
 }
 

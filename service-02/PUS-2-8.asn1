@@ -38,11 +38,11 @@ TC-2-8-AcquireDataFromPhysicalDevices ::= SEQUENCE
 
 DeviceDataRequest ::= DeviceDataRequestGeneric {Transaction-ID, ProtocolSpecificData}
 
-DeviceDataRequestGeneric {TTransaction-ID, TProtocolSpecificData} ::= SEQUENCE
+DeviceDataRequestGeneric {Transaction-ID-Type, ProtocolSpecificData-Type} ::= SEQUENCE
 {
-    transaction-ID TTransaction-ID,
---! physicalDevice-ID TPhysicalDevice-ID, moved to acn
-    protocolSpecificData TProtocolSpecificData
+    transaction-ID Transaction-ID-Type,
+--! physicalDevice-ID PhysicalDevice-ID-Type, moved to acn
+    protocolSpecificData ProtocolSpecificData-Type
 }
 
 END
