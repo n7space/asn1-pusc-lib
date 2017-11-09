@@ -33,7 +33,7 @@ maxTC-3-31-HousekeepingParamterStructureIntervalCount INTEGER ::= 2147483647
 TC-3-31-ModifyTheCollectionIntervalOfHousekeepingParameterReportStructures ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    housekeepingParamererReportStructureIntervals SEQUENCE (SIZE(0 .. maxTC-3-31-HousekeepingParamterStructureIntervalCount)) OF HousekeepingParameterReportStructureIntervals
+    housekeepingParamererReportStructureIntervals SEQUENCE (SIZE(1 .. maxTC-3-31-HousekeepingParamterStructureIntervalCount)) OF HousekeepingParameterReportStructureIntervals
 }
 
 HousekeepingParameterReportStructureIntervals ::= HousekeepingParameterReportStructureIntervalsGeneric {HousekeepingParameterReportStructure-ID, CollectionInterval}

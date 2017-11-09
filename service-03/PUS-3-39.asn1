@@ -34,7 +34,7 @@ TC-3-39-DeleteParameterFunctionalReportingDefinitions ::= TC-3-39-DeleteParamete
 TC-3-39-DeleteParameterFunctionalReportingDefinitionsGeneric {ParameterFunctionalReportingDefinition-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type,
-    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(0 .. maxTC-3-39-ParameterFunctionalReportingDefinition-ID-Count)) OF ParameterFunctionalReportingDefinition-ID-Type
+    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(1 .. maxTC-3-39-ParameterFunctionalReportingDefinition-ID-Count)) OF ParameterFunctionalReportingDefinition-ID-Type
 }
 
 END

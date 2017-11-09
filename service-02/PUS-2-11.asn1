@@ -34,7 +34,7 @@ maxTC-2-11-DataAcquireRequestCount INTEGER ::= 2147483647
 TC-2-11-AcquireDataFromLogicalDevices ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    dataAcquireRequests SEQUENCE (SIZE(0 .. maxTC-2-11-DataAcquireRequestCount)) OF DataAcquireRequest
+    dataAcquireRequests SEQUENCE (SIZE(1 .. maxTC-2-11-DataAcquireRequestCount)) OF DataAcquireRequest
 }
 
 DataAcquireRequest ::= DataAcquireRequestGeneric {Transaction-ID, LogicalDevice-ID, Parameter-ID}

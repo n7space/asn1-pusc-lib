@@ -41,7 +41,7 @@ TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinitionMu
 {
     parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID,
 --! n1 UnsignedInteger-Type, moved to acn
-    apidParameterReportingEntries SEQUENCE (SIZE(0 .. maxTC-42-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
+    apidParameterReportingEntries SEQUENCE (SIZE(1 .. maxTC-42-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
 }
 
 TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition ::= TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
@@ -50,7 +50,7 @@ TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinitionGe
 {
     parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID-Type,
 --! n2 UnsignedInteger-Type, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-42-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-42-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
 ApidParameterReportingEntries ::= ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
@@ -59,7 +59,7 @@ ApidParameterReportingEntriesGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {
     applicationProcess-ID ApplicationProcess-ID-Type,
 --! n2 UnsignedInteger-Type, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-42-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-42-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
 ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}

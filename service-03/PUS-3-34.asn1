@@ -34,7 +34,7 @@ TC-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructur
 TC-3-34-ReportThePeriodicGenerationPropertiesOfDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-34-DiagnosticParameterReportStructure-ID-Count)) OF DiagnosticParameterReportStructure-ID-Type
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE(1 .. maxTC-3-34-DiagnosticParameterReportStructure-ID-Count)) OF DiagnosticParameterReportStructure-ID-Type
 }
 
 END

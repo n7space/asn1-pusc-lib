@@ -34,7 +34,7 @@ TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStruct
 TC-3-33-ReportThePeriodicGenerationPropertiesOfHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-33-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(1 .. maxTC-3-33-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
 }
 
 END

@@ -28,7 +28,7 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-    TM-17-4-OnBoardConnectionTestReport ::= TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID}
+TM-17-4-OnBoardConnectionTestReport ::= TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID}
 
 TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {

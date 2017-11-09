@@ -39,7 +39,7 @@ TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinit
 {
     parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID-Type,
 --! n1 UnsignedInteger-Type, moved to acn
-    apidParameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ApidParameterReportingDefinitionCount)) OF ApidParameterReporingDefinitions
+    apidParameterReportingDefinitions SEQUENCE (SIZE(1 .. maxTC-3-43-ApidParameterReportingDefinitionCount)) OF ApidParameterReporingDefinitions
 }
 
 TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinition ::= TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
@@ -48,7 +48,7 @@ TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinit
 {
     parameterFunctionalReportingDefinitions-ID ParameterFunctionalReportingDefinition-ID-Type,
 --! n2 UnsignedInteger-Type, moved to acn
-    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
+    parameterReportingDefinitions SEQUENCE (SIZE(1 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
 }
 
 ApidParameterReporingDefinitions ::= ApidParameterReporingDefinitionsGeneric {ApplicationProcess-ID}
@@ -57,7 +57,7 @@ ApidParameterReporingDefinitionsGeneric {ApplicationProcess-ID-Type} ::= SEQUENC
 {
     applicationProcess-ID ApplicationProcess-ID-Type,
 --! n2 UnsignedInteger-Type, moved to acn
-    parameterReportingDefinitions SEQUENCE (SIZE(0 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
+    parameterReportingDefinitions SEQUENCE (SIZE(1 .. maxTC-3-43-ParameterReportingDefinitionCount)) OF ParameterReportingDefiniton
 }
 
 ParameterReportingDefiniton ::= ParameterReportingDefinitonGeneric {ParameterReportStructure-ID}

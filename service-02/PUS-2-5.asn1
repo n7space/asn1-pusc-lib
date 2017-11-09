@@ -34,7 +34,7 @@ TC-2-5-DistributeRegisterDumpCommands  ::= TC-2-5-DistributeRegisterDumpCommands
 TC-2-5-DistributeRegisterDumpCommandsGeneric {RegisterAddress-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    registerAddresses SEQUENCE (SIZE(0 .. maxTC-2-5-RegisterAddressCount)) OF RegisterAddress-Type
+    registerAddresses SEQUENCE (SIZE(1 .. maxTC-2-5-RegisterAddressCount)) OF RegisterAddress-Type
 }
 
 END

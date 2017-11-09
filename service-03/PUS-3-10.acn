@@ -23,7 +23,7 @@
 
 PUS-3-10 DEFINITIONS ::= BEGIN
 
-TC-3-10-HousekeepingParameterReportStructureReport []
+TM-3-10-HousekeepingParameterReportStructureReport []
 {
     housekeepingParameterReportStructure-ID [],
     periodicGenerationActionStatus [],

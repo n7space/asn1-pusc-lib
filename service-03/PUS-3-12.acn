@@ -23,7 +23,7 @@
 
 PUS-3-12 DEFINITIONS ::= BEGIN
 
-TC-3-12-DiagnosticParameterReportStructureReport []
+TM-3-12-DiagnosticParameterReportStructureReport []
 {
     diagnosticParameterReportStructure-ID [],
     periodicGenerationActionStatus [],

@@ -34,7 +34,7 @@ TC-5-6-DisableTheReportGenerationOfEventDefinitions ::= TC-5-6-DisableTheReportG
 TC-5-6-DisableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-6-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
+    eventDefinition-ID SEQUENCE (SIZE(1 .. maxTC-5-6-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
 

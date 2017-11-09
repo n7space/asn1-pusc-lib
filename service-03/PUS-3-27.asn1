@@ -34,7 +34,7 @@ TC-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures ::= TC-3-
 TC-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-27-HousekeepingParameterReportStructureCount)) OF HousekeepingParameterReportStructure-ID-Type
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (1 .. maxTC-3-27-HousekeepingParameterReportStructureCount)) OF HousekeepingParameterReportStructure-ID-Type
 }
 
 END

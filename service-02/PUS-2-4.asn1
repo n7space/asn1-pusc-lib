@@ -31,14 +31,14 @@ maxTC-2-4-CpduCount INTEGER ::= 536870911
 
 TC-2-4-DistributeCpduCommands ::= SEQUENCE
 {
---! n2 UnsignedInteger, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
+--! n2 UnsignedInteger-Type, moved to acn
+    cpduCommands SEQUENCE (SIZE(1 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
 }
 
 TC-2-4-DistrubiteCpduCommands-MultipleCpdu ::= SEQUENCE
 {
---! n1 UnsignedInteger, moved to acn
-    cpdu SEQUENCE (SIZE (0 .. maxTC-2-4-CpduCount)) OF CPDU
+--! n1 UnsignedInteger-Type, moved to acn
+    cpdu SEQUENCE (SIZE (1 .. maxTC-2-4-CpduCount)) OF CPDU
 }
 
 CPDU ::= CPDU-Generic {CPDU-ID}
@@ -46,8 +46,8 @@ CPDU ::= CPDU-Generic {CPDU-ID}
 CPDU-Generic {CPDU-ID-Type} ::= SEQUENCE
 {
     cpdu-ID CPDU-ID-Type,
---! n2 UnsignedInteger, moved to acn
-    cpduCommands SEQUENCE (SIZE(0 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
+--! n2 UnsignedInteger-Type, moved to acn
+    cpduCommands SEQUENCE (SIZE(1 .. maxTC-2-4-CpduCommandsCount)) OF CpduCommand
 }
 
 CpduCommand ::= CpduCommandGeneric {OutputLine-ID}

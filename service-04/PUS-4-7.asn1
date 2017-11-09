@@ -34,7 +34,7 @@ TC-4-7-DeleteParameterStatisticsReporting ::= TC-4-7-DeleteParameterStatisticsRe
 TC-4-7-DeleteParameterStatisticsReportingGeneric {Parameter-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger,
-    parameter-ID SEQUENCE (SIZE(0 .. maxTC-4-7-Parameter-ID-Count)) OF Parameter-ID-Type
+    parameter-ID SEQUENCE (SIZE(1 .. maxTC-4-7-Parameter-ID-Count)) OF Parameter-ID-Type
 }
 
 

@@ -32,7 +32,7 @@ TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructures ::= TC-3-28
 TC-3-28-GenerateAOneShotReportForDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. 2147483647)) OF DiagnosticParameterReportStructure-ID-Type
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (1 .. 2147483647)) OF DiagnosticParameterReportStructure-ID-Type
 }
 
 END

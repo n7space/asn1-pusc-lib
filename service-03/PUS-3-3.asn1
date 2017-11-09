@@ -34,7 +34,7 @@ TC-3-3-DeleteHousekeepingParameterReportStructures ::= TC-3-3-DeleteHousekeeping
 TC-3-3-DeleteHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(0 .. maxTC-3-3-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE(1 .. maxTC-3-3-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
 }
 
 END

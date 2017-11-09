@@ -33,8 +33,8 @@ TC-2-2-DistributeRegisterCommands ::= TC-2-2-DistributeRegisterCommandsGeneric {
 
 TC-2-2-DistributeRegisterCommandsGeneric {Register-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    registerCommands SEQUENCE (SIZE(0 .. maxTC-2-2-RegisterCommandCount)) OF Register-Type
+--! n UnsignedInteger-Type, moved to acn
+    registerCommands SEQUENCE (SIZE(1 .. maxTC-2-2-RegisterCommandCount)) OF Register-Type
 }
 
 END

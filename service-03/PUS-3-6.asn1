@@ -34,6 +34,6 @@ TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReport ::= TC-3-6-Disa
 TC-3-6-DisableThePeriodicGenerationOfHousekeepingParameterReportGeneric {HousekeepingParameterReportStructure-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-6-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
+    housekeepingParameterReportStructure-ID SEQUENCE (SIZE (1 .. maxTC-3-6-HousekeepingParameterReportStructure-ID-Count)) OF HousekeepingParameterReportStructure-ID-Type
 }
 END
