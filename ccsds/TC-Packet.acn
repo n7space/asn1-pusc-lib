@@ -69,9 +69,11 @@ TC-PacketSecondaryHeader []
     acknowledgementFlags [],
     serviceType-ID PacketTypes.ServiceType-ID [],
     messageSubtype-ID PacketTypes.MessageSubtype-ID [],
-    source-ID [size 16, encoding pos-int]
+    source-ID []
 --! spare []
 }
+
+Source-ID [size 16, encoding pos-int, endianness big]
 
 AcknowledgementFlags []
 {

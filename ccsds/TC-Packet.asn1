@@ -51,9 +51,11 @@ TC-PacketSecondaryHeader ::=  SEQUENCE
     acknowledgementFlags AcknowledgementFlags,
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN
-    source-ID ApplicationProcessUser-ID
+    source-ID Source-ID
 --! spare NULL         defined as align-to-next in acn file
 }
+
+Source-ID ::= INTEGER (0 .. 65535)
 
 AcknowledgementFlags ::= SEQUENCE
 {

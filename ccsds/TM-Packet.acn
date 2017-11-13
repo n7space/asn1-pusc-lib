@@ -66,14 +66,16 @@ TM-Packet-ID []
 TM-PacketSecondaryHeader []
 {
     tmPacketPusVersionNumber [],
-    spacecraftTimeReferenceStatus [size 4, encoding pos-int, endianness big],
+    spacecraftTimeReferenceStatus [],
     serviceType-ID PacketTypes.ServiceType-ID [],
     messageSubtype-ID PacketTypes.MessageSubtype-ID [],
     messageTimeCounter [size 16, encoding pos-int, endianness big],
-    destination-ID [size 16, encoding pos-int, endianness big],
+    destination-ID [],
     time []
 --! spare NULL         defined as align-to-next in acn file
 }
+
+Destination-ID [size 16, encoding pos-int, endianness big]
 
 SpacecraftTimeReferenceStatus [size 4, encoding pos-int, endianness big]
 
