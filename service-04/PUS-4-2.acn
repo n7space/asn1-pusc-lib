@@ -23,7 +23,7 @@
 
 PUS-4-2 DEFINITIONS ::= BEGIN
 
-TC-4-2-ParameterStatisticsReport []
+TM-4-2-ParameterStatisticsReport []
 {
     startTime [],
     endTime [],

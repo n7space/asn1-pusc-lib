@@ -31,10 +31,10 @@ maxTC-3-40-ParameterFunctionalReportingDefinition-ID-Count INTEGER ::= 214748364
 
 TC-3-40-ReportParameterFunctionalReportingDefinitions ::= TC-3-40-ReportParameterFunctionalReportingDefinitionsGeneric {ParameterFunctionalReportingDefinition-ID} 
 
-TC-3-40-ReportParameterFunctionalReportingDefinitionsGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-40-ReportParameterFunctionalReportingDefinitionsGeneric {ParameterFunctionalReportingDefinition-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger,
-    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(0 .. maxTC-3-40-ParameterFunctionalReportingDefinition-ID-Count)) OF TParameterFunctionalReportingDefinition-ID
+--! n UnsignedInteger-Type,
+    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(1 .. maxTC-3-40-ParameterFunctionalReportingDefinition-ID-Count)) OF ParameterFunctionalReportingDefinition-ID-Type
 }
 
 END

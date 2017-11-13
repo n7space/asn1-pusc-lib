@@ -73,6 +73,7 @@
             "PhysicalDevice.asn1",
             "Transaction.asn1"
           ],
+          "requires": ["Distribute physical device commands"],
           "imports":[
             {
               "from": "BasicTypes",
@@ -106,6 +107,7 @@
             "LogicalDevice.asn1",
             "Transaction"
           ],
+          "requires": ["Distribute logical device commands"],
           "imports": [
             {
               "from": "BasicTypes",

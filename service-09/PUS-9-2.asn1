@@ -28,11 +28,13 @@ IMPORTS
     AbsoluteTime FROM BasicTypes
     SpacecraftTimeReferenceStatus FROM SpacecraftTimeReferenceStatus;
 
-TM-9-2-CucTimeReport ::= SEQUENCE
+TM-9-2-CucTimeReport ::= TM-9-2-CucTimeReportGeneric {RateExponentialValue, AbsoluteTime, SpacecraftTimeReferenceStatus}
+
+TM-9-2-CucTimeReportGeneric {RateExponentialValue-Type, AbsoluteTime-Type, SpacecraftTimeReferenceStatus-Type} ::= SEQUENCE
 {
-    rateExponentialValue RateExponentialValue OPTIONAL, --TODO
-    spacecraftTime AbsoluteTime,
-    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus OPTIONAL --TODO
+    rateExponentialValue RateExponentialValue-Type OPTIONAL, --TODO
+    spacecraftTime AbsoluteTime-Type,
+    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus-Type OPTIONAL --TODO
 }
 
 END

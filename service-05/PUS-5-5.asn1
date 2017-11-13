@@ -34,7 +34,7 @@ TC-5-5-EnableTheReportGenerationOfEventDefinitions ::= TC-5-5-EnableTheReportGen
 TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger-Type, moved to acn
-    eventDefinition-ID SEQUENCE (SIZE(0 .. maxTC-5-5-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
+    eventDefinition-ID SEQUENCE (SIZE(1 .. maxTC-5-5-EventDefinition-ID-Count)) OF EventDefinition-ID-Type
 }
 
 

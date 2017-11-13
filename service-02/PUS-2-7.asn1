@@ -31,17 +31,17 @@ maxTC-2-7-PhysicalDeviceCommandCount INTEGER ::= 2147483647
 
 TC-2-7-DistributePhysicalDeviceCommands ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    physicalDeviceCommands SEQUENCE (SIZE(0 .. maxTC-2-7-PhysicalDeviceCommandCount)) OF PhysicalDeviceCommand
+--! n UnsignedInteger-Type, moved to acn
+    physicalDeviceCommands SEQUENCE (SIZE(1 .. maxTC-2-7-PhysicalDeviceCommandCount)) OF PhysicalDeviceCommand
 }
 
 PhysicalDeviceCommand ::= PhysicalDeviceCommandGeneric {ProtocolSpecificData, CommandData}
 
-    PhysicalDeviceCommandGeneric {TProtocolSpecificData, TCommandData} ::= SEQUENCE
+PhysicalDeviceCommandGeneric {ProtocolSpecificData-Type, CommandData-Type} ::= SEQUENCE
 {
---! physicalDevice-ID TPhysicalDevice-ID, moved to acn
-    protocolSpecificData TProtocolSpecificData,
-    commandData TCommandData
+--! physicalDevice-ID PhysicalDevice-ID-Type, moved to acn
+    protocolSpecificData ProtocolSpecificData-Type,
+    commandData CommandData-Type
 }
 
 CommandData ::= CHOICE

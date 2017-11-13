@@ -31,10 +31,10 @@ maxTC-3-11-DiagnosticParameterReportStructure-ID-Count INTEGER ::= 2147483647
 
 TC-3-11-ReportDiagnosticParameterReportStructures ::= TC-3-11-ReportDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID}
 
-TC-3-11-ReportDiagnosticParameterReportStructuresGeneric {TDiagnosticParameterReportStructure-ID} ::= SEQUENCE
+TC-3-11-ReportDiagnosticParameterReportStructuresGeneric {DiagnosticParameterReportStructure-ID-Type} ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (0 .. maxTC-3-11-DiagnosticParameterReportStructure-ID-Count)) OF TDiagnosticParameterReportStructure-ID
+--! n UnsignedInteger-Type, moved to acn
+    diagnosticParameterReportStructure-ID SEQUENCE (SIZE (1 .. maxTC-3-11-DiagnosticParameterReportStructure-ID-Count)) OF DiagnosticParameterReportStructure-ID-Type
 }
 
 

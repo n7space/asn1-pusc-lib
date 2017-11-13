@@ -23,7 +23,7 @@
 
 TM-Payload DEFINITIONS ::= BEGIN
 
-TM-Payload <INTEGER:service, INTEGER:message> []
+TM-Payload <PacketTypes.ServiceType-ID:service, PacketTypes.MessageSubtype-ID:message> []
 {
     tm-17-2 [present-when service==17 message==2] --TODO
 }

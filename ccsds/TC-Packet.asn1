@@ -37,13 +37,13 @@ IMPORTS
 
 TC-CCSDS-Packet ::= CCSDS-Packet {TC-Packet-ID, TC-PacketDataField}
 
+TC-PacketDataField ::= PacketDataField {TC-DataWithSecondaryHeader, TC-DataNoSecondaryHeader}
+
 TC-DataNoSecondaryHeader ::= DataNoSecondaryHeader {TC-NoHeaderPayload}
 
 TC-DataWithSecondaryHeader ::= DataWithSecondaryHeader {TC-PacketSecondaryHeader, TC-Payload}
 
 TC-Packet-ID ::= Packet-ID {TC-PacketType}
-
-TC-PacketDataField ::= PacketDataField {TC-DataWithSecondaryHeader, TC-DataNoSecondaryHeader}
 
 TC-PacketSecondaryHeader ::=  SEQUENCE
 {

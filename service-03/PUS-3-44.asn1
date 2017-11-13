@@ -37,20 +37,20 @@ maxTC-44-ApidParameterReportingEntryCount INTEGER ::= 536870911
 
 TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApid ::= TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID}
 
-TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApidGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionMultipleApidGeneric {ParameterFunctionalReportingDefinition-ID-Type} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
---! n1 UnsignedInteger, moved to acn
-    apidParameterReportingEntries SEQUENCE (SIZE(0 .. maxTC-44-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
+    parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID-Type,
+--! n1 UnsignedInteger-Type, moved to acn
+    apidParameterReportingEntries SEQUENCE (SIZE(1 .. maxTC-44-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
 }
 
 TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition ::= TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
 
-TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID-Type} ::= SEQUENCE
 {
-    parameterFunctionalReportingDefinition-ID TParameterFunctionalReportingDefinition-ID,
---! n2 UnsignedInteger, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID-Type,
+--! n2 UnsignedInteger-Type, moved to acn
+    parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
 ApidParameterReportingEntries ::= ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
@@ -59,17 +59,17 @@ ApidParameterReportingEntriesGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
     applicationProcess-ID ApplicationProcess-ID,
 --! n2 UnsignedInteger, moved to acn
-    parameterReportingEntries SEQUENCE (SIZE(0 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
+    parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
-ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructureType, ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
+ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
 
-ParameterReportingEntriesGeneric {TParameterReportStructureType, TParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
+ParameterReportingEntriesGeneric {ParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
 {
---! parameterReportStructureType TParameterReportStructureType, moved to acn
-    parameterReportStructure-ID TParameterReportStructure-ID,
-    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
-    collectionInterval TCollectionInterval
+--! parameterReportStructureType ParameterReportStructureType-Type, moved to acn
+    parameterReportStructure-ID ParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

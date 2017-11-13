@@ -32,17 +32,17 @@ maxTC-2-8-DeviceDataRequestCount INTEGER ::= 2147483647
 
 TC-2-8-AcquireDataFromPhysicalDevices ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    deviceDataRequests SEQUENCE (SIZE(0 .. maxTC-2-8-DeviceDataRequestCount)) OF DeviceDataRequest
+--! n UnsignedInteger-Type, moved to acn
+    deviceDataRequests SEQUENCE (SIZE(1 .. maxTC-2-8-DeviceDataRequestCount)) OF DeviceDataRequest
 }
 
 DeviceDataRequest ::= DeviceDataRequestGeneric {Transaction-ID, ProtocolSpecificData}
 
-DeviceDataRequestGeneric {TTransaction-ID, TProtocolSpecificData} ::= SEQUENCE
+DeviceDataRequestGeneric {Transaction-ID-Type, ProtocolSpecificData-Type} ::= SEQUENCE
 {
-    transaction-ID TTransaction-ID,
---! physicalDevice-ID TPhysicalDevice-ID, moved to acn
-    protocolSpecificData TProtocolSpecificData
+    transaction-ID Transaction-ID-Type,
+--! physicalDevice-ID PhysicalDevice-ID-Type, moved to acn
+    protocolSpecificData ProtocolSpecificData-Type
 }
 
 END

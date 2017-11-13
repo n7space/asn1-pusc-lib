@@ -35,7 +35,7 @@ ParameterStatistics ::= ParameterStatisticsGeneric {Parameter-ID, SamplingInterv
 TC-4-6-AddOrUpdateParameterStatisticsDefinitions ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(0 .. maxTC-4-6-ParameterStatisticCount)) OF ParameterStatistics
+    parameterStatistics SEQUENCE (SIZE(1 .. maxTC-4-6-ParameterStatisticCount)) OF ParameterStatistics
 }
 
 ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE

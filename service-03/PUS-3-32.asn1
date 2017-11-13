@@ -32,16 +32,16 @@ maxTC-3-32-DiagnosticParameterReportStructureIntervalCount INTEGER ::= 214748364
 
 TC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    diagnosticParamererReportStructureIntervals SEQUENCE (SIZE(0 .. maxTC-3-32-DiagnosticParameterReportStructureIntervalCount)) OF DiagnosticParameterReportStructureIntervals
+--! n UnsignedInteger-Type, moved to acn
+    diagnosticParamererReportStructureIntervals SEQUENCE (SIZE(1 .. maxTC-3-32-DiagnosticParameterReportStructureIntervalCount)) OF DiagnosticParameterReportStructureIntervals
 }
 
 DiagnosticParameterReportStructureIntervals ::= DiagnosticParameterReportStructureIntervalsGeneric {DiagnosticParameterReportStructure-ID, CollectionInterval}
 
-DiagnosticParameterReportStructureIntervalsGeneric {TDiagnosticParameterReportStructure-ID, TCollectionInterval} ::= SEQUENCE
+DiagnosticParameterReportStructureIntervalsGeneric {DiagnosticParameterReportStructure-ID-Type, CollectionInterval-Type} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
-    collectionInterval TCollectionInterval
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

@@ -7,6 +7,10 @@
         {
           "name": "Basic types",
           "asn1Files": ["BasicTypes.asn1"]
+        },
+        {
+          "name": "Dummy type",
+          "asn1Files": ["Dummy.asn1"]
         }
       ]
     },
@@ -22,8 +26,8 @@
           "asn1Files": ["ExecutionStep.asn1"]
         },
         {
-          "name": "Dummy type",
-          "asn1Files": ["Dummy.asn1"]
+          "name": "Parameter",
+          "asn1Files": ["Parameter.asn1"]
         }
       ]
     }

@@ -26,13 +26,13 @@ PUS-17-4 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
 IMPORTS
-    ApplicationProcess-ID
-      FROM ApplicationProcess
-    ;
+    ApplicationProcess-ID FROM ApplicationProcess;
 
-TM-17-4-OnBoardConnectionTestReport ::= SEQUENCE
+TM-17-4-OnBoardConnectionTestReport ::= TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID}
+
+TM-17-4-OnBoardConnectionTestReportGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {
-    applicationProcessId ApplicationProcess-ID
+    applicationProcessId ApplicationProcess-ID-Type
 }
 
 END

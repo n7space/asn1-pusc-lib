@@ -33,17 +33,17 @@ maxTM-3-35-PeriodicGenerationPropertiesCount INTEGER ::= 2147483647
 
 TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 {
---! n UnsignedInteger, moved to acn
-    periodicGenerationProperties SEQUENCE (SIZE(0 .. maxTM-3-35-PeriodicGenerationPropertiesCount)) OF PeriodicGenerationProperties
+--! n UnsignedInteger-Type, moved to acn
+    periodicGenerationProperties SEQUENCE (SIZE(1 .. maxTM-3-35-PeriodicGenerationPropertiesCount)) OF PeriodicGenerationProperties
 }
 
 PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {HousekeepingParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
 
-PeriodicGenerationPropertiesGeneric {THousekeepingParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
+PeriodicGenerationPropertiesGeneric {HousekeepingParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
 {
-    housekeepingParameterReportStructure-ID THousekeepingParameterReportStructure-ID,
-    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
-    collectionInterval TCollectionInterval
+    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

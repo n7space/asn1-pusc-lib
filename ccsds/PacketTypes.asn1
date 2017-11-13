@@ -26,20 +26,20 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-CCSDS-Packet {Packet-ID, PacketDataField} ::= SEQUENCE
+CCSDS-Packet {Packet-ID-Type, PacketDataField-Type} ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID Packet-ID,
+    packet-ID Packet-ID-Type,
     packetSequenceControl PacketSequenceControl,
     packetDataLength PacketDataLength,
-    packetDataField PacketDataField
+    packetDataField PacketDataField-Type
 }
 
 PacketVersionNumberValue ::= NULL
 
-Packet-ID {PacketType} ::= SEQUENCE
+Packet-ID {PacketType-Type} ::= SEQUENCE
 {
-    packetType PacketType,
+    packetType PacketType-Type,
 --! secondaryHeaderFlag INTEGER (0 .. 1),  moved to ACN
     applicationProcess-ID ApplicationProcess-ID
 }
@@ -54,25 +54,25 @@ PacketSequenceControl ::= SEQUENCE
 
 PacketDataLength ::= INTEGER (0 .. 65535)
 
-PacketDataField {PacketDataWithSecondaryHeader, PacketDataNoSecondaryHeader} ::= CHOICE
+PacketDataField {PacketDataWithSecondaryHeader-Type, PacketDataNoSecondaryHeader-Type} ::= CHOICE
 {
-    dataWithSecondaryHeader PacketDataWithSecondaryHeader,
-    dataNoSecondaryHeader PacketDataNoSecondaryHeader
+    dataWithSecondaryHeader PacketDataWithSecondaryHeader-Type,
+    dataNoSecondaryHeader PacketDataNoSecondaryHeader-Type
 }
 
-DataWithSecondaryHeader {SecondaryHeaderField, Payload} ::= SEQUENCE
+DataWithSecondaryHeader {SecondaryHeaderField-Type, Payload-Type} ::= SEQUENCE
 {
-    secondaryHeader SecondaryHeaderField,
-    data Payload,
+    secondaryHeader SecondaryHeaderField-Type,
+    data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl
+    packetErrorContol PacketErrorControl OPTIONAL
 }
 
-DataNoSecondaryHeader {Payload} ::= SEQUENCE
+DataNoSecondaryHeader {Payload-Type} ::= SEQUENCE
 {
-    data Payload,
+    data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl
+    packetErrorContol PacketErrorControl OPTIONAL
 }
 
 PacketErrorControl ::= BIT STRING (SIZE(16))

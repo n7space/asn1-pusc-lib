@@ -38,7 +38,7 @@ TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval-Type} ::= S
 {
     reportingInterval ReportingInterval-Type OPTIONAL,
 --! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(0 .. maxTM-4-9-ParameterStatisticCount)) OF ParameterStatistics
+    parameterStatistics SEQUENCE (SIZE(1 .. maxTM-4-9-ParameterStatisticCount)) OF ParameterStatistics
 }
 
 ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE

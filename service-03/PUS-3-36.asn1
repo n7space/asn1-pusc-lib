@@ -34,16 +34,16 @@ maxTM-3-36-PeriodicGenerationProperties INTEGER ::= 2147483647
 TM-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    periodicGenerationProperties SEQUENCE (SIZE(0 .. maxTM-3-36-PeriodicGenerationProperties)) OF PeriodicGenerationProperties
+    periodicGenerationProperties SEQUENCE (SIZE(1 .. maxTM-3-36-PeriodicGenerationProperties)) OF PeriodicGenerationProperties
 }
 
 PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
 
-PeriodicGenerationPropertiesGeneric {TDiagnosticParameterReportStructure-ID, TPeriodicGenerationActionStatus, TCollectionInterval} ::= SEQUENCE
+PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID TDiagnosticParameterReportStructure-ID,
-    periodicGenerationActionStatus TPeriodicGenerationActionStatus,
-    collectionInterval TCollectionInterval
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

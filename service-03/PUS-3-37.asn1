@@ -31,11 +31,11 @@ maxTC-3-37-ParameterFunctionalReportingDefinition-ID-Count INTEGER ::= 214748364
 
 TC-3-37-ApplyParameterFunctionalReportingConfigurations ::= TC-3-37-ApplyParameterFunctionalReportingConfigurationsGeneric {ParameterFunctionalReportingDefinition-ID}
 
-TC-3-37-ApplyParameterFunctionalReportingConfigurationsGeneric {TParameterFunctionalReportingDefinition-ID} ::= SEQUENCE
+TC-3-37-ApplyParameterFunctionalReportingConfigurationsGeneric {ParameterFunctionalReportingDefinition-ID-Type} ::= SEQUENCE
 {
     configurationExecutionFlag ConfigurationExecutionFlag,
---! n UnsignedInteger, moved to acn
-    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(0 .. maxTC-3-37-ParameterFunctionalReportingDefinition-ID-Count)) OF TParameterFunctionalReportingDefinition-ID
+--! n UnsignedInteger-Type, moved to acn
+    parameterFunctionalReportingDefinition-ID SEQUENCE (SIZE(1 .. maxTC-3-37-ParameterFunctionalReportingDefinition-ID-Count)) OF ParameterFunctionalReportingDefinition-ID-Type
 }
 
 ConfigurationExecutionFlag ::= ENUMERATED

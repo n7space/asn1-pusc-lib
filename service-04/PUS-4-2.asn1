@@ -27,23 +27,23 @@ IMPORTS
     AbsoluteTime, PUSC-UINT32 FROM BasicTypes
     Parameter-ID, ParameterValue FROM Parameter;
 
-maxTC-4-2-StatisticsCount INTEGER ::= 2147483647
+maxTM-4-2-StatisticsCount INTEGER ::= 2147483647
 
-TC-4-2-ParameterStatisticsReport ::= TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
+TM-4-2-ParameterStatisticsReport ::= TM-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
 
-Statistics ::= StatisticsGeneric {Parameter-ID, PUSC-UINT32, ParameterValue, AbsoluteTime, StandardDeviation}
+Statistics ::= StatisticsGeneric {PUSC-UINT32, ParameterValue, AbsoluteTime, StandardDeviation}
 
-TC-4-2-ParameterStatisticsReportGeneric {AbsoluteTime-Type} ::= SEQUENCE
+TM-4-2-ParameterStatisticsReportGeneric {AbsoluteTime-Type} ::= SEQUENCE
 {
     startTime AbsoluteTime-Type,
     endTime AbsoluteTime-Type,
 --! n UnsignedInteger-Type, moved to acn
-    statistics SEQUENCE (SIZE(0 .. maxTC-4-2-StatisticsCount)) OF Statistics
+    statistics SEQUENCE (SIZE(1 .. maxTM-4-2-StatisticsCount)) OF Statistics
 }
 
-StatisticsGeneric {Parameter-ID-Type, UnsignedInteger-Type, ParameterValue-Type, AbsoluteTime-Type, StandardDeviation-Type} ::= SEQUENCE
+StatisticsGeneric {UnsignedInteger-Type, ParameterValue-Type, AbsoluteTime-Type, StandardDeviation-Type} ::= SEQUENCE
 {
---! parameter-ID TParameter-ID, moved to acn
+--! parameter-ID Parameter-ID-Type, moved to acn
     numberOfSamples UnsignedInteger-Type,
     maxValue ParameterValue-Type,
     maxTime AbsoluteTime-Type,

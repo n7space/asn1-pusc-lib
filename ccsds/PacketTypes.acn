@@ -23,17 +23,6 @@
 
 PacketTypes DEFINITIONS ::= BEGIN
 
--------------------------------------
---choose size of CONSTANT below
-----> ERROR-CONTROL-ENABLED for enabled error contol
-----> ERROR-CONTROL-DISABLED for disabled error control
-
-CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-ENABLED
---CONSTANT PACKET-ERROR-CONTROL ::= ERROR-CONTROL-DISABLED
-
-CONSTANT ERROR-CONTROL-ENABLED ::= 16
-CONSTANT ERROR-CONTROL-DISABLED ::= 0
-
 PacketVersionNumberValue [pattern '000'B]
 
 PacketSequenceControl []
@@ -46,7 +35,7 @@ SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
 
 PacketDataLength [size 16, encoding pos-int, endianness big]
 
-PacketErrorControl [size PACKET-ERROR-CONTROL]
+PacketErrorControl [size 16]
 
 ServiceType-ID  [size 8, encoding pos-int, endianness big]
 MessageSubtype-ID  [size 8, encoding pos-int, endianness big]
