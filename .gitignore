@@ -1,4 +1,5 @@
 /.build
+/.dependency_check
 /*.pro.user
 *.autosave
 *.swp
