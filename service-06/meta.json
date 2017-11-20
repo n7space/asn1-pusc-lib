@@ -237,10 +237,7 @@
       "elements": [
         {
           "name": "Abort all memory dumps",
-          "asn1Files": [
-            "PUS-6-12.asn1",
-            "Memory.asn1"
-          ]
+          "asn1Files": ["PUS-6-12.asn1"]
         }
       ]
     },
@@ -253,13 +250,25 @@
             "PUS-6-13.asn1",
             "Memory.asn1"
           ],
-          "requires": ["Disable the scrubbing of a memory"]
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Disable the scrubbing of a memory",
           "asn1Files": [
             "PUS-6-14.asn1",
             "Memory.asn1"
+          ],
+          "requires": ["Enable the scrubbing of a memory"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
           ]
         },
         {
@@ -268,13 +277,25 @@
             "PUS-6-15.asn1",
             "Memory.asn1"
           ],
-          "requires": ["Disable the write protection of a memory"]
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
         },
         {
           "name": "Disable the write protection of a memory",
           "asn1Files": [
             "PUS-6-16.asn1",
             "Memory.asn1"
+          ],
+          "requires": ["Enable the write protection of a memory"],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
           ]
         }
       ]

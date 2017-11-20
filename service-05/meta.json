@@ -16,11 +16,15 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "types": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",
-              "types": "DummyType"
+              "types": ["DummyType"]
             }
           ]
         },
@@ -33,11 +37,15 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "types": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",
-              "types": "DummyType"
+              "types": ["DummyType"]
             }
           ]
         },
@@ -50,11 +58,15 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "types": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",
-              "types": "DummyType"
+              "types": ["DummyType"]
             }
           ],
           "requires": ["Enable the report generation of event definitions"]
@@ -69,11 +81,15 @@
           "imports": [
             {
               "from": "ApplicationProcess",
-              "types": "ApplicationProcess-ID"
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",
-              "types": "DummyType"
+              "types": ["DummyType"]
             }
           ],
           "requires": ["Enable the report generation of event definitions"]

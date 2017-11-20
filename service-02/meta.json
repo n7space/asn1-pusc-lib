@@ -5,7 +5,7 @@
       "name": "Device access subservice",
       "elements": [
         {
-          "name": "Distribute on/off device commands",
+          "name": "Distribute on off device commands",
           "asn1Files": ["PUS-2-1.asn1"],
           "imports": [
             {
@@ -105,7 +105,7 @@
             "PUS-2-11.asn1",
             "PUS-2-12.asn1",
             "LogicalDevice.asn1",
-            "Transaction"
+            "Transaction.asn1"
           ],
           "requires": ["Distribute logical device commands"],
           "imports": [

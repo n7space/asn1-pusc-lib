@@ -57,6 +57,12 @@
           "asn1Files": [
             "PUS-4-4.asn1",
             "Intervals.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["RelativeTime"]
+            }
           ]
         },
         {
@@ -73,11 +79,14 @@
           "imports":[
             {
               "from": "Parameter",
-              "types": "Parameter-ID"
+              "types": ["Parameter-ID"]
             },
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": [
+                "PUSC-UINT32",
+                "RelativeTime"
+              ]
             }
           ]
         },
@@ -106,11 +115,14 @@
           "imports":[
             {
               "from": "Parameter",
-              "types": "Parameter-ID"
+              "types": ["Parameter-ID"]
             },
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": [
+                "PUSC-UINT32",
+                "RelativeTime"
+              ]
             }
           ],
           "requires": ["Add or update parameter statistics definitions"]

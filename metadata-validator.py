@@ -155,7 +155,7 @@ def main():
         dependencies = set(getRecursiveDependency(element_lib, element))
 
         if len(dependencies):
-            asn1scc_command = ASN1SCC + " )" +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH
+            asn1scc_command = ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH
 
             print(asn1scc_command)
             return_code =  os.system(ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH)
