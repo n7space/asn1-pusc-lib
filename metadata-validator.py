@@ -7,7 +7,7 @@ import subprocess
 
 BUILD_PATH = os.path.abspath(".") + "/.dependency_check/"
 ASN1SOURCES_PATH = os.path.abspath(".") + "/.dependency_check/asn1sources/"
-LOG_FILE = "log.txt"
+ERRORLOG_FILE = "errorlog.txt"
 
 METADATA_FILENAME = "meta.json"
 ASN_EXTENSION = ".asn"
@@ -27,7 +27,6 @@ FROM_KEY = "from"
 MODULE_NAME_KEY = "module_name"
 METADATA_KEY = "meta_json"
 METADATA_PATH_KEY = "meta_path"
-
 
 ASN1SCC = "asn1.exe"
 ASN1SCC_ARGS = "-ACN -c"
@@ -60,7 +59,9 @@ def getRecursiveDependency(element_lib, element):
     
     return dependencies
 
-def logError(path, message, element, filepath):
+def logError(path, message, element):
+    path += METADATA_FILENAME
+    filepath = BUILD_PATH + ERRORLOG_FILE
     print("\033[1;37;49m%s: \033[1;31;49m%s: \033[0;37;49m%s" % (path, message, element))
     with open(filepath, "a+") as f:
         f.write("\n" + path + ": " + message + ": " + element)
@@ -73,8 +74,14 @@ def errorCheck(error_flag):
         print("\033[1;32;49mMetadata validation passed\033[0;37;49m")
 
 def main():
-    if os.path.isfile(BUILD_PATH + LOG_FILE):
-        os.remove(BUILD_PATH + LOG_FILE)
+    try:
+        if(os.path.isdir(BUILD_PATH)):
+            shutil.rmtree(BUILD_PATH)
+
+        os.mkdir(BUILD_PATH)
+    except OSError:
+        print("Error when creating directory: %s" (BUILD_PATH))
+        sys.exit(1)
 
     metadata = []
     files = glob.glob(os.path.join(os.path.abspath("."), "*/" + METADATA_FILENAME))
@@ -94,53 +101,44 @@ def main():
 
     error_flag = False;
     
+
     print("\nVerifying internal metadata dependencies")
     for element in element_lib:
         if CONFLICTS_KEY in element: 
             for conflicting in element[CONFLICTS_KEY]:
                 if conflicting not in [x[NAME_KEY] for x in element_lib if x[MODULE_NAME_KEY] == element[MODULE_NAME_KEY]]:
-                    logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Could not find conflicting element", conflicting, BUILD_PATH + LOG_FILE)
+                    logError(element[METADATA_PATH_KEY], "Could not find conflicting element", conflicting)
                     error_flag = True
 
         if REQUIRES_KEY in element: 
             for required in element[REQUIRES_KEY]:
                 if required not in [x[NAME_KEY] for x in element_lib if x[MODULE_NAME_KEY] == element[MODULE_NAME_KEY]]:
-                    logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Could not find required element", required, BUILD_PATH + LOG_FILE)
+                    logError(element[METADATA_PATH_KEY], "Could not find required element", required)
 
                     error_flag = True
 
         if ASN1FILES_KEY in element: 
             for element_filename in element[ASN1FILES_KEY]:
                 if element_filename not in [x for x in os.listdir(element[METADATA_PATH_KEY]) if os.path.isfile(element[METADATA_PATH_KEY] + x)]:
-                    logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Could not find ASN.1 file", element_filename, BUILD_PATH + LOG_FILE)
+                    logError(element[METADATA_PATH_KEY], "Could not find ASN.1 file", element_filename)
 
                     error_flag = True
-
    
     errorCheck(error_flag)
+
     
     print("\nVeryfing external metadata dependencies")
-
     for element in element_lib:
         if IMPORTS_KEY in element: 
             for imported in element[IMPORTS_KEY]:
                 if imported[FROM_KEY] not in [os.path.splitext(asn_file)[0] for item in element_lib if ASN1FILES_KEY in item for asn_file in item[ASN1FILES_KEY]]:
-                    logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Could not find module for import", imported[FROM_KEY], BUILD_PATH + LOG_FILE)
+                    logError(element[METADATA_PATH_KEY], "Could not find module for import", imported[FROM_KEY])
                     error_flag = True
                     
     errorCheck(error_flag)
 
+
     print("\nGenerating and building C files")
-
-    try:
-        if(os.path.isdir(BUILD_PATH)):
-            shutil.rmtree(BUILD_PATH)
-
-        os.mkdir(BUILD_PATH)
-    except OSError:
-        print("Error when creating directory: %s" (BUILD_PATH))
-        sys.exit(1)
-
     for element in element_lib:
         try:
             [os.remove(x) for x in glob.glob(ASN1SCC_OUT_PATH + "*.c")]
@@ -160,7 +158,7 @@ def main():
             print(asn1scc_command)
             return_code =  os.system(ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH)
             if return_code:
-                logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Element imported in ASN.1 but not declared in metadata", element[NAME_KEY], BUILD_PATH + LOG_FILE)
+                logError(element[METADATA_PATH_KEY], "Element imported in ASN.1 but not declared in metadata", element[NAME_KEY])
                 error_flag = True
             
             else:
@@ -171,6 +169,7 @@ def main():
                     print(compile_command)
                     return_code = os.system(compile_command)
                     if return_code:
+                        logError(element[METADATA_PATH_KEY], "Compilation failed", element[NAME_KEY])
                         error_flag = True
                     
                 ar_command = AR + " " + AR_ARGS + " " + AR_OUT_PATH + element[NAME_KEY].replace(" ", "_") + ".a " +  " ".join(glob.glob(CC_OUT_PATH + "*.o"))
@@ -179,7 +178,7 @@ def main():
                 return_code = os.system(ar_command)
 
                 if return_code:
-                    logError(element[METADATA_PATH_KEY] + METADATA_FILENAME, "Compilation error", element[NAME_KEY], BUILD_PATH + LOG_FILE)
+                    logError(element[METADATA_PATH_KEY], "Library creation failed", element[NAME_KEY])
                     error_flag = True
 
             print()
