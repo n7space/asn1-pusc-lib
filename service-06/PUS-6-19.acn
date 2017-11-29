@@ -31,7 +31,7 @@ TC-6-19-LoadRawMemoryDataAreasByReference []
     dataAreas [size n]
 }
 
-DataArea []
+TC-6-19-DataArea []
 {
     startAddress [],
     offsetInFile [],

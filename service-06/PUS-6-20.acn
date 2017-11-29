@@ -31,7 +31,7 @@ TC-6-20-DumpRawMemoryDataAreasToFile []
     dataAreas [size n]
 }
 
-DataArea []
+TC-6-20-DataArea []
 {
     startAddress [],
     length []

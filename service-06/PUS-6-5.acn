@@ -30,7 +30,7 @@ TC-6-5-DumpRawMemoryData []
     dataAreas [size n]
 }
 
-DataArea []
+TC-6-5-DataArea []
 {
     startAddress [],
     length []
