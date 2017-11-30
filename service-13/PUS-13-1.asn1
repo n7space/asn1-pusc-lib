@@ -1,0 +1,7 @@
+PUS-13-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+    EXPORTS ALL;
+    TM-13-1-FirstDownlinkPartReport ::= SEQUENCE {
+        -- message subtype 1
+    }
+
+END
