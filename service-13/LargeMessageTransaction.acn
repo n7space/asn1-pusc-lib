@@ -21,15 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-13-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-    EXPORTS ALL;
-    IMPORTS
-        PUSC-UINT32 FROM BasicTypes
-        DownlinkPartReport FROM LargeMessageTransaction;
 
-    TM-13-1-FirstDownlinkPartReport ::= SEQUENCE {
-        -- message subtype 1 (TM::1)
-        firstDownlinkPartReport DownlinkPartReport
+LargeMessageTransaction DEFINITIONS ::= BEGIN
+
+    DownlinkPartReport [] {
+        largeMessageTransactionIdentifier [],
+        partSequenceNumber [],
+        part [] --[size 1..MAXPARTSIZE] -- suggestion?
+    }
+
+    UplinkPartReport [] {
+        largeMessageTransactionIdentifier [],
+        partSequenceNumber [],
+        part [] --[size 1..MAXPARTSIZE] -- suggestion?
     }
 
 END

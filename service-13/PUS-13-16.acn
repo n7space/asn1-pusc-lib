@@ -1,0 +1,8 @@
+PUS-13-16 DEFINITIONS ::= BEGIN
+    FailureReasonType []
+
+    TM-13-16-LargePacketUplinkAbortionReport [] {
+        largeMessageTransactionIdentifier [],
+        failureReason []
+    }
+END
