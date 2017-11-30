@@ -22,14 +22,15 @@
 --!
 
 PUS-13-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-    EXPORTS ALL;
-    IMPORTS
-        PUSC-UINT32 FROM BasicTypes
-        UplinkPartReport FROM LargeMessageTransaction;
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    UplinkPartReport FROM LargeMessageTransaction;
 
-    TM-13-10-IntermediateUplinkPartReport ::= SEQUENCE {
-        -- message subtype 10 (TM::10)
-        intermediateUplinkPartReport UplinkPartReport
-    }
+TM-13-10-IntermediateUplinkPartReport ::= SEQUENCE
+{
+    -- message subtype 10 (TM::10)
+    intermediateUplinkPartReport UplinkPartReport
+}
 
 END

@@ -29,7 +29,8 @@ IMPORTS
 
     LargeMessageTransactionIdentifierType ::= PUSC-UINT32
 
-    PartReportGeneric { UnsignedInteger, PartType } ::= SEQUENCE {
+    PartReportGeneric { UnsignedInteger, PartType } ::= SEQUENCE
+    {
         largeMessageTransactionIdentifier LargeMessageTransactionIdentifierType, -- must be unique
         partSequenceNumber UnsignedInteger,
         part PartType

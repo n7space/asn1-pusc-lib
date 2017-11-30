@@ -27,9 +27,10 @@ PUS-13-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
         PUSC-UINT32 FROM BasicTypes
         DownlinkPartReport FROM LargeMessageTransaction;
 
-    TM-13-2-IntermediateDownlinkPartReport ::= SEQUENCE {
-        -- message subtype 2 (TM::2)
-        intermediateDownlinkPartReport DownlinkPartReport
-    }
+TM-13-2-IntermediateDownlinkPartReport ::= SEQUENCE
+{
+    -- message subtype 2 (TM::2)
+    intermediateDownlinkPartReport DownlinkPartReport
+}
 
 END

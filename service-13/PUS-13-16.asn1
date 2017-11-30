@@ -22,18 +22,20 @@
 --!
 
 PUS-13-16 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-    EXPORTS ALL;
-    IMPORTS
-        PUSC-UINT32 FROM BasicTypes
-        UplinkPartReport, LargeMessageTransactionIdentifierType FROM LargeMessageTransaction;
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    UplinkPartReport, LargeMessageTransactionIdentifierType FROM LargeMessageTransaction;
 
-    FailureReasonType ::= ENUMERATED {
-        reason1, reason2 -- TODO: it's for user-case to define
-    }
+FailureReasonType ::= ENUMERATED
+{
+    reason1, reason2 -- TODO: it's for user-case to define
+}
 
-    TM-13-16-LargePacketUplinkAbortionReport ::= SEQUENCE {
-        largeMessageTransactionIdentifier LargeMessageTransactionIdentifierType,
-        failureReason FailureReasonType
-    }
+TM-13-16-LargePacketUplinkAbortionReport ::= SEQUENCE
+{
+    largeMessageTransactionIdentifier LargeMessageTransactionIdentifierType,
+    failureReason FailureReasonType
+}
 
 END
