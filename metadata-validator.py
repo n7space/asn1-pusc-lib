@@ -3,10 +3,11 @@ import shutil
 import os
 import glob
 import sys
-import subprocess
+import string
 
-BUILD_PATH = os.path.abspath(".") + "/.dependency_check/"
-ASN1SOURCES_PATH = os.path.abspath(".") + "/.dependency_check/asn1sources/"
+LIBRARY_PATH = os.path.abspath(".")
+BUILD_PATH = os.path.join(LIBRARY_PATH, ".build", "dependency_check")
+ASN1SOURCES_PATH = os.path.join(LIBRARY_PATH, ".build", "dependency_check", "asn1sources")
 ERRORLOG_FILE = "errorlog.txt"
 
 METADATA_FILENAME = "meta.json"
@@ -30,160 +31,197 @@ METADATA_PATH_KEY = "meta_path"
 
 ASN1SCC = "asn1.exe"
 ASN1SCC_ARGS = "-ACN -c"
-ASN1SCC_OUT_PATH = BUILD_PATH
 CC = "gcc"
 CC_ARGS = "-c -pipe -O2 -fPIC -Wall -W"
-CC_OUT_PATH = BUILD_PATH
-CC_SRC_PATH = BUILD_PATH
 AR = "ar"
 AR_ARGS = "cqs"
 AR_OUT_PATH = BUILD_PATH
 
+REQUIRES_ERROR_MESSAGE = "Could not find conflicting element"
+CONFLICTS_ERROR_MESSAGE = "Could not find required element"
+ASN1FILES_ERROR_MESSAGE = "Could not find ASN.1 file"
+IMPORTS_ERROR_MESSAGE =  "Could not find module for import"
+CODE_GENERATION_ERROR_MESSAGE = "C code generation failed"
+COMPILATION_ERROR_MESSAGE = "Compilation failed"
+LIBRARY_CREATION_ERROR_MESSAGE = "Library creation failed"
 
-def getRecursiveDependency(element_lib, element):
+VALIDATION_FAILED_MESSAGE = "\033[1;31;49mMetadata validation failed\033[0;37;0m"
+VALIDATION_PASSED_MESSAGE = "\033[1;32;49mMetadata validation passed\033[0;37;0m"
+
+ERROR_CODE = 1
+SUCCESS_CODE = 0
+
+def logError(element, message, details):
+    path = os.path.join(element[METADATA_PATH_KEY], METADATA_FILENAME)
+    filepath = os.path.join(BUILD_PATH, ERRORLOG_FILE)
+    print("\033[1;37;49m%s: \033[1;31;49m%s: \033[0;37;49m%s\033[0;37;0m" % (path, message, details))
+    with open(filepath, "a+") as f:
+        f.write("path" + ": " + message + ": " + details)
+
+
+def getRecursiveDependency(element, element_lib):
     dependencies = []
-    if ASN1FILES_KEY in element:
-        for element_filename in element[ASN1FILES_KEY]:
-            dependencies.append(element[METADATA_PATH_KEY] + element_filename)
+    for element_filename in element.get(ASN1FILES_KEY, []):
+        dependencies.append(element[METADATA_PATH_KEY] + element_filename)
 
-            acn_filename = element[METADATA_PATH_KEY] + os.path.splitext(element_filename)[0] + ACN_EXTENSION
-            if os.path.exists(acn_filename):
-                dependencies.append(acn_filename)
+        acn_filename = element[METADATA_PATH_KEY] + os.path.splitext(element_filename)[0] + ACN_EXTENSION
+        if os.path.exists(acn_filename):
+            dependencies.append(acn_filename)
     
-    if IMPORTS_KEY in element:
-        for imported in element[IMPORTS_KEY]:
-            for item in element_lib:
-                if ASN1FILES_KEY in item:
-                    if imported[FROM_KEY] in [os.path.splitext(x)[0] for x in item[ASN1FILES_KEY]]:
-                        dependencies += getRecursiveDependency(element_lib, item) 
+    for imported in element.get(IMPORTS_KEY, []):
+        for item in element_lib:
+            if imported[FROM_KEY] in [os.path.splitext(x)[0] for x in item.get(ASN1FILES_KEY, [])]:
+                dependencies += getRecursiveDependency(item, element_lib) 
     
     return dependencies
 
-def logError(path, message, element):
-    path += METADATA_FILENAME
-    filepath = BUILD_PATH + ERRORLOG_FILE
-    print("\033[1;37;49m%s: \033[1;31;49m%s: \033[0;37;49m%s" % (path, message, element))
-    with open(filepath, "a+") as f:
-        f.write("\n" + path + ": " + message + ": " + element)
 
-def errorCheck(error_flag):
-    if error_flag:
-        print("\033[1;31;49mMetadata validation failed")
-        sys.exit(1)
+def makeValidFilename(filename):
+    valid_characters = "_-.() " + string.ascii_letters + string.digits
+    return "".join(c for c in filename.replace(" ", "-") if c in valid_characters)
+
+
+def getModuleElementNames(module_name, element_lib):
+    return [element[NAME_KEY] for element in element_lib if module_name == element[MODULE_NAME_KEY]]
+
+
+def getAsn1Modules(element_lib):
+    return [os.path.splitext(asn_file)[0] for element in element_lib if ASN1FILES_KEY in element for asn_file in element[ASN1FILES_KEY]]
+
+
+def checkRequiresValid(element, element_lib):
+    return not [logError(element, REQUIRES_ERROR_MESSAGE, required) \
+                for required in element.get(REQUIRES_KEY, []) \
+                if required not in getModuleElementNames(element[MODULE_NAME_KEY], element_lib)]
+
+
+def checkConflictsValid(element, element_lib):
+    return not [logError(element, CONFLICTS_ERROR_MESSAGE, conflicting) \
+                for conflicting in element.get(CONFLICTS_KEY, []) \
+                if conflicting not in getModuleElementNames(element[MODULE_NAME_KEY], element_lib)]
+
+
+def checkAsn1FilesValid(element):
+    return not [logError(element, ASN1FILES_ERROR_MESSAGE, asn1file) \
+                for asn1file in element.get(ASN1FILES_KEY, []) \
+                if asn1file not in os.listdir(element[METADATA_PATH_KEY])]
+
+
+def checkImportsValid(element, asn1_modules):
+    return not [logError(element, IMPORTS_ERROR_MESSAGE, imported[FROM_KEY]) \
+                for imported in element.get(IMPORTS_KEY, []) if imported[FROM_KEY] not in asn1_modules]  
+
+
+def checkInternalDependenciesValid(element_lib):
+    return all(checkRequiresValid(element, element_lib) and checkConflictsValid(element, element_lib) and checkAsn1FilesValid(element) \
+               for element in element_lib)
+
+
+def checkExternalDependenciesValid(element_lib):
+    asn1_modules = getAsn1Modules(element_lib)
+    return all(checkImportsValid(element, asn1_modules) for element in element_lib)
+
+
+def checkCCodeGenerationValid(element, files, path):
+    asn1scc_command = ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(files)) + " -o " + path
+    #print(asn1scc_command)
+
+    if os.system(asn1scc_command) != 0:
+        logError(element, CODE_GENERATION_ERROR_MESSAGE, element[NAME_KEY])
+        return False
     else:
-        print("\033[1;32;49mMetadata validation passed\033[0;37;49m")
+        return True
 
-def main():
-    try:
-        if(os.path.isdir(BUILD_PATH)):
-            shutil.rmtree(BUILD_PATH)
 
-        os.mkdir(BUILD_PATH)
-    except OSError:
-        print("Error when creating directory: %s" (BUILD_PATH))
-        sys.exit(1)
+def compileFile(src, path):
+    cc_command = CC + " " +  CC_ARGS + " -I " + path + " " + src + " -o " + os.path.join(path, os.path.splitext((src))[0]) +  ".o"
+    #print(cc_command)
+    return os.system(cc_command)
 
+
+def checkCompilationValid(element, path):
+    return not [logError(element, COMPILATION_ERROR_MESSAGE, element[NAME_KEY]) \
+                for src in glob.glob(os.path.join(path, "*.c")) if compileFile(src, path) != 0]
+
+
+def checkLibraryCreationValid(element, path):
+    ar_command = AR + " " + AR_ARGS + " " + os.path.join(path, "lib.a")  +  " ".join(glob.glob(os.path.join(path + "*.o")))
+    #print(ar_command)
+
+    if os.system(ar_command) != 0:
+        logError(element, CODE_GENERATION_ERROR_MESSAGE, element[NAME_KEY])
+        return False
+    else:
+        return True
+
+
+def checkElementCompilationValid(element, element_lib):
+    dependencies = set(getRecursiveDependency(element, element_lib))
+    path = os.path.join(BUILD_PATH, makeValidFilename(element[NAME_KEY]))
+    print (path)
+    os.makedirs(path)
+    if not dependencies: return True
+    if not checkCCodeGenerationValid(element, dependencies, path): return False
+    if not checkCompilationValid(element, path): return False
+    if not checkLibraryCreationValid(element, path): return False
+    return True
+
+def checkCodeValid(element_lib):
+    return all(checkElementCompilationValid(element, element_lib) for element in element_lib)
+
+
+def loadLibrary(path):
     metadata = []
-    files = glob.glob(os.path.join(os.path.abspath("."), "*/" + METADATA_FILENAME))
+    files = glob.glob(os.path.join(path, "*/" + METADATA_FILENAME))
     for filepath in files:
         with open(filepath) as f:
             metadata.append({METADATA_KEY: json.load(f), METADATA_PATH_KEY: filepath.replace(METADATA_FILENAME, "")})
     
     element_lib = []
     for meta in metadata:
-        if SUBMODULES_KEY in meta[METADATA_KEY]: 
-            for submodule in meta[METADATA_KEY][SUBMODULES_KEY]:
-                if ELEMENTS_KEY in submodule: 
-                    for element in submodule[ELEMENTS_KEY]:
-                        element[METADATA_PATH_KEY] = meta[METADATA_PATH_KEY]
-                        element[MODULE_NAME_KEY] = meta[METADATA_KEY][NAME_KEY]
-                        element_lib.append(element)
+        for submodule in meta[METADATA_KEY].get(SUBMODULES_KEY, []):
+            for element in submodule.get(ELEMENTS_KEY, []):
+                element[METADATA_PATH_KEY] = meta[METADATA_PATH_KEY]
+                element[MODULE_NAME_KEY] = meta[METADATA_KEY][NAME_KEY]
+                element_lib.append(element)
 
-    error_flag = False;
+    return element_lib
+
+
+def validateMetadata():
+    try:
+        if(os.path.isdir(BUILD_PATH)):
+            shutil.rmtree(BUILD_PATH)
+
+        os.makedirs(BUILD_PATH)
+    except OSError:
+        print("Error when creating directory: %s" % (BUILD_PATH))
+        return ERROR_CODE
     
+    element_lib = loadLibrary(LIBRARY_PATH)
 
     print("\nVerifying internal metadata dependencies")
-    for element in element_lib:
-        if CONFLICTS_KEY in element: 
-            for conflicting in element[CONFLICTS_KEY]:
-                if conflicting not in [x[NAME_KEY] for x in element_lib if x[MODULE_NAME_KEY] == element[MODULE_NAME_KEY]]:
-                    logError(element[METADATA_PATH_KEY], "Could not find conflicting element", conflicting)
-                    error_flag = True
+    if checkInternalDependenciesValid(element_lib):
+        print(VALIDATION_PASSED_MESSAGE)
+    else:
+        print(VALIDATION_FAILED_MESSAGE)
+        return ERROR_CODE
 
-        if REQUIRES_KEY in element: 
-            for required in element[REQUIRES_KEY]:
-                if required not in [x[NAME_KEY] for x in element_lib if x[MODULE_NAME_KEY] == element[MODULE_NAME_KEY]]:
-                    logError(element[METADATA_PATH_KEY], "Could not find required element", required)
-
-                    error_flag = True
-
-        if ASN1FILES_KEY in element: 
-            for element_filename in element[ASN1FILES_KEY]:
-                if element_filename not in [x for x in os.listdir(element[METADATA_PATH_KEY]) if os.path.isfile(element[METADATA_PATH_KEY] + x)]:
-                    logError(element[METADATA_PATH_KEY], "Could not find ASN.1 file", element_filename)
-
-                    error_flag = True
-   
-    errorCheck(error_flag)
-
-    
     print("\nVeryfing external metadata dependencies")
-    for element in element_lib:
-        if IMPORTS_KEY in element: 
-            for imported in element[IMPORTS_KEY]:
-                if imported[FROM_KEY] not in [os.path.splitext(asn_file)[0] for item in element_lib if ASN1FILES_KEY in item for asn_file in item[ASN1FILES_KEY]]:
-                    logError(element[METADATA_PATH_KEY], "Could not find module for import", imported[FROM_KEY])
-                    error_flag = True
-                    
-    errorCheck(error_flag)
-
+    if checkExternalDependenciesValid(element_lib):
+        print(VALIDATION_PASSED_MESSAGE)
+    else:
+        print(VALIDATION_FAILED_MESSAGE)
+        return ERROR_CODE
 
     print("\nGenerating and building C files")
-    for element in element_lib:
-        try:
-            [os.remove(x) for x in glob.glob(ASN1SCC_OUT_PATH + "*.c")]
-            [os.remove(x) for x in glob.glob(ASN1SCC_OUT_PATH + "*.h")]
-            [os.remove(x) for x in glob.glob(CC_OUT_PATH + "*.o")]
-            [os.remove(x) for x in glob.glob(AR_OUT_PATH + "*.a")]
+    if checkCodeValid(element_lib):
+        print(VALIDATION_PASSED_MESSAGE)
+    else:
+        print(VALIDATION_FAILED_MESSAGE)
+        return ERROR_CODE
 
-        except OSError:
-            print("Error when removing temporary files: %s" (BUILD_PATH))
-            sys.exit(1)
-        
-        dependencies = set(getRecursiveDependency(element_lib, element))
+    return SUCCESS_CODE
 
-        if len(dependencies):
-            asn1scc_command = ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH
-
-            print(asn1scc_command)
-            return_code =  os.system(ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(dependencies)) + " -o " + ASN1SCC_OUT_PATH)
-            if return_code:
-                logError(element[METADATA_PATH_KEY], "Element imported in ASN.1 but not declared in metadata", element[NAME_KEY])
-                error_flag = True
-            
-            else:
-                cfiles = glob.glob(ASN1SCC_OUT_PATH + "*.c")
-                for src in cfiles:
-                    compile_command = CC + " " +  CC_ARGS + " -I " + CC_SRC_PATH + " " + src + " -o " + CC_OUT_PATH + os.path.splitext(os.path.basename(src))[0] + ".o"
-
-                    print(compile_command)
-                    return_code = os.system(compile_command)
-                    if return_code:
-                        logError(element[METADATA_PATH_KEY], "Compilation failed", element[NAME_KEY])
-                        error_flag = True
-                    
-                ar_command = AR + " " + AR_ARGS + " " + AR_OUT_PATH + element[NAME_KEY].replace(" ", "_") + ".a " +  " ".join(glob.glob(CC_OUT_PATH + "*.o"))
-
-                print(ar_command)
-                return_code = os.system(ar_command)
-
-                if return_code:
-                    logError(element[METADATA_PATH_KEY], "Library creation failed", element[NAME_KEY])
-                    error_flag = True
-
-            print()
-    
-    errorCheck(error_flag)
-    sys.exit(0)
-
-main()
+if __name__ == "__main__":
+    sys.exit(validateMetadata())
