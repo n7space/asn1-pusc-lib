@@ -5,7 +5,7 @@
       "name": "Device access subservice",
       "elements": [
         {
-          "name": "Distribute on off device commands",
+          "name": "Distribute on/off device commands",
           "asn1Files": ["PUS-2-1.asn1"],
           "imports": [
             {

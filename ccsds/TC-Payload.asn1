@@ -28,7 +28,7 @@ IMPORTS
 
 TC-Payload ::= CHOICE --TODO
 {
-    tc-100-100 INTEGER(0 .. 255) --TODO
+    tc-0-0 INTEGER(0 .. 255) --TODO
 }
 
 TC-NoHeaderPayload ::= NULL --TODO
