@@ -1,5 +1,4 @@
-TEMPLATE = lib
-CONFIG += static
+TEMPLATE = app
 CONFIG -= qt
 
 DISTFILES += \
@@ -39,7 +38,7 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-09/meta.json \ 
+    service-09/meta.json \
     service-09/PUS-9-1.acn \
     service-09/PUS-9-1.asn1 \
     service-09/PUS-9-2.acn \
@@ -281,5 +280,9 @@ DISTFILES += \
     service-08/PUS-8-1.asn1 \
     service-04/ParameterStatisticsDefinitions.acn \
     service-04/ParameterStatisticsDefinitions.asn1
+
+linux-g++ {
+    QMAKE_CFLAGS += --std=c99
+}
 
 include(.qmake/handleAsn1AcnBuild.pri)
