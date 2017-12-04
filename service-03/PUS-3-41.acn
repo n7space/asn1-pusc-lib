@@ -44,12 +44,4 @@ TM-3-41-ApidParameterReportingEntries []
     parameterReportingEntries [size n2]
 }
 
-ParameterReportingEntries []
-{
-    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
-    parameterReportStructure-ID <parameterReportStructureType> [],
-    periodicGenerationActionStatus [],
-    collectionInterval []
-}
-
 END

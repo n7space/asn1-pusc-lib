@@ -104,6 +104,8 @@ DISTFILES += \
     service-03/DiagnosticParameterReportStructure.asn1 \
     service-03/HousekeepingParameterReportStructure.acn \
     service-03/HousekeepingParameterReportStructure.asn1 \
+    service-03/ParameterReportingEntries.asn1 \
+    service-03/ParameterReportingEntries.acn \
     common/Parameter.acn \
     common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \

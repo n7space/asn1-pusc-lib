@@ -21,27 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-42 DEFINITIONS ::= BEGIN
+ParameterReportingEntries DEFINITIONS ::= BEGIN
 
-TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinitionMultipleApid []
+ParameterReportingEntries []
 {
-    parameterFunctionalReportingDefinition-ID [],
-    n1 BasicTypes.PUSC-UINT32 [],
-    apidParameterReportingEntries [size n1]
-}
-
-TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition []
-{
-    parameterFunctionalReportingDefinition-ID [],
-    n2 BasicTypes.PUSC-UINT32 [],
-    parameterReportingEntries [size n2]
-}
-
-TC-3-42-ApidParameterReportingEntries []
-{
-    applicationProcess-ID [],
-    n2 BasicTypes.PUSC-UINT32 [],
-    parameterReportingEntries [size n2]
+    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
+    parameterReportStructure-ID <parameterReportStructureType> [],
+    periodicGenerationActionStatus [],
+    collectionInterval []
 }
 
 END

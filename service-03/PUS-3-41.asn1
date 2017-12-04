@@ -30,7 +30,8 @@ IMPORTS
     ParameterReportStructure-ID FROM ParameterReportStructureType
     PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
     CollectionInterval FROM CollectionInterval
-    ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition;
+    ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition
+    ParameterReportingEntries FROM ParameterReportingEntries;
 
 macTC-41-ParameterReportingEntryCount INTEGER ::= 536870911
 maxTC-41-ApidParameterReportingEntryCount INTEGER ::= 536870911
@@ -60,16 +61,6 @@ TM-3-41-ApidParameterReportingEntriesGeneric {ApplicationProcess-ID-Type} ::= SE
     applicationProcess-ID ApplicationProcess-ID-Type,
 --! n2 UnsignedInteger-Type, moved to acn
     parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-41-ParameterReportingEntryCount)) OF ParameterReportingEntries
-}
-
-ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
-
-ParameterReportingEntriesGeneric {ParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
-{
---! parameterReportStructureType ParameterReportStructureType-Type, moved to acn
-    parameterReportStructure-ID ParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
-    collectionInterval CollectionInterval-Type
 }
 
 END
