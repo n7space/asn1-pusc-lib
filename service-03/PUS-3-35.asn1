@@ -27,7 +27,8 @@ IMPORTS
     HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
     PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
     CollectionInterval FROM CollectionInterval
-    PUSC-UINT32 FROM BasicTypes;
+    PUSC-UINT32 FROM BasicTypes
+    PeriodicGenerationProperties FROM PeriodicGenerationProperties;
 
 maxTM-3-35-PeriodicGenerationPropertiesCount INTEGER ::= 2147483647
 
@@ -35,15 +36,6 @@ TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport ::= SEQUEN
 {
 --! n UnsignedInteger-Type, moved to acn
     periodicGenerationProperties SEQUENCE (SIZE(1 .. maxTM-3-35-PeriodicGenerationPropertiesCount)) OF PeriodicGenerationProperties
-}
-
-PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {HousekeepingParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
-
-PeriodicGenerationPropertiesGeneric {HousekeepingParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
-{
-    housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
-    collectionInterval CollectionInterval-Type
 }
 
 END

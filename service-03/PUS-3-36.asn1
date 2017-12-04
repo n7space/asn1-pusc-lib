@@ -27,7 +27,8 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
     CollectionInterval FROM CollectionInterval
-    PUSC-UINT32 FROM BasicTypes;
+    PUSC-UINT32 FROM BasicTypes
+    PeriodicGenerationProperties FROM PeriodicGenerationProperties;
 
 maxTM-3-36-PeriodicGenerationProperties INTEGER ::= 2147483647
 
@@ -35,15 +36,6 @@ TM-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     periodicGenerationProperties SEQUENCE (SIZE(1 .. maxTM-3-36-PeriodicGenerationProperties)) OF PeriodicGenerationProperties
-}
-
-PeriodicGenerationProperties ::= PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
-
-PeriodicGenerationPropertiesGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
-{
-    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
-    collectionInterval CollectionInterval-Type
 }
 
 END

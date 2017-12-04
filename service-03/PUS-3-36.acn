@@ -29,11 +29,4 @@ TM-3-36-DiagnosticParameterReportPeriodicGenerationPropertiesReport []
     periodicGenerationProperties [size n]
 }
 
-PeriodicGenerationProperties []
-{
-    diagnosticParameterReportStructure-ID [],
-    periodicGenerationActionStatus [],
-    collectionInterval []
-}
-
 END

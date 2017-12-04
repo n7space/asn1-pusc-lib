@@ -106,6 +106,8 @@ DISTFILES += \
     service-03/HousekeepingParameterReportStructure.asn1 \
     service-03/ParameterReportingEntries.asn1 \
     service-03/ParameterReportingEntries.acn \
+    service-03/PeriodicGenerationProperties.asn1 \
+    service-03/PeriodicGenerationProperties.acn \
     common/Parameter.acn \
     common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
