@@ -15,6 +15,9 @@ printf "\n\nGenerating Makefile files...\n"
 printf "\n\nGenerating and building C files...\n"
 make -C ${OUT_DIR} || { echo "Error building C files" ; exit 1 ; }
 
+printf "\n\nExecuting unit tests...\n"
+${OUT_DIR}/asn1-pusc-lib || { echo "Unit tests failed" ; exit 1 ; }
+
 printf "\n\nGenerating ICD...\n"
 make -C ${OUT_DIR} icdFromAsn1 || { echo "Error building ICD" ; exit 1 ; }
 

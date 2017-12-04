@@ -33,4 +33,4 @@ install:
 
 script:
   - . /opt/qt59/bin/qt59-env.sh
-  - PATH=$HOME/asn1scc/:$PATH ./sanity-check.sh
+  - PATH=$HOME/asn1scc/:$PATH LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH ./sanity-check.sh
