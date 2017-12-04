@@ -32,7 +32,7 @@ TC-3-29-AppendParametersToAHousekeepingParameterReportStructure []
     superCommutatedParameterSet [size nfa]
 }
 
-SuperCommutatedParameterSet []
+TC-3-29-SuperCommutatedParameterSet []
 {
     superCommutatedSampleRepetitionNumber [],
     n2 BasicTypes.PUSC-UINT32 [],
