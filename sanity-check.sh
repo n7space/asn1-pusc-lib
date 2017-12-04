@@ -14,6 +14,9 @@ printf "\n\nGenerating Makefile files...\n"
 printf "\n\nGenerating and building C files...\n"
 make -C ${OUT_DIR} || { echo "Error building C files" ; exit 1 ; }
 
+printf "\n\nGenerating ICD...\n"
+make -C ${OUT_DIR} icdFromAsn1 || { echo "Error building ICD" ; exit 1 ; }
+
 printf "\n\nDownloading module schema...\n"
 (cd ${OUT_DIR} && wget --no-cache ${URL}/${MODULE_SCHEMA_FILE}) \
     || { echo "Error getting module json-schema" ; exit 1 ; }
