@@ -24,6 +24,6 @@
 SpacecraftTimeReferenceStatus DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 
-SpacecraftTimeReferenceStatus ::= NULL --TODO
+SpacecraftTimeReferenceStatus ::= INTEGER (0 .. 15)
 
 END

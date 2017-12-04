@@ -23,6 +23,6 @@
 
 SpacecraftTimeReferenceStatus DEFINITIONS ::= BEGIN
 
-SpacecraftTimeReferenceStatus []
+SpacecraftTimeReferenceStatus [size 4, encoding pos-int, endianness big]
 
 END

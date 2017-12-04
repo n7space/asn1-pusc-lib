@@ -15,6 +15,8 @@ DISTFILES += \
     common/BasicTypes.asn1 \
     common/ExecutionStep.acn \
     common/ExecutionStep.asn1 \
+    common/SpacecraftTimeReferenceStatus.acn \
+    common/SpacecraftTimeReferenceStatus.asn1 \
     common/meta.json \
     service-01/ErrorCodes.acn \
     service-01/ErrorCodes.asn1 \
@@ -62,8 +64,6 @@ DISTFILES += \
     ccsds/TC-Payload.asn1 \
     service-09/RateExponentialValue.acn \
     service-09/RateExponentialValue.asn1 \
-    service-09/SpacecraftTimeReferenceStatus.acn \
-    service-09/SpacecraftTimeReferenceStatus.asn1 \
     service-01/Request.acn \
     service-01/Request.asn1 \
     service-02/meta.json \

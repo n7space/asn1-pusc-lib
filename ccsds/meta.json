@@ -35,8 +35,11 @@
             {
               "from": "ApplicationProcess",
               "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "SpacecraftTimeReferenceStatus",
+              "types": ["SpacecraftTimeReferenceStatus"]
             }
-
           ]
         }
       ]

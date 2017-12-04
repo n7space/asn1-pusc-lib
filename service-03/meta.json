@@ -145,7 +145,7 @@
             "PUS-3-35.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatus.asn1"
+            "PeriodicGenerationActionStatus.asn1",
             "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
