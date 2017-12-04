@@ -21,13 +21,18 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-4-9 DEFINITIONS ::= BEGIN
+ParameterStatisticsDefinitions DEFINITIONS AUTOMATIC TAGS::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    Parameter-ID FROM Parameter
+    SamplingInterval FROM Intervals;
 
-TM-4-9-ParameterStatisticsDefinitionReport []
+ParameterStatisticsDefinition ::= ParameterStatisticsDefinitionGeneric {Parameter-ID, SamplingInterval}
+
+ParameterStatisticsDefinitionGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
 {
-    reportingInterval [],
-    n BasicTypes.PUSC-UINT32 [],
-    parameterStatistics [size n]
+    parameter-ID Parameter-ID-Type,
+    samplingInterval SamplingInterval-Type OPTIONAL
 }
 
 END

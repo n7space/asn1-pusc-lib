@@ -21,13 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-4-9 DEFINITIONS ::= BEGIN
+ParameterStatisticsDefinitions DEFINITIONS ::= BEGIN
 
-TM-4-9-ParameterStatisticsDefinitionReport []
+ParameterStatisticsDefinition []
 {
-    reportingInterval [],
-    n BasicTypes.PUSC-UINT32 [],
-    parameterStatistics [size n]
+    parameter-ID [],
+    samplingInterval []
 }
 
 END

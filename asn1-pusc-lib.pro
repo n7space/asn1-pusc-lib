@@ -274,6 +274,8 @@ DISTFILES += \
     service-04/PUS-4-9.asn1 \
     service-08/meta.json \
     service-08/PUS-8-1.acn \
-    service-08/PUS-8-1.asn1
+    service-08/PUS-8-1.asn1 \
+    service-04/ParameterStatisticsDefinitions.acn \
+    service-04/ParameterStatisticsDefinitions.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)

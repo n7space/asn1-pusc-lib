@@ -60,7 +60,7 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
 
 Destination-ID ::= INTEGER (0 .. 65535)
 
-SpacecraftTimeReferenceStatus ::= INTEGER (0 ..15)
+SpacecraftTimeReferenceStatus ::= INTEGER (0 .. 15)
 TM-PacketType ::= NULL
 
 END

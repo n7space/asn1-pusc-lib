@@ -29,10 +29,5 @@ TC-4-6-AddOrUpdateParameterStatisticsDefinitions []
     parameterStatistics [size n]
 }
 
-ParameterStatistics []
-{
-    parameter-ID [],
-    samplingInterval []
-}
 
 END
