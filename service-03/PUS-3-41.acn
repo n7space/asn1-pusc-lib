@@ -37,7 +37,7 @@ TM-3-41-ParameterFunctionalReportingDefinitionReport []
     parameterReportingEntries [size n2]
 }
 
-ApidParameterReportingEntries []
+TM-3-41-ApidParameterReportingEntries []
 {
     applicationProcess-ID [],
     n2 BasicTypes.PUSC-UINT32 [],

@@ -37,7 +37,7 @@ TC-3-38-CreateAParameterFunctionalReportingDefinition []
     parameterReportingEntries [size n2]
 }
 
-ApidParameterReportingEntries []
+TC-3-38-ApidParameterReportingEntries []
 {
     applicationProcess-ID [],
     n2 BasicTypes.PUSC-UINT32 [],
