@@ -73,11 +73,11 @@
           "imports":[
             {
               "from": "Parameter",
-              "types": "Parameter-ID"
+              "types": ["Parameter-ID"]
             },
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             }
           ]
         },
@@ -106,11 +106,11 @@
           "imports":[
             {
               "from": "Parameter",
-              "types": "Parameter-ID"
+              "types": ["Parameter-ID"]
             },
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             }
           ],
           "requires": ["Add or update parameter statistics definitions"]
