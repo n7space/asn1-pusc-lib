@@ -15,7 +15,9 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": [ 
+                "PUSC-UINT32" 
+              ]
             }
           ]
         },
@@ -31,7 +33,7 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": [ "PUSC-UINT32" ]
             }
           ]
         }

@@ -28,14 +28,14 @@ DownlinkPartReport []
 {
     largeMessageTransactionIdentifier [],
     partSequenceNumber [],
-    part [] --[size 1..MAXPARTSIZE] -- suggestion?
+    part []
 }
 
 UplinkPartReport []
 {
     largeMessageTransactionIdentifier [],
     partSequenceNumber [],
-    part [] --[size 1..MAXPARTSIZE] -- suggestion?
+    part []
 }
 
 END

@@ -29,7 +29,6 @@ IMPORTS
 
 TM-13-9-FirstUplinkPartReport ::= SEQUENCE
 {
-    -- message subtype 9 (TM::9)
     firstUplinkPartReport UplinkPartReport
 }
 

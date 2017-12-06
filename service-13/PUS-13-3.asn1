@@ -29,7 +29,6 @@ IMPORTS
 
 TM-13-3-LastDownlinkPartReport ::= SEQUENCE
 {
-    -- message subtype 3 (TM::3)
     lastDownlinkPartReport DownlinkPartReport
 }
 

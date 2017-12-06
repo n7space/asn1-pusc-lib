@@ -29,7 +29,7 @@ IMPORTS
 
 FailureReasonType ::= ENUMERATED
 {
-    reason1, reason2 -- TODO: it's for user-case to define
+    reason1, reason2 --! TODO: it's for user-case to define
 }
 
 TM-13-16-LargePacketUplinkAbortionReport ::= SEQUENCE

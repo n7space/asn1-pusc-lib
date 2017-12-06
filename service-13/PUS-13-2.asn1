@@ -29,7 +29,6 @@ PUS-13-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 
 TM-13-2-IntermediateDownlinkPartReport ::= SEQUENCE
 {
-    -- message subtype 2 (TM::2)
     intermediateDownlinkPartReport DownlinkPartReport
 }
 

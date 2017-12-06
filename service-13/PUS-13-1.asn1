@@ -29,7 +29,6 @@ IMPORTS
 
 TM-13-1-FirstDownlinkPartReport ::= SEQUENCE
 {
-    -- message subtype 1 (TM::1)
     firstDownlinkPartReport DownlinkPartReport
 }
 

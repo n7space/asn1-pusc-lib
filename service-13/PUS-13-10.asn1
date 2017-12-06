@@ -29,7 +29,6 @@ IMPORTS
 
 TM-13-10-IntermediateUplinkPartReport ::= SEQUENCE
 {
-    -- message subtype 10 (TM::10)
     intermediateUplinkPartReport UplinkPartReport
 }
 

@@ -27,19 +27,20 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-    LargeMessageTransactionIdentifierType ::= PUSC-UINT32
+LargeMessageTransactionIdentifierType ::= PUSC-UINT32
 
-    PartReportGeneric { UnsignedInteger, PartType } ::= SEQUENCE
-    {
-        largeMessageTransactionIdentifier LargeMessageTransactionIdentifierType, -- must be unique
-        partSequenceNumber UnsignedInteger,
-        part PartType
-    }
+PartReportGeneric { UnsignedInteger, PartType } ::= SEQUENCE
+{
+    largeMessageTransactionIdentifier LargeMessageTransactionIdentifierType, --! must be unique
+    partSequenceNumber UnsignedInteger,
+    part PartType
+}
 
-    maxPartSizeTransfer INTEGER ::= 4096
+maxPartSizeTransfer INTEGER ::= 4096
 
-    PartSizeOctedStringType ::= OCTET STRING (SIZE(maxPartSizeTransfer))
+PartSizeOctedStringType ::= OCTET STRING (SIZE(maxPartSizeTransfer))
 
-    UplinkPartReport ::= PartReportGeneric {PUSC-UINT32, PartSizeOctedStringType}
-    DownlinkPartReport ::= PartReportGeneric {PUSC-UINT32, PartSizeOctedStringType}
+UplinkPartReport ::= PartReportGeneric {PUSC-UINT32, PartSizeOctedStringType}
+DownlinkPartReport ::= PartReportGeneric {PUSC-UINT32, PartSizeOctedStringType}
+
 END
