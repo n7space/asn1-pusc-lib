@@ -116,7 +116,7 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Parameter",
@@ -134,7 +134,7 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             }
           ]
         },
@@ -270,7 +270,7 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Parameter",
@@ -288,7 +288,7 @@
           "imports": [
             {
               "from": "BasicTypes",
-              "types": "PUSC-UINT32"
+              "types": ["PUSC-UINT32"]
             }
           ]
         },
@@ -317,7 +317,7 @@
           "name": "Apply parameter functional reporting configurations",
           "asn1Files": [
             "PUS-3-37.asn1",
-            "ParameterFunctionalReportingDefinition.asn1" 
+            "ParameterFunctionalReportingDefinition.asn1"
           ],
           "imports": [
             {
