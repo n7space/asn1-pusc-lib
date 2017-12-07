@@ -36,6 +36,10 @@ PartReportGeneric { UnsignedInteger, PartType } ::= SEQUENCE
     part PartType
 }
 
+--! The "maxPartSizeTransfer" should be deduced from ccsds max packet lenght (and header size) and
+--! should be variable depending on subservice number - sbs 11 and 3 require shortened length
+--! depending on another external factor - so it should be of variable length
+--! TODO: refactor this draft to address above changes
 maxPartSizeTransfer INTEGER ::= 4096
 
 PartSizeOctedStringType ::= OCTET STRING (SIZE(maxPartSizeTransfer))
