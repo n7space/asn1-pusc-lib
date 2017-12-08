@@ -21,14 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Request DEFINITIONS ::= BEGIN
+PUS-11-12 DEFINITIONS ::= BEGIN
 
-Request-ID []
+TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier []
 {
-    packetVersionNumber [],
-    packet-ID [],
-    packetSequenceControl []
+    n BasicTypes.PUSC-UINT32 [],
+    request-ID [size n]
 }
-
 
 END

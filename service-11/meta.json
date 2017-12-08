@@ -1,0 +1,414 @@
+{
+  "name": "ST[11] time-based scheduling",
+  "submodules": [
+    {
+      "name": "Time-based scheduling subservice",
+      "elements": [
+        {
+          "name": "Enable the time-based schedule execution function",
+          "asn1Files": [
+            "PUS-11-1.asn1"
+          ]
+        },
+        {
+          "name": "Disable the time-based schedule execution function",
+          "asn1Files": [
+            "PUS-11-2.asn1"
+          ],
+          "requires":[
+            "Enable the time-based schedule execution function"
+          ]
+        },
+        {
+          "name": "Reset the time-based schedule",
+          "asn1Files":[
+            "PUS-11-3.asn1"
+          ]
+        },
+        {
+          "name": "Insert activities into the time-based chedule",
+          "asn1Files":[
+            "PUS-11-4.asn1",
+            "Group.asn1",
+            "Subschedule.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32",
+                "AbsoluteTime"
+              ]
+            },
+            {
+              "from": "Dummy",
+              "types": ["DummyType"]
+            }
+          ]
+        },
+        {
+          "name": "Enable time-based sub-schedules",
+          "asn1Files":[
+            "PUS-11-20.asn1",
+            "Subschedule.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Disable time-based sub-schedules",
+          "asn1Files":[
+            "PUS-11-21.asn1"
+          ],
+          "requires": [
+            "Enable time-based sub-schedules"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Report the status of each time-based sub-schedule",
+          "asn1Files":[
+            "PUS-11-18.asn1",
+            "PUS-11-19.asn1",
+            "Subschedule.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+
+        {
+          "name": "Create time-based scheduling groups",
+          "asn1Files":[
+            "PUS-11-22.asn1",
+            "Group.asn1"
+          ],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Delete time-based scheduling groups",
+          "asn1Files":[
+            "PUS-11-23.asn1",
+            "Group.asn1"
+          ],
+          "requires": ["Create time-based scheduling groups"],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Enable time-based scheduling groups",
+          "asn1Files":[
+            "PUS-11-24.asn1"
+          ],
+          "requires": ["Create time-based scheduling groups"],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Disable time-based scheduling groups",
+          "asn1Files":[
+            "PUS-11-25.asn1"
+          ],
+          "requires": ["Create time-based scheduling groups"],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Report the status of each time-based scheduling group",
+          "asn1Files":[
+            "PUS-11-26.asn1",
+            "PUS-11-27.asn1",
+            "Group.asn1"
+          ],
+          "requires": ["Create time-based scheduling groups"],
+          "imports":[
+            {
+              "from": "BasicTypes",
+              "types": ["PUSC-UINT32"]
+            }
+          ]
+        },
+        {
+          "name": "Time-based schedule summary report",
+          "asn1Files":[
+            "PUS-11-13.asn1",
+            "Subschedule.asn1",
+            "Group.asn1",
+            "ST-11-Request.asn1"
+          ],
+          "imports": [
+            {
+              "from": "Source",
+              "types": ["Source-ID"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32",
+                "AbsoluteTime"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Time-based schedule detaild report",
+          "asn1Files":[
+            "PUS-11-10.asn1",
+            "Group.asn1",
+            "Subschedule"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32",
+                "AbsoluteTime"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Time-shift all scheduled activities",
+          "asn1Files":[
+            "PUS-11-15.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": ["RelativeTime"]
+            }
+          ]
+        },
+        {
+          "name": "Summary-report all time-based scheduled activities",
+          "asn1Files": [
+            "PUS-11-17.asn1"
+          ],
+          "requires": [
+            "Time-based schedule summary report"
+          ]
+        },
+        {
+          "name": "Detail-report all time-based scheduled activities",
+          "asn1Files": [
+            "PUS-11-16.asn1"
+          ],
+          "requires": [
+            "Time-based schedule detaild report"
+          ]
+        },
+        {
+          "name": "Delete time-based scheduled activities identified by request identifier",
+          "asn1Files": [
+            "PUS-11-5.asn1",
+            "ST-11-Request.asn1"
+          ],
+          "imports": [
+            {
+              "from": "Source",
+              "types": ["Source-ID"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Time-shift scheduled activities identified by request identifier",
+          "asn1Files": [
+            "PUS-11-7.asn1",
+            "ST-11-Request.asn1"
+          ],
+          "imports": [
+            {
+              "from": "Source",
+              "types": ["Source-ID"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32",
+                "RelativeTime"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Summary-report time-based scheduled activities identified by request identifier",
+          "asn1Files": [
+            "PUS-11-12.asn1",
+            "ST-11-Request.asn1"
+          ],
+          "imports": [
+            {
+              "from": "Source",
+              "types": ["Source-ID"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32"
+              ]
+            }
+          ],
+          "requires": [
+            "Time-based schedule summary report"
+          ]
+        },
+        {
+          "name": "Detail-report time-based scheduled activities identified by request identifier",
+          "asn1Files": [
+            "PUS-11-9.asn1",
+            "ST-11-Request.asn1"
+          ],
+          "imports": [
+            {
+              "from": "Source",
+              "types": ["Source-ID"]
+            },
+            {
+              "from": "ApplicationProcess",
+              "types": ["ApplicationProcess-ID"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": [
+                "PUSC-UINT32"
+              ]
+            }
+          ],
+          "requires": [
+            "Time-based schedule detaild report"
+          ]
+        },
+        {
+          "name": "Delete the time-based scheduled activities identifier by a filter",
+          "asn1Files": [
+            "PUS-11-6.asn1",
+            "TimeWindow.asn1",
+            "Subchedule.asn1",
+            "Group.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "AbsoluteTime",
+                "PUSC-UINT32"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Time-shift the scheduled activities identified by a filter",
+          "asn1Files": [
+            "PUS-11-8.asn1",
+            "TimeWindow.asn1",
+            "Subchedule.asn1",
+            "Group.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "AbsoluteTime",
+                "PUSC-UINT32",
+                "RelativeTime"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Summary-report the time-based scheduled activities identified by a filter",
+          "asn1Files": [
+            "PUS-11-14.asn1",
+            "TimeWindow.asn1",
+            "Subchedule.asn1",
+            "Group.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "AbsoluteTime",
+                "PUSC-UINT32"
+              ]
+            }
+          ],
+          "requires": [
+            "Time-based schedule summary report"
+          ]
+        },
+        {
+          "name": "Detail-report the time-based scheduled activities identified by a filter",
+          "asn1Files": [
+            "PUS-11-11.asn1",
+            "TimeWindow.asn1",
+            "Subchedule.asn1",
+            "Group.asn1"
+          ],
+          "imports": [
+            {
+              "from": "BasicTypes",
+              "types": [
+                "AbsoluteTime",
+                "PUSC-UINT32"
+              ]
+            }
+          ],
+          "requires": [
+            "Time-based schedule detaild report"
+          ]
+        }
+      ]
+    }
+  ]
+}
