@@ -73,8 +73,6 @@ TC-PacketSecondaryHeader []
 --! spare []
 }
 
-Source-ID [size 16, encoding pos-int, endianness big]
-
 AcknowledgementFlags []
 {
     ackExecutionCompletion [true-value '1'B],
