@@ -25,20 +25,26 @@ TimeWindow DEFINITIONS ::= BEGIN
 IMPORTS
     AbsoluteTime FROM BasicTypes;
 
-TimeWindow ::= TimeWindowGeneric {AbsoluteTime}
-
-TimeWindowGeneric {AbsoluteTimeType} ::= SEQUENCE
+TimeWindow ::= SEQUENCE
 {
-    type TimeWindowType,
-    timeTag1 AbsoluteTimeType OPTIONAL,
-    timeTag2 AbsoluteTimeType OPTIONAL
+--! type TimeWindowType,
+    timeTags  TimeTags
 }
 
-TimeTags {AbsoluteTimeType} ::= SEQUENCE
+TimeTags ::= TimeTagsGeneric {AbsoluteTime}
+
+TimeTagsGeneric {AbsoluteTimeType} ::= CHOICE
 {
+    selectAll NULL,
+    fromTimeTagToTimeTag SEQUENCE
+    {
+        fromTimeTag AbsoluteTimeType,
+        toTimeTag AbsoluteTimeType
+    },
     fromTimeTag AbsoluteTimeType,
     toTimeTag AbsoluteTimeType
 }
+
 
 
 TimeWindowType ::= ENUMERATED

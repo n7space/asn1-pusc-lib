@@ -25,9 +25,16 @@ TimeWindow DEFINITIONS ::= BEGIN
 
 TimeWindow []
 {
-    type [],
-    timeTag1 [],
-    timeTag2 []
+    type TimeWindowType [],
+    timeTags <type> []
+}
+
+TimeTags <TimeWindowType: type> [determinant type]
+{
+    selectAll [],
+    fromTimeTagToTimeTag [],
+    fromTimeTag [],
+    toTimeTag []
 }
 
 TimeWindowType [size 2, encoding pos-int, encode-values]
