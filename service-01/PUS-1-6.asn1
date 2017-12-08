@@ -24,11 +24,11 @@
 PUS-1-6 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request
+    ST-01-Request-ID FROM ST-01-Request
     ExecutionStep-ID FROM ExecutionStep
     ExecutionProgressFailureNotice FROM ErrorCodes;
 
-TM-1-6-FailedProgressOfExecutionVerificationReport ::= TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {Request-ID, ExecutionStep-ID, ExecutionProgressFailureNotice}
+TM-1-6-FailedProgressOfExecutionVerificationReport ::= TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {ST-01-Request-ID, ExecutionStep-ID, ExecutionProgressFailureNotice}
 
 TM-1-6-FailedProgressOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionStep-ID-Type, ExecutionProgressFailureNotice-Type} ::= SEQUENCE
 {

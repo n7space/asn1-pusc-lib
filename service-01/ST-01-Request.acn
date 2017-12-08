@@ -21,16 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-1-7 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    ST-01-Request-ID FROM ST-01-Request;
+ST-01-Request DEFINITIONS ::= BEGIN
 
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {ST-01-Request-ID}
-
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
+ST-01-Request-ID []
 {
-    request-ID Request-ID-Type
+    packetVersionNumber [],
+    packet-ID [],
+    packetSequenceControl []
 }
+
 
 END

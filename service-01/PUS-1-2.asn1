@@ -24,10 +24,10 @@
 PUS-1-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request
+    ST-01-Request-ID FROM ST-01-Request
     AcceptanceFailureNotice FROM ErrorCodes;
 
-TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID, AcceptanceFailureNotice}
+TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {ST-01-Request-ID, AcceptanceFailureNotice}
 
 TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID-Type, AcceptanceFailureNotice-Type} ::= SEQUENCE
 {
