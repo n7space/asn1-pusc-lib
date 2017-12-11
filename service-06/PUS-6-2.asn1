@@ -32,21 +32,21 @@ IMPORTS
 
 maxTC-6-2-DataAreasCount INTEGER ::= 2147483647
 
-TC-6-2-LoadRawMemoryDataAreas ::= TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID}
+TC-6-2-LoadRawMemoryDataAreas ::= TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID, TC-6-2-DataArea}
 
-DataArea ::= DataAreaGeneric {BytePointer, MemoryData}
+TC-6-2-DataArea ::= TC-6-2-DataAreaGeneric {BytePointer, MemoryData}
 
-TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID-Type} ::= SEQUENCE
+TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID-Type, DataArea-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type,
-    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-2-DataAreasCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-2-DataAreasCount)) OF DataArea-Type
 }
 
-DataAreaGeneric {UnsignedInteger-Type, VariableOctetString-Type} ::= SEQUENCE
+TC-6-2-DataAreaGeneric {Address-Type, Data-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger-Type,
-    dataToLoad VariableOctetString-Type,
+    startAddress Address-Type,
+    dataToLoad Data-Type,
     checksum BIT STRING (SIZE (16)) OPTIONAL
 }
 

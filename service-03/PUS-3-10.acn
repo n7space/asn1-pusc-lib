@@ -34,7 +34,7 @@ TM-3-10-HousekeepingParameterReportStructureReport []
     superCommutatedParameterSet [size nfa]
 }
 
-SuperCommutatedParameterSet []
+TM-3-10-SuperCommutatedParameterSet []
 {
     superCommutatedSampleRepetitionNumber [],
     n2 BasicTypes.PUSC-UINT32 [],

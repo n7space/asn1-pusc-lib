@@ -21,12 +21,24 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-35 DEFINITIONS ::= BEGIN
+PeriodicGenerationProperties DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
+    PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
+    CollectionInterval FROM CollectionInterval;
 
-TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport []
+PeriodicGenerationProperties
+  ::= PeriodicGenerationProperties-Generic
+    {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
+
+PeriodicGenerationProperties-Generic
+    {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type}
+  ::= SEQUENCE
 {
-    n BasicTypes.PUSC-UINT32 [],
-    periodicGenerationProperties [size n]
+    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
+    collectionInterval CollectionInterval-Type
 }
 
 END

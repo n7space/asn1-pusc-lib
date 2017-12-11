@@ -26,25 +26,18 @@ EXPORTS ALL;
 IMPORTS
     ReportingInterval, SamplingInterval FROM Intervals
     Parameter-ID FROM Parameter
+    ParameterStatisticsDefinition FROM ParameterStatisticsDefinitions
     PUSC-UINT32 FROM BasicTypes;
 
 maxTM-4-9-ParameterStatisticCount INTEGER ::= 2147483647
 
 TM-4-9-ParameterStatisticsDefinitionReport ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval}
 
-ParameterStatistics ::= ParameterStatisticsGeneric {Parameter-ID, SamplingInterval}
-
 TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval-Type} ::= SEQUENCE
 {
     reportingInterval ReportingInterval-Type OPTIONAL,
 --! n UnsignedInteger, moved to acn
-    parameterStatistics SEQUENCE (SIZE(1 .. maxTM-4-9-ParameterStatisticCount)) OF ParameterStatistics
-}
-
-ParameterStatisticsGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
-{
-    parameter-ID Parameter-ID-Type,
-    samplingInterval SamplingInterval-Type OPTIONAL
+    parameterStatistics SEQUENCE (SIZE(1 .. maxTM-4-9-ParameterStatisticCount)) OF ParameterStatisticsDefinition
 }
 
 END

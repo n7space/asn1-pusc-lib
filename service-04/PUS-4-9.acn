@@ -30,10 +30,4 @@ TM-4-9-ParameterStatisticsDefinitionReport []
     parameterStatistics [size n]
 }
 
-ParameterStatistics []
-{
-    parameter-ID [],
-    samplingInterval []
-}
-
 END

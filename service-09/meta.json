@@ -8,19 +8,29 @@
           "name": "Time reporting in CUC format",
           "asn1Files": [
             "PUS-9-2-CucTimeReport.asn1",
-            "RateExponentialValue.asn1",
-            "SpacecraftTimeReferenceStatus.asn1"
+            "RateExponentialValue.asn1"
           ],
-          "conflicts": ["Time reporting in CDS format"]
+          "conflicts": ["Time reporting in CDS format"],
+          "imports": [
+            {
+              "from": "SpacecraftTimeReferenceStatus",
+              "types": ["SpacecraftTimeReferenceStatus"]
+            }
+          ]
         },
         {
           "name": "Time reporting in CDS format",
           "asn1Files": [
             "PUS-9-3-CdsTimeReport.asn1",
-            "RateExponentialValue.asn1",
-            "SpacecraftTimeReferenceStatus.asn1"
+            "RateExponentialValue.asn1"
           ],
-          "conflicts": ["Time reporting in CUC format"]
+          "conflicts": ["Time reporting in CUC format"],
+          "imports": [
+            {
+              "from": "SpacecraftTimeReferenceStatus",
+              "types": ["SpacecraftTimeReferenceStatus"]
+            }
+          ]
         }
       ]
     },

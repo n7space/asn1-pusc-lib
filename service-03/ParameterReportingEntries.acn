@@ -21,12 +21,14 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-35 DEFINITIONS ::= BEGIN
+ParameterReportingEntries DEFINITIONS ::= BEGIN
 
-TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport []
+ParameterReportingEntries []
 {
-    n BasicTypes.PUSC-UINT32 [],
-    periodicGenerationProperties [size n]
+    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
+    parameterReportStructure-ID <parameterReportStructureType> [],
+    periodicGenerationActionStatus [],
+    collectionInterval []
 }
 
 END

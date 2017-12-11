@@ -145,7 +145,8 @@
             "PUS-3-35.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatus.asn1"
+            "PeriodicGenerationActionStatus.asn1",
+            "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
             {
@@ -299,7 +300,8 @@
             "PUS-3-36.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatusDiagnostics.asn1"
+            "PeriodicGenerationActionStatusDiagnostics.asn1",
+            "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
             {
@@ -329,13 +331,14 @@
         {
           "name": "Create a parameter functional reporting definition",
           "asn1Files": [
-            "PUS-3-38",
+            "PUS-3-38.asn1",
             "ParameterReportStructureType.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "imports": [
             {
@@ -372,7 +375,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "requires": ["Create a parameter functional reporting definition"],
           "imports": [
@@ -395,7 +399,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "requires": ["Create a parameter functional reporting definition"],
           "imports": [
@@ -439,7 +444,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "imports": [
             {

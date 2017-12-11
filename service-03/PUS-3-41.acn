@@ -37,19 +37,11 @@ TM-3-41-ParameterFunctionalReportingDefinitionReport []
     parameterReportingEntries [size n2]
 }
 
-ApidParameterReportingEntries []
+TM-3-41-ApidParameterReportingEntries []
 {
     applicationProcess-ID [],
     n2 BasicTypes.PUSC-UINT32 [],
     parameterReportingEntries [size n2]
-}
-
-ParameterReportingEntries []
-{
-    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
-    parameterReportStructure-ID <parameterReportStructureType> [],
-    periodicGenerationActionStatus [],
-    collectionInterval []
 }
 
 END

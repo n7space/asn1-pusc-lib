@@ -21,12 +21,18 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PUS-3-35 DEFINITIONS ::= BEGIN
+ParameterStatisticsDefinitions DEFINITIONS AUTOMATIC TAGS::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    Parameter-ID FROM Parameter
+    SamplingInterval FROM Intervals;
 
-TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport []
+ParameterStatisticsDefinition ::= ParameterStatisticsDefinitionGeneric {Parameter-ID, SamplingInterval}
+
+ParameterStatisticsDefinitionGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
 {
-    n BasicTypes.PUSC-UINT32 [],
-    periodicGenerationProperties [size n]
+    parameter-ID Parameter-ID-Type,
+    samplingInterval SamplingInterval-Type OPTIONAL
 }
 
 END
