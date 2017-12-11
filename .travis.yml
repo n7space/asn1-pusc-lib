@@ -5,7 +5,7 @@ dist: trusty
 sudo: required
 
 env:
-  - ASN1SCC_VERSION="3.3.23"
+  - ASN1SCC_VERSION="3.3.24"
 
 addons:
   apt:
