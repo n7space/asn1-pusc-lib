@@ -271,6 +271,17 @@ DISTFILES += \
     service-04/PUS-4-8.acn \
     service-04/PUS-4-8.asn1 \
     service-04/PUS-4-9.acn \
-    service-04/PUS-4-9.asn1
+    service-04/PUS-4-9.asn1 \
+    service-13/PUS-13-1.asn1 \
+    service-13/meta.json \
+    service-13/LargeMessageTransaction.acn \
+    service-13/LargeMessageTransaction.asn1 \
+    service-13/PUS-13-2.asn1 \
+    service-13/PUS-13-3.asn1 \
+    service-13/PUS-13-9.asn1 \
+    service-13/PUS-13-10.asn1 \
+    service-13/PUS-13-11.asn1 \
+    service-13/PUS-13-16.asn1 \
+    service-13/PUS-13-16.acn
 
 include(.qmake/handleAsn1AcnBuild.pri)
