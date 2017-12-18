@@ -5,7 +5,9 @@ dist: trusty
 sudo: required
 
 env:
-  - ASN1SCC_VERSION="3.3.24"
+  global:
+    - ASN1SCC_VERSION="3.3.24"
+    - CMOCKA_VERSION="1.1.1"
 
 addons:
   apt:
@@ -14,14 +16,21 @@ addons:
     packages:
     - qt59base
 
-
 install:
-  - cd $HOME
+  - pushd $HOME
   - wget https://github.com/n7mobile/3rdparty-deps/releases/download/asn1scc-${ASN1SCC_VERSION}/asn1scc-${ASN1SCC_VERSION}.tar.bz2
   - tar -xvf asn1scc-${ASN1SCC_VERSION}.tar.bz2
-  - cd -
+  - wget https://cmocka.org/files/1.1/cmocka-${CMOCKA_VERSION}.tar.xz
+  - tar -xf cmocka-${CMOCKA_VERSION}.tar.xz
+  - cd cmocka-${CMOCKA_VERSION}
+  - mkdir build
+  - cd build
+  - cmake ../
+  - make
+  - sudo make install
+  - popd
   - sudo pip install jsonschema
 
 script:
   - . /opt/qt59/bin/qt59-env.sh
-  - PATH=$HOME/asn1scc/:$PATH ./sanity-check.sh
+  - PATH=$HOME/asn1scc/:$PATH LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH ./sanity-check.sh

@@ -1,5 +1,4 @@
-TEMPLATE = lib
-CONFIG += static
+TEMPLATE = app
 CONFIG -= qt
 
 DISTFILES += \
@@ -39,7 +38,7 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-09/meta.json \ 
+    service-09/meta.json \
     service-09/PUS-9-1.acn \
     service-09/PUS-9-1.asn1 \
     service-09/PUS-9-2.acn \
@@ -282,4 +281,44 @@ DISTFILES += \
     service-04/ParameterStatisticsDefinitions.acn \
     service-04/ParameterStatisticsDefinitions.asn1
 
+HEADERS += \
+    wrappers/c/asn1pusclib_globals.h \
+    wrappers/c/Errors.h \
+    wrappers/c/Crc.h \
+    wrappers/c/IsoChecksum.h \
+    wrappers/c/UInt16Coder.h \
+    wrappers/c/PacketLength.h \
+    wrappers/c/PacketErrorControl.h \
+    wrappers/c/tests/CMocka.h \
+    wrappers/c/tests/TestHelper.h \
+    wrappers/c/tests/ErrorsTests.h \
+    wrappers/c/tests/CrcTests.h \
+    wrappers/c/tests/IsoChecksumTests.h \
+    wrappers/c/tests/PacketLengthTests.h \
+    wrappers/c/tests/PacketErrorControlTests.h \
+    wrappers/c/tests/UInt16CoderTests.h
+
+SOURCES += \
+    wrappers/c/Errors.c \
+    wrappers/c/Crc.c \
+    wrappers/c/IsoChecksum.c \
+    wrappers/c/UInt16Coder.c \
+    wrappers/c/PacketLength.c \
+    wrappers/c/PacketErrorControl.c \
+    wrappers/c/tests/ErrorsTests.c \
+    wrappers/c/tests/CrcTests.c \
+    wrappers/c/tests/IsoChecksumTests.c \
+    wrappers/c/tests/UInt16CoderTests.c \
+    wrappers/c/tests/PacketLengthTests.c \
+    wrappers/c/tests/PacketErrorControlTests.c \
+    wrappers/c/tests/test_main.c
+
+LIBS += -lcmocka
+
+linux-g++ {
+    QMAKE_CFLAGS += --std=c99
+}
+
 include(.qmake/handleAsn1AcnBuild.pri)
+
+INCLUDEPATH += $${ASN1SCC_PRODUCTS_DIR}
