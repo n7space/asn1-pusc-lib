@@ -160,6 +160,17 @@ def checkElementCompilationValid(element, element_lib, build_path):
     path = os.path.join(build_path, makeValidFilename(element[NAME_KEY]))
     print (path)
     os.makedirs(path)
+
+    if not dependencies: 
+        return True
+    
+    if checkCCodeGenerationValid(element, dependencies, path) and \
+       checkCompilationValid(element, path)                   and \
+       checkLibraryCreationValid(element, path): 
+        return True
+    else: 
+        return False
+        
     if not dependencies: return True
     if not checkCCodeGenerationValid(element, dependencies, path): return False
     if not checkCompilationValid(element, path): return False
