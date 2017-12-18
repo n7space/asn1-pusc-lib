@@ -74,6 +74,7 @@
           "name": "Add or update parameter statistics definitions",
           "asn1Files": [
             "PUS-4-6.asn1",
+            "ParameterStatisticsDefinitions.asn1",
             "Intervals.asn1"
           ],
           "imports":[
@@ -110,6 +111,7 @@
           "asn1Files": [
             "PUS-4-8.asn1",
             "PUS-4-9.asn1",
+            "ParameterStatisticsDefinitions.asn1",
             "Intervals.asn1"
           ],
           "imports":[

@@ -30,7 +30,7 @@ TC-6-2-LoadRawMemoryDataAreas []
     dataAreas [size n]
 }
 
-DataArea []
+TC-6-2-DataArea []
 {
     startAddress [],
     dataToLoad [],

@@ -33,7 +33,7 @@ TC-3-2-CreateADiagnosticParameterReportStructure []
     superCommutatedParameterSet [size nfa]
 }
 
-SuperCommutatedParameterSet []
+TC-3-2-SuperCommutatedParameterSet []
 {
     superCommutatedSampleRepetitionNumber [],
     n2 BasicTypes.PUSC-UINT32 [],

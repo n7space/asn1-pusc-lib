@@ -21,9 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-SpacecraftTimeReferenceStatus DEFINITIONS AUTOMATIC TAGS::= BEGIN
-EXPORTS ALL;
+SpacecraftTimeReferenceStatus DEFINITIONS ::= BEGIN
 
-SpacecraftTimeReferenceStatus ::= NULL --TODO
+SpacecraftTimeReferenceStatus [size 4, encoding pos-int, endianness big]
 
 END

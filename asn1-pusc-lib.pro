@@ -15,6 +15,8 @@ DISTFILES += \
     common/BasicTypes.asn1 \
     common/ExecutionStep.acn \
     common/ExecutionStep.asn1 \
+    common/SpacecraftTimeReferenceStatus.acn \
+    common/SpacecraftTimeReferenceStatus.asn1 \
     common/meta.json \
     service-01/ErrorCodes.acn \
     service-01/ErrorCodes.asn1 \
@@ -62,8 +64,6 @@ DISTFILES += \
     ccsds/TC-Payload.asn1 \
     service-09/RateExponentialValue.acn \
     service-09/RateExponentialValue.asn1 \
-    service-09/SpacecraftTimeReferenceStatus.acn \
-    service-09/SpacecraftTimeReferenceStatus.asn1 \
     service-01/Request.acn \
     service-01/Request.asn1 \
     service-02/meta.json \
@@ -104,6 +104,10 @@ DISTFILES += \
     service-03/DiagnosticParameterReportStructure.asn1 \
     service-03/HousekeepingParameterReportStructure.acn \
     service-03/HousekeepingParameterReportStructure.asn1 \
+    service-03/ParameterReportingEntries.asn1 \
+    service-03/ParameterReportingEntries.acn \
+    service-03/PeriodicGenerationProperties.asn1 \
+    service-03/PeriodicGenerationProperties.acn \
     common/Parameter.acn \
     common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
@@ -271,6 +275,11 @@ DISTFILES += \
     service-04/PUS-4-8.acn \
     service-04/PUS-4-8.asn1 \
     service-04/PUS-4-9.acn \
-    service-04/PUS-4-9.asn1
+    service-04/PUS-4-9.asn1 \
+    service-08/meta.json \
+    service-08/PUS-8-1.acn \
+    service-08/PUS-8-1.asn1 \
+    service-04/ParameterStatisticsDefinitions.acn \
+    service-04/ParameterStatisticsDefinitions.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)

@@ -19,10 +19,6 @@
               "types": ["ApplicationProcess-ID"]
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
-            },
-            {
               "from": "Dummy",
               "types": ["DummyType"]
             }
@@ -38,10 +34,6 @@
             {
               "from": "ApplicationProcess",
               "types": ["ApplicationProcess-ID"]
-            },
-            {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",
@@ -61,10 +53,6 @@
               "types": ["ApplicationProcess-ID"]
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
-            },
-            {
               "from": "Dummy",
               "types": ["DummyType"]
             }
@@ -82,10 +70,6 @@
             {
               "from": "ApplicationProcess",
               "types": ["ApplicationProcess-ID"]
-            },
-            {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
             },
             {
               "from": "Dummy",

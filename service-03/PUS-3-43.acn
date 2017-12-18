@@ -37,7 +37,7 @@ TC-3-43-RemoveParameterReportDefinitionsFromAParameterFunctionalReportingDefinit
     parameterReportingDefinitions [size n2]
 }
 
-ApidParameterReporingDefinitions []
+TC-3-43-ApidParameterReporingDefinitions []
 {
     applicationProcess-ID [],
     n2 BasicTypes.PUSC-UINT32 [],

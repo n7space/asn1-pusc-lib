@@ -44,12 +44,12 @@ TM-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterRepo
 --! n1 UnsignedInteger-Type, moved to acn
     parameter-ID SEQUENCE (SIZE(0 .. maxTM-3-12-Parameter-ID-Count)) OF Parameter-ID-Type,
 --! nfa UnsignedInteger-Type, moved to acn
-    superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTM-3-12-SuperComutatedParameterSetCount)) OF SuperCommutatedParameterSet
+    superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTM-3-12-SuperComutatedParameterSetCount)) OF TM-3-12-SuperCommutatedParameterSet
 }
 
-SuperCommutatedParameterSet ::= SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
+TM-3-12-SuperCommutatedParameterSet ::= TM-3-12-SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
 
-SuperCommutatedParameterSetGeneric {UnsignedInteger-Type, Parameter-ID-Type} ::= SEQUENCE
+TM-3-12-SuperCommutatedParameterSetGeneric {UnsignedInteger-Type, Parameter-ID-Type} ::= SEQUENCE
 {
     superCommutatedSampleRepetitionNumber UnsignedInteger-Type,
 --! n2 UnsignedInteger-Type, moved to acn

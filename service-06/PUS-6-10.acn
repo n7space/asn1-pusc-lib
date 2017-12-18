@@ -30,7 +30,7 @@ TM-6-10-CheckedRawMemoryDartaReport []
     dataArea [size n]
 }
 
-DataArea []
+TM-6-10-DataArea []
 {
     startAddress [],
     length [],

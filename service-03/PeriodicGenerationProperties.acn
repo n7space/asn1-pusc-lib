@@ -21,8 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-SpacecraftTimeReferenceStatus DEFINITIONS ::= BEGIN
+PeriodicGenerationProperties DEFINITIONS ::= BEGIN
 
-SpacecraftTimeReferenceStatus []
+PeriodicGenerationProperties []
+{
+    diagnosticParameterReportStructure-ID [],
+    periodicGenerationActionStatus [],
+    collectionInterval []
+}
 
 END

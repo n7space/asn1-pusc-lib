@@ -31,22 +31,24 @@ IMPORTS
 
 maxTC-6-20-DataAreaCount INTEGER ::= 2147483647
 
-TC-6-20-DumpRawMemoryDataAreasToFile ::= TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID, FilePath}
+TC-6-20-DumpRawMemoryDataAreasToFile
+  ::= TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID, FilePath, TC-6-20-DataArea}
 
-DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32}
+TC-6-20-DataArea ::= TC-6-20-DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID-Type, FilePath-Type} ::= SEQUENCE
+TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID-Type, FilePath-Type, DataArea-Type}
+  ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
     filePath FilePath-Type,
 --! n UnsignedInteger, moved to acn
-    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-20-DataAreaCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-20-DataAreaCount)) OF DataArea-Type
 }
 
-DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
+TC-6-20-DataAreaGeneric {Address-Type, Length-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger-Type0,
-    length UnsignedInteger-Type1
+    startAddress Address-Type,
+    length Length-Type
 }
 
 END
