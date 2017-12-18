@@ -25,11 +25,11 @@ PUS-11-12 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes
-    ST-11-Request-ID FROM ST-11-Request;
+    Request-ID FROM Request;
 
 maxTC-11-12-Request-ID-Count INTEGER ::= 4095
 
-TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {ST-11-Request-ID}
+TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID}
 
 TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID-Type} ::= SEQUENCE
 {

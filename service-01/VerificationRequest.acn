@@ -21,9 +21,9 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ST-01-Request DEFINITIONS ::= BEGIN
+VerificationRequest DEFINITIONS ::= BEGIN
 
-ST-01-Request-ID []
+VerificationRequest-ID []
 {
     packetVersionNumber [],
     packet-ID [],

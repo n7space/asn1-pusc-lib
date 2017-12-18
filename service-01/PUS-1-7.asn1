@@ -24,9 +24,9 @@
 PUS-1-7 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ST-01-Request-ID FROM ST-01-Request;
+    VerificationRequest-ID FROM VerificationRequest;
 
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {ST-01-Request-ID}
+TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID}
 
 TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {

@@ -32,7 +32,11 @@ IMPORTS
 maxTC-11-8-Group-ID-Count INTEGER ::= 4095
 maxTC-11-8-Subschedule-ID-Count INTEGER ::= 4095
 
-TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilter ::= TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilterGeneric {RelativeTime, TimeWindow}
+TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilter ::= TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilterGeneric {RelativeTime, TimeWindow} (WITH COMPONENTS
+{
+    subschedules PRESENT,
+    groups PRESENT
+})
 
 TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilterGeneric {RelativeTimeType, TimeWindowType} ::= SEQUENCE
 {

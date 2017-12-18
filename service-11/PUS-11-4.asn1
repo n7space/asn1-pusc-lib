@@ -31,7 +31,10 @@ IMPORTS
 
 maxTC-11-4-ActivityCount INTEGER ::= 4095
 
-TC-11-4-InsertActivitiesIntoTheTimebasedSchedule ::= TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID}
+TC-11-4-InsertActivitiesIntoTheTimebasedSchedule ::= TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID} (WITH COMPONENTS
+{
+    subschedule-ID PRESENT
+})
 
 TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID-Type} ::= SEQUENCE
 {
@@ -40,7 +43,10 @@ TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID-Type} ::
     activities SEQUENCE (SIZE(1 .. maxTC-11-4-ActivityCount)) OF TC-11-4-Activity
 }
 
-TC-11-4-Activity ::= TC-11-4-ActivityGeneric {Group-ID, AbsoluteTime, DummyType} --! should be TC-Payload instead of DummyType but it is impossible to parameterize
+TC-11-4-Activity ::= TC-11-4-ActivityGeneric {Group-ID, AbsoluteTime, DummyType} (WITH COMPONENTS --! should be TC-Payload instead of DummyType but it is impossible to parameterize
+{
+    group-ID PRESENT
+})
 
 TC-11-4-ActivityGeneric {Group-ID-Type, AbsoluteTimeType, TC-PacketType} ::= SEQUENCE
 {

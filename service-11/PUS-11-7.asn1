@@ -25,12 +25,12 @@ PUS-11-7 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PUSC-UINT32, RelativeTime FROM BasicTypes
-    ST-11-Request-ID FROM ST-11-Request;
+    Request-ID FROM Request;
 
 
 maxTC-11-7-Request-ID-Count INTEGER ::= 4095
 
-TC-11-7-TimeShiftScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-7-TimeShiftScheduledActivitiesIdentifiedByRequestIdentifierGeneric {RelativeTime, ST-11-Request-ID}
+TC-11-7-TimeShiftScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-7-TimeShiftScheduledActivitiesIdentifiedByRequestIdentifierGeneric {RelativeTime, Request-ID}
 
 TC-11-7-TimeShiftScheduledActivitiesIdentifiedByRequestIdentifierGeneric {RelativeTimeType, Request-ID-Type} ::= SEQUENCE
 {

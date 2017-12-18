@@ -327,15 +327,15 @@ DISTFILES += \
     service-11/Group.asn1 \
     common/Source.acn \
     common/Source.asn1 \
-    service-11/ST-11-Request.acn \
-    service-11/ST-11-Request.asn1 \
-    service-01/ST-01-Request.acn \
-    service-01/ST-01-Request.asn1 \
+    service-11/Request.acn \
+    service-11/Request.asn1 \
     service-11/TimeWindow.acn \
     service-11/TimeWindow.asn1 \
     service-11/PUS-11-6.acn \
     service-11/PUS-11-6.asn1 \
     service-11/PUS-11-8.asn1 \
-    service-11/PUS-11-8.acn
+    service-11/PUS-11-8.acn \
+    service-01/VerificationRequest.acn \
+    service-01/VerificationRequest.asn1
 
 include(.qmake/handleAsn1AcnBuild.pri)

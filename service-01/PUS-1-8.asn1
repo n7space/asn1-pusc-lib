@@ -24,10 +24,10 @@
 PUS-1-8 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ST-01-Request-ID FROM ST-01-Request
+    VerificationRequest-ID FROM VerificationRequest
     ExecutionCompletionFailureNotice FROM ErrorCodes;
 
-TM-1-8-FailedCompletionOfExecutionVerificationReport ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {ST-01-Request-ID, ExecutionCompletionFailureNotice}
+TM-1-8-FailedCompletionOfExecutionVerificationReport ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID, ExecutionCompletionFailureNotice}
 
 TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionCompletionFailureNotice-Type} ::= SEQUENCE
 {

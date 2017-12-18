@@ -27,7 +27,7 @@ IMPORTS
     Subschedule-ID FROM Subschedule
     Group-ID FROM Group
     PUSC-UINT32, AbsoluteTime FROM BasicTypes
-    ST-11-Request-ID FROM ST-11-Request;
+    Request-ID FROM Request;
 
 maxTM-11-13-ReportCount INTEGER ::= 4095
 
@@ -37,7 +37,11 @@ TM-11-13-TimebasedScheduleSummaryReport ::= SEQUENCE
     report SEQUENCE (SIZE(0 .. maxTM-11-13-ReportCount)) OF TM-11-13-Report
 }
 
-TM-11-13-Report ::= TM-11-13-ReportGeneric {Subschedule-ID, Group-ID, AbsoluteTime, ST-11-Request-ID}
+TM-11-13-Report ::= TM-11-13-ReportGeneric {Subschedule-ID, Group-ID, AbsoluteTime, Request-ID} (WITH COMPONENTS
+{
+    subschedule-ID PRESENT,
+    group-ID PRESENT
+})
 
 TM-11-13-ReportGeneric {Subschedule-ID-Type, Group-ID-Type, AbsoluteTimeType, Request-ID-Type} ::= SEQUENCE
 {

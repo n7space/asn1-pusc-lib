@@ -21,13 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ST-11-Request DEFINITIONS ::= BEGIN
+VerificationRequest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
+    TC-PacketType FROM TC-Packet;
 
-ST-11-Request-ID []
+VerificationRequest-ID ::= SEQUENCE
 {
-    source-ID [],
-    applicationProcess-ID [],
-    sequenceCount []
+    packetVersionNumber PacketVersionNumberValue,
+    packet-ID Packet-ID {TC-PacketType},
+    packetSequenceControl PacketSequenceControl
 }
 
 END

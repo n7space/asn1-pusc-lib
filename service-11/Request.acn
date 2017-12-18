@@ -21,19 +21,13 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-ST-11-Request DEFINITIONS ::= BEGIN
-IMPORTS
-    Source-ID FROM Source
-    ApplicationProcess-ID FROM ApplicationProcess
-    PUSC-UINT32, AbsoluteTime FROM BasicTypes;
+Request DEFINITIONS ::= BEGIN
 
-ST-11-Request-ID ::= ST-11-Request-ID-Generic {Source-ID, ApplicationProcess-ID, PUSC-UINT32}
-
-ST-11-Request-ID-Generic {Source-ID-Type, ApplicationProcess-ID-Type, UnsignedIntegerType} ::= SEQUENCE
+Request-ID []
 {
-    source-ID Source-ID-Type,
-    applicationProcess-ID ApplicationProcess-ID-Type,
-    sequenceCount UnsignedIntegerType
+    source-ID [],
+    applicationProcess-ID [],
+    sequenceCount []
 }
 
 END

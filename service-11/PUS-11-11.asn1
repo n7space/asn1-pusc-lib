@@ -32,7 +32,11 @@ IMPORTS
 maxTC-11-11-Group-ID-Count INTEGER ::= 4095
 maxTC-11-11-Subschedule-ID-Count INTEGER ::= 4095
 
-TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilter ::= TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindow}
+TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilter ::= TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindow} (WITH COMPONENTS
+{
+    subschedules PRESENT,
+    groups PRESENT
+})
 
 TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindowType} ::= SEQUENCE
 {

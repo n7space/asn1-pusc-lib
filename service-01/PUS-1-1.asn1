@@ -24,9 +24,9 @@
 PUS-1-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ST-01-Request-ID FROM ST-01-Request;
+    VerificationRequest-ID FROM VerificationRequest;
 
-TM-1-1-SuccessfulAcceptanceVerificationReport ::= TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {ST-01-Request-ID}
+TM-1-1-SuccessfulAcceptanceVerificationReport ::= TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {VerificationRequest-ID}
 
 TM-1-1-SuccessfulAcceptanceVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {
