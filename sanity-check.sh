@@ -22,11 +22,18 @@ printf "\n\nDownloading general info schema...\n"
 (cd ${OUT_DIR} && wget --no-cache ${URL}/${GENERAL_SCHEMA_FILE}) \
     || { echo "Error getting general json-schema" ; exit 1 ; }
 
-printf "\n\nValidating modules metadata...\n"
+printf "\n\nValidating modules metadata json structure...\n"
 (find . -name meta.json -print0 \
         | xargs --verbose -I{} -0 jsonschema -i {} ${OUT_DIR}/${MODULE_SCHEMA_FILE}) \
-    || { echo  "Error validating module's metadata" ; exit 1 ; }
+    || { echo  "Error validating module's metadata json structure" ; exit 1 ; }
 
-printf "\n\nValidating general info...\n"
+printf "\n\nValidating general info json structure...\n"
 jsonschema -i info.json ${OUT_DIR}/${GENERAL_SCHEMA_FILE} \
-    || { echo "Error validating general metadata" ; exit 1 ; }
+    || { echo "Error validating general metadata json structure" ; exit 1 ; }
+
+printf "\n\nValidating modules metadata...\n"
+(python3 -i metadata_validator.py \
+    || { echo "Error validating module's metadata" ; exit 1;}
+
+printf "\n\nSanity check passed"
+
