@@ -24,6 +24,6 @@
 PUS-11-1 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 
-TC-11-1-EnableTheTimebasedScheduleExecutionFunction ::= NULL
+TC-11-1-EnableTheTimeBasedScheduleExecutionFunction ::= NULL
 
 END

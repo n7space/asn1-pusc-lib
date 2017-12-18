@@ -26,11 +26,11 @@ EXPORTS ALL;
 IMPORTS
     TimeWindow FROM TimeWindow
     PUSC-UINT32, RelativeTime FROM BasicTypes
-    Subschedule-ID FROM Subschedule
+    SubSchedule-ID FROM SubSchedule
     Group-ID FROM Group;
 
 maxTC-11-8-Group-ID-Count INTEGER ::= 4095
-maxTC-11-8-Subschedule-ID-Count INTEGER ::= 4095
+maxTC-11-8-SubSchedule-ID-Count INTEGER ::= 4095
 
 TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilter ::= TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilterGeneric {RelativeTime, TimeWindow} (WITH COMPONENTS
 {
@@ -42,17 +42,17 @@ TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilterGeneric {RelativeTimeT
 {
     timeOffset RelativeTimeType,
     timeWindow TimeWindowType,
-    subschedules TC-11-8-Subschedules OPTIONAL,
+    subschedules TC-11-8-SubSchedules OPTIONAL,
     groups TC-11-8-Groups OPTIONAL
 }
 
-TC-11-8-Subschedules ::= TC-11-8-SubschedulesGeneric {Subschedule-ID}
+TC-11-8-SubSchedules ::= TC-11-8-SubSchedulesGeneric {SubSchedule-ID}
 TC-11-8-Groups ::= TC-11-8-GroupsGeneric {Group-ID}
 
-TC-11-8-SubschedulesGeneric {Subschedule-ID-Type} ::= SEQUENCE
+TC-11-8-SubSchedulesGeneric {SubSchedule-ID-Type} ::= SEQUENCE
 {
 --! n1 UnsignedInteger,
-    subschedule-ID SEQUENCE (SIZE(0 .. maxTC-11-8-Subschedule-ID-Count)) OF Subschedule-ID-Type
+    subschedule-ID SEQUENCE (SIZE(0 .. maxTC-11-8-SubSchedule-ID-Count)) OF SubSchedule-ID-Type
 }
 
 TC-11-8-GroupsGeneric {Group-ID-Type} ::= SEQUENCE

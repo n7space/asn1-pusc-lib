@@ -23,14 +23,14 @@
 
 PUS-11-11 DEFINITIONS ::= BEGIN
 
-TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilter []
+TC-11-11-DataReportTheTimeBasedScheduledActivitiedIdentifiedByAFilter []
 {
     timeWindow [],
     subschedules  [],
     groups []
 }
 
-TC-11-11-Subschedules []
+TC-11-11-SubSchedules []
 {
     n1 BasicTypes.PUSC-UINT32 [],
     subschedule-ID [size n1]

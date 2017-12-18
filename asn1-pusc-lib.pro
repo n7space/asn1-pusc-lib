@@ -321,8 +321,8 @@ DISTFILES += \
     service-11/PUS-11-14.asn1 \
     service-11/PUS-11-11.acn \
     service-11/PUS-11-11.asn1 \
-    service-11/Subschedule.acn \
-    service-11/Subschedule.asn1 \
+    service-11/SubSchedule.acn \
+    service-11/SubSchedule.asn1 \
     service-11/Group.acn \
     service-11/Group.asn1 \
     common/Source.acn \

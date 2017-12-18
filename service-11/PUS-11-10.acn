@@ -23,7 +23,7 @@
 
 PUS-11-10 DEFINITIONS ::= BEGIN
 
-TM-11-10-TimebasedScheduleDetailReport []
+TM-11-10-TimeBasedScheduleDetailReport []
 {
     n BasicTypes.PUSC-UINT32 [],
     report [size n]

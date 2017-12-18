@@ -26,32 +26,32 @@ EXPORTS ALL;
 IMPORTS
     TimeWindow FROM TimeWindow
     PUSC-UINT32 FROM BasicTypes
-    Subschedule-ID FROM Subschedule
+    SubSchedule-ID FROM SubSchedule
     Group-ID FROM Group;
 
 maxTC-11-11-Group-ID-Count INTEGER ::= 4095
-maxTC-11-11-Subschedule-ID-Count INTEGER ::= 4095
+maxTC-11-11-SubSchedule-ID-Count INTEGER ::= 4095
 
-TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilter ::= TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindow} (WITH COMPONENTS
+TC-11-11-DataReportTheTimeBasedScheduledActivitiedIdentifiedByAFilter ::= TC-11-11-DataReportTheTimeBasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindow} (WITH COMPONENTS
 {
     subschedules PRESENT,
     groups PRESENT
 })
 
-TC-11-11-DataReportTheTimebasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindowType} ::= SEQUENCE
+TC-11-11-DataReportTheTimeBasedScheduledActivitiedIdentifiedByAFilterGeneric {TimeWindowType} ::= SEQUENCE
 {
     timeWindow TimeWindowType,
-    subschedules TC-11-11-Subschedules OPTIONAL,
+    subschedules TC-11-11-SubSchedules OPTIONAL,
     groups TC-11-11-Groups OPTIONAL
 }
 
-TC-11-11-Subschedules ::= TC-11-11-SubschedulesGeneric {Subschedule-ID}
+TC-11-11-SubSchedules ::= TC-11-11-SubSchedulesGeneric {SubSchedule-ID}
 TC-11-11-Groups ::= TC-11-11-GroupsGeneric {Group-ID}
 
-TC-11-11-SubschedulesGeneric {Subschedule-ID-Type} ::= SEQUENCE
+TC-11-11-SubSchedulesGeneric {SubSchedule-ID-Type} ::= SEQUENCE
 {
 --! n1 UnsignedInteger,
-    subschedule-ID SEQUENCE (SIZE(0 .. maxTC-11-11-Subschedule-ID-Count)) OF Subschedule-ID-Type
+    subschedule-ID SEQUENCE (SIZE(0 .. maxTC-11-11-SubSchedule-ID-Count)) OF SubSchedule-ID-Type
 }
 
 TC-11-11-GroupsGeneric {Group-ID-Type} ::= SEQUENCE

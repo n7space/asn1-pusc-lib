@@ -29,9 +29,9 @@ IMPORTS
 
 maxTC-11-23-GroupCount INTEGER ::= 4095
 
-TC-11-32-DeleteTimebasedSchedulingGroups ::= TC-11-23-DeleteTimebasedSchedulingGroupsGeneric {Group-ID}
+TC-11-32-DeleteTimeBasedSchedulingGroups ::= TC-11-23-DeleteTimeBasedSchedulingGroupsGeneric {Group-ID}
 
-TC-11-23-DeleteTimebasedSchedulingGroupsGeneric {Group-ID-Type} ::= SEQUENCE
+TC-11-23-DeleteTimeBasedSchedulingGroupsGeneric {Group-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     groups SEQUENCE (SIZE(0 .. maxTC-11-23-GroupCount)) OF Group-ID-Type

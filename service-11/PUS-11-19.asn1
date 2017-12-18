@@ -25,22 +25,22 @@ PUS-11-19 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes
-    Subschedule-ID, SubscheduleStatus FROM Subschedule;
+    SubSchedule-ID, SubScheduleStatus FROM SubSchedule;
 
 maxTM-11-19-StatusCount INTEGER ::= 4095
 
-TM-11-19-TimebasedSubscheduleStatusReport ::= SEQUENCE
+TM-11-19-TimeBasedSubScheduleStatusReport ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     subscheduleStatuses  SEQUENCE (SIZE(0 .. maxTM-11-19-StatusCount)) OF TM-11-19-Status
 }
 
-TM-11-19-Status ::= TM-11-19-StatusGeneric {Subschedule-ID, SubscheduleStatus}
+TM-11-19-Status ::= TM-11-19-StatusGeneric {SubSchedule-ID, SubScheduleStatus}
 
-TM-11-19-StatusGeneric {Subschedule-ID-Type, SubscheduleStatusType} ::= SEQUENCE
+TM-11-19-StatusGeneric {SubSchedule-ID-Type, SubScheduleStatusType} ::= SEQUENCE
 {
-    subschedule-ID Subschedule-ID-Type,
-    subscheduleStatus SubscheduleStatusType
+    subschedule-ID SubSchedule-ID-Type,
+    subscheduleStatus SubScheduleStatusType
 }
 
 

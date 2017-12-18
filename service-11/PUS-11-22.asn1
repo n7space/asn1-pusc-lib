@@ -29,7 +29,7 @@ IMPORTS
 
 maxTC-11-22-GroupCount INTEGER ::= 4095
 
-TC-11-22-CreateTimebasedSchedulingGroups ::= SEQUENCE
+TC-11-22-CreateTimeBasedSchedulingGroups ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     groups SEQUENCE (SIZE(1 .. maxTC-11-22-GroupCount)) OF TC-11-22-Group

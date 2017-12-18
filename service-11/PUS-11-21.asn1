@@ -23,17 +23,17 @@
 
 PUS-11-21 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 IMPORTS
-    Subschedule-ID FROM Subschedule
+    SubSchedule-ID FROM SubSchedule
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-11-21-SubscheduleCount INTEGER ::= 4095
+maxTC-11-21-SubScheduleCount INTEGER ::= 4095
 
-TC-11-21-DisableTimebasedSubschedules ::= TC-11-21-DisableTimebasedSubschedulesGeneric {Subschedule-ID}
+TC-11-21-DisableTimeBasedSubSchedules ::= TC-11-21-DisableTimeBasedSubSchedulesGeneric {SubSchedule-ID}
 
-TC-11-21-DisableTimebasedSubschedulesGeneric {Subschedule-ID-Type} ::= SEQUENCE
+TC-11-21-DisableTimeBasedSubSchedulesGeneric {SubSchedule-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
-    subschedules SEQUENCE (SIZE(0 .. maxTC-11-21-SubscheduleCount )) OF Subschedule-ID-Type
+    subschedules SEQUENCE (SIZE(0 .. maxTC-11-21-SubScheduleCount )) OF SubSchedule-ID-Type
 }
 
 END

@@ -24,6 +24,6 @@
 PUS-11-26 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-TC-11-26-ReportTheStatusOfEachTimebasedSchedulingGroup ::= NULL
+TC-11-26-ReportTheStatusOfEachTimeBasedSchedulingGroup ::= NULL
 
 END

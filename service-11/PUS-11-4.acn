@@ -23,7 +23,7 @@
 
 PUS-11-4 DEFINITIONS ::= BEGIN
 
-TC-11-4-InsertActivitiesIntoTheTimebasedSchedule []
+TC-11-4-InsertActivitiesIntoTheTimeBasedSchedule []
 {
     subschedule-ID [],
     n BasicTypes.PUSC-UINT32 [],

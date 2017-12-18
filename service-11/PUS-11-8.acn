@@ -31,7 +31,7 @@ TC-11-8-TimeShiftTheScheduledActivitiesIdentifiedByAFilter []
     groups []
 }
 
-TC-11-8-Subschedules []
+TC-11-8-SubSchedules []
 {
     n1 BasicTypes.PUSC-UINT32 [],
     subschedule-ID [size n1]

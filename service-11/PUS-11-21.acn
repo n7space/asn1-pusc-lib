@@ -23,7 +23,7 @@
 
 PUS-11-21 DEFINITIONS ::= BEGIN
 
-TC-11-21-DisableTimebasedSubschedules []
+TC-11-21-DisableTimeBasedSubSchedules []
 {
     n BasicTypes.PUSC-UINT32 [],
     subschedules [size n]

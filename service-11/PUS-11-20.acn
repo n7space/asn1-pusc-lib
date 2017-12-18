@@ -23,7 +23,7 @@
 
 PUS-11-20 DEFINITIONS ::= BEGIN
 
-TC-11-20-EnableTimebasedSubschedules []
+TC-11-20-EnableTimeBasedSubSchedules []
 {
     n BasicTypes.PUSC-UINT32 [],
     subschedules [size n]

@@ -21,15 +21,10 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Subschedule DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+SubSchedule DEFINITIONS ::= BEGIN
 
-Subschedule-ID ::= INTEGER (0 .. 4294967295)
+SubSchedule-ID [size 32, encoding pos-int, endianness big]
 
-SubscheduleStatus ::= ENUMERATED
-{
-    disabled(0),
-    enabled(1)
-}
+SubScheduleStatus [size 1, encoding pos-int, encode-values]
 
 END

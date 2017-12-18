@@ -24,21 +24,21 @@
 PUS-11-4 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Subschedule-ID FROM Subschedule
+    SubSchedule-ID FROM SubSchedule
     Group-ID FROM Group
     DummyType FROM Dummy
     PUSC-UINT32, AbsoluteTime FROM BasicTypes;
 
 maxTC-11-4-ActivityCount INTEGER ::= 4095
 
-TC-11-4-InsertActivitiesIntoTheTimebasedSchedule ::= TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID} (WITH COMPONENTS
+TC-11-4-InsertActivitiesIntoTheTimeBasedSchedule ::= TC-11-4-InsertActivitiesIntoTheTimeBasedScheduleGeneric {SubSchedule-ID} (WITH COMPONENTS
 {
     subschedule-ID PRESENT
 })
 
-TC-11-4-InsertActivitiesIntoTheTimebasedScheduleGeneric {Subschedule-ID-Type} ::= SEQUENCE
+TC-11-4-InsertActivitiesIntoTheTimeBasedScheduleGeneric {SubSchedule-ID-Type} ::= SEQUENCE
 {
-    subschedule-ID Subschedule-ID OPTIONAL,
+    subschedule-ID SubSchedule-ID OPTIONAL,
 --! n UnsignedInteger, moved to acn
     activities SEQUENCE (SIZE(1 .. maxTC-11-4-ActivityCount)) OF TC-11-4-Activity
 }

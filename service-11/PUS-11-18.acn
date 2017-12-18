@@ -23,6 +23,6 @@
 
 PUS-11-18 DEFINITIONS ::= BEGIN
 
-TC-11-18-ReportTheStatusOfEachTimebasedSubschedule []
+TC-11-18-ReportTheStatusOfEachTimeBasedSubSchedule []
 
 END

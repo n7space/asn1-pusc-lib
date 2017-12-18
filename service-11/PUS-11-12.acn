@@ -23,7 +23,7 @@
 
 PUS-11-12 DEFINITIONS ::= BEGIN
 
-TC-11-12-SummaryReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier []
+TC-11-12-SummaryReportTimeBasedScheduledActivitiesIdentifiedByRequestIdentifier []
 {
     n BasicTypes.PUSC-UINT32 [],
     request-ID [size n]

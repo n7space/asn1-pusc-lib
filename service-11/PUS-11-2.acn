@@ -23,6 +23,6 @@
 
 PUS-11-2 DEFINITIONS ::= BEGIN
 
-TC-11-2-DisableTheTimebasedScheduleExecutionFunction []
+TC-11-2-DisableTheTimeBasedScheduleExecutionFunction []
 
 END

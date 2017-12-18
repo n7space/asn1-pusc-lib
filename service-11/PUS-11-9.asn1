@@ -29,9 +29,9 @@ IMPORTS
 
 maxTC-11-9-Request-ID-Count INTEGER ::= 4095
 
-TC-11-9-DetailReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-9-DetailReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID}
+TC-11-9-DetailReportTimeBasedScheduledActivitiesIdentifiedByRequestIdentifier ::= TC-11-9-DetailReportTimeBasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID}
 
-TC-11-9-DetailReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID-Type} ::= SEQUENCE
+TC-11-9-DetailReportTimeBasedScheduledActivitiesIdentifiedByRequestIdentifierGeneric {Request-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger,
     request-ID SEQUENCE (SIZE(1 .. maxTC-11-9-Request-ID-Count)) OF Request-ID-Type

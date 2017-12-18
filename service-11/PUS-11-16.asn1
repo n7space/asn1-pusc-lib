@@ -24,6 +24,6 @@
 PUS-11-16 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-TC-11-16-DetailReportAllTimebasedScheduledActivities ::= NULL
+TC-11-16-DetailReportAllTimeBasedScheduledActivities ::= NULL
 
 END

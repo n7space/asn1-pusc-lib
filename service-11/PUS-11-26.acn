@@ -23,6 +23,6 @@
 
 PUS-11-26 DEFINITIONS ::= BEGIN
 
-TC-11-26-ReportTheStatusOfEachTimebasedSchedulingGroup []
+TC-11-26-ReportTheStatusOfEachTimeBasedSchedulingGroup []
 
 END

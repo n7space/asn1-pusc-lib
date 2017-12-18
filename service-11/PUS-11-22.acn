@@ -23,7 +23,7 @@
 
 PUS-11-22 DEFINITIONS ::= BEGIN
 
-TC-11-22-CreateTimebasedSchedulingGroups []
+TC-11-22-CreateTimeBasedSchedulingGroups []
 {
     n BasicTypes.PUSC-UINT32 [],
     groups [size n]

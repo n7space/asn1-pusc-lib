@@ -30,7 +30,7 @@ IMPORTS
 
 maxTM-11-27-StatusCount INTEGER ::= 4095
 
-TM-11-27-TimebasedSchedulingGroupStatusReport ::= SEQUENCE
+TM-11-27-TimeBasedSchedulingGroupStatusReport ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     groupStatuses  SEQUENCE (SIZE(0 .. maxTM-11-27-StatusCount)) OF TM-11-19-Status

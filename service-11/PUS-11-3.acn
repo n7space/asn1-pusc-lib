@@ -23,6 +23,6 @@
 
 PUS-11-3 DEFINITIONS ::= BEGIN
 
-TC-11-3-ResetTheTimebasedSchedule []
+TC-11-3-ResetTheTimeBasedSchedule []
 
 END

@@ -23,7 +23,7 @@
 
 PUS-11-5 DEFINITIONS ::= BEGIN
 
-TC-11-5-DeleteTimebasedScheduledActivitiesIdentifiedByRequestIdentifier []
+TC-11-5-DeleteTimeBasedScheduledActivitiesIdentifiedByRequestIdentifier []
 {
     n BasicTypes.PUSC-UINT32 [],
     request-ID [size n]

@@ -29,9 +29,9 @@ IMPORTS
 
 maxTC-11-24-GroupCount INTEGER ::= 4095
 
-TC-11-24-EnableTimebasedSchedulingGroups ::= TC-11-24-EnableTimebasedSchedulingGroupsGeneric {Group-ID}
+TC-11-24-EnableTimeBasedSchedulingGroups ::= TC-11-24-EnableTimeBasedSchedulingGroupsGeneric {Group-ID}
 
-TC-11-24-EnableTimebasedSchedulingGroupsGeneric {Group-ID-Type} ::= SEQUENCE
+TC-11-24-EnableTimeBasedSchedulingGroupsGeneric {Group-ID-Type} ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     groups SEQUENCE (SIZE(0 .. maxTC-11-24-GroupCount)) OF Group-ID-Type

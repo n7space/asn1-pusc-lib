@@ -23,6 +23,6 @@
 
 PUS-11-1 DEFINITIONS ::= BEGIN
 
-TC-11-1-EnableTheTimebasedScheduleExecutionFunction []
+TC-11-1-EnableTheTimeBasedScheduleExecutionFunction []
 
 END

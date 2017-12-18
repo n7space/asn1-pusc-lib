@@ -23,14 +23,14 @@
 
 PUS-11-6 DEFINITIONS ::= BEGIN
 
-TC-11-6-DeleteTheTimebasedScheduledActivitiesIdentifiedByAFilter []
+TC-11-6-DeleteTheTimeBasedScheduledActivitiesIdentifiedByAFilter []
 {
     timeWindow [],
     subschedules  [],
     groups []
 }
 
-TC-11-6-Subschedules []
+TC-11-6-SubSchedules []
 {
     n1 BasicTypes.PUSC-UINT32 [],
     subschedule-ID [size n1]

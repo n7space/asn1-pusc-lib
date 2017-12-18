@@ -23,6 +23,6 @@
 
 PUS-11-17 DEFINITIONS ::= BEGIN
 
-TC-11-17-SummaryReportAllTimebasedScheduledActivities []
+TC-11-17-SummaryReportAllTimeBasedScheduledActivities []
 
 END

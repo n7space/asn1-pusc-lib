@@ -23,7 +23,7 @@
 
 PUS-11-9 DEFINITIONS ::= BEGIN
 
-TC-11-9-DetailReportTimebasedScheduledActivitiesIdentifiedByRequestIdentifier []
+TC-11-9-DetailReportTimeBasedScheduledActivitiesIdentifiedByRequestIdentifier []
 {
     n BasicTypes.PUSC-UINT32 [],
     request-ID [size n]

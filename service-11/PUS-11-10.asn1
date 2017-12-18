@@ -25,19 +25,19 @@ PUS-11-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     DummyType FROM Dummy
-    Subschedule-ID FROM Subschedule
+    SubSchedule-ID FROM SubSchedule
     Group-ID FROM Group
     PUSC-UINT32, AbsoluteTime FROM BasicTypes;
 
 maxTM-11-10-ReportCount INTEGER ::= 4095
 
-TM-11-10-TimebasedScheduleDetailReport ::= SEQUENCE
+TM-11-10-TimeBasedScheduleDetailReport ::= SEQUENCE
 {
 --! n UnsignedInteger, moved to acn
     report SEQUENCE (SIZE(1 .. maxTM-11-10-ReportCount)) OF TM-11-10-Report
 }
 
-TM-11-10-Report ::= TM-11-10-ReportGeneric {Subschedule-ID, Group-ID, AbsoluteTime, DummyType} (WITH COMPONENTS
+TM-11-10-Report ::= TM-11-10-ReportGeneric {SubSchedule-ID, Group-ID, AbsoluteTime, DummyType} (WITH COMPONENTS
 {
     subschedule-ID PRESENT,
     group-ID PRESENT
@@ -45,9 +45,9 @@ TM-11-10-Report ::= TM-11-10-ReportGeneric {Subschedule-ID, Group-ID, AbsoluteTi
    -- request
 })
 
-TM-11-10-ReportGeneric {Subschedule-ID-Type, Group-ID-Type, AbsoluteTimeType, TC-PacketType} ::= SEQUENCE
+TM-11-10-ReportGeneric {SubSchedule-ID-Type, Group-ID-Type, AbsoluteTimeType, TC-PacketType} ::= SEQUENCE
 {
-    subschedule-ID Subschedule-ID-Type OPTIONAL,
+    subschedule-ID SubSchedule-ID-Type OPTIONAL,
     group-ID Group-ID-Type OPTIONAL,
     releaseTime AbsoluteTimeType,
     request TC-PacketType

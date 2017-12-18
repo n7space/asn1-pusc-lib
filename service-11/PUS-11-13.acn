@@ -23,7 +23,7 @@
 
 PUS-11-13 DEFINITIONS ::= BEGIN
 
-TM-11-13-TimebasedScheduleSummaryReport []
+TM-11-13-TimeBasedScheduleSummaryReport []
 {
     n BasicTypes.PUSC-UINT32 [],
     report [size n]

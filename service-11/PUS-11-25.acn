@@ -23,7 +23,7 @@
 
 PUS-11-25 DEFINITIONS ::= BEGIN
 
-TC-11-25-DisableTimebasedSchedulingGroups []
+TC-11-25-DisableTimeBasedSchedulingGroups []
 {
     n BasicTypes.PUSC-UINT32 [],
     groups [size n]

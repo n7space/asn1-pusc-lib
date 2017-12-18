@@ -24,6 +24,6 @@
 PUS-11-3 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-TC-11-3-ResetTheTimebasedSchedule ::= NULL
+TC-11-3-ResetTheTimeBasedSchedule ::= NULL
 
 END

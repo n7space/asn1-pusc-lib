@@ -23,7 +23,7 @@
 
 PUS-11-27 DEFINITIONS ::= BEGIN
 
-TM-11-27-TimebasedSchedulingGroupStatusReport []
+TM-11-27-TimeBasedSchedulingGroupStatusReport []
 {
     n BasicTypes.PUSC-UINT32 [],
     groupStatuses [size n]

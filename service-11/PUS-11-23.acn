@@ -23,7 +23,7 @@
 
 PUS-11-23 DEFINITIONS ::= BEGIN
 
-TC-11-32-DeleteTimebasedSchedulingGroups []
+TC-11-32-DeleteTimeBasedSchedulingGroups []
 {
     n BasicTypes.PUSC-UINT32 [],
     groups [size n]

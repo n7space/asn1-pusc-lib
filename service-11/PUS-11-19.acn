@@ -23,7 +23,7 @@
 
 PUS-11-19 DEFINITIONS ::= BEGIN
 
-TM-11-19-TimebasedSubscheduleStatusReport []
+TM-11-19-TimeBasedSubScheduleStatusReport []
 {
     n BasicTypes.PUSC-UINT32 [],
     subscheduleStatuses [size n]
