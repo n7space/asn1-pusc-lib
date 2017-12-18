@@ -32,7 +32,7 @@ METADATA_PATH_KEY = "meta_path"
 ASN1SCC = "asn1.exe"
 ASN1SCC_ARGS = "-ACN -c"
 CC = "gcc"
-CC_ARGS = "-c -pipe -O2 -fPIC -Wall -W"
+CC_ARGS = "-c -pipe -O2 -fPIC -w"
 AR = "ar"
 AR_ARGS = "cqs"
 AR_OUT_PATH = BUILD_PATH
@@ -53,10 +53,10 @@ SUCCESS_CODE = 0
 
 def logError(element, message, details):
     path = os.path.join(element[METADATA_PATH_KEY], METADATA_FILENAME)
-    filepath = os.path.join(BUILD_PATH, ERRORLOG_FILE)
+    #filepath = os.path.join(BUILD_PATH, ERRORLOG_FILE)
     print("\033[1;37;49m%s: \033[1;31;49m%s: \033[0;37;49m%s\033[0;37;0m" % (path, message, details))
-    with open(filepath, "a+") as f:
-        f.write("path" + ": " + message + ": " + details)
+    #with open(filepath, "a+") as f:
+    #    f.write("path" + ": " + message + ": " + details)
 
 
 def getRecursiveDependency(element, element_lib):
@@ -130,7 +130,7 @@ def checkCCodeGenerationValid(element, files, path):
         logError(element, CODE_GENERATION_ERROR_MESSAGE, element[NAME_KEY])
         return False
     else:
-        return True
+        return True 
 
 
 def compileFile(src, path):
@@ -155,9 +155,9 @@ def checkLibraryCreationValid(element, path):
         return True
 
 
-def checkElementCompilationValid(element, element_lib):
+def checkElementCompilationValid(element, element_lib, build_path):
     dependencies = set(getRecursiveDependency(element, element_lib))
-    path = os.path.join(BUILD_PATH, makeValidFilename(element[NAME_KEY]))
+    path = os.path.join(build_path, makeValidFilename(element[NAME_KEY]))
     print (path)
     os.makedirs(path)
     if not dependencies: return True
@@ -166,8 +166,8 @@ def checkElementCompilationValid(element, element_lib):
     if not checkLibraryCreationValid(element, path): return False
     return True
 
-def checkCodeValid(element_lib):
-    return all(checkElementCompilationValid(element, element_lib) for element in element_lib)
+def checkCodeValid(element_lib, build_path):
+    return all(checkElementCompilationValid(element, element_lib, build_path) for element in element_lib)
 
 
 def loadLibrary(path):
@@ -188,17 +188,17 @@ def loadLibrary(path):
     return element_lib
 
 
-def validateMetadata():
+def validateMetadata(library_path=LIBRARY_PATH, build_path=BUILD_PATH):
     try:
-        if(os.path.isdir(BUILD_PATH)):
-            shutil.rmtree(BUILD_PATH)
+        if(os.path.isdir(build_path)):
+            shutil.rmtree(build_path)
 
-        os.makedirs(BUILD_PATH)
+        os.makedirs(build_path)
     except OSError:
-        print("Error when creating directory: %s" % (BUILD_PATH))
+        print("Error when creating directory: %s" % (build_path))
         return ERROR_CODE
     
-    element_lib = loadLibrary(LIBRARY_PATH)
+    element_lib = loadLibrary(library_path)
 
     print("\nVerifying internal metadata dependencies")
     if checkInternalDependenciesValid(element_lib):
@@ -215,7 +215,7 @@ def validateMetadata():
         return ERROR_CODE
 
     print("\nGenerating and building C files")
-    if checkCodeValid(element_lib):
+    if checkCodeValid(element_lib, build_path):
         print(VALIDATION_PASSED_MESSAGE)
     else:
         print(VALIDATION_FAILED_MESSAGE)
