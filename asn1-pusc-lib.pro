@@ -106,8 +106,6 @@ DISTFILES += \
     service-03/HousekeepingParameterReportStructure.asn1 \
     service-03/ParameterReportingEntries.asn1 \
     service-03/ParameterReportingEntries.acn \
-    service-03/PeriodicGenerationProperties.asn1 \
-    service-03/PeriodicGenerationProperties.acn \
     common/Parameter.acn \
     common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
@@ -280,6 +278,8 @@ DISTFILES += \
     service-08/PUS-8-1.acn \
     service-08/PUS-8-1.asn1 \
     service-04/ParameterStatisticsDefinitions.acn \
-    service-04/ParameterStatisticsDefinitions.asn1
+    service-04/ParameterStatisticsDefinitions.asn1 \
+    service-03/PeriodicGenerationProperties.asn1 \
+    service-03/PeriodicGenerationProperties.acn
 
 include(.qmake/handleAsn1AcnBuild.pri)

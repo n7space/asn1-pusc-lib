@@ -8,15 +8,17 @@
           "name": "Time reporting in CUC format",
           "asn1Files": [
             "PUS-9-2.asn1",
-            "RateExponentialValue.asn1",
-            "SpacecraftTimeReferenceStatus.asn1"
+            "RateExponentialValue.asn1"
           ],
           "conflicts": ["Time reporting in CDS format"],
           "imports": [
             {
               "from": "SpacecraftTimeReferenceStatus",
               "types": ["SpacecraftTimeReferenceStatus"]
-
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["AbsoluteTime"]
             }
           ]
         },
@@ -31,7 +33,12 @@
             {
               "from": "SpacecraftTimeReferenceStatus",
               "types": ["SpacecraftTimeReferenceStatus"]
+            },
+            {
+              "from": "BasicTypes",
+              "types": ["AbsoluteTime"]
             }
+
           ]
         }
       ]

@@ -29,4 +29,11 @@ TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport []
     periodicGenerationProperties [size n]
 }
 
+HousekeepingPeriodicGenerationProperties []
+{
+    parameterReportStructure-ID [],
+    periodicGenerationActionStatus [],
+    collectionInterval []
+}
+
 END

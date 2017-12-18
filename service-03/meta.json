@@ -307,7 +307,7 @@
             "PUS-3-36.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatusDiagnostics.asn1",
+            "PeriodicGenerationActionStatus.asn1",
             "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
