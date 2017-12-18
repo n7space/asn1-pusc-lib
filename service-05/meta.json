@@ -38,7 +38,11 @@
             {
               "from": "Dummy",
               "types": ["DummyType"]
-            }
+            },
+	    {
+	      "from": "BasicTypes",
+	      "types": ["PUSC-UINT32"]
+	    }
           ]
         },
         {
@@ -55,7 +59,11 @@
             {
               "from": "Dummy",
               "types": ["DummyType"]
-            }
+            },
+	    {
+	      "from": "BasicTypes",
+	      "types": ["PUSC-UINT32"]
+	    }
           ],
           "requires": ["Enable the report generation of event definitions"]
         },
@@ -74,7 +82,11 @@
             {
               "from": "Dummy",
               "types": ["DummyType"]
-            }
+            },
+	    {
+	      "from": "BasicTypes",
+	      "types": ["PUSC-UINT32"]
+	    }
           ],
           "requires": ["Enable the report generation of event definitions"]
         }

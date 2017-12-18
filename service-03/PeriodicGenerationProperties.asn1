@@ -23,20 +23,12 @@
 
 PeriodicGenerationProperties DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
-IMPORTS
-    DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
-    PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
-    CollectionInterval FROM CollectionInterval;
-
-PeriodicGenerationProperties
-  ::= PeriodicGenerationProperties-Generic
-    {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
 
 PeriodicGenerationProperties-Generic
-    {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type}
+    {HousekeepingParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type}
   ::= SEQUENCE
 {
-    diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
+    parameterReportStructure-ID HousekeepingParameterReportStructure-ID-Type,
     periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
     collectionInterval CollectionInterval-Type
 }

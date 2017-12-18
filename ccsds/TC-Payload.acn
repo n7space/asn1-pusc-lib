@@ -25,7 +25,7 @@ TC-Payload DEFINITIONS ::= BEGIN
 
 TC-Payload <PacketTypes.ServiceType-ID:service, PacketTypes.MessageSubtype-ID:message> []
 {
-    tc-17-1 [present-when service==17 message==1] --TODO
+    tc-0-0 [present-when service==0 message==0] --TODO
 }
 
 TC-NoHeaderPayload []

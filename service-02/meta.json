@@ -105,7 +105,7 @@
             "PUS-2-11.asn1",
             "PUS-2-12.asn1",
             "LogicalDevice.asn1",
-            "Transaction"
+            "Transaction.asn1"
           ],
           "requires": ["Distribute logical device commands"],
           "imports": [

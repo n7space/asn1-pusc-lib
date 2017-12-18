@@ -28,7 +28,11 @@
         {
           "name": "Parameter",
           "asn1Files": ["Parameter.asn1"]
-        }
+        },
+	{
+	  "name": "Spacecraft Time Reference Status",
+	  "asn1Files": ["SpacecraftTimeReferenceStatus.asn1"]
+	}
       ]
     }
   ]

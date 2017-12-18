@@ -23,11 +23,4 @@
 
 PeriodicGenerationProperties DEFINITIONS ::= BEGIN
 
-PeriodicGenerationProperties []
-{
-    diagnosticParameterReportStructure-ID [],
-    periodicGenerationActionStatus [],
-    collectionInterval []
-}
-
 END
