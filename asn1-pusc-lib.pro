@@ -326,10 +326,8 @@ DISTFILES += \
     service-11/SubSchedule.asn1 \
     service-11/Group.acn \
     service-11/Group.asn1 \
-    common/Source.acn \
-    common/Source.asn1 \
-    service-11/Request.acn \
-    service-11/Request.asn1 \
+    common/Request.acn \
+    common/Request.asn1 \
     service-11/TimeWindow.acn \
     service-11/TimeWindow.asn1 \
     service-11/PUS-11-6.acn \

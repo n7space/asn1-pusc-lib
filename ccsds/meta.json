@@ -16,10 +16,6 @@
             {
               "from": "ApplicationProcess",
               "types": ["ApplicationProcess-ID"]
-            },
-            {
-              "from": "Source",
-              "types": ["Source-ID"]
             }
           ]
         },
