@@ -30,21 +30,21 @@ IMPORTS
 
 maxTC-6-9-DataAreaCount INTEGER ::= 2147483647
 
-TC-6-9-CheckRawMemoryData ::= TC-6-9-CheckRawMemoryDataGeneric {Memory-ID}
+TC-6-9-CheckRawMemoryData ::= TC-6-9-CheckRawMemoryDataGeneric {Memory-ID, TC-6-9-DataArea}
 
-DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32}
+TC-6-9-DataArea ::= TC-6-9-DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TC-6-9-CheckRawMemoryDataGeneric {Memory-ID-Type} ::= SEQUENCE
+TC-6-9-CheckRawMemoryDataGeneric {Memory-ID-Type, DataArea-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type, moved to acn
-    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-9-DataAreaCount)) OF DataArea
+    dataAreas SEQUENCE (SIZE(1 .. maxTC-6-9-DataAreaCount)) OF DataArea-Type
 }
 
-DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
+TC-6-9-DataAreaGeneric {Address-Type, Length-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger-Type0,
-    length UnsignedInteger-Type1
+    startAddress Address-Type,
+    length Length-Type
 }
 
 END

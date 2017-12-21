@@ -34,7 +34,7 @@ TM-3-12-DiagnosticParameterReportStructureReport []
     superCommutatedParameterSet [size nfa]
 }
 
-SuperCommutatedParameterSet []
+TM-3-12-SuperCommutatedParameterSet []
 {
     superCommutatedSampleRepetitionNumber [],
     n2 BasicTypes.PUSC-UINT32 [],

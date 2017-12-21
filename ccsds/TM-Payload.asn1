@@ -24,12 +24,11 @@
 TM-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    MessageSubtype-ID, ServiceType-ID FROM PacketTypes
-    TM-17-2-AreYouAliveConnectionTestReport FROM PUS-17-2;
+    MessageSubtype-ID, ServiceType-ID FROM PacketTypes;
 
 TM-Payload ::= CHOICE --TODO
 {
-    tm-17-2 TM-17-2-AreYouAliveConnectionTestReport --TODO
+    tm-0-0 INTEGER(0 .. 255) --TODO
 }
 
 TM-NoHeaderPayload ::= NULL --TODO

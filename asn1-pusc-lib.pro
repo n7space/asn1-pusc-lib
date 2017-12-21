@@ -1,5 +1,4 @@
-TEMPLATE = lib
-CONFIG += static
+TEMPLATE = app
 CONFIG -= qt
 
 DISTFILES += \
@@ -15,6 +14,8 @@ DISTFILES += \
     common/BasicTypes.asn1 \
     common/ExecutionStep.acn \
     common/ExecutionStep.asn1 \
+    common/SpacecraftTimeReferenceStatus.acn \
+    common/SpacecraftTimeReferenceStatus.asn1 \
     common/meta.json \
     service-01/ErrorCodes.acn \
     service-01/ErrorCodes.asn1 \
@@ -37,7 +38,7 @@ DISTFILES += \
     service-01/PUS-1-7.asn1 \
     service-01/PUS-1-8.acn \
     service-01/PUS-1-8.asn1 \
-    service-09/meta.json \ 
+    service-09/meta.json \
     service-09/PUS-9-1.acn \
     service-09/PUS-9-1.asn1 \
     service-09/PUS-9-2.acn \
@@ -62,8 +63,6 @@ DISTFILES += \
     ccsds/TC-Payload.asn1 \
     service-09/RateExponentialValue.acn \
     service-09/RateExponentialValue.asn1 \
-    service-09/SpacecraftTimeReferenceStatus.acn \
-    service-09/SpacecraftTimeReferenceStatus.asn1 \
     service-02/meta.json \
     service-02/Registers.acn \
     service-02/Registers.asn1 \
@@ -102,6 +101,8 @@ DISTFILES += \
     service-03/DiagnosticParameterReportStructure.asn1 \
     service-03/HousekeepingParameterReportStructure.acn \
     service-03/HousekeepingParameterReportStructure.asn1 \
+    service-03/ParameterReportingEntries.asn1 \
+    service-03/ParameterReportingEntries.acn \
     common/Parameter.acn \
     common/Parameter.asn1 \
     service-03/PeriodicGenerationActionStatus.acn \
@@ -336,6 +337,53 @@ DISTFILES += \
     service-11/PUS-11-8.asn1 \
     service-11/PUS-11-8.acn \
     service-01/VerificationRequest.acn \
-    service-01/VerificationRequest.asn1
+    service-01/VerificationRequest.asn1 \
+    service-08/meta.json \
+    service-08/PUS-8-1.acn \
+    service-08/PUS-8-1.asn1 \
+    service-04/ParameterStatisticsDefinitions.acn \
+    service-04/ParameterStatisticsDefinitions.asn1 \
+    service-03/PeriodicGenerationProperties.asn1 \
+    service-03/PeriodicGenerationProperties.acn
+
+HEADERS += \
+    wrappers/c/asn1pusclib_globals.h \
+    wrappers/c/Errors.h \
+    wrappers/c/Crc.h \
+    wrappers/c/IsoChecksum.h \
+    wrappers/c/UInt16Coder.h \
+    wrappers/c/PacketLength.h \
+    wrappers/c/PacketErrorControl.h \
+    wrappers/c/tests/CMocka.h \
+    wrappers/c/tests/TestHelper.h \
+    wrappers/c/tests/ErrorsTests.h \
+    wrappers/c/tests/CrcTests.h \
+    wrappers/c/tests/IsoChecksumTests.h \
+    wrappers/c/tests/PacketLengthTests.h \
+    wrappers/c/tests/PacketErrorControlTests.h \
+    wrappers/c/tests/UInt16CoderTests.h
+
+SOURCES += \
+    wrappers/c/Errors.c \
+    wrappers/c/Crc.c \
+    wrappers/c/IsoChecksum.c \
+    wrappers/c/UInt16Coder.c \
+    wrappers/c/PacketLength.c \
+    wrappers/c/PacketErrorControl.c \
+    wrappers/c/tests/ErrorsTests.c \
+    wrappers/c/tests/CrcTests.c \
+    wrappers/c/tests/IsoChecksumTests.c \
+    wrappers/c/tests/UInt16CoderTests.c \
+    wrappers/c/tests/PacketLengthTests.c \
+    wrappers/c/tests/PacketErrorControlTests.c \
+    wrappers/c/tests/test_main.c
+
+LIBS += -lcmocka
+
+linux-g++ {
+    QMAKE_CFLAGS += --std=c99
+}
 
 include(.qmake/handleAsn1AcnBuild.pri)
+
+INCLUDEPATH += $${ASN1SCC_PRODUCTS_DIR}

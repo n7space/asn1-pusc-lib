@@ -30,7 +30,8 @@ IMPORTS
     ParameterReportStructure-ID FROM ParameterReportStructureType
     PeriodicGenerationActionStatus FROM PeriodicGenerationActionStatus
     CollectionInterval FROM CollectionInterval
-    ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition;
+    ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition
+    ParameterReportingEntries FROM ParameterReportingEntries;
 
 macTC-44-ParameterReportingEntryCount INTEGER ::= 536870911
 maxTC-44-ApidParameterReportingEntryCount INTEGER ::= 536870911
@@ -41,7 +42,7 @@ TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAPara
 {
     parameterFunctionalReportingDefinition-ID ParameterFunctionalReportingDefinition-ID-Type,
 --! n1 UnsignedInteger-Type, moved to acn
-    apidParameterReportingEntries SEQUENCE (SIZE(1 .. maxTC-44-ApidParameterReportingEntryCount)) OF ApidParameterReportingEntries
+    apidParameterReportingEntries SEQUENCE (SIZE(1 .. maxTC-44-ApidParameterReportingEntryCount)) OF TC-3-44-ApidParameterReportingEntries
 }
 
 TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinition ::= TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAParameterFunctionalReportingDefinitionGeneric {ParameterFunctionalReportingDefinition-ID}
@@ -53,23 +54,13 @@ TC-3-44-ModifyThePeriodicGenerationPropertiesOfParameterReportDefinitionsOfAPara
     parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
 }
 
-ApidParameterReportingEntries ::= ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
+TC-3-44-ApidParameterReportingEntries ::= TC-3-44-ApidParameterReportingEntriesGeneric {ApplicationProcess-ID}
 
-ApidParameterReportingEntriesGeneric {TApplicationProcess-ID} ::= SEQUENCE
+TC-3-44-ApidParameterReportingEntriesGeneric {TApplicationProcess-ID} ::= SEQUENCE
 {
     applicationProcess-ID ApplicationProcess-ID,
 --! n2 UnsignedInteger, moved to acn
     parameterReportingEntries SEQUENCE (SIZE(1 .. macTC-44-ParameterReportingEntryCount)) OF ParameterReportingEntries
-}
-
-ParameterReportingEntries ::= ParameterReportingEntriesGeneric {ParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval}
-
-ParameterReportingEntriesGeneric {ParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type} ::= SEQUENCE
-{
---! parameterReportStructureType ParameterReportStructureType-Type, moved to acn
-    parameterReportStructure-ID ParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type,
-    collectionInterval CollectionInterval-Type
 }
 
 END

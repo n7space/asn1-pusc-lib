@@ -37,19 +37,11 @@ TC-3-42-AddParameterReportDefinitionsToAParameterFunctionalReportingDefinition [
     parameterReportingEntries [size n2]
 }
 
-ApidParameterReportingEntries []
+TC-3-42-ApidParameterReportingEntries []
 {
     applicationProcess-ID [],
     n2 BasicTypes.PUSC-UINT32 [],
     parameterReportingEntries [size n2]
-}
-
-ParameterReportingEntries []
-{
-    parameterReportStructureType ParameterReportStructureType.ParameterReportStructureType [],
-    parameterReportStructure-ID <parameterReportStructureType> [],
-    periodicGenerationActionStatus [],
-    collectionInterval []
 }
 
 END

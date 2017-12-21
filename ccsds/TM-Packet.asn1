@@ -34,6 +34,7 @@ IMPORTS
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcessUser-ID FROM ApplicationProcessUser
     TM-Payload, TM-NoHeaderPayload FROM TM-Payload
+    SpacecraftTimeReferenceStatus FROM SpacecraftTimeReferenceStatus
     AbsoluteTime FROM BasicTypes;
 
 TM-CCSDS-Packet ::= CCSDS-Packet {TM-Packet-ID, TM-PacketDataField}
@@ -60,7 +61,6 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
 
 Destination-ID ::= INTEGER (0 .. 65535)
 
-SpacecraftTimeReferenceStatus ::= INTEGER (0 ..15)
 TM-PacketType ::= NULL
 
 END

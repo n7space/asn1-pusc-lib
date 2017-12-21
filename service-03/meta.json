@@ -10,7 +10,13 @@
             "PUS-3-25.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "requires": ["Generate a one shot report for housekeeping parameter report structures"]
+          "requires": ["Generate a one shot report for housekeeping parameter report structures"],
+          "imports": [
+             {
+               "from": "BasicTypes",
+               "types": ["PUSC-UINT32"]
+             }
+          ]
         },
         {
           "name": "Enable the periodic generation of housekeeping parameter reports",
@@ -66,7 +72,7 @@
           "requires": ["Create a housekeeping parameter report structure"],
           "imports": [
             {
-              "from": "BaqsicTypes",
+              "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
             }
           ]
@@ -145,7 +151,8 @@
             "PUS-3-35.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatus.asn1"
+            "PeriodicGenerationActionStatus.asn1",
+            "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
             {
@@ -220,7 +227,7 @@
           "requires": ["Create a diagnostic parameter report structure"],
           "imports": [
             {
-              "from": "BaqsicTypes",
+              "from": "BasicTypes",
               "types": ["PUSC-UINT32"]
             }
           ]
@@ -251,7 +258,8 @@
           "asn1Files": [
             "PUS-3-28.asn1",
             "PUS-3-26.asn1",
-            "HousekeepingParameterReportStructure.asn1"
+            "HousekeepingParameterReportStructure.asn1",
+            "DiagnosticParameterReportStructure.asn1"
           ],
           "imports": [
             {
@@ -299,7 +307,8 @@
             "PUS-3-36.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "CollectionInterval.asn1",
-            "PeriodicGenerationActionStatusDiagnostics.asn1"
+            "PeriodicGenerationActionStatus.asn1",
+            "PeriodicGenerationProperties.asn1"
           ],
           "imports": [
             {
@@ -329,13 +338,14 @@
         {
           "name": "Create a parameter functional reporting definition",
           "asn1Files": [
-            "PUS-3-38",
+            "PUS-3-38.asn1",
             "ParameterReportStructureType.asn1",
             "HousekeepingParameterReportStructure.asn1",
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "imports": [
             {
@@ -372,7 +382,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "requires": ["Create a parameter functional reporting definition"],
           "imports": [
@@ -395,7 +406,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "requires": ["Create a parameter functional reporting definition"],
           "imports": [
@@ -439,7 +451,8 @@
             "DiagnosticParameterReportStructure.asn1",
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1",
-            "ParameterFunctionalReportingDefinition.asn1"
+            "ParameterFunctionalReportingDefinition.asn1",
+            "ParameterReportingEntries.asn1"
           ],
           "imports": [
             {

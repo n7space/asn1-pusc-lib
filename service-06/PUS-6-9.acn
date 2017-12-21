@@ -30,7 +30,7 @@ TC-6-9-CheckRawMemoryData []
     dataAreas [size n]
 }
 
-DataArea []
+TC-6-9-DataArea []
 {
     startAddress [],
     length []

@@ -30,21 +30,22 @@ IMPORTS
 
 maxTM-6-10-DataAreaCount INTEGER ::= 2147483647
 
-TM-6-10-CheckedRawMemoryDartaReport ::= TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID}
+TM-6-10-CheckedRawMemoryDartaReport
+  ::= TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID, TM-6-10-DataArea}
 
-DataArea ::= DataAreaGeneric {BytePointer, PUSC-UINT32}
+TM-6-10-DataArea ::= TM-6-10-DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID-Type} ::= SEQUENCE
+TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID-Type, DataArea-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type, moved to acn
-    dataArea SEQUENCE (SIZE(1 .. maxTM-6-10-DataAreaCount)) OF DataArea
+    dataArea SEQUENCE (SIZE(1 .. maxTM-6-10-DataAreaCount)) OF DataArea-Type
 }
 
-DataAreaGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUENCE
+TM-6-10-DataAreaGeneric {Address-Type, Length-Type} ::= SEQUENCE
 {
-    startAddress UnsignedInteger-Type0,
-    length UnsignedInteger-Type1,
+    startAddress Address-Type,
+    length Length-Type,
     checksum BIT STRING (SIZE (16))
 }
 

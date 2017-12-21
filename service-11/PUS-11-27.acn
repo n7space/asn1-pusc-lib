@@ -29,7 +29,7 @@ TM-11-27-TimeBasedSchedulingGroupStatusReport []
     groupStatuses [size n]
 }
 
-TM-11-19-Status []
+TM-11-27-Status []
 {
     group-ID [],
     groupStatus []

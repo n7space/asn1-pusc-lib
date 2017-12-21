@@ -33,7 +33,7 @@ TC-3-1-CreateAHousekeepingParameterReportStructure []
     superCommutatedParameterSet [size nfa]
 }
 
-SuperCommutatedParameterSet []
+TC-3-1-SuperCommutatedParameterSet []
 {
     superCommutatedSampleRepetitionNumber [],
     n2 BasicTypes.PUSC-UINT32 [],
