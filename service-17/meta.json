@@ -17,10 +17,11 @@
             "PUS-17-3.asn1",
             "PUS-17-4.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplicationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         }
