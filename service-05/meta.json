@@ -48,7 +48,7 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
-          ]	    
+          ]         
         },
         {
           "name": "Disable the report generation of event definitions",
@@ -73,7 +73,7 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
-          ]	    
+          ]         
         },
         {
           "name": "Report the list of disabled event definitions",
@@ -99,7 +99,7 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
-          ]	    
+          ]         
         }
       ]
     }

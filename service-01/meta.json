@@ -16,8 +16,8 @@
           ],
           "requires": [
             {
-	            "module": "CCSDS",
-              "submodule": "CCSDS Packet",
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
               "element": "TC Packet"
             }
           ]

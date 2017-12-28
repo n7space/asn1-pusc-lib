@@ -17,7 +17,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {
@@ -33,7 +33,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {
@@ -52,7 +52,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -72,7 +72,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {
@@ -89,7 +89,7 @@
             "Add or update parameter statistics definitions",
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {
@@ -111,7 +111,7 @@
             "Add or update parameter statistics definitions",
             {
               "module": "Common Types",
-              "submodule": "Basic Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {

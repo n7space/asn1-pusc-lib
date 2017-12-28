@@ -10,7 +10,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -24,7 +24,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -40,7 +40,7 @@
             "Distribute register load commands",
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -52,7 +52,7 @@
             "Distribute register load commands",
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -66,7 +66,7 @@
           "requires": [
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -83,12 +83,12 @@
             "Distribute physical device commands",
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
 {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Dummy Type"
             }
           ]
@@ -103,7 +103,7 @@
             "Distribute physical device commands",
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             }
           ]
@@ -120,12 +120,12 @@
             "Distribute logical device commands",
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
             {
               "module": "Common Types",
-              "submodule": "PTC/FPC Types",
+              "submodule": "PTC/PFC Types",
               "element": "Dummy Type"
             },
             {
