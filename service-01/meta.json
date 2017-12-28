@@ -14,18 +14,11 @@
             "ST01-Request.asn1",
             "ErrorCodes.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         }
@@ -43,10 +36,11 @@
             "PUS-1-1.asn1",
             "Request.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -57,18 +51,11 @@
             "ST01-Request.asn1",
             "ErrorCodes.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         }
@@ -83,18 +70,11 @@
             "PUS-1-3.asn1",
             "Request.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -105,18 +85,11 @@
             "ST01-Request.asn1",
             "ErrorCodes.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -126,22 +99,16 @@
             "PUS-1-5.asn1",
             "ST01-Request.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ExecutionStep",
-              "types": ["ExecutionStep-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Execution Step"
             },
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -152,22 +119,16 @@
             "ST01-Request.asn1",
             "ErrorCodes.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ExecutionStep",
-              "types": ["ExecutionStep-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Execution Step"
             },
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -177,18 +138,11 @@
             "PUS-1-7.asn1",
             "Request.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         },
@@ -199,18 +153,11 @@
             "ST01-Request.asn1",
             "ErrorCodes.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "PacketTypes",
-              "types":[
-                "PacketVersionNumberValue",
-                "PacketSequenceControl",
-                "Packet-ID"
-              ]
-            },
-            {
-              "from": "TC-Packet",
-              "types": ["TC-PacketType"]
+              "module": "CCSDS",
+              "submodule": "CCSDS Packets",
+              "element": "TC Packet"
             }
           ]
         }

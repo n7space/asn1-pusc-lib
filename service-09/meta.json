@@ -11,14 +11,16 @@
             "RateExponentialValue.asn1"
           ],
           "conflicts": ["Time reporting in CDS format"],
-          "imports": [
+          "requires": [
             {
-              "from": "SpacecraftTimeReferenceStatus",
-              "types": ["SpacecraftTimeReferenceStatus"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Spacecraft Time Reference Status"
             },
             {
-              "from": "BasicTypes",
-              "types": ["AbsoluteTime"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -29,16 +31,17 @@
             "RateExponentialValue.asn1"
           ],
           "conflicts": ["Time reporting in CUC format"],
-          "imports": [
+          "requires": [
             {
-              "from": "SpacecraftTimeReferenceStatus",
-              "types": ["SpacecraftTimeReferenceStatus"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Spacecraft Time Reference Status"
             },
             {
-              "from": "BasicTypes",
-              "types": ["AbsoluteTime"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
-
           ]
         }
       ]
@@ -52,10 +55,11 @@
             "PUS-9-1.asn1",
             "RateExponentialValue.asn1"
           ],
-          "imports":[
+          "requires":[
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }
