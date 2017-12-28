@@ -5,11 +5,11 @@
       "name": "PTC/PFC Types",
       "elements": [
         {
-          "name": "Basic types",
+          "name": "Basic Types",
           "asn1Files": ["BasicTypes.asn1"]
         },
         {
-          "name": "Dummy type",
+          "name": "Dummy Type",
           "asn1Files": ["Dummy.asn1"]
         }
       ]
