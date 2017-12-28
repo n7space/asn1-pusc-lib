@@ -7,12 +7,11 @@
         {
           "name": "Perform a function",
           "asn1Files": ["PUS-8-1.asn1"],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }

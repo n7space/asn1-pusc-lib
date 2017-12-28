@@ -14,41 +14,32 @@
             "PUS-4-1.asn1",
             "PUS-4-2.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-BOOL32",
-                "AbsoluteTime",
-                "PUSC-UINT32"
-              ]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": [
-                "Parameter-ID",
-                "ParameterValue"
-              ]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
           ]
         },
         {
           "name": "Parameter statistics report",
           "asn1Files": ["PUS-4-2.asn1"],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "AbsoluteTime",
-                "PUSC-UINT32"
-              ]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": [
-                "Parameter-ID",
-                "ParameterValue"
-              ]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
           ]
         },
@@ -58,10 +49,11 @@
             "PUS-4-4.asn1",
             "Intervals.asn1"
           ],
-          "imports":[
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["RelativeTime"]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -77,34 +69,35 @@
             "ParameterStatisticsDefinitions.asn1",
             "Intervals.asn1"
           ],
-          "imports":[
+          "requires": [
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "RelativeTime"
-              ]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
           ]
         },
         {
           "name": "Delete parameter statistics definitions",
           "asn1Files": ["PUS-4-7.asn1"],
-          "imports":[
+          "requires": [
+            "Add or update parameter statistics definitions",
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ],
-          "requires": ["Add or update parameter statistics definitions"]
+          ]
         },
         {
           "name": "Report the parameter statistics definitions",
@@ -114,20 +107,19 @@
             "ParameterStatisticsDefinitions.asn1",
             "Intervals.asn1"
           ],
-          "imports":[
+          "requires": [
+            "Add or update parameter statistics definitions",
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Basic Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "RelativeTime"
-              ]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ],
-          "requires": ["Add or update parameter statistics definitions"]
+          ]
         }
       ]
     }

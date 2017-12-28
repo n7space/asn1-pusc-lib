@@ -7,10 +7,11 @@
         {
           "name": "Distribute on/off device commands",
           "asn1Files": ["PUS-2-1.asn1"],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -20,10 +21,11 @@
             "PUS-2-2.asn1",
             "Registers.asn1"
           ],
-          "imports":[
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUS-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -34,21 +36,24 @@
             "PUS-2-6.asn1",
             "Registers.asn1"
           ],
-          "requires": ["Distribute register load commands"],
-          "imports": [
+          "requires": [
+            "Distribute register load commands",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
         {
           "name": "Distribute CPDU commands",
           "asn1Files": ["PUS-2-4.asn1"],
-          "imports": [
+          "requires": [
+            "Distribute register load commands",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -58,10 +63,11 @@
             "PUS-2-7.asn1",
             "PhysicalDevice.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -73,15 +79,17 @@
             "PhysicalDevice.asn1",
             "Transaction.asn1"
           ],
-          "requires": ["Distribute physical device commands"],
-          "imports":[
+          "requires": [
+            "Distribute physical device commands",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             },
-            {
-              "from": "Dummy",
-              "types": ["DummyType"]
+{
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Dummy Type"
             }
           ]
         },
@@ -91,11 +99,12 @@
             "PUS-2-10.asn1",
             "LogicalDevice.asn1"
           ],
-          "requires": ["Distribute physical device commands"],
-          "imports": [
+          "requires": [
+            "Distribute physical device commands",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -107,19 +116,22 @@
             "LogicalDevice.asn1",
             "Transaction.asn1"
           ],
-          "requires": ["Distribute logical device commands"],
-          "imports": [
+          "requires": [
+            "Distribute logical device commands",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Dummy",
-              "types": ["DummyType"]
+              "module": "Common Types",
+              "submodule": "PTC/FPC Types",
+              "element": "Dummy Type"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "name": "st[06] memory management",
+  "name": "ST[06] memory management",
   "submodules": [
     {
       "name": "Raw data memory management subservice",
@@ -12,13 +12,11 @@
             "RawMemory.asn1",
             "Data.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -29,13 +27,11 @@
             "Memory.asn1",
             "RawMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -48,13 +44,11 @@
             "RawMemory.asn1",
             "Data.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -66,13 +60,11 @@
             "Memory.asn1",
             "RawMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -84,15 +76,11 @@
             "FilePath.asn1",
             "RawMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-UINT12",
-                "PUSC-OCTSTR-VARIABLE-LEN",
-                "PUSC-CHARSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -104,15 +92,11 @@
             "FilePath.asn1",
             "RawMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-UINT12",
-                "PUSC-OCTSTR-VARIABLE-LEN",
-                "PUSC-CHARSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }
@@ -129,13 +113,11 @@
             "StructuredMemory.asn1",
             "Data.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -148,13 +130,11 @@
             "StructuredMemory.asn1",
             "Data.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-OCTSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -166,12 +146,11 @@
             "Memory.asn1",
             "StructuredMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -183,10 +162,11 @@
             "Memory.asn1",
             "StructuredMemory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -198,15 +178,11 @@
             "StructuredMemory.asn1",
             "FilePath.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-UINT12",
-                "PUSC-OCTSTR-VARIABLE-LEN",
-                "PUSC-CHARSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -218,15 +194,11 @@
             "StructuredMemory.asn1",
             "FilePath.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": [
-                "PUSC-UINT32",
-                "PUSC-UINT12",
-                "PUSC-OCTSTR-VARIABLE-LEN",
-                "PUSC-CHARSTR-VARIABLE-LEN"
-              ]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }   
@@ -250,10 +222,11 @@
             "PUS-6-13.asn1",
             "Memory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -263,11 +236,12 @@
             "PUS-6-14.asn1",
             "Memory.asn1"
           ],
-          "requires": ["Enable the scrubbing of a memory"],
-          "imports": [
+          "requires": [
+            "Enable the scrubbing of a memory",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -277,10 +251,11 @@
             "PUS-6-15.asn1",
             "Memory.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -290,11 +265,12 @@
             "PUS-6-16.asn1",
             "Memory.asn1"
           ],
-          "requires": ["Enable the write protection of a memory"],
-          "imports": [
+          "requires": [
+            "Enable the write protection of a memory",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }

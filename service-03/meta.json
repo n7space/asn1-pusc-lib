@@ -10,12 +10,13 @@
             "PUS-3-25.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "requires": ["Generate a one shot report for housekeeping parameter report structures"],
-          "imports": [
-             {
-               "from": "BasicTypes",
-               "types": ["PUSC-UINT32"]
-             }
+          "requires": [
+            "Generate a one shot report for housekeeping parameter report structures",
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
           ]
         },
         {
@@ -24,11 +25,12 @@
             "PUS-3-5.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "imports": [
-             {
-               "from": "BasicTypes",
-               "types": ["PUSC-UINT32"]
-             }
+          "requires": [
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
           ]
         },
         {
@@ -37,12 +39,13 @@
             "PUS-3-6.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "requires": ["Enable the periodic generation of housekeeping parameter reports"],
-          "imports": [
-             {
-               "from": "BasicTypes",
-               "types": ["PUSC-UINT32"]
-             }
+          "requires": [
+            "Enable the periodic generation of housekeeping parameter reports",
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
           ]
         },
         {
@@ -52,14 +55,16 @@
             "HousekeepingParameterReportStructure.asn1",
             "CollectionInterval.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
           ]
         },
@@ -69,12 +74,13 @@
             "PUS-3-3.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "requires": ["Create a housekeeping parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a housekeeping parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
-            }
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            } 
           ]
         },
         {
@@ -86,17 +92,19 @@
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1"
           ],
-          "requires": ["Create a housekeeping parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a housekeeping parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ]
+          ]        
         },
         {
           "name": "Generate a one shot report for housekeeping parameter report structures",
@@ -105,10 +113,11 @@
             "PUS-3-25.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -118,17 +127,19 @@
             "PUS-3-29.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "requires": ["Create a housekeeping parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a housekeeping parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ]
+          ]  
         },
         {
           "name": "Modify the collection interval of housekeeping parameter report structures",
@@ -137,10 +148,11 @@
             "CollectionInterval.asn1",
             "HousekeepingParameterReportStructure.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -154,10 +166,11 @@
             "PeriodicGenerationActionStatus.asn1",
             "PeriodicGenerationProperties.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }
@@ -179,11 +192,12 @@
             "PUS-3-7.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "imports": [
-             {
-               "from": "BasicTypes",
-               "types": ["PUSC-UINT32"]
-             }
+          "requires": [
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
           ]
         },
         {
@@ -192,13 +206,14 @@
             "PUS-3-8.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "requires": ["Enable the periodic generation of diagnostic parameter reports"],
-          "imports": [
-             {
-               "from": "BasicTypes",
-               "types": ["PUSC-UINT32"]
-             }
-          ]
+          "requires": [
+            "Enable the periodic generation of diagnostic parameter reports",
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]  
         },
         {
           "name": "Create a diagnostic parameter report structure",
@@ -207,16 +222,18 @@
             "DiagnosticParameterReportStructure.asn1",
             "CollectionInterval.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ]
+          ]  
         },
         {
           "name": "Delete diagnostic parameter report structures",
@@ -224,11 +241,12 @@
             "PUS-3-4.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "requires": ["Create a diagnostic parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a diagnostic parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -241,17 +259,19 @@
             "PeriodicGenerationActionStatus.asn1",
             "CollectionInterval.asn1"
           ],
-          "requires": ["Create a diagnostic parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a diagnostic parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ]
+          ]  
         },
         {
           "name": "Generate a one shot report for diagnostic parameter report structures",
@@ -261,10 +281,11 @@
             "HousekeepingParameterReportStructure.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -274,17 +295,19 @@
             "PUS-3-30.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "requires": ["Create a diagnostic parameter report structure"],
-          "imports": [
+          "requires": [
+            "Create a diagnostic parameter report structure",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "Parameter",
-              "types": ["Parameter-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Parameter"
             }
-          ]
+          ]  
         },
         {
           "name": "Modify the collection interval of diagnostic parameter report structures",
@@ -293,10 +316,11 @@
             "CollectionInterval.asn1",
             "DiagnosticParameterReportStructure.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -310,10 +334,11 @@
             "PeriodicGenerationActionStatus.asn1",
             "PeriodicGenerationProperties.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         }
@@ -328,10 +353,11 @@
             "PUS-3-37.asn1",
             "ParameterFunctionalReportingDefinition.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -347,14 +373,16 @@
             "ParameterFunctionalReportingDefinition.asn1",
             "ParameterReportingEntries.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -364,11 +392,12 @@
             "PUS-3-39.asn1",
             "ParameterFunctionalReportingDefinition.asn1"
           ],
-          "requires": ["Create a parameter functional reporting definition"],
-          "imports": [
+          "requires": [
+            "Create a parameter functional reporting definition",
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             }
           ]
         },
@@ -385,15 +414,17 @@
             "ParameterFunctionalReportingDefinition.asn1",
             "ParameterReportingEntries.asn1"
           ],
-          "requires": ["Create a parameter functional reporting definition"],
-          "imports": [
+          "requires": [
+            "Create a parameter functional reporting definition",
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -409,15 +440,17 @@
             "ParameterFunctionalReportingDefinition.asn1",
             "ParameterReportingEntries.asn1"
           ],
-          "requires": ["Create a parameter functional reporting definition"],
-          "imports": [
+          "requires": [
+            "Create a parameter functional reporting definition",
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -430,15 +463,17 @@
             "DiagnosticParameterReportStructure.asn1",
             "ParameterFunctionalReportingDefinition.asn1"
           ],
-          "requires": ["Add parameter report definitions to a parameter functional reporting definition"],
-          "imports": [
+          "requires": [
+            "Add parameter report definitions to a parameter functional reporting definition",
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -454,14 +489,16 @@
             "ParameterFunctionalReportingDefinition.asn1",
             "ParameterReportingEntries.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
             },
             {
-              "from": "BasicTypes",
-              "types": ["PUSC-UINT32"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         }

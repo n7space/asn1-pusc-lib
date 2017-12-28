@@ -13,14 +13,16 @@
             "PUS-5-4.asn1",
             "EventDefinition.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplicationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             },
             {
-              "from": "Dummy",
-              "types": ["DummyType"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Dummy Type"
             }
           ]
         },
@@ -30,20 +32,23 @@
            "PUS-5-5.asn1",
            "EventDefinition.asn1"
           ],
-          "imports": [
+          "requires": [
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplicationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             },
             {
-              "from": "Dummy",
-              "types": ["DummyType"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Dummy Type"
             },
-	    {
-	      "from": "BasicTypes",
-	      "types": ["PUSC-UINT32"]
-	    }
-          ]
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]	    
         },
         {
           "name": "Disable the report generation of event definitions",
@@ -51,21 +56,24 @@
             "PUS-5-6.asn1",
             "EventDefinition.asn1"
           ],
-          "imports": [
+          "requires": [
+            "Enable the report generation of event definitions",
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplicationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             },
             {
-              "from": "Dummy",
-              "types": ["DummyType"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Dummy Type"
             },
-	    {
-	      "from": "BasicTypes",
-	      "types": ["PUSC-UINT32"]
-	    }
-          ],
-          "requires": ["Enable the report generation of event definitions"]
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]	    
         },
         {
           "name": "Report the list of disabled event definitions",
@@ -74,21 +82,24 @@
             "PUS-5-8.asn1",
             "EventDefinition.asn1"
           ],
-          "imports": [
+          "requires": [
+            "Enable the report generation of event definitions",
             {
-              "from": "ApplicationProcess",
-              "types": ["ApplicationProcess-ID"]
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             },
             {
-              "from": "Dummy",
-              "types": ["DummyType"]
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Dummy Type"
             },
-	    {
-	      "from": "BasicTypes",
-	      "types": ["PUSC-UINT32"]
-	    }
-          ],
-          "requires": ["Enable the report generation of event definitions"]
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]	    
         }
       ]
     }
