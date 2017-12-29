@@ -134,9 +134,9 @@ def checkElementCompilationValid(element, submodule, module, metadata, build_pat
     if not dependencies: 
         return True
     
-    if checkCCodeGenerationValid(element, metadata.get(METADATA_PATH_KEY, ''), dependencies, path) and \
-       checkCompilationValid(element, metadata.get(METADATA_PATH_KEY, ''),path)                    and \
-       checkLibraryCreationValid(element, metadata.get(METADATA_PATH_KEY, ''), path): 
+    if checkCCodeGenerationValid(element, module.get(METADATA_PATH_KEY, ''), dependencies, path) and \
+       checkCompilationValid(element, module.get(METADATA_PATH_KEY, ''),path)                    and \
+       checkLibraryCreationValid(element, module.get(METADATA_PATH_KEY, ''), path): 
         return True
     else: 
         return False
@@ -227,12 +227,12 @@ def checkDependenciesValid(metadata):
 
 
 def checkAsn1FilesValid(metadata):
-    return not [logError(metadataPath(module), ASN1FILES_ERROR_MESSAGE, asn1file) \
+    return not [logError(metadataPath(module)+":"+element.get(NAME_KEY), ASN1FILES_ERROR_MESSAGE, asn1File) \
                 for key, module in metadata.items()                               \
                 for submodule in module.get(SUBMODULES_KEY, [])                   \
                 for element in submodule.get(ELEMENTS_KEY, [])                    \
                 for asn1File in element.get(ASN1FILES_KEY, [])                    \
-                if asn1File not in os.listdir(module[METADATA_PATH_KEY])]
+                if asn1File not in os.listdir(module.get(METADATA_PATH_KEY))]
 
     
 def validateMetadata(library_path=LIBRARY_PATH, build_path=BUILD_PATH):
