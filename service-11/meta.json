@@ -187,13 +187,18 @@
           "asn1Files":[
             "PUS-11-10.asn1",
             "Group.asn1",
-            "SubSchedule"
+            "SubSchedule.asn1"
           ],
           "requires": [
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Request"
+            },
+            {
+	      "module": "Common Types",
+	      "submodule": "PTC/PFC Types",
+	      "element": "Dummy Type"
             }
           ]
         },
@@ -225,7 +230,7 @@
             "PUS-11-16.asn1"
           ],
           "requires": [
-            "Time-based schedule detaild report"
+            "Time-based schedule detailed report"
           ]
         },
         {
@@ -233,7 +238,7 @@
           "asn1Files": [
             "PUS-11-5.asn1"
           ],
-          "requests": [
+          "requires": [
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -251,7 +256,7 @@
           "asn1Files": [
             "PUS-11-7.asn1"
           ],
-          "requests": [
+          "requires": [
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -269,7 +274,7 @@
           "asn1Files": [
             "PUS-11-12.asn1"
           ],
-          "requests": [
+          "requires": [
             "Time-based schedule summary report",
             {
               "module": "Common Types",
@@ -286,10 +291,9 @@
         {
           "name": "Detail-report time-based scheduled activities identified by request identifier",
           "asn1Files": [
-            "PUS-11-9.asn1",
-            "ST-11-Request.asn1"
+            "PUS-11-9.asn1"
           ],
-          "requests": [
+          "requires": [
             "Time-based schedule detailed report",
             {
               "module": "Common Types",
@@ -308,10 +312,10 @@
           "asn1Files": [
             "PUS-11-6.asn1",
             "TimeWindow.asn1",
-            "Subchedule.asn1",
+            "SubSchedule.asn1",
             "Group.asn1"
           ],
-          "requests": [
+          "requires": [
             {
 	      "module": "Common Types",
 	      "submodule": "PTC/PFC Types",
@@ -324,10 +328,10 @@
           "asn1Files": [
             "PUS-11-8.asn1",
             "TimeWindow.asn1",
-            "Subchedule.asn1",
+            "SubSchedule.asn1",
             "Group.asn1"
           ],
-          "requests": [
+          "requires": [
             {
 	      "module": "Common Types",
 	      "submodule": "PTC/PFC Types",
@@ -340,10 +344,10 @@
           "asn1Files": [
             "PUS-11-14.asn1",
             "TimeWindow.asn1",
-            "Subchedule.asn1",
+            "SubSchedule.asn1",
             "Group.asn1"
           ],
-          "requests": [
+          "requires": [
             "Time-based schedule summary report",
             {
 	      "module": "Common Types",
@@ -357,10 +361,10 @@
           "asn1Files": [
             "PUS-11-11.asn1",
             "TimeWindow.asn1",
-            "Subchedule.asn1",
+            "SubSchedule.asn1",
             "Group.asn1"
           ],
-          "requests": [
+          "requires": [
             "Time-based schedule detailed report",
             {
 	      "module": "Common Types",

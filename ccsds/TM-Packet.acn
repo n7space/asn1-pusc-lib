@@ -75,8 +75,6 @@ TM-PacketSecondaryHeader []
 --! spare NULL         defined as align-to-next in acn file
 }
 
-Destination-ID [size 16, encoding pos-int, endianness big]
-
 TM-PacketType [pattern '0'B]
 
 END

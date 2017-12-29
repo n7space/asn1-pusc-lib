@@ -21,6 +21,10 @@
           "name": "Application Process",
           "asn1Files": ["ApplicationProcess.asn1"]
         },
+	{
+	  "name": "Application Process User",
+	  "asn1Files": ["ApplicationProcessUser.asn1"]
+	},
         {
           "name": "Execution Step",
           "asn1Files": ["ExecutionStep.asn1"]
@@ -34,12 +38,13 @@
 	  "asn1Files": ["SpacecraftTimeReferenceStatus.asn1"]
 	},
         {
-          "name": "Request"
+          "name": "Request",
           "asn1Files":[
             "Request.asn1"
           ],
           "requires":[
             "Application Process",
+	    "Application Process User",
             {
 	      "module": "Common Types",
 	      "submodule": "PTC/PFC Types",

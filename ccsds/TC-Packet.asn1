@@ -34,8 +34,7 @@ IMPORTS
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcess-ID FROM ApplicationProcess
     ApplicationProcessUser-ID FROM ApplicationProcessUser
-    TC-Payload, TC-NoHeaderPayload FROM TC-Payload
-    Source-ID FROM Source;
+    TC-Payload, TC-NoHeaderPayload FROM TC-Payload;
 
 TC-CCSDS-Packet ::= CCSDS-Packet {TC-Packet-ID, TC-PacketDataField}
 
@@ -53,7 +52,7 @@ TC-PacketSecondaryHeader ::=  SEQUENCE
     acknowledgementFlags AcknowledgementFlags,
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN
-    source-ID ApplicationProcess-ID
+    source-ID ApplicationProcessUser-ID
 --! spare NULL         defined as align-to-next in acn file
 }
 

@@ -55,8 +55,8 @@ DISTFILES += \
     service-17/PUS-17-4.acn \
     service-17/PUS-17-4.asn1 \
     ccsds/meta.json \
-    ccsds/ApplicationProcessUser.acn \
-    ccsds/ApplicationProcessUser.asn1 \
+    common/ApplicationProcessUser.acn \
+    common/ApplicationProcessUser.asn1 \
     ccsds/TM-Payload.asn1 \
     ccsds/TM-Payload.acn \
     ccsds/TC-Payload.acn \

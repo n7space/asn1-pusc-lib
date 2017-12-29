@@ -54,12 +54,10 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN
     messageTimeCounter INTEGER (0 .. 65535),
-    destination-ID Destination-ID,
+    destination-ID ApplicationProcessUser-ID,
     time AbsoluteTime
 --! spare NULL         defined as align-to-next in acn file
 }
-
-Destination-ID ::= INTEGER (0 .. 65535)
 
 TM-PacketType ::= NULL
 

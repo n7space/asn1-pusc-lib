@@ -23,15 +23,15 @@
 
 Request DEFINITIONS ::= BEGIN
 IMPORTS
-    Source-ID FROM Source
     ApplicationProcess-ID FROM ApplicationProcess
+    ApplicationProcessUser-ID FROM ApplicationProcessUser
     PUSC-UINT32, AbsoluteTime FROM BasicTypes;
 
-Request-ID ::= Request-ID-Generic {Source-ID, ApplicationProcess-ID, PUSC-UINT32}
+Request-ID ::= Request-ID-Generic {ApplicationProcessUser-ID, ApplicationProcess-ID, PUSC-UINT32}
 
-Request-ID-Generic {ApplicationProcess-ID-Type, UnsignedIntegerType} ::= SEQUENCE
+Request-ID-Generic {ApplicationProcessUser-ID-Type, ApplicationProcess-ID-Type, UnsignedIntegerType} ::= SEQUENCE
 {
-    source-ID ApplicationProcess-ID-Type,
+    source-ID ApplicationProcessUser-ID-Type,
     applicationProcess-ID ApplicationProcess-ID-Type,
     sequenceCount UnsignedIntegerType
 }
