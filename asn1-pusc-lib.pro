@@ -55,16 +55,14 @@ DISTFILES += \
     service-17/PUS-17-4.acn \
     service-17/PUS-17-4.asn1 \
     ccsds/meta.json \
-    ccsds/ApplicationProcessUser.acn \
-    ccsds/ApplicationProcessUser.asn1 \
+    common/ApplicationProcessUser.acn \
+    common/ApplicationProcessUser.asn1 \
     ccsds/TM-Payload.asn1 \
     ccsds/TM-Payload.acn \
     ccsds/TC-Payload.acn \
     ccsds/TC-Payload.asn1 \
     service-09/RateExponentialValue.acn \
     service-09/RateExponentialValue.asn1 \
-    service-01/Request.acn \
-    service-01/Request.asn1 \
     service-02/meta.json \
     service-02/Registers.acn \
     service-02/Registers.asn1 \
@@ -273,6 +271,71 @@ DISTFILES += \
     service-04/PUS-4-8.asn1 \
     service-04/PUS-4-9.acn \
     service-04/PUS-4-9.asn1 \
+    service-11/meta.json \
+    service-11/PUS-11-1.acn \
+    service-11/PUS-11-1.asn1 \
+    service-11/PUS-11-2.acn \
+    service-11/PUS-11-2.asn1 \
+    service-11/PUS-11-3.acn \
+    service-11/PUS-11-3.asn1 \
+    service-11/PUS-11-4.acn \
+    service-11/PUS-11-4.asn1 \
+    service-11/PUS-11-20.acn \
+    service-11/PUS-11-20.asn1 \
+    service-11/PUS-11-21.acn \
+    service-11/PUS-11-21.asn1 \
+    service-11/PUS-11-18.acn \
+    service-11/PUS-11-18.asn1 \
+    service-11/PUS-11-19.acn \
+    service-11/PUS-11-19.asn1 \
+    service-11/PUS-11-22.acn \
+    service-11/PUS-11-22.asn1 \
+    service-11/PUS-11-23.acn \
+    service-11/PUS-11-23.asn1 \
+    service-11/PUS-11-24.acn \
+    service-11/PUS-11-24.asn1 \
+    service-11/PUS-11-25.acn \
+    service-11/PUS-11-25.asn1 \
+    service-11/PUS-11-26.acn \
+    service-11/PUS-11-26.asn1 \
+    service-11/PUS-11-27.acn \
+    service-11/PUS-11-27.asn1 \
+    service-11/PUS-11-13.acn \
+    service-11/PUS-11-13.asn1 \
+    service-11/PUS-11-10.acn \
+    service-11/PUS-11-10.asn1 \
+    service-11/PUS-11-15.acn \
+    service-11/PUS-11-15.asn1 \
+    service-11/PUS-11-17.acn \
+    service-11/PUS-11-17.asn1 \
+    service-11/PUS-11-16.acn \
+    service-11/PUS-11-16.asn1 \
+    service-11/PUS-11-5.acn \
+    service-11/PUS-11-5.asn1 \
+    service-11/PUS-11-7.acn \
+    service-11/PUS-11-7.asn1 \
+    service-11/PUS-11-12.acn \
+    service-11/PUS-11-12.asn1 \
+    service-11/PUS-11-9.acn \
+    service-11/PUS-11-9.asn1 \
+    service-11/PUS-11-14.acn \
+    service-11/PUS-11-14.asn1 \
+    service-11/PUS-11-11.acn \
+    service-11/PUS-11-11.asn1 \
+    service-11/SubSchedule.acn \
+    service-11/SubSchedule.asn1 \
+    service-11/Group.acn \
+    service-11/Group.asn1 \
+    common/Request.acn \
+    common/Request.asn1 \
+    service-11/TimeWindow.acn \
+    service-11/TimeWindow.asn1 \
+    service-11/PUS-11-6.acn \
+    service-11/PUS-11-6.asn1 \
+    service-11/PUS-11-8.asn1 \
+    service-11/PUS-11-8.acn \
+    service-01/VerificationRequest.acn \
+    service-01/VerificationRequest.asn1 \
     service-08/meta.json \
     service-08/PUS-8-1.acn \
     service-08/PUS-8-1.asn1 \

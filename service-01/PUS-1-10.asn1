@@ -24,10 +24,10 @@
 PUS-1-10 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request
+    VerificationRequest-ID FROM VerificationRequest
     RoutingFailureNotice FROM ErrorCodes;
 
-TM-1-10-FailedRoutingVerificatrionReport ::= TM-1-10-FailedRoutingVerificatrionReportGeneric {Request-ID, RoutingFailureNotice}
+TM-1-10-FailedRoutingVerificatrionReport ::= TM-1-10-FailedRoutingVerificatrionReportGeneric {VerificationRequest-ID, RoutingFailureNotice}
 
 TM-1-10-FailedRoutingVerificatrionReportGeneric {Request-ID-Type, RoutingFailureNotice-Type} ::= SEQUENCE
 {

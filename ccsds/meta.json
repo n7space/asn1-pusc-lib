@@ -9,7 +9,6 @@
           "asn1Files": [
             "TC-Packet.asn1",
             "PacketTypes.asn1",
-            "ApplicationProcessUser.asn1",
             "TC-Payload.asn1"
           ],
           "requires": [
@@ -17,6 +16,11 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process User" 
             }
           ]
         },
@@ -25,7 +29,6 @@
           "asn1Files": [
             "TM-Packet.asn1",
             "PacketTypes.asn1",
-            "ApplicationProcessUser.asn1",
             "TM-Payload.asn1"
           ],
           "requires": [
@@ -44,6 +47,11 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Spacecraft Time Reference Status"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process User" 
             }
           ]
         }

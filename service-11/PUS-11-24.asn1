@@ -21,14 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Request DEFINITIONS ::= BEGIN
+PUS-11-24 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    Group-ID FROM Group;
 
-Request-ID []
+maxTC-11-24-GroupCount INTEGER ::= 4095
+
+TC-11-24-EnableTimeBasedSchedulingGroups ::= TC-11-24-EnableTimeBasedSchedulingGroupsGeneric {Group-ID}
+
+TC-11-24-EnableTimeBasedSchedulingGroupsGeneric {Group-ID-Type} ::= SEQUENCE
 {
-    packetVersionNumber [],
-    packet-ID [],
-    packetSequenceControl []
+--! n UnsignedInteger, moved to acn
+    groups SEQUENCE (SIZE(0 .. maxTC-11-24-GroupCount)) OF Group-ID-Type
 }
-
 
 END

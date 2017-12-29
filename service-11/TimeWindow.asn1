@@ -21,17 +21,38 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Request DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+TimeWindow DEFINITIONS ::= BEGIN
 IMPORTS
-    PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
-    TC-PacketType FROM TC-Packet;
+    AbsoluteTime FROM BasicTypes;
 
-Request-ID ::= SEQUENCE
+TimeWindow ::= SEQUENCE
 {
-    packetVersionNumber PacketVersionNumberValue,
-    packet-ID Packet-ID {TC-PacketType},
-    packetSequenceControl PacketSequenceControl
+--! type TimeWindowType,
+    timeTags  TimeTags
+}
+
+TimeTags ::= TimeTagsGeneric {AbsoluteTime}
+
+TimeTagsGeneric {AbsoluteTimeType} ::= CHOICE
+{
+    selectAll NULL,
+    fromTimeTagToTimeTag SEQUENCE
+    {
+        fromTimeTag AbsoluteTimeType,
+        toTimeTag AbsoluteTimeType
+    },
+    fromTimeTag AbsoluteTimeType,
+    toTimeTag AbsoluteTimeType
+}
+
+
+
+TimeWindowType ::= ENUMERATED
+{
+    selectAll (0),
+    fromTimeTagToTimeTag (1),
+    fromTimeTag (2),
+    toTimeTag (3)
 }
 
 END

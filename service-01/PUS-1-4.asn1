@@ -24,10 +24,10 @@
 PUS-1-4 DEFINITIONS AUTOMATIC TAGS::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    Request-ID FROM Request
+    VerificationRequest-ID FROM VerificationRequest
     ExecutionStartFailureNotice FROM ErrorCodes;
 
-TM-1-4-FailedStartOfExecutionVerificationReport ::= TM-1-4-FailedStartOfExecutionVerificationReportGeneric {Request-ID, ExecutionStartFailureNotice}
+TM-1-4-FailedStartOfExecutionVerificationReport ::= TM-1-4-FailedStartOfExecutionVerificationReportGeneric {VerificationRequest-ID, ExecutionStartFailureNotice}
 
 TM-1-4-FailedStartOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionStartFailureNotice-Type} ::= SEQUENCE
 {
