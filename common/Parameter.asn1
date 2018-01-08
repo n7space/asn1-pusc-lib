@@ -34,4 +34,9 @@ ParameterValue ::= CHOICE
     param1 INTEGER (0 ..255)
 }
 
+ParameterMask ::= CHOICE
+{
+    param1 BIT STRING(SIZE (16))
+}
+
 END

@@ -21,16 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-19 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ApplicationProcess-ID FROM ApplicationProcess
-    DummyType FROM Dummy;
+    FMON-ID FROM FMON
+    PUSC-UINT32 FROM BasicTypes;
 
-eventDefinition-ID-Size INTEGER ::= 32
+maxTC-12-19-FMON-ID-Count INTEGER ::= 4095
 
-EventDefinition-ID ::= INTEGER (0 .. 4294967295)
+TC-12-19-EnableFunctionalMonitoringDefinitions ::= TC-12-19-EnableFunctionalMonitoringDefinitionsGeneric  {FMON-ID}
 
-EventDefinitionAuxiliaryData ::= DummyType
+TC-12-19-EnableFunctionalMonitoringDefinitionsGeneric {FMON-ID-Type} ::= SEQUENCE
+{
+--! n UnsignedInteger,
+    fmon-ID SEQUENCE (SIZE(1 .. maxTC-12-19-FMON-ID-Count)) OF FMON-ID-Type
+}
 
 END

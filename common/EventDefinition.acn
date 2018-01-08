@@ -23,6 +23,7 @@
 
 EventDefinition DEFINITIONS ::= BEGIN
 
+
 EventDefinition-ID [size 32, encoding pos-int, endianness big]
 
 EventDefinitionAuxiliaryData []

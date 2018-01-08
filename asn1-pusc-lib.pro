@@ -348,7 +348,72 @@ DISTFILES += \
     service-11/PUS-11-8.asn1 \
     service-11/PUS-11-9.asn1 \
     service-11/SubSchedule.asn1 \
-    service-11/TimeWindow.asn1
+    service-11/TimeWindow.asn1 \
+    service-12/PMON.asn1 \
+    service-12/PUS-12-1.asn1 \
+    service-12/PUS-12-12.asn1 \
+    service-12/PUS-12-15.asn1 \
+    service-12/PUS-12-16.asn1 \
+    service-12/PUS-12-2.asn1 \
+    service-12/TransitionNotification.asn1 \
+    service-17/PUS-17-1.asn1 \
+    service-17/PUS-17-2.asn1 \
+    service-17/PUS-17-3.asn1 \
+    service-17/PUS-17-4.asn1 \
+    service-12/PUS-12-3.acn \
+    service-12/PUS-12-3.asn1 \
+    service-12/PUS-12-5.acn \
+    service-12/PUS-12-5.asn1 \
+    service-12/CheckValidityCondition.acn \
+    service-12/CheckValidityCondition.asn1 \
+    service-12/ParameterMonitoringDefinition.acn \
+    service-12/ParameterMonitoringDefinition.asn1 \
+    service-12/PUS-12-6.acn \
+    service-12/PUS-12-6.asn1 \
+    service-12/PUS-12-7.acn \
+    service-12/PUS-12-7.asn1 \
+    service-12/PUS-12-8.acn \
+    service-12/PUS-12-8.asn1 \
+    service-12/PUS-12-9.acn \
+    service-12/PUS-12-9.asn1 \
+    service-12/PUS-12-13.acn \
+    service-12/PUS-12-13.asn1 \
+    service-12/PUS-12-14.acn \
+    service-12/PUS-12-14.asn1 \
+    service-12/PUS-12-10.acn \
+    service-12/PUS-12-10.asn1 \
+    service-12/PUS-12-11.acn \
+    service-12/PUS-12-11.asn1 \
+    service-12/PUS-12-17.acn \
+    service-12/PUS-12-17.asn1 \
+    service-12/PUS-12-18.acn \
+    service-12/PUS-12-18.asn1 \
+    service-12/PUS-12-19.acn \
+    service-12/PUS-12-19.asn1 \
+    service-12/FMON.acn \
+    service-12/FMON.asn1 \
+    service-12/PUS-12-20.acn \
+    service-12/PUS-12-20.asn1 \
+    service-12/PUS-12-21.acn \
+    service-12/PUS-12-21.asn1 \
+    service-12/PUS-12-22.acn \
+    service-12/PUS-12-22.asn1 \
+    service-12/PUS-12-23.acn \
+    service-12/PUS-12-23.asn1 \
+    service-12/PUS-12-24.acn \
+    service-12/PUS-12-24.asn1 \
+    service-12/PMON-FailingNumber.acn \
+    service-12/PMON-FailingNumber.asn1 \
+    service-12/PUS-12-25.acn \
+    service-12/PUS-12-25.asn1 \
+    service-12/PUS-12-26.acn \
+    service-12/PUS-12-26.asn1 \
+    service-12/PUS-12-27.acn \
+    service-12/PUS-12-27.asn1 \
+    service-12/PUS-12-28.acn \
+    service-12/PUS-12-28.asn1 \
+    service-12/PUS-12-4.acn \
+    service-12/PUS-12-4.asn1
 
 
 HEADERS += \
@@ -390,5 +455,6 @@ linux-g++ {
 }
 
 include(.qmake/handleAsn1AcnBuild.pri)
+#include(.qmakeV4/handleAsn1AcnBuild.pri)
 
 INCLUDEPATH += $${ASN1SCC_PRODUCTS_DIR}

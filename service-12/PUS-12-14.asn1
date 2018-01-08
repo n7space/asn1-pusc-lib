@@ -21,16 +21,26 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-14 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ApplicationProcess-ID FROM ApplicationProcess
-    DummyType FROM Dummy;
+    PMON-Status, PMON-ID FROM PMON
+    PUSC-UINT32 FROM BasicTypes;
 
-eventDefinition-ID-Size INTEGER ::= 32
+maxTM-12-14-ParameterMonitoringStatusCount INTEGER ::= 4095
 
-EventDefinition-ID ::= INTEGER (0 .. 4294967295)
+TM-12-14-ParameterMonitoringDefinitionReport ::= SEQUENCE
+{
+--! n BasicTypes.PUSC-UINT32,
+    status SEQUENCE (SIZE(0 .. maxTM-12-14-ParameterMonitoringStatusCount )) OF ParameterMonitoringStatusReport
+}
 
-EventDefinitionAuxiliaryData ::= DummyType
+ParameterMonitoringStatusReport ::= ParameterMonitoringStatusReportGeneric {PMON-ID}
+
+ParameterMonitoringStatusReportGeneric {PMON-ID-Type} ::= SEQUENCE
+{
+    pmon-ID PMON-ID-Type,
+    pmonStatus PMON-Status
+}
 
 END

@@ -21,16 +21,8 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    ApplicationProcess-ID FROM ApplicationProcess
-    DummyType FROM Dummy;
+PUS-12-16 DEFINITIONS ::= BEGIN
 
-eventDefinition-ID-Size INTEGER ::= 32
-
-EventDefinition-ID ::= INTEGER (0 .. 4294967295)
-
-EventDefinitionAuxiliaryData ::= DummyType
+TC-12-16-DisableTheParameterMonitoringFunction []
 
 END

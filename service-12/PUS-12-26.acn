@@ -21,16 +21,25 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-IMPORTS
-    ApplicationProcess-ID FROM ApplicationProcess
-    DummyType FROM Dummy;
+PUS-12-26 DEFINITIONS ::= BEGIN
 
-eventDefinition-ID-Size INTEGER ::= 32
+TM-12-28-FunctionalMonitoringDefinitionReport []
+{
+    n1 BasicTypes.PUSC-UINT32 [],
+    report [size n1]
+}
 
-EventDefinition-ID ::= INTEGER (0 .. 4294967295)
 
-EventDefinitionAuxiliaryData ::= DummyType
+
+TM-12-28-MonitoringDefinitionReport []
+{
+    fmon-ID [],
+    checkValidityCondition [],
+    fmonProtectionStatus [],
+    fmonStatus [],
+    min-PMON-FailingNumber [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    pmon-ID [size n2]
+}
 
 END

@@ -21,16 +21,30 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+TransitionNotification DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    ApplicationProcess-ID FROM ApplicationProcess
-    DummyType FROM Dummy;
+    PMON-ID,
+    PMON-CheckType,
+    PMON-ExpectedValueCheckMask,
+    PMON-ParameterValue,
+    PMON-LimitCrossed,
+    PMON-CheckingStatus FROM PMON
+    AbsoluteTime FROM BasicTypes;
 
-eventDefinition-ID-Size INTEGER ::= 32
 
-EventDefinition-ID ::= INTEGER (0 .. 4294967295)
+TransitionNotification ::= TransitionNotificationGeneric {PMON-ExpectedValueCheckMask, PMON-ParameterValue, PMON-LimitCrossed}
 
-EventDefinitionAuxiliaryData ::= DummyType
+TransitionNotificationGeneric {ExpectedValueCheckMaskType, ParameterValueType, LimitCrossedType}  ::= SEQUENCE
+{
+--! pmon-ID PMON-ID-Type,
+--! checkType CheckType-Type,
+    expectedValueCheckMask ExpectedValueCheckMaskType,
+    parameterValue ParameterValueType,
+    limitCrossed LimitCrossedType,
+    previous-PMON-CheckingStatus PMON-CheckingStatus,
+    current-PMON-CheckingStatus PMON-CheckingStatus,
+    transitionTime AbsoluteTime
+}
 
 END
