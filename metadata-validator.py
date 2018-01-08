@@ -127,7 +127,11 @@ def checkLibraryCreationValid(element_name, metadata_path, path):
 
 def checkElementCompilationValid(element, submodule, module, metadata, build_path):
     dependencies = set(getRecursiveDependency(element, submodule, module, metadata))
-    path = os.path.join(build_path, makeValidFilename(element[NAME_KEY]))
+    path = os.path.join(build_path,                                  \
+                        makeValidFilename(module.get(NAME_KEY)),      \
+                        makeValidFilename(submodule.get(NAME_KEY)),  \
+                        makeValidFilename(element.get(NAME_KEY)))
+
     print (path)
     os.makedirs(path)
 
@@ -177,7 +181,7 @@ def getSubmoduleByRequiresReference(reference, metadata):
 
 def getModuleByRequiresReference(reference, metadata):
     module_name = reference.get(DEPENDENCY_MODULE_KEY, [])
-    return metadata.get(module_name, [])
+    return metadata.get(module_name, {})
 
 def getElementByRequiresReference(reference, metadata):
     element_name = reference.get(DEPENDENCY_ELEMENT_KEY, [])
