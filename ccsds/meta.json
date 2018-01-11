@@ -21,6 +21,11 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process User" 
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Message Type"
             }
           ]
         },
@@ -52,6 +57,11 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process User" 
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Message Type"
             }
           ]
         }

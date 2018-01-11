@@ -413,7 +413,10 @@ DISTFILES += \
     service-12/PUS-12-28.acn \
     service-12/PUS-12-28.asn1 \
     service-12/PUS-12-4.acn \
-    service-12/PUS-12-4.asn1
+    service-12/PUS-12-4.asn1 \
+    common/MessageType.acn \
+    common/MessageType.asn1
+
 
 
 HEADERS += \

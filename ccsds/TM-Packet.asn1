@@ -27,15 +27,15 @@ IMPORTS
     CCSDS-Packet,
     PacketDataField,
     Packet-ID,
-    ServiceType-ID,
-    MessageSubtype-ID,
     DataWithSecondaryHeader,
     DataNoSecondaryHeader,
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcessUser-ID FROM ApplicationProcessUser
     TM-Payload, TM-NoHeaderPayload FROM TM-Payload
     SpacecraftTimeReferenceStatus FROM SpacecraftTimeReferenceStatus
-    AbsoluteTime FROM BasicTypes;
+    AbsoluteTime FROM BasicTypes
+    ServiceType-ID, MessageSubtype-ID FROM MessageType;
+
 
 TM-CCSDS-Packet ::= CCSDS-Packet {TM-Packet-ID, TM-PacketDataField}
 
