@@ -21,22 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+PUS-12-14 DEFINITIONS ::= BEGIN
 
-Parameter-ID ::= ENUMERATED
+TM-12-14-ParameterMonitoringDefinitionReport []
 {
-    param1 (0)
+    n BasicTypes.PUSC-UINT32 [],
+    status [size n]
 }
-
-ParameterValue ::= CHOICE
+ParameterMonitoringStatusReport []
 {
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
+    pmon-ID [],
+    pmonStatus []
 }
 
 END

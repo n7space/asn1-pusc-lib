@@ -21,10 +21,10 @@
           "name": "Application Process",
           "asn1Files": ["ApplicationProcess.asn1"]
         },
-	{
-	  "name": "Application Process User",
-	  "asn1Files": ["ApplicationProcessUser.asn1"]
-	},
+        {
+          "name": "Application Process User",
+          "asn1Files": ["ApplicationProcessUser.asn1"]
+        },
         {
           "name": "Execution Step",
           "asn1Files": ["ExecutionStep.asn1"]
@@ -33,10 +33,10 @@
           "name": "Parameter",
           "asn1Files": ["Parameter.asn1"]
         },
-	{
-	  "name": "Spacecraft Time Reference Status",
-	  "asn1Files": ["SpacecraftTimeReferenceStatus.asn1"]
-	},
+        {
+          "name": "Spacecraft Time Reference Status",
+          "asn1Files": ["SpacecraftTimeReferenceStatus.asn1"]
+        },
         {
           "name": "Request",
           "asn1Files":[
@@ -44,11 +44,23 @@
           ],
           "requires":[
             "Application Process",
-	    "Application Process User",
+            "Application Process User",
             {
-	      "module": "Common Types",
-	      "submodule": "PTC/PFC Types",
-	      "element": "Basic Types"
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]
+        },
+        {
+          "name": "Event Definition",
+          "asn1Files": ["EventDefinition.asn1"],
+          "requires": [
+            "Application Process",
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Dummy Type"
             }
           ]
         }

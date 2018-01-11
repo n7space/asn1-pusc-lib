@@ -21,22 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-25 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    FMON-ID FROM FMON
+    PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
+maxTC-12-25-FMON-ID-Count INTEGER ::= 4095
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
+TC-12-25-ReportFunctionalMonitoringDefinitions ::= TC-12-25-ReportFunctionalMonitoringDefinitionsGeneric {FMON-ID}
 
-ParameterMask ::= CHOICE
+TC-12-25-ReportFunctionalMonitoringDefinitionsGeneric {FMON-ID-Type} ::= SEQUENCE
 {
-    param1 BIT STRING(SIZE (16))
+--! n UnsignedInteger,
+    fmon-ID SEQUENCE (SIZE(1 .. maxTC-12-25-FMON-ID-Count)) OF FMON-ID-Type
 }
 
 END

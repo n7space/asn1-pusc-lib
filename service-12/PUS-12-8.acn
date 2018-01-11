@@ -21,22 +21,6 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
-
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
-
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
+PUS-12-8 DEFINITIONS ::= BEGIN
 
 END

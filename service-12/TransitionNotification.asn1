@@ -21,22 +21,30 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+TransitionNotification DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PMON-ID,
+    PMON-CheckType,
+    PMON-ExpectedValueCheckMask,
+    PMON-ParameterValue,
+    PMON-LimitCrossed,
+    PMON-CheckingStatus FROM PMON
+    AbsoluteTime FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
+TransitionNotification ::= TransitionNotificationGeneric {PMON-ExpectedValueCheckMask, PMON-ParameterValue, PMON-LimitCrossed}
 
-ParameterMask ::= CHOICE
+TransitionNotificationGeneric {ExpectedValueCheckMaskType, ParameterValueType, LimitCrossedType}  ::= SEQUENCE
 {
-    param1 BIT STRING(SIZE (16))
+--! pmon-ID PMON-ID-Type,
+--! checkType CheckType-Type,
+    expectedValueCheckMask ExpectedValueCheckMaskType,
+    parameterValue ParameterValueType,
+    limitCrossed LimitCrossedType,
+    previous-PMON-CheckingStatus PMON-CheckingStatus,
+    current-PMON-CheckingStatus PMON-CheckingStatus,
+    transitionTime AbsoluteTime
 }
 
 END

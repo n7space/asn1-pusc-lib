@@ -21,22 +21,25 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+PUS-12-26 DEFINITIONS ::= BEGIN
 
-Parameter-ID ::= ENUMERATED
+TM-12-28-FunctionalMonitoringDefinitionReport []
 {
-    param1 (0)
+    n1 BasicTypes.PUSC-UINT32 [],
+    report [size n1]
 }
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
 
-ParameterMask ::= CHOICE
+
+TM-12-28-MonitoringDefinitionReport []
 {
-    param1 BIT STRING(SIZE (16))
+    fmon-ID [],
+    checkValidityCondition [],
+    fmonProtectionStatus [],
+    fmonStatus [],
+    min-PMON-FailingNumber [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    pmon-ID [size n2]
 }
 
 END

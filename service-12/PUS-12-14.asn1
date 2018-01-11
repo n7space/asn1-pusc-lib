@@ -21,22 +21,26 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-14 DEFINITIONS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PMON-Status, PMON-ID FROM PMON
+    PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
+maxTM-12-14-ParameterMonitoringStatusCount INTEGER ::= 4095
+
+TM-12-14-ParameterMonitoringDefinitionReport ::= SEQUENCE
 {
-    param1 (0)
+--! n BasicTypes.PUSC-UINT32,
+    status SEQUENCE (SIZE(0 .. maxTM-12-14-ParameterMonitoringStatusCount )) OF ParameterMonitoringStatusReport
 }
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
+ParameterMonitoringStatusReport ::= ParameterMonitoringStatusReportGeneric {PMON-ID}
 
-ParameterMask ::= CHOICE
+ParameterMonitoringStatusReportGeneric {PMON-ID-Type} ::= SEQUENCE
 {
-    param1 BIT STRING(SIZE (16))
+    pmon-ID PMON-ID-Type,
+    pmonStatus PMON-Status
 }
 
 END

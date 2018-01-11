@@ -21,22 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-11 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes
+    TransitionNotification FROM TransitionNotification;
 
-Parameter-ID ::= ENUMERATED
+maxTM-12-11-outOfLimitsReportCount INTEGER ::= 4095
+
+TM-12-11-outOfLimitsReport ::= SEQUENCE
 {
-    param1 (0)
+--! n UnsignedInteger, moved to acn
+    outOfLimitsReports SEQUENCE (SIZE(1 .. maxTM-12-11-outOfLimitsReportCount)) OF TransitionNotification
 }
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
 
 END
