@@ -56,8 +56,8 @@ DISTFILES += \
     service-02/Registers.acn \
     service-02/Transaction.acn \
     service-03/CollectionInterval.acn \
-    service-03/DiagnosticParameterReportStructure.acn \
-    service-03/HousekeepingParameterReportStructure.acn \
+    common/DiagnosticParameterReportStructure.acn \
+    common/HousekeepingParameterReportStructure.acn \
     service-03/ParameterFunctionalReportingDefinition.acn \
     service-03/ParameterReportingEntries.acn \
     service-03/ParameterReportStructureType.acn \
@@ -228,8 +228,8 @@ DISTFILES += \
     service-02/Registers.asn1 \
     service-02/Transaction.asn1 \
     service-03/CollectionInterval.asn1 \
-    service-03/DiagnosticParameterReportStructure.asn1 \
-    service-03/HousekeepingParameterReportStructure.asn1 \
+    common/DiagnosticParameterReportStructure.asn1 \
+    common/HousekeepingParameterReportStructure.asn1 \
     service-03/ParameterFunctionalReportingDefinition.asn1 \
     service-03/ParameterReportingEntries.asn1 \
     service-03/ParameterReportStructureType.asn1 \
