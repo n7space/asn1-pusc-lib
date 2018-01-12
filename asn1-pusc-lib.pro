@@ -28,6 +28,8 @@ DISTFILES += \
     common/ExecutionStep.acn \
     common/Parameter.acn \
     common/Request.acn \
+    common/FilePath.acn \
+    common/FilePath.asn1 \
     common/SpacecraftTimeReferenceStatus.acn \
     service-01/ErrorCodes.acn \
     service-01/PUS-1-1.acn \
@@ -116,7 +118,6 @@ DISTFILES += \
     service-05/PUS-5-7.acn \
     service-05/PUS-5-8.acn \
     service-06/Data.acn \
-    service-06/FilePath.acn \
     service-06/Memory.acn \
     service-06/PUS-6-1.acn \
     service-06/PUS-6-10.acn \
@@ -288,7 +289,6 @@ DISTFILES += \
     service-05/PUS-5-7.asn1 \
     service-05/PUS-5-8.asn1 \
     service-06/Data.asn1 \
-    service-06/FilePath.asn1 \
     service-06/Memory.asn1 \
     service-06/PUS-6-1.asn1 \
     service-06/PUS-6-10.asn1 \
