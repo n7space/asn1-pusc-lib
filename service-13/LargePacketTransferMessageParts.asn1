@@ -29,13 +29,13 @@ IMPORTS
 uplinkMaximumPartSize PUSC-UINT32 ::= 1024
 downlinkMaximumPartSize PUSC-UINT32 ::= 1024
 
-UplinkMessagePart ::= MessagePartGeneric {PUSC-UINT32, uplinkMaximumPartSize}
-DownlinkMessagePart ::= MessagePartGeneric {PUSC-UINT32, downlinkMaximumPartSize}
+UplinkMessagePart ::= MessagePartGeneric {PUSC-UINT32, PUSC-UINT32, uplinkMaximumPartSize}
+DownlinkMessagePart ::= MessagePartGeneric {PUSC-UINT32, PUSC-UINT32, downlinkMaximumPartSize}
 
-MessagePartGeneric {UnsignedInteger-Type, PUSC-UINT32:maximumPartSize} ::= SEQUENCE
+MessagePartGeneric {MessageTransactionId-Type, PartSequenceNumber-Type, PUSC-UINT32:maximumPartSize} ::= SEQUENCE
 {
-    largeMessageTransactionIdentifier UnsignedInteger-Type,
-    partSequenceNumber UnsignedInteger-Type,
+    largeMessageTransactionIdentifier MessageTransactionId-Type,
+    partSequenceNumber PartSequenceNumber-Type,
     part OCTET STRING (SIZE(maximumPartSize))
 }
 
