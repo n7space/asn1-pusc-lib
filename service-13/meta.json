@@ -7,13 +7,9 @@
           {
             "name": "Downlink processing",
             "asn1Files": [
-              "LargePacketTransferMessageParts.acn",
               "LargePacketTransferMessageParts.asn1",
-              "PUS-13-1.acn",
               "PUS-13-1.asn1",
-              "PUS-13-2.acn",
               "PUS-13-2.asn1",
-              "PUS-13-3.acn",
               "PUS-13-3.asn1"
             ],
             "requires": [
@@ -32,15 +28,10 @@
         {
           "name": "Uplink processing",
           "asn1Files": [
-            "LargePacketTransferMessageParts.acn",
             "LargePacketTransferMessageParts.asn1",
-            "PUS-13-9.acn",
             "PUS-13-9.asn1",
-            "PUS-13-10.acn",
             "PUS-13-10.asn1",
-            "PUS-13-11.acn",
             "PUS-13-11.asn1",
-            "PUS-13-16.acn",
             "PUS-13-16.asn1"
           ],
           "requires": [
