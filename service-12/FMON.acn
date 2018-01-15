@@ -21,22 +21,12 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
-EXPORTS ALL;
+FMON DEFINITIONS ::= BEGIN
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
+FMON-ID [size 32, encoding pos-int, encode-values]
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
+FMON-Status [size 1, encoding pos-int, encode-values]
 
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
+FMON-CheckingStatus [size 2, encoding pos-int, encode-values]
 
 END

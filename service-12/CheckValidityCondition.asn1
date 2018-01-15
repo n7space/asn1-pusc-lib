@@ -21,22 +21,18 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+CheckValidityCondition DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    Parameter-ID, ParameterMask, ParameterValue FROM Parameter;
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
+CheckValidityCondition ::= CheckValidityConditionGeneric {ParameterMask, ParameterValue}
 
-ParameterValue ::= CHOICE
+CheckValidityConditionGeneric {MaskType, ExpectedValueType} ::= SEQUENCE
 {
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
+--!    validityParameter-ID ValidityParameter-ID-Type,
+    mask MaskType,
+    expectedValue ExpectedValueType
 }
 
 END

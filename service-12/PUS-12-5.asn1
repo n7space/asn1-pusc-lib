@@ -21,22 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-5 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    ParameterMonitoringDefinition FROM ParameterMonitoringDefinition
+    PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
+maxTC-12-5-ParameterMonitoringDefinitionCount INTEGER ::= 4095
+
+TC-12-5-AddParameterMonitoringDefinitions ::= SEQUENCE
 {
-    param1 (0)
+--! n UnsignedInteger,
+    definitions SEQUENCE (SIZE(1 .. maxTC-12-5-ParameterMonitoringDefinitionCount)) OF ParameterMonitoringDefinition
 }
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
 
 END

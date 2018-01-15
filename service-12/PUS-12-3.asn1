@@ -21,22 +21,17 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-3 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
+TC-12-3-ChangeTheMaximumTransitionReportingDelay ::= TC-12-3-ChangeTheMaximumTransitionReportingDelayGeneric {PUSC-UINT32}
+
+TC-12-3-ChangeTheMaximumTransitionReportingDelayGeneric {ReportingDelayType}::= SEQUENCE
 {
-    param1 (0)
+    maxReportingDelay ReportingDelayType
 }
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
 
 END

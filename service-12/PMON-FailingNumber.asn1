@@ -21,22 +21,10 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PMON-FailingNumber DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
-
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
-
-ParameterMask ::= CHOICE
-{
-    param1 BIT STRING(SIZE (16))
-}
+Min-PMON-FailingNumber ::= PUSC-UINT32
 
 END

@@ -21,22 +21,20 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-Parameter DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+PUS-12-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
+IMPORTS
+    PMON-ID FROM PMON
+    PUSC-UINT32 FROM BasicTypes;
 
-Parameter-ID ::= ENUMERATED
-{
-    param1 (0)
-}
+maxTC-12-2-PMON-ID-Count INTEGER ::= 4096
 
-ParameterValue ::= CHOICE
-{
-    param1 INTEGER (0 ..255)
-}
+TC-12-2-DisableParameterReportingDefinitions ::= TC-12-2-DisableParameterReportingDefinitionsGeneric {PMON-ID}
 
-ParameterMask ::= CHOICE
+TC-12-2-DisableParameterReportingDefinitionsGeneric {PMON-ID-Type} ::= SEQUENCE
 {
-    param1 BIT STRING(SIZE (16))
+--! n UnsignedInteger, moved to acn
+    pmon SEQUENCE (SIZE(1 .. maxTC-12-2-PMON-ID-Count)) OF PMON-ID-Type
 }
 
 END
