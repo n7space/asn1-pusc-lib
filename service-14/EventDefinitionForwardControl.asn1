@@ -21,20 +21,29 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+EventDefinitionForwardControl DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+EXPORTS ALL;
+IMPORTS
+    EventDefinition-ID FROM EventDefinition
+    ApplicationProcess-ID FROM ApplicationProcess
+    PUSC-UINT32 FROM BasicTypes;
 
-PacketVersionNumberValue [pattern '000'B]
+maxEventDefinitionForwardControlCount INTEGER ::= 4095
+maxEventDefinition-ID-Count INTEGER::= 4095
 
-PacketSequenceControl []
+EventDefinitionForwardControl ::= SEQUENCE
 {
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int, endianness big]
+--! n UnsignedInteger,
+    forwardControl SEQUENCE (SIZE(1 .. maxEventDefinitionForwardControlCount)) OF SingleEventDefinitionForwardControl
 }
 
-SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
+SingleEventDefinitionForwardControl ::= SingleEventDefinitionForwardControlGeneric {ApplicationProcess-ID, EventDefinition-ID}
 
-PacketDataLength [size 16, encoding pos-int, endianness big]
-
-PacketErrorControl [size 16]
+SingleEventDefinitionForwardControlGeneric {ApplicationProcess-ID-Type, EventDefinition-ID-Type} ::= SEQUENCE
+{
+    applicationProcess-ID ApplicationProcess-ID-Type,
+--! n2 UnsignedInteger,
+    eventDefinition-ID SEQUENCE (SIZE(0 .. maxEventDefinition-ID-Count)) OF EventDefinition-ID-Type
+}
 
 END

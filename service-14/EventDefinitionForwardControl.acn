@@ -21,20 +21,19 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+EventDefinitionForwardControl DEFINITIONS ::= BEGIN
 
-PacketVersionNumberValue [pattern '000'B]
-
-PacketSequenceControl []
+EventDefinitionForwardControl []
 {
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int, endianness big]
+    n1 BasicTypes.PUSC-UINT32 [],
+    forwardControl [size n1]
 }
 
-SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
-
-PacketDataLength [size 16, encoding pos-int, endianness big]
-
-PacketErrorControl [size 16]
+SingleEventDefinitionForwardControl []
+{
+    applicationProcess-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    eventDefinition-ID [size n2]
+}
 
 END

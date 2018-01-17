@@ -24,7 +24,7 @@
 TM-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    MessageSubtype-ID, ServiceType-ID FROM PacketTypes;
+    MessageSubtype-ID, ServiceType-ID FROM MessageType;
 
 TM-Payload ::= CHOICE --TODO
 {

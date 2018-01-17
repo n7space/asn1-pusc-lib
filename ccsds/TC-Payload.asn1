@@ -24,7 +24,7 @@
 TC-Payload DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    MessageSubtype-ID, ServiceType-ID FROM PacketTypes;
+    MessageSubtype-ID, ServiceType-ID FROM MessageType;
 
 TC-Payload ::= CHOICE --TODO
 {

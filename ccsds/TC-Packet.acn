@@ -67,8 +67,8 @@ TC-PacketSecondaryHeader []
 {
     tcPacketPusVersionNumber [],
     acknowledgementFlags [],
-    serviceType-ID PacketTypes.ServiceType-ID [],
-    messageSubtype-ID PacketTypes.MessageSubtype-ID [],
+    serviceType-ID MessageType.ServiceType-ID [],
+    messageSubtype-ID MessageType.MessageSubtype-ID [],
     source-ID []
 --! spare []
 }

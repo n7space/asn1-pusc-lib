@@ -63,6 +63,18 @@
               "element": "Dummy Type"
             }
           ]
+        },
+        {
+          "name": "Housekeeping Parameter Report Structure",
+          "asn1Files": ["HousekeepingParameterReportStructure.asn1"] 
+        },
+        {
+          "name": "Diagnostic Parameter Report Structure",
+          "asn1Files": ["DiagnosticParameterReportStructure.asn1"]
+        },
+        {
+          "name": "Message Type",
+          "asn1Files": ["MessageType.asn1"]
         }
       ]
     }

@@ -77,7 +77,4 @@ DataNoSecondaryHeader {Payload-Type} ::= SEQUENCE
 
 PacketErrorControl ::= BIT STRING (SIZE(16))
 
-ServiceType-ID ::= INTEGER (1 .. 255)
-MessageSubtype-ID ::= INTEGER (1 .. 255)
-
 END
