@@ -21,20 +21,45 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+DiagnosticParameterReportForwardControl DEFINITIONS ::= BEGIN
 
-PacketVersionNumberValue [pattern '000'B]
-
-PacketSequenceControl []
+DiagnosticParameterReportForwardControlSubsampling []
 {
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int, endianness big]
+    n1 BasicTypes.PUSC-UINT32 [],
+    forwardControl [size n1]
 }
 
-SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
+SingleDiagnosticParameterReportForwardControlSubsampling []
+{
+    applicationProcess-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    structure [size n2]
+}
 
-PacketDataLength [size 16, encoding pos-int, endianness big]
+DiagnosticParameterStructure-ID-ConfigurationSubsampling []
+{
+    id [],
+    subsamplingRate []
+}
 
-PacketErrorControl [size 16]
+DiagnosticParameterReportForwardControlNoSubsampling []
+{
+    n1 BasicTypes.PUSC-UINT32 [],
+    forwardControl [size n1]
+}
+
+SingleDiagnosticParameterReportForwardControlNoSubsampling []
+{
+    applicationProcess-ID [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    structure [size n2]
+}
+
+DiagnosticParameterStructure-ID-ConfigurationNoSubsampling []
+{
+    id [],
+    subsamplingRate []
+}
+
 
 END

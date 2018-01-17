@@ -27,14 +27,13 @@ IMPORTS
     CCSDS-Packet,
     PacketDataField,
     Packet-ID,
-    ServiceType-ID,
-    MessageSubtype-ID,
     DataWithSecondaryHeader,
     DataNoSecondaryHeader,
     SecondaryHeaderFlag FROM PacketTypes
     ApplicationProcess-ID FROM ApplicationProcess
     ApplicationProcessUser-ID FROM ApplicationProcessUser
-    TC-Payload, TC-NoHeaderPayload FROM TC-Payload;
+    TC-Payload, TC-NoHeaderPayload FROM TC-Payload
+    ServiceType-ID, MessageSubtype-ID FROM MessageType;
 
 TC-CCSDS-Packet ::= CCSDS-Packet {TC-Packet-ID, TC-PacketDataField}
 

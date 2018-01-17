@@ -56,8 +56,8 @@ DISTFILES += \
     service-02/Registers.acn \
     service-02/Transaction.acn \
     service-03/CollectionInterval.acn \
-    service-03/DiagnosticParameterReportStructure.acn \
-    service-03/HousekeepingParameterReportStructure.acn \
+    common/DiagnosticParameterReportStructure.acn \
+    common/HousekeepingParameterReportStructure.acn \
     service-03/ParameterFunctionalReportingDefinition.acn \
     service-03/ParameterReportingEntries.acn \
     service-03/ParameterReportStructureType.acn \
@@ -228,8 +228,8 @@ DISTFILES += \
     service-02/Registers.asn1 \
     service-02/Transaction.asn1 \
     service-03/CollectionInterval.asn1 \
-    service-03/DiagnosticParameterReportStructure.asn1 \
-    service-03/HousekeepingParameterReportStructure.asn1 \
+    common/DiagnosticParameterReportStructure.asn1 \
+    common/HousekeepingParameterReportStructure.asn1 \
     service-03/ParameterFunctionalReportingDefinition.asn1 \
     service-03/ParameterReportingEntries.asn1 \
     service-03/ParameterReportStructureType.asn1 \
@@ -440,7 +440,52 @@ DISTFILES += \
     service-19/PUS-19-10.acn \
     service-19/PUS-19-10.asn1 \
     service-19/PUS-19-11.acn \
-    service-19/PUS-19-11.asn1
+    service-19/PUS-19-11.asn1 \
+    common/MessageType.acn \
+    common/MessageType.asn1 \
+    service-14/meta.json \
+    service-14/ApplicationProcessForwardControl.acn \
+    service-14/PUS-14-1.acn \
+    service-14/PUS-14-2.acn \
+    service-14/PUS-14-3.acn \
+    service-14/PUS-14-4.acn \
+    service-14/PUS-14-5.acn \
+    service-14/ApplicationProcessForwardControl.asn1 \
+    service-14/DiagnosticParameterReportForwardControl.asn1 \
+    service-14/PUS-14-1.asn1 \
+    service-14/PUS-14-2.asn1 \
+    service-14/PUS-14-3.asn1 \
+    service-14/PUS-14-4.asn1 \
+    service-14/PUS-14-5.asn1 \
+    service-14/DiagnosticParameterReportForwardControl.acn \
+    service-14/HousekeepingParameterReportForwardControl.acn \
+    service-14/HousekeepingParameterReportForwardControl.asn1 \
+    service-14/SubsamplingRate.acn \
+    service-14/SubsamplingRate.asn1 \
+    service-14/PUS-14-6.acn \
+    service-14/PUS-14-6.asn1 \
+    service-14/PUS-14-7.acn \
+    service-14/PUS-14-7.asn1 \
+    service-14/PUS-14-8.acn \
+    service-14/PUS-14-8.asn1 \
+    service-14/PUS-14-9.acn \
+    service-14/PUS-14-9.asn1 \
+    service-14/PUS-14-10.acn \
+    service-14/PUS-14-10.asn1 \
+    service-14/PUS-14-11.acn \
+    service-14/PUS-14-11.asn1 \
+    service-14/PUS-14-12.acn \
+    service-14/PUS-14-12.asn1 \
+    service-14/EventDefinitionForwardControl.acn \
+    service-14/EventDefinitionForwardControl.asn1 \
+    service-14/PUS-14-13.acn \
+    service-14/PUS-14-13.asn1 \
+    service-14/PUS-14-14.acn \
+    service-14/PUS-14-14.asn1 \
+    service-14/PUS-14-15.acn \
+    service-14/PUS-14-15.asn1 \
+    service-14/PUS-14-16.acn \
+    service-14/PUS-14-16.asn1
 
 
 HEADERS += \

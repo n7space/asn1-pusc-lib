@@ -21,20 +21,9 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-PacketTypes DEFINITIONS ::= BEGIN
+MessageType DEFINITIONS ::= BEGIN
 
-PacketVersionNumberValue [pattern '000'B]
-
-PacketSequenceControl []
-{
-    sequenceFlags [pattern '11'B],
-    packetSequenceCountOrName [size 14, encoding pos-int, endianness big]
-}
-
-SecondaryHeaderFlag [size 1, encoding pos-int, endianness big]
-
-PacketDataLength [size 16, encoding pos-int, endianness big]
-
-PacketErrorControl [size 16]
+ServiceType-ID  [size 8, encoding pos-int, endianness big]
+MessageSubtype-ID  [size 8, encoding pos-int, endianness big]
 
 END
