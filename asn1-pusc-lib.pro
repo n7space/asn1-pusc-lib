@@ -414,6 +414,33 @@ DISTFILES += \
     service-12/PUS-12-28.asn1 \
     service-12/PUS-12-4.acn \
     service-12/PUS-12-4.asn1 \
+    service-19/meta.json \
+    service-19/PUS-19-8.acn \
+    service-19/PUS-19-8.asn1 \
+    service-19/PUS-19-9.acn \
+    service-19/PUS-19-9.asn1 \
+    service-19/PUS-19-4.acn \
+    service-19/PUS-19-4.asn1 \
+    service-19/EventDefinitionSystem.acn \
+    service-19/EventDefinitionSystem.asn1 \
+    service-19/PUS-19-5.acn \
+    service-19/PUS-19-5.asn1 \
+    service-19/PUS-19-1.acn \
+    service-19/PUS-19-1.asn1 \
+    service-19/PUS-19-2.acn \
+    service-19/PUS-19-2.asn1 \
+    service-19/PUS-19-3.acn \
+    service-19/PUS-19-3.asn1 \
+    service-19/PUS-19-6.acn \
+    service-19/PUS-19-6.asn1 \
+    service-19/PUS-19-7.acn \
+    service-19/PUS-19-7.asn1 \
+    service-19/EventActionStatus.acn \
+    service-19/EventActionStatus.asn1 \
+    service-19/PUS-19-10.acn \
+    service-19/PUS-19-10.asn1 \
+    service-19/PUS-19-11.acn \
+    service-19/PUS-19-11.asn1 \
     common/MessageType.acn \
     common/MessageType.asn1 \
     service-14/meta.json \
@@ -491,7 +518,7 @@ SOURCES += \
     wrappers/c/tests/UInt16CoderTests.c \
     wrappers/c/tests/PacketLengthTests.c \
     wrappers/c/tests/PacketErrorControlTests.c \
-wrappers/c/tests/test_main.c
+    wrappers/c/tests/test_main.c
 
 LIBS += -lcmocka
 
