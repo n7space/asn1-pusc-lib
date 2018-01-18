@@ -23,7 +23,7 @@
 
 TC-Payload DEFINITIONS ::= BEGIN
 
-TC-Payload <PacketTypes.ServiceType-ID:service, PacketTypes.MessageSubtype-ID:message> []
+TC-Payload <MessageType.ServiceType-ID:service, MessageType.MessageSubtype-ID:message> []
 {
     tc-0-0 [present-when service==0 message==0] --TODO
 }

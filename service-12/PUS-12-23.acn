@@ -21,10 +21,24 @@
 --! along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --!
 
-EventDefinition DEFINITIONS ::= BEGIN
+PUS-12-23 DEFINITIONS ::= BEGIN
 
-EventDefinition-ID [size 32, encoding pos-int, endianness big]
+TC-12-23-AddFunctionalMonitoringDefinition []
+{
+    n1 BasicTypes.PUSC-UINT32 [],
+    functionalMonitoringDefinitions [size n1]
 
-EventDefinitionAuxiliaryData []
+}
+
+TC-12-23-FunctionalMonitoringDefinition []
+{
+    fmon-ID [],
+    checkValidityCondition [],
+    eventDefinition-ID [],
+    min-PMON-FailingNumber [],
+    n2 BasicTypes.PUSC-UINT32 [],
+    pmon-ID [size n2]
+}
+
 
 END

@@ -30,4 +30,9 @@ ParameterValue <Parameter-ID: parameter> [determinant parameter]
     param1 [size 8, encoding pos-int, endianness big]
 }
 
+ParameterMask <Parameter-ID: parameter> [determinant parameter]
+{
+    param1 []
+}
+
 END

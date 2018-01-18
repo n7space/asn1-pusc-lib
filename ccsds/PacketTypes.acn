@@ -37,7 +37,4 @@ PacketDataLength [size 16, encoding pos-int, endianness big]
 
 PacketErrorControl [size 16]
 
-ServiceType-ID  [size 8, encoding pos-int, endianness big]
-MessageSubtype-ID  [size 8, encoding pos-int, endianness big]
-
 END
