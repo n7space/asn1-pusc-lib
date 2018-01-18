@@ -485,8 +485,24 @@ DISTFILES += \
     service-14/PUS-14-15.acn \
     service-14/PUS-14-15.asn1 \
     service-14/PUS-14-16.acn \
-    service-14/PUS-14-16.asn1
-
+    service-14/PUS-14-16.asn1 \
+    service-13/meta.json \
+    service-13/LargePacketTransferMessageParts.acn \
+    service-13/LargePacketTransferMessageParts.asn1 \
+    service-13/PUS-13-1.acn \
+    service-13/PUS-13-1.asn1 \
+    service-13/PUS-13-2.acn \
+    service-13/PUS-13-2.asn1 \
+    service-13/PUS-13-3.acn \
+    service-13/PUS-13-3.asn1 \
+    service-13/PUS-13-9.acn \
+    service-13/PUS-13-9.asn1 \
+    service-13/PUS-13-10.acn \
+    service-13/PUS-13-10.asn1 \
+    service-13/PUS-13-11.acn \
+    service-13/PUS-13-11.asn1 \
+    service-13/PUS-13-16.acn \
+    service-13/PUS-13-16.asn1
 
 HEADERS += \
     wrappers/c/asn1pusclib_globals.h \
