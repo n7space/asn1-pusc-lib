@@ -28,6 +28,8 @@ DISTFILES += \
     common/ExecutionStep.acn \
     common/Parameter.acn \
     common/Request.acn \
+    common/FilePath.acn \
+    common/FilePath.asn1 \
     common/SpacecraftTimeReferenceStatus.acn \
     service-01/ErrorCodes.acn \
     service-01/PUS-1-1.acn \
@@ -116,7 +118,6 @@ DISTFILES += \
     service-05/PUS-5-7.acn \
     service-05/PUS-5-8.acn \
     service-06/Data.acn \
-    service-06/FilePath.acn \
     service-06/Memory.acn \
     service-06/PUS-6-1.acn \
     service-06/PUS-6-10.acn \
@@ -288,7 +289,6 @@ DISTFILES += \
     service-05/PUS-5-7.asn1 \
     service-05/PUS-5-8.asn1 \
     service-06/Data.asn1 \
-    service-06/FilePath.asn1 \
     service-06/Memory.asn1 \
     service-06/PUS-6-1.asn1 \
     service-06/PUS-6-10.asn1 \
@@ -502,7 +502,58 @@ DISTFILES += \
     service-13/PUS-13-11.acn \
     service-13/PUS-13-11.asn1 \
     service-13/PUS-13-16.acn \
-    service-13/PUS-13-16.asn1
+    service-13/PUS-13-16.asn1 \
+    service-18/meta.json \
+    service-18/OBCP.acn \
+    service-18/OBCP.asn1 \
+    service-18/OBCPActivation.acn \
+    service-18/OBCPActivation.asn1 \
+    service-18/OBCPArgumentValues.acn \
+    service-18/OBCPArgumentValues.asn1 \
+    service-18/OBCPManagement.acn \
+    service-18/OBCPManagement.asn1 \
+    service-18/OBCPWithold.acn \
+    service-18/OBCPWithold.asn1 \
+    service-18/PUS-18-1.acn \
+    service-18/PUS-18-1.asn1 \
+    service-18/PUS-18-2.acn \
+    service-18/PUS-18-2.asn1 \
+    service-18/PUS-18-3.acn \
+    service-18/PUS-18-3.asn1 \
+    service-18/PUS-18-4.acn \
+    service-18/PUS-18-4.asn1 \
+    service-18/PUS-18-5.acn \
+    service-18/PUS-18-5.asn1 \
+    service-18/PUS-18-6.acn \
+    service-18/PUS-18-6.asn1 \
+    service-18/PUS-18-7.acn \
+    service-18/PUS-18-7.asn1 \
+    service-18/PUS-18-8.acn \
+    service-18/PUS-18-8.asn1 \
+    service-18/PUS-18-9.acn \
+    service-18/PUS-18-9.asn1 \
+    service-18/PUS-18-12.acn \
+    service-18/PUS-18-12.asn1 \
+    service-18/PUS-18-13.acn \
+    service-18/PUS-18-13.asn1 \
+    service-18/PUS-18-14.acn \
+    service-18/PUS-18-14.asn1 \
+    service-18/PUS-18-15.acn \
+    service-18/PUS-18-15.asn1 \
+    service-18/PUS-18-16.acn \
+    service-18/PUS-18-16.asn1 \
+    service-18/PUS-18-17.acn \
+    service-18/PUS-18-17.asn1 \
+    service-18/PUS-18-18.acn \
+    service-18/PUS-18-18.asn1 \
+    service-18/PUS-18-19.acn \
+    service-18/PUS-18-19.asn1 \
+    service-18/PUS-18-20.acn \
+    service-18/PUS-18-20.asn1 \
+    service-18/PUS-18-21.acn \
+    service-18/PUS-18-21.asn1 \
+    service-18/PUS-18-22.acn \
+    service-18/PUS-18-22.asn1
 
 HEADERS += \
     wrappers/c/asn1pusclib_globals.h \

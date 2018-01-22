@@ -73,7 +73,6 @@
           "asn1Files": [
             "PUS-6-19.asn1",
             "Memory.asn1",
-            "FilePath.asn1",
             "RawMemory.asn1"
           ],
           "requires": [
@@ -81,6 +80,11 @@
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "File Path"
             }
           ]
         },
@@ -89,7 +93,6 @@
           "asn1Files": [
             "PUS-6-20.asn1",
             "Memory.asn1",
-            "FilePath.asn1",
             "RawMemory.asn1"
           ],
           "requires": [
@@ -97,6 +100,11 @@
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "File Path"
             }
           ]
         }
@@ -175,14 +183,18 @@
           "asn1Files": [
             "PUS-6-21.asn1",
             "Memory.asn1",
-            "StructuredMemory.asn1",
-            "FilePath.asn1"
+            "StructuredMemory.asn1"
           ],
           "requires": [
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "File Path"
             }
           ]
         },
@@ -191,17 +203,21 @@
           "asn1Files": [
             "PUS-6-22.asn1",
             "Memory.asn1",
-            "StructuredMemory.asn1",
-            "FilePath.asn1"
+            "StructuredMemory.asn1"
           ],
           "requires": [
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "File Path"
             }
           ]
-        }   
+        }
       ]
     },
     {

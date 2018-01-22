@@ -30,6 +30,17 @@
           "asn1Files": ["ExecutionStep.asn1"]
         },
         {
+          "name": "File Path",
+          "asn1Files": ["FilePath.asn1"],
+          "requires":[
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]
+        },
+        {
           "name": "Parameter",
           "asn1Files": ["Parameter.asn1"]
         },
