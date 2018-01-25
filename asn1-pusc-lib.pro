@@ -30,6 +30,8 @@ DISTFILES += \
     common/Request.acn \
     common/FilePath.acn \
     common/FilePath.asn1 \
+    common/TimeWindow.acn \
+    common/TimeWindow.asn1 \
     common/SpacecraftTimeReferenceStatus.acn \
     service-01/ErrorCodes.acn \
     service-01/PUS-1-1.acn \
@@ -177,7 +179,6 @@ DISTFILES += \
     service-11/PUS-11-8.acn \
     service-11/PUS-11-9.acn \
     service-11/SubSchedule.acn \
-    service-11/TimeWindow.acn \
     service-12/PMON.acn \
     service-12/PUS-12-1.acn \
     service-12/PUS-12-12.acn \
@@ -348,7 +349,6 @@ DISTFILES += \
     service-11/PUS-11-8.asn1 \
     service-11/PUS-11-9.asn1 \
     service-11/SubSchedule.asn1 \
-    service-11/TimeWindow.asn1 \
     service-12/PMON.asn1 \
     service-12/PUS-12-1.asn1 \
     service-12/PUS-12-12.asn1 \
