@@ -30,6 +30,8 @@ DISTFILES += \
     common/Request.acn \
     common/FilePath.acn \
     common/FilePath.asn1 \
+    common/TimeWindow.acn \
+    common/TimeWindow.asn1 \
     common/SpacecraftTimeReferenceStatus.acn \
     service-01/ErrorCodes.acn \
     service-01/PUS-1-1.acn \
@@ -177,7 +179,6 @@ DISTFILES += \
     service-11/PUS-11-8.acn \
     service-11/PUS-11-9.acn \
     service-11/SubSchedule.acn \
-    service-11/TimeWindow.acn \
     service-12/PMON.acn \
     service-12/PUS-12-1.acn \
     service-12/PUS-12-12.acn \
@@ -348,7 +349,6 @@ DISTFILES += \
     service-11/PUS-11-8.asn1 \
     service-11/PUS-11-9.asn1 \
     service-11/SubSchedule.asn1 \
-    service-11/TimeWindow.asn1 \
     service-12/PMON.asn1 \
     service-12/PUS-12-1.asn1 \
     service-12/PUS-12-12.asn1 \
@@ -553,7 +553,97 @@ DISTFILES += \
     service-18/PUS-18-21.acn \
     service-18/PUS-18-21.asn1 \
     service-18/PUS-18-22.acn \
-    service-18/PUS-18-22.asn1
+    service-18/PUS-18-22.asn1 \
+    service-15/meta.json \
+    service-15/PacketStore.acn \
+    service-15/PacketStore.asn1 \
+    service-15/PacketStoreConfiguration.acn \
+    service-15/PacketStoreConfiguration.asn1 \
+    service-15/PacketStoreEnumerations.acn \
+    service-15/PacketStoreEnumerations.asn1 \
+    service-15/Storage-ControlConfiguration.asn1 \
+    service-15/Storage-ControlDiagnosticParameterReport.acn \
+    service-15/Storage-ControlDiagnosticParameterReport.asn1 \
+    service-15/Storage-ControlEventReportBlocking.acn \
+    service-15/Storage-ControlEventReportBlocking.asn1 \
+    service-15/Storage-ControlHousekeepingParameterReport.acn \
+    service-15/Storage-ControlHousekeepingParameterReport.asn1 \
+    service-15/Storage-ControlReportType.acn \
+    service-15/Storage-ControlReportType.asn1 \
+    service-15/PUS-15-1.acn \
+    service-15/PUS-15-1.asn1 \
+    service-15/PUS-15-2.acn \
+    service-15/PUS-15-2.asn1 \
+    service-15/PUS-15-3.acn \
+    service-15/PUS-15-3.asn1 \
+    service-15/PUS-15-4.acn \
+    service-15/PUS-15-4.asn1 \
+    service-15/PUS-15-5.acn \
+    service-15/PUS-15-5.asn1 \
+    service-15/PUS-15-6.acn \
+    service-15/PUS-15-6.asn1 \
+    service-15/PUS-15-9.acn \
+    service-15/PUS-15-9.asn1 \
+    service-15/PUS-15-11.acn \
+    service-15/PUS-15-11.asn1 \
+    service-15/PUS-15-12.acn \
+    service-15/PUS-15-12.asn1 \
+    service-15/PUS-15-13.acn \
+    service-15/PUS-15-13.asn1 \
+    service-15/PUS-15-14.acn \
+    service-15/PUS-15-14.asn1 \
+    service-15/PUS-15-15.acn \
+    service-15/PUS-15-15.asn1 \
+    service-15/PUS-15-16.acn \
+    service-15/PUS-15-16.asn1 \
+    service-15/PUS-15-17.acn \
+    service-15/PUS-15-17.asn1 \
+    service-15/PUS-15-18.acn \
+    service-15/PUS-15-18.asn1 \
+    service-15/PUS-15-19.acn \
+    service-15/PUS-15-19.asn1 \
+    service-15/PUS-15-20.acn \
+    service-15/PUS-15-20.asn1 \
+    service-15/PUS-15-21.acn \
+    service-15/PUS-15-21.asn1 \
+    service-15/PUS-15-22.acn \
+    service-15/PUS-15-22.asn1 \
+    service-15/PUS-15-23.acn \
+    service-15/PUS-15-23.asn1 \
+    service-15/PUS-15-24.acn \
+    service-15/PUS-15-24.asn1 \
+    service-15/PUS-15-25.acn \
+    service-15/PUS-15-25.asn1 \
+    service-15/PUS-15-26.acn \
+    service-15/PUS-15-26.asn1 \
+    service-15/PUS-15-27.acn \
+    service-15/PUS-15-27.asn1 \
+    service-15/PUS-15-28.acn \
+    service-15/PUS-15-28.asn1 \
+    service-15/PUS-15-29.acn \
+    service-15/PUS-15-29.asn1 \
+    service-15/PUS-15-30.acn \
+    service-15/PUS-15-30.asn1 \
+    service-15/PUS-15-31.acn \
+    service-15/PUS-15-31.asn1 \
+    service-15/PUS-15-32.acn \
+    service-15/PUS-15-32.asn1 \
+    service-15/PUS-15-33.acn \
+    service-15/PUS-15-33.asn1 \
+    service-15/PUS-15-34.acn \
+    service-15/PUS-15-34.asn1 \
+    service-15/PUS-15-35.acn \
+    service-15/PUS-15-35.asn1 \
+    service-15/PUS-15-36.acn \
+    service-15/PUS-15-36.asn1 \
+    service-15/PUS-15-37.acn \
+    service-15/PUS-15-37.asn1 \
+    service-15/PUS-15-38.acn \
+    service-15/PUS-15-38.asn1 \
+    service-15/PUS-15-39.acn \
+    service-15/PUS-15-39.asn1 \
+    service-15/PUS-15-40.acn \
+    service-15/PUS-15-40.asn1
 
 HEADERS += \
     wrappers/c/asn1pusclib_globals.h \

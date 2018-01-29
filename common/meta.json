@@ -41,6 +41,17 @@
           ]
         },
         {
+          "name": "Time Window",
+          "asn1Files": ["TimeWindow.asn1"],
+          "requires":[
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            }
+          ]
+        },
+        {
           "name": "Parameter",
           "asn1Files": ["Parameter.asn1"]
         },
