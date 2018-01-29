@@ -27,7 +27,8 @@ IMPORTS
     Storage-ControlConfiguration, Storage-ControlConfigurationItem, Storage-ControlConfigurationSizeType FROM Storage-ControlConfiguration
     PacketStore-ID FROM PacketStore
     ApplicationProcess-ID FROM ApplicationProcess
-    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure;
+    HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
+    PUSC-UINT32 FROM BasicTypes;
 
 TC-15-30-DeleteStructureIdentifiersFromTheHousekeepingParameterReportStorage-ControlConfiguration ::=
     Storage-ControlConfiguration {PacketStore-ID, TC-15-30-DeleteStructureIdentifiersFromTheHousekeepingParameterReportStorage-ControlItem}

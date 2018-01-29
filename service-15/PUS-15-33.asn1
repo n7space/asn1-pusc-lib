@@ -28,6 +28,7 @@ IMPORTS
 
 TC-15-33-DeleteEventDefinitionIdentifiersFromTheEventReportBlockingStorage-ControlConfiguration ::=
     TC-15-33-DeleteEventDefinitionIdentifiersFromTheEventReportBlockingStorage-ControlConfigurationGeneric {Storage-ControlEventReportBlocking}
+
 TC-15-33-DeleteEventDefinitionIdentifiersFromTheEventReportBlockingStorage-ControlConfigurationGeneric {Storage-ControlEventReportBlocking-Type} ::= SEQUENCE
 {
     storage-ControlEventReportBlocking Storage-ControlEventReportBlocking-Type

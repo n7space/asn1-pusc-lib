@@ -25,7 +25,8 @@ PUS-15-19 DEFINITIONS ::= BEGIN
 
 TM-15-19-PacketStoreStatusReport []
 {
-    packetStoreStatusReports []
+    n BasicTypes.PUSC-UINT32 [],
+    packetStoreStatusReports [size n]
 }
 
 TM-15-19-PacketStoreStatusReportItem []

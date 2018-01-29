@@ -28,6 +28,7 @@ IMPORTS
 
 TC-15-5-ReportTheContentOfTheApplicationProcessStorage-ControlConfiguration ::=
     TC-15-5-ReportTheContentOfTheApplicationProcessStorage-ControlConfigurationGeneric {PacketStore-ID}
+
 TC-15-5-ReportTheContentOfTheApplicationProcessStorage-ControlConfigurationGeneric {PacketStore-ID-Type} ::= SEQUENCE
 {
     packetStore-ID PacketStore-ID-Type

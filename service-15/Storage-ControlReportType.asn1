@@ -27,7 +27,6 @@ IMPORTS
     Storage-ControlConfiguration, Storage-ControlConfigurationItem, Storage-ControlConfigurationSizeType FROM Storage-ControlConfiguration
     PacketStore-ID FROM PacketStore
     ApplicationProcess-ID FROM ApplicationProcess
-    DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     MessageSubtype-ID FROM MessageType
     PUSC-UINT32 FROM BasicTypes;
 

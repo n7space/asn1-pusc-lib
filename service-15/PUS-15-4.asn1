@@ -28,6 +28,7 @@ IMPORTS
 
 TC-15-4-DeleteReportTypesFromTheApplicationProcessStorage-ControlConfiguration ::=
     TC-15-4-DeleteReportTypesFromTheApplicationProcessStorage-ControlConfigurationGeneric {Storage-ControlReportType}
+
 TC-15-4-DeleteReportTypesFromTheApplicationProcessStorage-ControlConfigurationGeneric {Storage-ControlReportType-Type} ::= SEQUENCE
 {
     storage-ControlReportType Storage-ControlReportType-Type

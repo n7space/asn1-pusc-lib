@@ -28,6 +28,7 @@ IMPORTS
 
 TM-15-38-DiagnosticParameterReportStorage-ControlConfigurationContentReport-ControlConfiguration ::=
     TM-15-38-DiagnosticParameterReportStorage-ControlConfigurationContentReport-ControlConfigurationGeneric {Storage-ControlDiagnosticParameterReport}
+
 TM-15-38-DiagnosticParameterReportStorage-ControlConfigurationContentReport-ControlConfigurationGeneric {Storage-ControlDiagnosticParameterReport-Type} ::= SEQUENCE
 {
     storage-ControlDiagnosticParameterReport Storage-ControlDiagnosticParameterReport-Type

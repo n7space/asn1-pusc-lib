@@ -28,6 +28,7 @@ IMPORTS
 
 TM-15-36-HousekeepingParameterReportStorage-ControlConfigurationContentReport ::=
     TM-15-36-HousekeepingParameterReportStorage-ControlConfigurationContentReportGeneric {Storage-ControlHousekeepingParameterReport}
+
 TM-15-36-HousekeepingParameterReportStorage-ControlConfigurationContentReportGeneric {Storage-ControlHousekeepingParameterReport-Type} ::= SEQUENCE
 {
     storage-ControlHousekeepingParameterReport Storage-ControlHousekeepingParameterReport-Type

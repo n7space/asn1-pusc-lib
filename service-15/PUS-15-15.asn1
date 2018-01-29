@@ -28,7 +28,6 @@ IMPORTS
     PacketStoreRetrievalPriority FROM PacketStoreEnumerations
     PUSC-UINT32 FROM BasicTypes;
 
-
 TC-15-15-ResumeTheOpenRetrievalOfPacketStores ::= TC-15-15-ResumeTheOpenRetrievalOfPacketStoresGeneric {TC-15-15-PacketStoresToResume}
 
 maxPacketStoresToResumeSize INTEGER ::= 4096

@@ -24,6 +24,19 @@
 PUS-15-30 DEFINITIONS ::= BEGIN
 
 TC-15-30-DeleteStructureIdentifiersFromTheHousekeepingParameterReportStorage-ControlConfiguration []
+{
+    packetStoreID [],
+
+    n1 BasicTypes.PUSC-UINT32 [],
+    configuration [size n1]
+}
+
 TC-15-30-DeleteStructureIdentifiersFromTheHousekeepingParameterReportStorage-ControlItem []
+{
+    applicationProcess-ID [],
+
+    n2 BasicTypes.PUSC-UINT32 [],
+    tail [size n2]
+}
 
 END

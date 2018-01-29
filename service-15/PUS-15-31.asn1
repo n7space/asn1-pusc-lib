@@ -28,6 +28,7 @@ IMPORTS
 
 TC-15-31-AddStructureIdentifiersToTheDiagnosticParameterReportStorage-ControlConfiguration ::=
     TC-15-31-AddStructureIdentifiersToTheDiagnosticParameterReportStorage-ControlConfigurationGeneric {Storage-ControlDiagnosticParameterReport}
+
 TC-15-31-AddStructureIdentifiersToTheDiagnosticParameterReportStorage-ControlConfigurationGeneric {Storage-ControlDiagnosticParameterReport-Type} ::= SEQUENCE
 {
     storage-ControlDiagnosticParameterReport Storage-ControlDiagnosticParameterReport-Type

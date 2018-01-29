@@ -28,6 +28,7 @@ IMPORTS
 
 TM-15-40-EventReportBlockingStorage-ControlConfigurationContentReport ::=
     TM-15-40-EventReportBlockingStorage-ControlConfigurationContentReportGeneric {Storage-ControlEventReportBlocking}
+
 TM-15-40-EventReportBlockingStorage-ControlConfigurationContentReportGeneric {Storage-ControlEventReportBlocking-Type} ::= SEQUENCE
 {
     storage-ControlEventReportBlocking Storage-ControlEventReportBlocking-Type

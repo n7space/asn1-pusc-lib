@@ -25,9 +25,9 @@ PUS-15-13 DEFINITIONS ::= BEGIN
 
 TM-15-13-PacketStoreContentSummaryReport []
 {
-    packetStore-ID [],
-
     n BasicTypes.PUSC-UINT32 [],
+
+    packetStore-ID [],
     reportContents [size n]
 }
 

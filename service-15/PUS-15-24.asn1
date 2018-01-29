@@ -29,6 +29,7 @@ IMPORTS
 
 TC-15-24-CopyThePacketsContainedInAPacketStoreSelectedByTimeWindow ::=
     TC-15-24-CopyThePacketsContainedInAPacketStoreSelectedByTimeWindowGeneric {TimeWindow, PacketStore-ID, PacketStore-ID}
+
 TC-15-24-CopyThePacketsContainedInAPacketStoreSelectedByTimeWindowGeneric {TimeWindow-Type, FromPacketStore-ID-Type, ToPacketStore-ID-Type} ::= SEQUENCE
 {
     timeWindow TimeWindow-Type,

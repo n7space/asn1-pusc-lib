@@ -28,6 +28,7 @@ IMPORTS
 
 TC-15-6-ApplicationProcessStorage-ControlConfigurationContentReport ::=
     TC-15-6-ApplicationProcessStorage-ControlConfigurationContentReportGeneric {Storage-ControlReportType}
+
 TC-15-6-ApplicationProcessStorage-ControlConfigurationContentReportGeneric {Storage-ControlReportType-Type} ::= SEQUENCE
 {
     storage-ControlReportType Storage-ControlReportType-Type
