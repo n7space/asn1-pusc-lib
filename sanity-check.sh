@@ -3,7 +3,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OUT_DIR=${DIR}/.build
 MODULE_SCHEMA_FILE=asn1-lib-module-schema.json
 GENERAL_SCHEMA_FILE=asn1-lib-general-schema.json
-URL=https://raw.githubusercontent.com/n7mobile/asn1scc.IDE/master/schemas
+URL=https://raw.githubusercontent.com/n7space/asn1scc.IDE/master/schemas
 JSON_SCHEMA_URL=http://json-schema.org/draft-04/schema
 
 rm -rf ${OUT_DIR}
