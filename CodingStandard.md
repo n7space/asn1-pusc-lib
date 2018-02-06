@@ -46,7 +46,7 @@ END
 * `Tx-NN-MM-MessageNameFromEcss` - main type assignment representing message type (prefix should be `TC` for telecommands or `TM` for telemetry)
 
 ## ASN.1/ACN files Coding Standard
-Each file should begin with [License template](https://github.com/n7mobile/asn1-pusc-lib/blob/master/license-template.txt) as found in project's repository.
+Each file should begin with [License template](https://github.com/n7space/asn1-pusc-lib/blob/master/license-template.txt) as found in project's repository.
 
 Each file should contain only single `DEFINITIONS` block, named after file name.
 
