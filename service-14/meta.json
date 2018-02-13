@@ -11,6 +11,7 @@
             "ApplicationProcessForwardControl.asn1"
           ],
           "requires": [
+            "Delete report types from the application process forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -35,7 +36,6 @@
             "ApplicationProcessForwardControl.asn1"
           ],
           "requires": [
-            "Add report types to the application process forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -87,6 +87,7 @@
             "SubsamplingRate.asn1"
           ],
           "requires":[
+            "Delete structure identifiers from the housekeeping parameter report forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -112,7 +113,6 @@
             "SubsamplingRate.asn1"
           ],
           "requires":[
-            "Add structure identifiers to the housekeeping parameter report forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -165,6 +165,7 @@
             "SubsamplingRate.asn1"
           ],
           "requires":[
+            "Delete structure identifiers from the diagnostic parameter report forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -190,7 +191,6 @@
             "SubsamplingRate.asn1"
           ],
           "requires":[
-            "Add structure identifiers to the diagnostic parameter report forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -242,7 +242,6 @@
             "EventDefinitionForwardControl.asn1"
           ],
           "requires":[
-            "Add event definition identifiers to the event report blocking forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -267,6 +266,7 @@
             "EventDefinitionForwardControl.asn1"
           ],
           "requires":[
+            "Delete event definition identifiers from the event report blocking forward-control configuration",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",

@@ -50,6 +50,7 @@
             "Intervals.asn1"
           ],
           "requires": [
+            "Disable the periodic parameter statistics reporting",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -59,8 +60,7 @@
         },
         {
           "name": "Disable the periodic parameter statistics reporting",
-          "asn1Files": ["PUS-4-5.asn1"],
-          "requires": ["Enable the periodic parameter statistics reporting"]
+          "asn1Files": ["PUS-4-5.asn1"]
         },
         {
           "name": "Add or update parameter statistics definitions",
@@ -70,6 +70,7 @@
             "Intervals.asn1"
           ],
           "requires": [
+            "Delete parameter statistics definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -86,7 +87,6 @@
           "name": "Delete parameter statistics definitions",
           "asn1Files": ["PUS-4-7.asn1"],
           "requires": [
-            "Add or update parameter statistics definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",

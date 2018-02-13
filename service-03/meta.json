@@ -16,11 +16,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
@@ -29,42 +29,23 @@
             "PUS-3-5.asn1"
           ],
           "requires": [
+            "Disable the periodic generation of housekeeping parameter reports",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
           "name": "Disable the periodic generation of housekeeping parameter reports",
           "asn1Files": [
             "PUS-3-6.asn1"
-          ],
-          "requires": [
-            "Enable the periodic generation of housekeeping parameter reports",
-            {
-              "module": "Common Types",
-              "submodule": "PTC/PFC Types",
-              "element": "Basic Types"
-            },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
-          ]
-        },
-        {
-          "name": "Create a housekeeping parameter report structure",
-          "asn1Files": [
-            "PUS-3-1.asn1",
-            "CollectionInterval.asn1"
           ],
           "requires": [
             {
@@ -75,13 +56,33 @@
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
+          ]
+        },
+        {
+          "name": "Create a housekeeping parameter report structure",
+          "asn1Files": [
+            "PUS-3-1.asn1",
+            "CollectionInterval.asn1"
+          ],
+          "requires": [
+            "Delete housekeeping parameter report structures",
+            {
+              "module": "Common Types",
+              "submodule": "PTC/PFC Types",
+              "element": "Basic Types"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
@@ -90,17 +91,16 @@
             "PUS-3-3.asn1"
           ],
           "requires": [
-            "Create a housekeeping parameter report structure",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
@@ -123,12 +123,12 @@
               "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
-          ]        
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
+          ]
         },
         {
           "name": "Generate a one shot report for housekeeping parameter report structures",
@@ -142,11 +142,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
@@ -166,12 +166,12 @@
               "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
-          ]  
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
+          ]
         },
         {
           "name": "Modify the collection interval of housekeeping parameter report structures",
@@ -185,11 +185,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         },
         {
@@ -207,11 +207,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
+            }
           ]
         }
       ]
@@ -224,12 +224,12 @@
           "asn1Files": [
           ],
           "requires": [
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
-	  ]
+          {
+            "module": "Common Types",
+            "submodule": "Mission Objects",
+            "element": "Diagnostic Parameter Report Structure"
+          }
+        ]
         },
         {
           "name": "Enable the periodic generation of diagnostic parameter reports",
@@ -242,11 +242,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            }
           ]
         },
         {
@@ -261,11 +261,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            }
           ]  
         },
         {
@@ -285,12 +285,12 @@
               "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
-          ]  
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            }
+          ]
         },
         {
           "name": "Delete diagnostic parameter report structures",
@@ -304,11 +304,11 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            }
           ]
         },
         {
@@ -331,11 +331,11 @@
               "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
-	    }
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            }
           ]  
         },
         {
@@ -350,15 +350,15 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         },
@@ -379,12 +379,12 @@
               "submodule": "Mission Objects",
               "element": "Parameter"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
             }
-          ]  
+          ]
         },
         {
           "name": "Modify the collection interval of diagnostic parameter report structures",
@@ -398,10 +398,10 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
             }
           ]
         },
@@ -420,10 +420,10 @@
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
             }
           ]
         }
@@ -457,6 +457,7 @@
             "ParameterReportingEntries.asn1"
           ],
           "requires": [
+            "Delete parameter functional reporting definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -466,16 +467,16 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
-	    },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         },
@@ -486,7 +487,6 @@
             "ParameterFunctionalReportingDefinition.asn1"
           ],
           "requires": [
-            "Create a parameter functional reporting definition",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -516,16 +516,16 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
-	    },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         },
@@ -541,6 +541,7 @@
           ],
           "requires": [
             "Create a parameter functional reporting definition",
+            "Remove parameter report definitions from a parameter functional reporting definition",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -550,16 +551,16 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
- 	    },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         },
@@ -571,7 +572,6 @@
             "ParameterFunctionalReportingDefinition.asn1"
           ],
           "requires": [
-            "Add parameter report definitions to a parameter functional reporting definition",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -581,16 +581,16 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
- 	    },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         },
@@ -614,16 +614,16 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Application Process"
-	    },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Diagnostic Parameter Report Structure"
             },
-	    {
-	      "module": "Common Types",
-	      "submodule": "Mission Objects",
-	      "element": "Housekeeping Parameter Report Structure"
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Diagnostic Parameter Report Structure"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Housekeeping Parameter Report Structure"
             }
           ]
         }

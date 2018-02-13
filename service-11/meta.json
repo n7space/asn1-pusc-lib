@@ -8,15 +8,15 @@
           "name": "Enable the time-based schedule execution function",
           "asn1Files": [
             "PUS-11-1.asn1"
+          ],
+          "requires":[
+            "Disable the time-based schedule execution function"
           ]
         },
         {
           "name": "Disable the time-based schedule execution function",
           "asn1Files": [
             "PUS-11-2.asn1"
-          ],
-          "requires":[
-            "Enable the time-based schedule execution function"
           ]
         },
         {
@@ -52,6 +52,7 @@
             "SubSchedule.asn1"
           ],
           "requires": [
+            "Disable time-based sub-schedules",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -62,10 +63,10 @@
         {
           "name": "Disable time-based sub-schedules",
           "asn1Files":[
-            "PUS-11-21.asn1"
+            "PUS-11-21.asn1",
+            "SubSchedule.asn1"
           ],
           "requires": [
-            "Enable time-based sub-schedules",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -81,6 +82,7 @@
             "SubSchedule.asn1"
           ],
           "requires": [
+            "Enable time-based sub-schedules",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -88,7 +90,6 @@
             }
           ]
         },
-
         {
           "name": "Create time-based scheduling groups",
           "asn1Files":[
@@ -96,6 +97,8 @@
             "Group.asn1"
           ],
           "requires": [
+            "Delete time-based scheduling groups",
+            "Enable time-based scheduling groups",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -110,7 +113,6 @@
             "Group.asn1"
           ],
           "requires": [
-            "Create time-based scheduling groups",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -121,10 +123,11 @@
         {
           "name": "Enable time-based scheduling groups",
           "asn1Files":[
-            "PUS-11-24.asn1"
+            "PUS-11-24.asn1",
+            "Group.asn1"
           ],
           "requires": [
-            "Create time-based scheduling groups",
+            "Disable time-based scheduling groups",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -135,10 +138,10 @@
         {
           "name": "Disable time-based scheduling groups",
           "asn1Files":[
-            "PUS-11-25.asn1"
+            "PUS-11-25.asn1",
+            "Group.asn1"
           ],
           "requires": [
-            "Create time-based scheduling groups",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",

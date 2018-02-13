@@ -64,6 +64,7 @@
             "PhysicalDevice.asn1"
           ],
           "requires": [
+            "Acquire data from physical devices",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -80,13 +81,12 @@
             "Transaction.asn1"
           ],
           "requires": [
-            "Distribute physical device commands",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Basic Types"
             },
-{
+            {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
               "element": "Dummy Type"
@@ -101,6 +101,7 @@
           ],
           "requires": [
             "Distribute physical device commands",
+            "Acquire data from logical devices",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -117,7 +118,6 @@
             "Transaction.asn1"
           ],
           "requires": [
-            "Distribute logical device commands",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",

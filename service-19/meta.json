@@ -75,6 +75,8 @@
             "EventDefinitionSystem.asn1"
           ],
           "requires":[
+            "Delete event-action definitions",
+            "Delete all event-action definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -104,7 +106,6 @@
             "EventDefinitionSystem.asn1"
           ],
           "requires":[
-            "Add event-action definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -126,9 +127,6 @@
           "name": "Delete all event-action definitions",
           "asn1Files": [
             "PUS-19-3.asn1"
-          ],
-          "requires": [
-            "Add event-action definitions"
           ]
         },
         {

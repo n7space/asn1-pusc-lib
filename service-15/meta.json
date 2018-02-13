@@ -54,6 +54,7 @@
             "PacketStoreEnumerations.asn1"
           ],
           "requires": [
+            "Suspend the open retrieval of packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -68,7 +69,6 @@
             "PacketStore.asn1"
           ],
           "requires": [
-            "Resume the open retrieval of packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -84,6 +84,7 @@
             "PacketStoreEnumerations.asn1"
           ],
           "requires": [
+            "Abort the by-time-range retrieval of packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -144,6 +145,7 @@
             "PacketStoreEnumerations.asn1"
           ],
           "requires": [
+            "Delete packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -152,7 +154,7 @@
           ]
         },
         {
-          "name": "  Delete packet stores",
+          "name": "Delete packet stores",
           "asn1Files": [
             "PUS-15-21.asn1",
             "PacketStore.asn1"
@@ -175,6 +177,7 @@
             "PacketStoreEnumerations.asn1"
           ],
           "requires": [
+            "Create packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -189,6 +192,7 @@
             "PacketStore.asn1"
           ],
           "requires": [
+            "Create packet stores",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -208,6 +212,9 @@
             "PacketStore.asn1"
           ],
           "requires": [
+            "Change a packet store type to circular",
+            "Change a packet store type to bounded",
+            "Change the virtual channel used by a packet store",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -382,6 +389,7 @@
             "Storage-ControlConfiguration.asn1"
           ],
           "requires": [
+            "Delete structure identifiers from the housekeeping parameter report storage-control configuration",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -461,6 +469,7 @@
             "Storage-ControlConfiguration.asn1"
           ],
           "requires": [
+            "Delete structure identifiers from the diagnostic parameter report storage-control configuration",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -540,6 +549,7 @@
             "PacketStore.asn1"
           ],
           "requires": [
+            "Delete event definition identifiers from the event report blocking storage-control configuration",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
