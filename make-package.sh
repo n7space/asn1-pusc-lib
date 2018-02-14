@@ -24,6 +24,6 @@ cp ${DIR}/README.md ${DIST_DIR}
 
 pushd ${DIST_DIR}
 tar czf ${DIR}/${PACKAGE_NAME}-${VERSION}.tar.gz *
-7z a ${DIR}/${PACKAGE_NAME}-${VERSION}.zip *
-7z a ${DIR}/${PACKAGE_NAME}-${VERSION}.7z *
+7zr a ${DIR}/${PACKAGE_NAME}-${VERSION}.zip *
+7zr a ${DIR}/${PACKAGE_NAME}-${VERSION}.7z *
 popd
