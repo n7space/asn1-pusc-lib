@@ -14,6 +14,7 @@ addons:
     - sourceline: "ppa:beineri/opt-qt591-trusty"
     packages:
     - qt59base
+    - p7zip
 
 install:
   - pushd $HOME
@@ -33,3 +34,20 @@ install:
 script:
   - . /opt/qt59/bin/qt59-env.sh
   - PATH=$HOME/asn1scc/:$PATH LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH ./sanity-check.sh
+
+before_deploy:
+  - ./make-package.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: LXGii/oNhNC6tgtrvxp+gb6bDkT8kPQ1m0rH9FcjZ1QzbxsoWiQggeWEE0p38cSoAB08UmmsHNJAnfhEg8w0qV7tdk5zsP0J4Yw37AcuC6udvloRIuX628ZkayDpGfniovdC4iBf1dHuXI4C/QzSqM1+YMVeX6ZdKlDVN9lX12XhRy4wJEOWcDkR9nrqOjut1vpFiYTVHJh3C3WlgcZYbhI5OtdteZend9FhZL5OCKWsjdGISOrDfJ396IJumJZt10KvEtJ4DjKR7MCQ2Xg+Wlnuu5yF2s4J5LS6fiXNP9NO6wOHi/daYcGn64Mm9NDUHD7J1R2dknAntpP2nanQBEnRIeoQLlJ5wx3nAPozgNpx72a05SgKnZS0lQ8zx+1MY4+uhagFzxGP2T0yySXcN3B0asJwmqxbh/pKhqIjc7STbC+ofG3nCPG1CiykwspXinb4AQUmdFZz1lk80hK7cn9XFDfd21Wtr5jjRkiM7/1xEn1HRwNbBpjlbSo64qbMi4vY46zlc6IZgHjitmbzygCHYLGTIjkq5HFT9ok4uO27dVJNrUOSQr8wOyp7r1a9DbCyL2Pbk9mRiKmBsLkjBfjRV3g06TPRjl2cklL+BX9Pte9dMyoHzs5kGANa+mDEh8aqayPFw1IGuetZRVS+ko1LsY5iQtj9AR/GV38a0MY=
+  file_glob: true
+  file:
+  - Asn1Acn-*.tar.gz
+  - Asn1Acn-*.zip
+  - Asn1Acn-*.7z
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: n7space/asn1-pusc-lib
+    tags: true
