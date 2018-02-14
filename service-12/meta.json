@@ -85,6 +85,8 @@
             "CheckValidityCondition.asn1"
           ],
           "requires": [
+            "Delete all parameter monitoring definitions",
+            "Delete parameter monitoring reports",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -111,9 +113,6 @@
           "name": "Delete all parameter monitoring definitions",
           "asn1Files": [
             "PUS-12-4.asn1"
-          ],
-          "requires":[
-            "Add parameter monitoring definitions"
           ]
         },
         {
@@ -123,7 +122,6 @@
             "PMON.asn1"
           ],
           "requires": [
-            "Add parameter monitoring definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -266,6 +264,7 @@
             "FMON.asn1"
           ],
           "requires": [
+            "Unprotect functional monitoring definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -280,7 +279,6 @@
             "FMON.asn1"
           ],
           "requires": [
-            "Protect functional monitoring definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
@@ -298,6 +296,7 @@
             "PMON-FailingNumber.asn1"
           ],
           "requires": [
+            "Delete functional minitoring definitions",
             {
               "module": "Common Types",
               "submodule": "Mission Objects",
@@ -322,7 +321,6 @@
             "FMON.asn1"
           ],
           "requires": [
-            "Add functional monitoring definitions",
             {
               "module": "Common Types",
               "submodule": "PTC/PFC Types",
