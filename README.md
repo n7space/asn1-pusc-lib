@@ -1,5 +1,5 @@
 # ASN.1 PUS-C Types Library
-ASN.1/ACN implementation of PUS-C ECSS standard.
+ASN.1 implementation of PUS-C ECSS standard with ACN encoding.
 
 [![Build Status](https://travis-ci.org/n7space/asn1-pusc-lib.svg?branch=master)](https://travis-ci.org/n7space/asn1-pusc-lib)
 
