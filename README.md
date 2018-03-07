@@ -16,8 +16,8 @@ but project itself is prepared to be included as "ASN.1 Components Library" in
 1. Download library [release](https://github.com/n7space/asn1-pusc-lib/releases)
 2. Unpack library package
 3. If you want plugin to automatically detect library, copy it to specific directory:
-   * To be visible by every plugin user:
-        (assuming QtCreator was installed under default path)
+   * To be visible by every plugin user
+        (assuming QtCreator was installed under default path):
         - Linux: `/opt/Qt/Tools/QtCreator/share/qtcreator/asn1acn/libs`
         - Windows: `C:\Qt\Tools\QtCreator\share\qtcreator\asn1acn\libs`
    * To be visible only by current user:
