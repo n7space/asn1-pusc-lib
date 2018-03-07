@@ -2,8 +2,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIST_DIR=${DIR}/.dist
 
-#TODO better versioning
-VERSION=0.0.1
 PACKAGE_NAME=Asn1Acn-PusC-Library
 
 rm -rf ${DIST_DIR}
@@ -23,7 +21,7 @@ cp ${DIR}/LICENSE ${DIST_DIR}
 cp ${DIR}/README.md ${DIST_DIR}
 
 pushd ${DIST_DIR}
-tar czf ${DIR}/${PACKAGE_NAME}-${VERSION}.tar.gz *
-7z a ${DIR}/${PACKAGE_NAME}-${VERSION}.zip *
-7z a ${DIR}/${PACKAGE_NAME}-${VERSION}.7z *
+tar czf ${DIR}/${PACKAGE_NAME}-${TRAVIS_TAG}.tar.gz *
+7z a ${DIR}/${PACKAGE_NAME}-${TRAVIS_TAG}.zip *
+7z a ${DIR}/${PACKAGE_NAME}-${TRAVIS_TAG}.7z *
 popd
