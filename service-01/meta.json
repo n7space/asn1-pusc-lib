@@ -5,9 +5,6 @@
       "name": "Routing and reporting subservice",
       "elements": [
         {
-          "name": "Routing verification of a request"
-        },
-        {
           "name": "Reporting failed routing",
           "asn1Files": [
             "PUS-1-10.asn1",
@@ -27,9 +24,6 @@
     {
       "name": "Acceptance and reporting subservice",
       "elements": [
-        {
-          "name": "Acceptance verification of a request"
-        },
         {
           "name": "Reporting successful acceptance",
           "asn1Files": [
