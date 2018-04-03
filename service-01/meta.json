@@ -42,16 +42,9 @@
           "name": "Reporting failed acceptance",
           "asn1Files": [
             "PUS-1-2.asn1",
-            "VerificationRequest.asn1",
             "ErrorCodes.asn1"
           ],
-          "requires": [
-            {
-              "module": "CCSDS",
-              "submodule": "CCSDS Packets",
-              "element": "TC Packet"
-            }
-          ]
+          "requires": []
         }
       ]
     },

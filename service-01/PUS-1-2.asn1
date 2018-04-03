@@ -24,10 +24,9 @@
 PUS-1-2 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    VerificationRequest-ID FROM VerificationRequest
     AcceptanceFailureNotice FROM ErrorCodes;
 
-TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {VerificationRequest-ID, AcceptanceFailureNotice}
+TM-1-2-FailedAcceptanceVerificationReport ::= TM-1-2-FailedAcceptanceVerificationReportGeneric {OCTET STRING(SIZE(4)), AcceptanceFailureNotice}
 
 TM-1-2-FailedAcceptanceVerificationReportGeneric {Request-ID-Type, AcceptanceFailureNotice-Type} ::= SEQUENCE
 {
