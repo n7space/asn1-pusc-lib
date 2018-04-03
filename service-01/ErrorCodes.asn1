@@ -27,7 +27,6 @@ EXPORTS ALL;
 AcceptanceFailureCode ::= ENUMERATED {error1} --TODO
 AcceptanceFailureNotice ::= SEQUENCE --TODO
 {
---! code RoutingFailureCode,     moved to ACN
     data CHOICE --TODO
     {
         error1 BIT STRING (SIZE(1))
@@ -38,7 +37,6 @@ AcceptanceFailureNotice ::= SEQUENCE --TODO
 ExecutionStartFailureCode ::= ENUMERATED {error1} --TODO
 ExecutionStartFailureNotice ::= SEQUENCE --TODO
 {
---! code RoutingFailureCode,     moved to ACN
     data CHOICE --TODO
     {
         error1 BIT STRING (SIZE(1))
@@ -48,7 +46,6 @@ ExecutionStartFailureNotice ::= SEQUENCE --TODO
 ExecutionProgressFailureCode ::= ENUMERATED {error1} --TODO
 ExecutionProgressFailureNotice::= SEQUENCE --TODO
 {
---! code RoutingFailureCode,     moved to ACN
     data CHOICE --TODO
     {
         error1 BIT STRING (SIZE(1))
@@ -58,7 +55,6 @@ ExecutionProgressFailureNotice::= SEQUENCE --TODO
 ExecutionCompletionFailureCode ::= ENUMERATED {error1} --TODO
 ExecutionCompletionFailureNotice ::= SEQUENCE --TODO
 {
---! code RoutingFailureCode,     moved to ACN
     data CHOICE --TODO
     {
         error1 BIT STRING (SIZE(1))
@@ -69,7 +65,6 @@ ExecutionCompletionFailureNotice ::= SEQUENCE --TODO
 RoutingFailureCode ::= ENUMERATED {error1} --TODO
 RoutingFailureNotice ::= SEQUENCE --TODO
 {
---! code RoutingFailureCode,     moved to ACN
     data CHOICE --TODO
     {
         error1 BIT STRING (SIZE(1))
