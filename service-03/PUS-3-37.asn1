@@ -27,7 +27,7 @@ IMPORTS
     ParameterFunctionalReportingDefinition-ID FROM ParameterFunctionalReportingDefinition
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-3-37-ParameterFunctionalReportingDefinition-ID-Count INTEGER ::= 2147483647
+maxTC-3-37-ParameterFunctionalReportingDefinition-ID-Count INTEGER ::= 65535
 
 TC-3-37-ApplyParameterFunctionalReportingConfigurations ::= TC-3-37-ApplyParameterFunctionalReportingConfigurationsGeneric {ParameterFunctionalReportingDefinition-ID}
 

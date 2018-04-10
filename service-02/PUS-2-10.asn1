@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     LogicalDevice-ID FROM LogicalDevice;
 
-maxTC-2-10-LogicalDeviceCommandCount INTEGER ::= 2147483647
+maxTC-2-10-LogicalDeviceCommandCount INTEGER ::= 65535
 
 TC-2-10-DistributeLogicalDeviceCommands ::= SEQUENCE
 {

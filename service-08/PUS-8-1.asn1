@@ -26,7 +26,7 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-8-1-ArgumentCount INTEGER ::= 2147483647
+maxTC-8-1-ArgumentCount INTEGER ::= 4096
 maxTC-8-1-Function-ID-Size INTEGER ::= 4096
 
 TC-8-1-PerformAFunction ::= TC-8-1-PerformAFunctionGeneric {FunctionArguments}

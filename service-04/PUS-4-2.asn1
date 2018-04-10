@@ -27,7 +27,7 @@ IMPORTS
     AbsoluteTime, PUSC-UINT32 FROM BasicTypes
     Parameter-ID, ParameterValue FROM Parameter;
 
-maxTM-4-2-StatisticsCount INTEGER ::= 2147483647
+maxTM-4-2-StatisticsCount INTEGER ::= 65535
 
 TM-4-2-ParameterStatisticsReport ::= TM-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
 

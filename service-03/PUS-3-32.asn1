@@ -28,7 +28,7 @@ IMPORTS
     DiagnosticParameterReportStructure-ID FROM DiagnosticParameterReportStructure
     CollectionInterval FROM CollectionInterval;
 
-maxTC-3-32-DiagnosticParameterReportStructureIntervalCount INTEGER ::= 2147483647
+maxTC-3-32-DiagnosticParameterReportStructureIntervalCount INTEGER ::= 65535
 
 TC-3-32-ModifyTheCollectionIntervalOfDiagnosticParameterReportStructures ::= SEQUENCE
 {

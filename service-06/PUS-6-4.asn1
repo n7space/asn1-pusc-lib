@@ -29,7 +29,7 @@ IMPORTS
     MemoryData FROM Data
     PUSC-UINT32 FROM BasicTypes;
 
-maxTM-6-4-ObjectDataCount INTEGER ::= 2147483647
+maxTM-6-4-ObjectDataCount INTEGER ::= 65535
 
 TM-6-4-DumpedObjectMemoryDataReport ::= TM-6-4-DumpedObjectMemoryDataReportGeneric {Base}
 

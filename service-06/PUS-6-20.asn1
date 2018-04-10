@@ -29,7 +29,7 @@ IMPORTS
     BytePointer FROM RawMemory
     FilePath FROM FilePath;
 
-maxTC-6-20-DataAreaCount INTEGER ::= 2147483647
+maxTC-6-20-DataAreaCount INTEGER ::= 65535
 
 TC-6-20-DumpRawMemoryDataAreasToFile
   ::= TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID, FilePath, TC-6-20-DataArea}

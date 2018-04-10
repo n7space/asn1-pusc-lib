@@ -28,7 +28,7 @@ IMPORTS
     Memory-ID FROM Memory
     PUSC-UINT32 FROM BasicTypes;
 
-maxTM-6-8-CheckObjectCount INTEGER ::= 2147483647
+maxTM-6-8-CheckObjectCount INTEGER ::= 65535
 
 TM-6-8-CheckedObjectMemoryDataReport ::= TM-6-8-CheckedObjectMemoryDataReportGeneric {Base}
 

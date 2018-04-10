@@ -29,7 +29,7 @@ IMPORTS
     ParameterStatisticsDefinition FROM ParameterStatisticsDefinitions
     PUSC-UINT32 FROM BasicTypes;
 
-maxTM-4-9-ParameterStatisticCount INTEGER ::= 2147483647
+maxTM-4-9-ParameterStatisticCount INTEGER ::= 65535
 
 TM-4-9-ParameterStatisticsDefinitionReport ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval}
 

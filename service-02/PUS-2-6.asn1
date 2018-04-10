@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     Register FROM Registers;
 
-maxTC-2-6-RegisterDumpCount INTEGER ::= 2147483647
+maxTC-2-6-RegisterDumpCount INTEGER ::= 65535
 
 TM-2-6-RegisterDumpReport ::= TM-2-6-RegisterDumpReportGeneric {Register}
 
