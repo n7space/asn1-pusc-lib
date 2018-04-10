@@ -28,7 +28,7 @@ IMPORTS
     Memory-ID FROM Memory
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-6-3-DumpObjectInstructionCount INTEGER ::= 2147483647
+maxTC-6-3-DumpObjectInstructionCount INTEGER ::= 65535
 
 TC-6-3-DumpObjectMemoryData ::= TC-6-3-DumpObjectMemoryDataGeneric {Base}
 

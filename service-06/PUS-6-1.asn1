@@ -29,7 +29,7 @@ IMPORTS
     MemoryData FROM Data
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-6-1-LoadObjectInstructionCount INTEGER ::= 2147483647
+maxTC-6-1-LoadObjectInstructionCount INTEGER ::= 65535
 
 TC-6-1-LoadObjectMemoryData ::= TC-6-1-LoadObjectMemoryDataGeneric {Base}
 

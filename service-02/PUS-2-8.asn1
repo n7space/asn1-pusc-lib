@@ -28,7 +28,7 @@ IMPORTS
     PhysicalDevice-ID, ProtocolSpecificData FROM PhysicalDevice
     Transaction-ID FROM Transaction;
 
-maxTC-2-8-DeviceDataRequestCount INTEGER ::= 2147483647
+maxTC-2-8-DeviceDataRequestCount INTEGER ::= 65535
 
 TC-2-8-AcquireDataFromPhysicalDevices ::= SEQUENCE
 {

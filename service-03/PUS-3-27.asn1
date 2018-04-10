@@ -27,7 +27,7 @@ IMPORTS
     HousekeepingParameterReportStructure-ID FROM HousekeepingParameterReportStructure
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-3-27-HousekeepingParameterReportStructureCount INTEGER ::= 2147483647
+maxTC-3-27-HousekeepingParameterReportStructureCount INTEGER ::= 65535
 
 TC-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructures ::= TC-3-27-GenerateAOneShotReportForHousekeepingParameterReportStructuresGeneric {HousekeepingParameterReportStructure-ID}
 

@@ -30,7 +30,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     PeriodicGenerationProperties-Generic FROM PeriodicGenerationProperties;
 
-maxTM-3-35-PeriodicGenerationPropertiesCount INTEGER ::= 2147483647
+maxTM-3-35-PeriodicGenerationPropertiesCount INTEGER ::= 65535
 
 TM-3-35-HousekeepingParameterReportPeriodicGenerationPropertiesReport ::= SEQUENCE
 {

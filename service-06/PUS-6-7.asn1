@@ -28,7 +28,7 @@ IMPORTS
     Memory-ID FROM Memory
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-6-7-CheckObjectInstructionCount INTEGER ::= 2147483647
+maxTC-6-7-CheckObjectInstructionCount INTEGER ::= 65535
 
 TC-6-7-CheckObjectMemoryData ::= TC-6-7-CheckObjectMemoryDataGeneric {Base}
 

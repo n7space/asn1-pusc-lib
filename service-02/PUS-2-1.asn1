@@ -26,7 +26,7 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-2-1-OnOffDeviceAdressesCount INTEGER ::= 2147483647
+maxTC-2-1-OnOffDeviceAdressesCount INTEGER ::= 65535
 
 TC-2-1-DistributeOnOffDeviceCommands ::= TC-2-1-DistributeOnOffDeviceCommandsGeneric {DeviceAddress}
 

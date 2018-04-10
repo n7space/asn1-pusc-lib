@@ -30,7 +30,7 @@ IMPORTS
     MemoryData FROM Data;
 
 
-maxTC-6-2-DataAreasCount INTEGER ::= 2147483647
+maxTC-6-2-DataAreasCount INTEGER ::= 65535
 
 TC-6-2-LoadRawMemoryDataAreas ::= TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID, TC-6-2-DataArea}
 

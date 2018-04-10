@@ -29,7 +29,7 @@ IMPORTS
     Base, BaseMultipleMemid FROM StructuredMemory
     FilePath FROM FilePath;
 
-maxTC-6-21-ObjectDataAreaCount INTEGER ::= 2147483647
+maxTC-6-21-ObjectDataAreaCount INTEGER ::= 65535
 
 TC-6-21-LoadObjectMemoryDataAreasByReference ::= TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {Base, FilePath}
 

@@ -29,7 +29,7 @@ IMPORTS
     BytePointer FROM RawMemory
     MemoryData FROM Data;
 
-maxTM-6-6-DataDumpCount INTEGER ::= 2147483647
+maxTM-6-6-DataDumpCount INTEGER ::= 65535
 
 TM-6-6-DumpedRawMemoryDataReport ::= TM-6-6-DumpedRawMemoryDataReportGeneric {Memory-ID}
 

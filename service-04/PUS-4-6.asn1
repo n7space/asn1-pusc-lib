@@ -29,7 +29,7 @@ IMPORTS
     ParameterStatisticsDefinition FROM ParameterStatisticsDefinitions
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-4-6-ParameterStatisticCount INTEGER ::= 2147483647
+maxTC-4-6-ParameterStatisticCount INTEGER ::= 65535
 
 TC-4-6-AddOrUpdateParameterStatisticsDefinitions ::= SEQUENCE
 {

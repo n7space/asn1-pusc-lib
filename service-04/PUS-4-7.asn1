@@ -27,7 +27,7 @@ IMPORTS
     Parameter-ID FROM Parameter
     PUSC-UINT32 FROM BasicTypes;
 
-maxTC-4-7-Parameter-ID-Count INTEGER ::= 2147483647
+maxTC-4-7-Parameter-ID-Count INTEGER ::= 65535
 
 TC-4-7-DeleteParameterStatisticsReporting ::= TC-4-7-DeleteParameterStatisticsReportingGeneric {Parameter-ID}
 

@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     EventDefinition-ID FROM EventDefinition;
 
-maxTC-5-5-EventDefinition-ID-Count INTEGER ::= 2147483647
+maxTC-5-5-EventDefinition-ID-Count INTEGER ::= 65535
 
 TC-5-5-EnableTheReportGenerationOfEventDefinitions ::= TC-5-5-EnableTheReportGenerationOfEventDefinitionsGeneric {EventDefinition-ID}
 

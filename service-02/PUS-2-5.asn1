@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     RegisterAddress FROM Registers;
 
-maxTC-2-5-RegisterAddressCount INTEGER ::= 2147483647
+maxTC-2-5-RegisterAddressCount INTEGER ::= 65535
 
 TC-2-5-DistributeRegisterDumpCommands  ::= TC-2-5-DistributeRegisterDumpCommandsGeneric {RegisterAddress}
 

@@ -29,7 +29,7 @@ IMPORTS
     Base, BaseMultipleMemid FROM StructuredMemory
     FilePath FROM FilePath;
 
-maxTC-6-22-ObjectMemoryDumpCount INTEGER ::= 2147483647
+maxTC-6-22-ObjectMemoryDumpCount INTEGER ::= 65535
 
 TC-6-22-DumpObjectMemoryDataAreasToFile ::= TC-6-22-DumpObjectMemoryDataAreasToFileGeneric {Base, FilePath}
 

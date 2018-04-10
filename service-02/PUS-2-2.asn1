@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     Register FROM Registers;
 
-maxTC-2-2-RegisterCommandCount INTEGER ::= 2147483647
+maxTC-2-2-RegisterCommandCount INTEGER ::= 65535
 
 TC-2-2-DistributeRegisterCommands ::= TC-2-2-DistributeRegisterCommandsGeneric {Register}
 

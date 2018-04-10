@@ -28,7 +28,7 @@ IMPORTS
     BytePointer FROM RawMemory
     PUSC-UINT32 FROM BasicTypes;
 
-maxTM-6-10-DataAreaCount INTEGER ::= 2147483647
+maxTM-6-10-DataAreaCount INTEGER ::= 65535
 
 TM-6-10-CheckedRawMemoryDartaReport
   ::= TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID, TM-6-10-DataArea}
