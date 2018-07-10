@@ -51,4 +51,3 @@ python3 ${DIR}/metadata-validator.py \
     || { echo "Error validating module's metadata" ; exit 1;}
 
 printf "\n\nSanity check passed\n"
-
