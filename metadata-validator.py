@@ -33,7 +33,7 @@ METADATA_KEY = "meta_json"
 METADATA_PATH_KEY = "meta_path"
 
 ASN1SCC = "asn1.exe"
-ASN1SCC_ARGS = "-ACN -c"
+ASN1SCC_ARGS = "--c-lang --acn-enc --field-prefix AUTO --type-prefix T"
 CC = "gcc"
 CC_ARGS = "-c -pipe -O2 -fPIC -w"
 AR = "ar"
@@ -92,7 +92,7 @@ def makeValidFilename(filename):
 
 
 def checkCCodeGenerationValid(element_name, metadata_path, files, path):
-    asn1scc_command = ASN1SCC + " " +  ASN1SCC_ARGS + " " + (" ".join(files)) + " -o " + path
+    asn1scc_command = ASN1SCC + " " +  ASN1SCC_ARGS + " -o " + path + " " + (" ".join(files))
     #print(asn1scc_command)
 
     if os.system(asn1scc_command) != 0:

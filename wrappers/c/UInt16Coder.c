@@ -33,12 +33,12 @@ void Asn1PuscLib_UInt16Coder_encode(const BitStream* const originalStream,
                                     const long offset,
                                     const uint16_t value_)
 {
-  const PUSC_UINT16 value = value_;
+  const TPUSC_UINT16 value = value_;
   BitStream auxStream;
   BitStream_Init(&auxStream,
                  originalStream->buf + offset,
-                 PUSC_UINT16_REQUIRED_BYTES_FOR_ACN_ENCODING);
-  PUSC_UINT16_ACN_Encode(&value, &auxStream, NULL, FALSE);
+                 TPUSC_UINT16_REQUIRED_BYTES_FOR_ACN_ENCODING);
+  TPUSC_UINT16_ACN_Encode(&value, &auxStream, NULL, FALSE);
 }
 
 uint16_t Asn1PuscLib_UInt16Coder_decode(const BitStream* const originalStream, const long offset)
@@ -47,8 +47,8 @@ uint16_t Asn1PuscLib_UInt16Coder_decode(const BitStream* const originalStream, c
   BitStream_AttachBuffer(&auxStream, originalStream->buf, originalStream->count);
   auxStream.currentByte = offset;
 
-  PUSC_UINT16 value;
+  TPUSC_UINT16 value;
   int ignoredErrCode;
-  PUSC_UINT16_ACN_Decode(&value, &auxStream, &ignoredErrCode);
+  TPUSC_UINT16_ACN_Decode(&value, &auxStream, &ignoredErrCode);
   return (uint16_t)value;
 }

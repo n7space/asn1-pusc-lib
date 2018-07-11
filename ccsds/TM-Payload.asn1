@@ -28,7 +28,7 @@ IMPORTS
 
 TM-Payload ::= CHOICE --TODO
 {
-    tm-0-0 INTEGER(0 .. 255) --TODO
+    tm-255-255 INTEGER(0 .. 255) --TODO
 }
 
 TM-NoHeaderPayload ::= NULL --TODO
