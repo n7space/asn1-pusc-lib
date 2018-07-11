@@ -25,7 +25,7 @@ OBCPArgumentValues DEFINITIONS ::= BEGIN
 
 OBCPArgumentValues <OBCP.OBCP-ID: id> []
 {
-    arg0 [size 8, encoding pos-int, present-when id == "1"]
+    arg0 [size 8, encoding pos-int, present-when id == "obcp1"]
 }
 
 END
