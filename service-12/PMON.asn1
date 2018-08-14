@@ -48,9 +48,9 @@ PMON-Mask ::= CHOICE
 
 PMON-CheckType ::= ENUMERATED
 {
-    expectedValueChecking(0),
-    limitChecking(1),
-    deltaChecking(2)
+    expectedValueChecking   (0),
+    limitChecking           (1),
+    deltaChecking           (2)
 }
 
 PMON-LimitCrossed ::= CHOICE
@@ -65,37 +65,36 @@ PMON-CheckingStatus ::= CHOICE
     deltaChecking CheckingStatusForDeltaChecking
 }
 
-
 CheckingStatusForExpectedValueChecking ::= ENUMERATED
 {
-    expectedValue(0),
-    unchecked(1),
-    invalid(2),
-    unexpectedValue(3)
+    expectedValue   (0),
+    unchecked       (1),
+    invalid         (2),
+    unexpectedValue (3)
 }
 
 CheckingStatusForLimitChecking ::= ENUMERATED
 {
-    withinLimits(0),
-    unchecked(1),
-    invalid(2),
-    belowLowLimit(3),
-    aboveHighLimit(4)
+    withinLimits        (0),
+    unchecked           (1),
+    invalid             (2),
+    belowLowLimit       (3),
+    aboveHighLimit      (4)
 }
 
 CheckingStatusForDeltaChecking ::= ENUMERATED
 {
-    withinThresholds(0),
-    unchecked(1),
-    invalid(2),
-    belowLowTreshold(3),
-    aboveHighTreshold(4)
+    withinThresholds      (0),
+    unchecked             (1),
+    invalid               (2),
+    belowLowTreshold      (3),
+    aboveHighTreshold     (4)
 }
 
 PMON-Status ::= ENUMERATED
 {
-    disabled(0),
-    enabled(1)
+    disabled (0),
+    enabled  (1)
 }
 
 END
