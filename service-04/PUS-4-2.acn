@@ -40,12 +40,12 @@ Statistics []
     minValue <parameter-ID> [],
     minTime [],
     meanValue <parameter-ID> [],
-    standardDeviationValue []
+    standardDeviationValue <parameter-ID> []
 }
 
-StandardDeviation []
+StandardDeviation <Parameter.Parameter-ID:param> [determinant param]
 {
-    param1 []
+    param1 [encoding IEEE754-1985-64]
 }
 
 END
