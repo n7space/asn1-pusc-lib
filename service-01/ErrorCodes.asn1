@@ -24,48 +24,48 @@
 ErrorCodes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-AcceptanceFailureCode ::= ENUMERATED {error1} --TODO
-AcceptanceFailureNotice ::= SEQUENCE --TODO
+AcceptanceFailureCode ::= ENUMERATED {error1}
+AcceptanceFailureNotice ::= SEQUENCE
 {
-    data CHOICE --TODO
+    data CHOICE
     {
         error1 BIT STRING (SIZE(1))
     }
 }
 
 
-ExecutionStartFailureCode ::= ENUMERATED {error1} --TODO
-ExecutionStartFailureNotice ::= SEQUENCE --TODO
+ExecutionStartFailureCode ::= ENUMERATED {error1}
+ExecutionStartFailureNotice ::= SEQUENCE
 {
-    data CHOICE --TODO
+    data CHOICE
     {
         error1 BIT STRING (SIZE(1))
     }
 }
 
-ExecutionProgressFailureCode ::= ENUMERATED {error1} --TODO
-ExecutionProgressFailureNotice::= SEQUENCE --TODO
+ExecutionProgressFailureCode ::= ENUMERATED {error1}
+ExecutionProgressFailureNotice::= SEQUENCE
 {
-    data CHOICE --TODO
+    data CHOICE
     {
         error1 BIT STRING (SIZE(1))
     }
 }
 
-ExecutionCompletionFailureCode ::= ENUMERATED {error1} --TODO
-ExecutionCompletionFailureNotice ::= SEQUENCE --TODO
+ExecutionCompletionFailureCode ::= ENUMERATED {error1}
+ExecutionCompletionFailureNotice ::= SEQUENCE
 {
-    data CHOICE --TODO
+    data CHOICE
     {
         error1 BIT STRING (SIZE(1))
     }
 }
 
 
-RoutingFailureCode ::= ENUMERATED {error1} --TODO
-RoutingFailureNotice ::= SEQUENCE --TODO
+RoutingFailureCode ::= ENUMERATED {error1}
+RoutingFailureNotice ::= SEQUENCE
 {
-    data CHOICE --TODO
+    data CHOICE
     {
         error1 BIT STRING (SIZE(1))
     }

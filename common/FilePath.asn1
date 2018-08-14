@@ -26,7 +26,7 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT12, PUSC-CHARSTR-VARIABLE-LEN FROM BasicTypes;
 
-FilePath ::= SEQUENCE --TODO
+FilePath ::= SEQUENCE
 {
 --! repositoryPathLength UnsignedInteger,
     repositoryPath PUSC-CHARSTR-VARIABLE-LEN,

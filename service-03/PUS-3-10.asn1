@@ -39,7 +39,7 @@ TM-3-10-HousekeepingParameterReportStructureReport ::= TM-3-10-HousekeepingParam
 TM-3-10-HousekeepingParameterReportStructureReportGeneric {HousekeepingParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type, Parameter-ID-Type} ::= SEQUENCE
 {
     housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL, --TODO
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL,
     collectionInterval CollectionInterval-Type,
 --! n1 UnsignedInteger-Type, moved to acn
     parameter-ID SEQUENCE (SIZE(0 .. maxTM-3-10-Parameter-ID-Count)) OF Parameter-ID-Type,

@@ -34,12 +34,12 @@ TransactionExecutionStatus ::= SEQUENCE
     auxiliaryData AuxiliaryData
 }
 
-DataAcquisitionReturnCode ::= ENUMERATED --TODO
+DataAcquisitionReturnCode ::= ENUMERATED
 {
     ret1 (0)
 }
 
-AuxiliaryData ::= CHOICE --TODO
+AuxiliaryData ::= CHOICE
 {
     ret1 NULL
 }

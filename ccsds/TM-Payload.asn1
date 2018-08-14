@@ -26,11 +26,11 @@ EXPORTS ALL;
 IMPORTS
     MessageSubtype-ID, ServiceType-ID FROM MessageType;
 
-TM-Payload ::= CHOICE --TODO
+TM-Payload ::= CHOICE
 {
-    tm-255-255 INTEGER(0 .. 255) --TODO
+    tm-255-255 INTEGER (0 .. 255)
 }
 
-TM-NoHeaderPayload ::= NULL --TODO
+TM-NoHeaderPayload ::= NULL
 
 END

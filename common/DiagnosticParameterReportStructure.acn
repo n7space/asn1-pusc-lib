@@ -23,9 +23,9 @@
 
 DiagnosticParameterReportStructure DEFINITIONS ::= BEGIN
 
-DiagnosticParameterReportStructure-ID [size 32, encoding pos-int, endianness big] --TODO
+DiagnosticParameterReportStructure-ID [size 32, encoding pos-int, endianness big]
 
-DiagnosticParameterValues <DiagnosticParameterReportStructure-ID: structure> [] --TODO
+DiagnosticParameterValues <DiagnosticParameterReportStructure-ID: structure> []
 {
     struct1 [size 8, encoding pos-int, present-when structure == 1]
 }

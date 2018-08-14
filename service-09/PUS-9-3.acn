@@ -25,9 +25,9 @@ PUS-9-3 DEFINITIONS ::= BEGIN
 
 TM-9-3-CdsTimeReport []
 {
-    rateExponentialValue [], --TODO
+    rateExponentialValue [],
     spacecraftTime [],
-    spacecraftTimeReferenceStatus [] --TODO
+    spacecraftTimeReferenceStatus []
 }
 
 END

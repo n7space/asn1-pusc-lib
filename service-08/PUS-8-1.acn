@@ -31,7 +31,7 @@ TC-8-1-PerformAFunction []
 
 Function-ID []
 
-FunctionArguments <Function-ID: function> [] --TODO
+FunctionArguments <Function-ID: function> []
 {
     function0 [present-when function == "fun2"],
     function1 [present-when function == "fun1"]

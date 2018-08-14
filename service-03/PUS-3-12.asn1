@@ -39,7 +39,7 @@ TM-3-12-DiagnosticParameterReportStructureReport ::= TM-3-12-DiagnosticParameter
 TM-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type, Parameter-ID-Type} ::= SEQUENCE
 {
     diagnosticParameterReportStructure-ID DiagnosticParameterReportStructure-ID-Type,
-    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL, --TODO
+    periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL,
     collectionInterval CollectionInterval-Type,
 --! n1 UnsignedInteger-Type, moved to acn
     parameter-ID SEQUENCE (SIZE(0 .. maxTM-3-12-Parameter-ID-Count)) OF Parameter-ID-Type,

@@ -24,7 +24,7 @@
 LogicalDevice DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-LogicalDevice-ID ::= ENUMERATED --TODO
+LogicalDevice-ID ::= ENUMERATED
 {
     ldev1 (0)
 }

@@ -30,7 +30,7 @@ maxTC-2-1-OnOffDeviceAdressesCount INTEGER ::= 65535
 
 TC-2-1-DistributeOnOffDeviceCommands ::= TC-2-1-DistributeOnOffDeviceCommandsGeneric {DeviceAddress}
 
-DeviceAddress ::= ENUMERATED --TODO
+DeviceAddress ::= ENUMERATED
 {
     addr0 (1)
 }

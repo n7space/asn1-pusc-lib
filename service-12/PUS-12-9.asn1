@@ -25,7 +25,6 @@ PUS-12-9 DEFINITIONS ::= BEGIN
 
 TM-12-9-ParameterMonitoringDefinitionReport ::= SEQUENCE
 {
-    --TODO
 }
 
 END

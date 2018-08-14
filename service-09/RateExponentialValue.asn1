@@ -26,6 +26,6 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-RateExponentialValue ::= PUSC-UINT32 --TODO
+RateExponentialValue ::= PUSC-UINT32
 
 END

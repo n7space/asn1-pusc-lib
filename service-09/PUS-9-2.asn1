@@ -32,9 +32,9 @@ TM-9-2-CucTimeReport ::= TM-9-2-CucTimeReportGeneric {RateExponentialValue, Abso
 
 TM-9-2-CucTimeReportGeneric {RateExponentialValue-Type, AbsoluteTime-Type, SpacecraftTimeReferenceStatus-Type} ::= SEQUENCE
 {
-    rateExponentialValue RateExponentialValue-Type OPTIONAL, --TODO
+    rateExponentialValue RateExponentialValue-Type OPTIONAL,
     spacecraftTime AbsoluteTime-Type,
-    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus-Type OPTIONAL --TODO
+    spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus-Type OPTIONAL
 }
 
 END

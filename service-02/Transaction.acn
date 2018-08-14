@@ -31,9 +31,9 @@ TransactionExecutionStatus []
     auxiliaryData <dataAcquisitionReturnCode> []
 }
 
-DataAcquisitionReturnCode [encoding pos-int, size 32, endianness big, encode-values] --TODO
+DataAcquisitionReturnCode [encoding pos-int, size 32, endianness big, encode-values]
 
-AuxiliaryData <DataAcquisitionReturnCode: code> [determinant code] --TODO
+AuxiliaryData <DataAcquisitionReturnCode: code> [determinant code]
 {
     ret1 []
 }

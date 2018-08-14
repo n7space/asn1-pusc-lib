@@ -27,9 +27,9 @@ TM-Payload
  <MessageType.ServiceType-ID:service, MessageType.MessageSubtype-ID:message>
  [align-to-next byte]
 {
-    tm-255-255 [present-when service==255 message==255] --TODO
+    tm-255-255 [present-when service==255 message==255]
 }
 
-TM-NoHeaderPayload [] --TODO
+TM-NoHeaderPayload []
 
 END

@@ -23,6 +23,6 @@
 
 LogicalDevice DEFINITIONS ::= BEGIN
 
-LogicalDevice-ID [size 32, encoding pos-int, endianness big, encode-values] --TODO
+LogicalDevice-ID [size 32, encoding pos-int, endianness big, encode-values]
 
 END

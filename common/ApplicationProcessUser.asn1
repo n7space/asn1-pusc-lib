@@ -24,6 +24,6 @@
 ApplicationProcessUser DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-ApplicationProcessUser-ID ::= INTEGER (0 .. 65535) --TODO
+ApplicationProcessUser-ID ::= INTEGER (0 .. 65535)
 
 END

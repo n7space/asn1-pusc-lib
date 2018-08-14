@@ -23,9 +23,9 @@
 
 HousekeepingParameterReportStructure DEFINITIONS ::= BEGIN
 
-HousekeepingParameterReportStructure-ID [size 32, encoding pos-int, endianness big] --TODO
+HousekeepingParameterReportStructure-ID [size 32, encoding pos-int, endianness big]
 
-HousekeepingParameterValues <HousekeepingParameterReportStructure-ID: structure> [] --TODO
+HousekeepingParameterValues <HousekeepingParameterReportStructure-ID: structure> []
 {
     struct1 [size 8, encoding pos-int, present-when structure == 2]
 }

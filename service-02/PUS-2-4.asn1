@@ -59,12 +59,12 @@ CpduCommandGeneric {OutputLine-ID-Type} ::= SEQUENCE
     durationExponentialValue INTEGER (0 .. 7)
 }
 
-CPDU-ID ::= ENUMERATED --TODO
+CPDU-ID ::= ENUMERATED
 {
     cpdu0 (0)
 }
 
-OutputLine-ID ::= ENUMERATED --TODO
+OutputLine-ID ::= ENUMERATED
 {
     out1 (1)
 }

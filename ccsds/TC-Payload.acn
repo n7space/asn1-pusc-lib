@@ -27,7 +27,7 @@ TC-Payload
  <MessageType.ServiceType-ID:service, MessageType.MessageSubtype-ID:message>
  [align-to-next byte]
 {
-    tc-255-255 [present-when service==255 message==255] --TODO
+    tc-255-255 [present-when service==255 message==255]
 }
 
 TC-NoHeaderPayload []

@@ -23,38 +23,36 @@
 
 ErrorCodes DEFINITIONS ::= BEGIN
 
-AcceptanceFailureCode [] --TODO
-AcceptanceFailureNotice [] --TODO
+AcceptanceFailureCode []
+AcceptanceFailureNotice []
 {
     code ErrorCodes.AcceptanceFailureCode [],
     data [determinant code]
 }
 
-ExecutionStartFailureCode [] --TODO
-ExecutionStartFailureNotice [] --TODO
+ExecutionStartFailureCode []
+ExecutionStartFailureNotice []
 {
     code ErrorCodes.ExecutionStartFailureCode [],
     data [determinant code]
 }
 
-ExecutionProgressFailureCode [] --TODO
-ExecutionProgressFailureNotice [] --TODO
+ExecutionProgressFailureCode []
+ExecutionProgressFailureNotice []
 {
     code ErrorCodes.ExecutionProgressFailureCode[],
     data [determinant code]
 }
 
-ExecutionCompletionFailureCode [] --TODO
-ExecutionCompletionFailureNotice [] --TODO
+ExecutionCompletionFailureCode []
+ExecutionCompletionFailureNotice []
 {
     code ErrorCodes.ExecutionCompletionFailureCode[],
     data [determinant code]
 }
 
-
-
-RoutingFailureCode [] --TODO
-RoutingFailureNotice [] --TODO
+RoutingFailureCode []
+RoutingFailureNotice []
 {
     code ErrorCodes.RoutingFailureCode [],
     data [determinant code]

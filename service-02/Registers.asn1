@@ -30,13 +30,13 @@ Register ::= SEQUENCE
     registerData RegisterData
 }
 
-RegisterAddress ::= ENUMERATED --TODO
+RegisterAddress ::= ENUMERATED
 {
     reg1 (1),
     reg2 (2)
 }
 
-RegisterData ::= CHOICE --TODO
+RegisterData ::= CHOICE
 {
     reg1 INTEGER (0 .. 255),
     reg2 INTEGER (0 .. 65535)

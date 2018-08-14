@@ -43,23 +43,23 @@ LogicalDeviceCommandGeneric {Command-Type} ::= SEQUENCE
     command Command-Type
 }
 
-Command ::= CHOICE --TODO
+Command ::= CHOICE
 {
     ldev1 Ldev1
 }
 
-Ldev1 ::= SEQUENCE --TODO
+Ldev1 ::= SEQUENCE
 {
 --! command-ID Ldev1-Commands, moved to acn
     commandArguments Ldev1-Arguments
 }
 
-Ldev1-Commands ::= ENUMERATED --TODO
+Ldev1-Commands ::= ENUMERATED
 {
     command1 (0)
 }
 
-Ldev1-Arguments ::= CHOICE --TODO
+Ldev1-Arguments ::= CHOICE
 {
     command1 INTEGER (0 .. 255)
 }

@@ -27,7 +27,7 @@ IMPORTS
     PUSC-UINT32 FROM BasicTypes
     Memory-ID FROM Memory;
 
-BaseMultipleMemid ::= CHOICE --TODO
+BaseMultipleMemid ::= CHOICE
 {
     memId1 INTEGER (0 .. 255)
 }

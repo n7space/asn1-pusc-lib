@@ -24,12 +24,12 @@
 PhysicalDevice DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-PhysicalDevice-ID ::= ENUMERATED --TODO
+PhysicalDevice-ID ::= ENUMERATED
 {
     dev1 (1)
 }
 
-ProtocolSpecificData ::= CHOICE --TODO
+ProtocolSpecificData ::= CHOICE
 {
     dev1 INTEGER (0 .. 255)
 }

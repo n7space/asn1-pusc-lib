@@ -41,7 +41,7 @@ TC-8-1-PerformAFunctionGeneric {FunctionArguments-Type} ::= SEQUENCE
 
 Function-ID ::= IA5String (SIZE(maxTC-8-1-Function-ID-Size))
 
-FunctionArguments ::= CHOICE --TODO
+FunctionArguments ::= CHOICE
 {
     function0 MultipleArguments,
     function1 INTEGER (0 .. 255)
@@ -59,12 +59,12 @@ ArgumentGeneric {ArgumentValue-Type} ::= SEQUENCE
     argumentValue ArgumentValue-Type
 }
 
-Argument-ID ::= ENUMERATED --TODO
+Argument-ID ::= ENUMERATED
 {
     arg0 (0)
 }
 
-ArgumentValue ::= CHOICE --TODO
+ArgumentValue ::= CHOICE
 {
     arg0 INTEGER (0 .. 255)
 }

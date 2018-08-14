@@ -24,6 +24,6 @@
 ExecutionStep DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-ExecutionStep-ID ::= INTEGER ((1)) --TODO
+ExecutionStep-ID ::= INTEGER ((1))
 
 END

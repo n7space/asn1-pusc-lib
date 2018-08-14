@@ -27,12 +27,12 @@ service-NN
  |- ServiceCommonObject.asn1
  |- ServiceCommonObject.acn
  |- ...
- |- meta.TODO
+ |- meta.json
 ```
 
 * `PUS-NN-MM.asn1` and `PUS-NN-MM.acn` - files containing models of message number MM from service NN (separate files for each message type modeled from service)
 * `ServiceCommonObjectX.asn1` and `ServiceCommonObjectX.acn` - optional files defining objects used by more than one message in service (if required there can be more than one pair of such files, names should describe what models are included in that file).
-* `meta.TODO` - file containing metadata describing service NN
+* `meta.json` - file containing metadata describing service NN
 
 ## Message file layout
 ```asn1

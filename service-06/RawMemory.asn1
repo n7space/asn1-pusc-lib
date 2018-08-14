@@ -26,7 +26,6 @@ EXPORTS ALL;
 IMPORTS
     PUSC-UINT32 FROM BasicTypes;
 
-BytePointer ::= PUSC-UINT32 --TODO
-
+BytePointer ::= PUSC-UINT32
 
 END
