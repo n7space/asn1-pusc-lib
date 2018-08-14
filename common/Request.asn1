@@ -29,7 +29,9 @@ IMPORTS
 
 Request-ID ::= Request-ID-Generic {ApplicationProcessUser-ID, ApplicationProcess-ID, PUSC-UINT32}
 
-Request-ID-Generic {ApplicationProcessUser-ID-Type, ApplicationProcess-ID-Type, UnsignedIntegerType} ::= SEQUENCE
+Request-ID-Generic
+    {ApplicationProcessUser-ID-Type, ApplicationProcess-ID-Type, UnsignedIntegerType}
+    ::= SEQUENCE
 {
     source-ID ApplicationProcessUser-ID-Type,
     applicationProcess-ID ApplicationProcess-ID-Type,

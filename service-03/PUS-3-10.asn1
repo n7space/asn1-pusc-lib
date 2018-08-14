@@ -34,9 +34,19 @@ IMPORTS
 maxTM-3-10-Parameter-ID-Count INTEGER ::= 1073741823
 maxTM-3-10-SuperComutatedParameterSetCount INTEGER ::= 536870911
 
-TM-3-10-HousekeepingParameterReportStructureReport ::= TM-3-10-HousekeepingParameterReportStructureReportGeneric {HousekeepingParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval, Parameter-ID}
+TM-3-10-HousekeepingParameterReportStructureReport
+    ::= TM-3-10-HousekeepingParameterReportStructureReportGeneric
+        {HousekeepingParameterReportStructure-ID,
+         PeriodicGenerationActionStatus,
+         CollectionInterval,
+         Parameter-ID}
 
-TM-3-10-HousekeepingParameterReportStructureReportGeneric {HousekeepingParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type, Parameter-ID-Type} ::= SEQUENCE
+TM-3-10-HousekeepingParameterReportStructureReportGeneric
+    {HousekeepingParameterReportStructure-ID-Type,
+     PeriodicGenerationActionStatus-Type,
+     CollectionInterval-Type,
+     Parameter-ID-Type}
+    ::= SEQUENCE
 {
     housekeepingParameterReportStructure-ID HousekeepingParameterReportStructure-ID-Type,
     periodicGenerationActionStatus PeriodicGenerationActionStatus-Type OPTIONAL,
@@ -44,10 +54,12 @@ TM-3-10-HousekeepingParameterReportStructureReportGeneric {HousekeepingParameter
 --! n1 UnsignedInteger-Type, moved to acn
     parameter-ID SEQUENCE (SIZE(0 .. maxTM-3-10-Parameter-ID-Count)) OF Parameter-ID-Type,
 --! nfa UnsignedInteger-Type, moved to acn
-    superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTM-3-10-SuperComutatedParameterSetCount)) OF TM-3-10-SuperCommutatedParameterSet
+    superCommutatedParameterSet SEQUENCE (SIZE(0 .. maxTM-3-10-SuperComutatedParameterSetCount))
+        OF TM-3-10-SuperCommutatedParameterSet
 }
 
-TM-3-10-SuperCommutatedParameterSet ::= TM-3-10-SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
+TM-3-10-SuperCommutatedParameterSet
+    ::= TM-3-10-SuperCommutatedParameterSetGeneric {PUSC-UINT32, Parameter-ID}
 
 TM-3-10-SuperCommutatedParameterSetGeneric {UnsignedInteger-Type, Parameter-ID-Type} ::= SEQUENCE
 {

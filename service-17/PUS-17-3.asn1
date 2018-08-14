@@ -28,7 +28,8 @@ EXPORTS ALL;
 IMPORTS
     ApplicationProcess-ID FROM ApplicationProcess;
 
-TC-17-3-PerformAnOnBoardConnectionTest ::= TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID}
+TC-17-3-PerformAnOnBoardConnectionTest
+    ::= TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID}
 
 TC-17-3-PerformAnOnBoardConnectionTestGeneric {ApplicationProcess-ID-Type} ::= SEQUENCE
 {
