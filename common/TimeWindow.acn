@@ -30,12 +30,6 @@ TimeWindow []
 }
 
 TimeTags <TimeWindowType: type> [determinant type]
-{
-    selectAll [],
-    fromTimeTagToTimeTag [],
-    fromTimeTag [],
-    toTimeTag []
-}
 
 TimeWindowType [size 2, encoding pos-int, encode-values]
 

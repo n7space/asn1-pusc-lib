@@ -31,8 +31,5 @@ ParameterValue <Parameter-ID: parameter> [determinant parameter]
 }
 
 ParameterMask <Parameter-ID: parameter> [determinant parameter]
-{
-    param1 []
-}
 
 END

@@ -23,11 +23,12 @@
 
 TM-Payload DEFINITIONS ::= BEGIN
 
-TM-Payload <MessageType.ServiceType-ID:service, MessageType.MessageSubtype-ID:message> []
+TM-Payload
+ <MessageType.ServiceType-ID:service, MessageType.MessageSubtype-ID:message>
+ [align-to-next byte]
 {
     tm-255-255 [present-when service==255 message==255] --TODO
 }
-
 
 TM-NoHeaderPayload [] --TODO
 

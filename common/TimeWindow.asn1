@@ -45,8 +45,6 @@ TimeTagsGeneric {AbsoluteTimeType} ::= CHOICE
     toTimeTag AbsoluteTimeType
 }
 
-
-
 TimeWindowType ::= ENUMERATED
 {
     selectAll (0),
