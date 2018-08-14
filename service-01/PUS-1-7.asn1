@@ -26,7 +26,8 @@ EXPORTS ALL;
 IMPORTS
     VerificationRequest-ID FROM VerificationRequest;
 
-TM-1-7-SuccessfulCompletionOfExecutionVerificationReport ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID}
+TM-1-7-SuccessfulCompletionOfExecutionVerificationReport
+    ::= TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID}
 
 TM-1-7-SuccessfulCompletionOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {

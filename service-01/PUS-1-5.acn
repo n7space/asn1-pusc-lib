@@ -24,9 +24,5 @@
 PUS-1-5 DEFINITIONS ::= BEGIN
 
 TM-1-5-SuccessfulProgressOfExecutionVerificationReport []
-{
-    request-ID [],
-    step-ID []
-}
 
 END

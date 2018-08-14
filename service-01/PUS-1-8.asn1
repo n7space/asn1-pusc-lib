@@ -27,9 +27,12 @@ IMPORTS
     VerificationRequest-ID FROM VerificationRequest
     ExecutionCompletionFailureNotice FROM ErrorCodes;
 
-TM-1-8-FailedCompletionOfExecutionVerificationReport ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID, ExecutionCompletionFailureNotice}
+TM-1-8-FailedCompletionOfExecutionVerificationReport
+    ::= TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {VerificationRequest-ID,
+                                                                     ExecutionCompletionFailureNotice}
 
-TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric {Request-ID-Type, ExecutionCompletionFailureNotice-Type} ::= SEQUENCE
+TM-1-8-FailedCompletionOfExecutionVerificationReportGeneric
+    {Request-ID-Type, ExecutionCompletionFailureNotice-Type} ::= SEQUENCE
 {
     request-ID Request-ID-Type,
     failureNotice ExecutionCompletionFailureNotice-Type

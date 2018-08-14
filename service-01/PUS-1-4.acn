@@ -24,9 +24,5 @@
 PUS-1-4 DEFINITIONS ::= BEGIN
 
 TM-1-4-FailedStartOfExecutionVerificationReport []
-{
-    request-ID [],
-    failureNotice []
-}
 
 END

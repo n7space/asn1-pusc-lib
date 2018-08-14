@@ -24,11 +24,5 @@
 VerificationRequest DEFINITIONS ::= BEGIN
 
 VerificationRequest-ID []
-{
-    packetVersionNumber [],
-    packet-ID [],
-    packetSequenceControl []
-}
-
 
 END

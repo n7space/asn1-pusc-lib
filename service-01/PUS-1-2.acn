@@ -24,9 +24,5 @@
 PUS-1-2 DEFINITIONS ::= BEGIN
 
 TM-1-2-FailedAcceptanceVerificationReport []
-{
-    request-ID [],
-    failureNotice []
-}
 
 END

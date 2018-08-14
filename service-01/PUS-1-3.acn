@@ -24,8 +24,5 @@
 PUS-1-3 DEFINITIONS ::= BEGIN
 
 TM-1-3-SuccessfulStartOfExecutionVerificationReport []
-{
-    request-ID []
-}
 
 END

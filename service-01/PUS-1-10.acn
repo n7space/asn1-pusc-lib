@@ -24,9 +24,5 @@
 PUS-1-10 DEFINITIONS ::= BEGIN
 
 TM-1-10-FailedRoutingVerificatrionReport []
-{
-    request-ID [],
-    failureNotice []
-}
 
 END

@@ -24,8 +24,5 @@
 PUS-1-7 DEFINITIONS ::= BEGIN
 
 TM-1-7-SuccessfulCompletionOfExecutionVerificationReport []
-{
-    request-ID []
-}
 
 END
