@@ -52,10 +52,5 @@ Argument []
 Argument-ID [size 32, encoding pos-int, encode-values]
 
 ArgumentValue <Argument-ID: argument> [determinant argument]
-{
-    arg0 []
-}
-
-
 
 END
