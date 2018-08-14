@@ -36,9 +36,6 @@ LogicalDeviceCommand []
 }
 
 Command <LogicalDevice.LogicalDevice-ID: device> [determinant device] --TODO
-{
-    ldev1 []
-}
 
 Ldev1 [] --TODO
 {

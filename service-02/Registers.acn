@@ -32,9 +32,5 @@ Register []
 RegisterAddress [size 32, encoding pos-int, endianness big] --TODO
 
 RegisterData <RegisterAddress: registerAddress> [determinant registerAddress] --TODO
-{
-    reg1 [],
-    reg2 []
-}
 
 END
