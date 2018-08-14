@@ -36,6 +36,7 @@ TC-6-1-LoadObjectMemoryData ::= TC-6-1-LoadObjectMemoryDataGeneric {Base}
 TC-6-1-LoadObjectMemoryDataMultipleMemid ::= TC-6-1-LoadObjectMemoryDataGeneric {BaseMultipleMemid}
 
 LoadObjectInstruction ::= LoadObjectInstructionGeneric {PUSC-UINT32, MemoryData}
+                          (WITH COMPONENTS {checksum PRESENT})
 
 TC-6-1-LoadObjectMemoryDataGeneric {Base-Type} ::= SEQUENCE
 {

@@ -33,6 +33,7 @@ IMPORTS
 maxTC-6-2-DataAreasCount INTEGER ::= 65535
 
 TC-6-2-LoadRawMemoryDataAreas ::= TC-6-2-LoadRawMemoryDataAreasGeneric {Memory-ID, TC-6-2-DataArea}
+                                  (WITH COMPONENTS {memory-ID PRESENT})
 
 TC-6-2-DataArea ::= TC-6-2-DataAreaGeneric {BytePointer, MemoryData}
 

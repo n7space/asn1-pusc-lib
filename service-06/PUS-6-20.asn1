@@ -32,12 +32,13 @@ IMPORTS
 maxTC-6-20-DataAreaCount INTEGER ::= 65535
 
 TC-6-20-DumpRawMemoryDataAreasToFile
-  ::= TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID, FilePath, TC-6-20-DataArea}
+    ::= TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID, FilePath, TC-6-20-DataArea}
+        (WITH COMPONENTS {memory-ID PRESENT})
 
 TC-6-20-DataArea ::= TC-6-20-DataAreaGeneric {BytePointer, PUSC-UINT32}
 
 TC-6-20-DumpRawMemoryDataAreasToFileGeneric {Memory-ID-Type, FilePath-Type, DataArea-Type}
-  ::= SEQUENCE
+    ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
     filePath FilePath-Type,

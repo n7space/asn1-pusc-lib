@@ -27,7 +27,9 @@ IMPORTS
     OBCPActivation FROM OBCPActivation
     FilePath FROM FilePath;
 
-TC-18-19-LoadByReferenceAndActivateOBCP ::= TC-18-19-LoadByReferenceAndActivateOBCPGeneric{FilePath, OBCPActivation}
+TC-18-19-LoadByReferenceAndActivateOBCP
+    ::= TC-18-19-LoadByReferenceAndActivateOBCPGeneric{FilePath, OBCPActivation}
+        (WITH COMPONENTS {filePath PRESENT})
 
 TC-18-19-LoadByReferenceAndActivateOBCPGeneric {FilePath-Type, OBCPActivation-Type} ::= SEQUENCE
 {

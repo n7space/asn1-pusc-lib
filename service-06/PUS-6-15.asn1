@@ -26,7 +26,9 @@ EXPORTS ALL;
 IMPORTS
     Memory-ID FROM Memory;
 
-TC-6-15-EnableTheWriteProtectionOfAMemory ::= TC-6-15-EnableTheWriteProtectionOfAMemoryGeneric {Memory-ID}
+TC-6-15-EnableTheWriteProtectionOfAMemory
+    ::= TC-6-15-EnableTheWriteProtectionOfAMemoryGeneric {Memory-ID}
+        (WITH COMPONENTS {memory-ID PRESENT})
 
 TC-6-15-EnableTheWriteProtectionOfAMemoryGeneric {Memory-ID-Type} ::= SEQUENCE
 {

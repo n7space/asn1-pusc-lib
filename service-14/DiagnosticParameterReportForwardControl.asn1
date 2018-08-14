@@ -78,5 +78,4 @@ DiagnosticParameterStructure-ID-ConfigurationGeneric {DiagnosticParameterStructu
     subsamplingRate SubsamplingRateType OPTIONAL
 }
 
-
 END

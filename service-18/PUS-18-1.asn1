@@ -28,6 +28,7 @@ IMPORTS
     PUSC-UINT32, PUSC-OCTSTR-VARIABLE-LEN FROM BasicTypes;
 
 TC-18-1-Direct-LoadAnOBCP ::= TC-18-1-Direct-LoadAnOBCPGeneric {OBCP-ID, PUSC-OCTSTR-VARIABLE-LEN}
+                              (WITH COMPONENTS {checksum PRESENT})
 
 TC-18-1-Direct-LoadAnOBCPGeneric {OBCP-ID-Type, OBCPCode-Type} ::= SEQUENCE
 {

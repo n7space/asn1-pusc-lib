@@ -36,10 +36,11 @@ maxTM-3-10-SuperComutatedParameterSetCount INTEGER ::= 536870911
 
 TM-3-10-HousekeepingParameterReportStructureReport
     ::= TM-3-10-HousekeepingParameterReportStructureReportGeneric
-        {HousekeepingParameterReportStructure-ID,
-         PeriodicGenerationActionStatus,
-         CollectionInterval,
-         Parameter-ID}
+            {HousekeepingParameterReportStructure-ID,
+             PeriodicGenerationActionStatus,
+             CollectionInterval,
+             Parameter-ID}
+         (WITH COMPONENTS {periodicGenerationActionStatus PRESENT})
 
 TM-3-10-HousekeepingParameterReportStructureReportGeneric
     {HousekeepingParameterReportStructure-ID-Type,
