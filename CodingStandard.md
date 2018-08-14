@@ -13,11 +13,11 @@ asn1-pusc-lib
  |- ccsds
 ```
 
-* `service-NN` - folder containing models of messages defined by PUS Service NN 
+* `service-NN` - folder containing models of messages defined by PUS Service NN
                  (separate folder for each service included in library)
 * `common` - folder containing models used by more than one service
 * `system-objects` - folder containing models of types defined as System Objects
-                     or their properties in ECSS 
+                     or their properties in ECSS
 * `ccsds` - models representing CCSDS packets
 
 ## Service folder structure
@@ -32,11 +32,11 @@ service-NN
  |- meta.json
 ```
 
-* `PUS-NN-MM.asn1` and `PUS-NN-MM.acn` - files containing models of message number MM from service NN 
+* `PUS-NN-MM.asn1` and `PUS-NN-MM.acn` - files containing models of message MM from service NN
                                          (separate files for each message type modeled from service)
-* `ServiceCommonObjectX.asn1` and `ServiceCommonObjectX.acn` - optional files defining objects 
-                                      used by more than one message in service 
-                                      (if required there can be more than one pair of such files, 
+* `ServiceCommonObjectX.asn1` and `ServiceCommonObjectX.acn` - optional files defining objects
+                                      used by more than one message in service
+                                      (if required there can be more than one pair of such files,
                                       names should describe what models are included in that file).
 * `meta.json` - file containing metadata describing service NN
 
@@ -49,11 +49,12 @@ END
 ```
 
 * `PUS-NN-MM` - definitions block named after file name (message `MM` from service `NN`)
-* `Tx-NN-MM-MessageNameFromEcss` - main type assignment representing message type 
+* `Tx-NN-MM-MessageNameFromEcss` - main type assignment representing message type
                                    (prefix should be `TC` for telecommands or `TM` for telemetry)
 
 ## ASN.1/ACN files Coding Standard
-Each file should begin with [License template](https://github.com/n7space/asn1-pusc-lib/blob/master/license-template.txt) 
+Each file should begin with
+[License template](https://github.com/n7space/asn1-pusc-lib/blob/master/license-template.txt)
 as found in project's repository.
 
 Each file should contain only single `DEFINITIONS` block, named after file name.
@@ -64,3 +65,5 @@ if required - with prefixes defined in previous paragraphs.
 Type fields should follow `camelCaseStartingWithLowerCase`.
 
 Hyphen (`-`) is allowed to separate numbers in names or upper-cased abbreviations (like ID).
+
+Lines should not exceed 100 characters.
