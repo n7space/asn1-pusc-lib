@@ -38,14 +38,8 @@ TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionMultipleMemid 
 }
 
 BitMaskMultipleMemid <Memory.Memory-ID: memory> [determinant memory]
-{
-    memId1 []
-}
 
 DataToLoadMultipleMemid <Memory.Memory-ID: memory> [determinant memory]
-{
-    memId1 []
-}
 
 BitMask []
 DataToLoad []

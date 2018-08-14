@@ -28,11 +28,18 @@ IMPORTS
     BytePointer FROM RawMemory
     PUSC-UINT32 FROM BasicTypes;
 
-TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransaction ::= TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {BytePointer, BitMask, DataToLoad}
+TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransaction
+    ::= TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {BytePointer,
+                                                                                   BitMask,
+                                                                                   DataToLoad}
 
-TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionMultipleMemid ::= TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {BytePointer, BitMaskMultipleMemid, DataToLoadMultipleMemid}
+TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionMultipleMemid
+    ::= TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {BytePointer,
+                                                                                   BitMaskMultipleMemid,
+                                                                                   DataToLoadMultipleMemid}
 
-TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric {UnsignedInteger-Type, BitMask-Type, DataToLoad-Type} ::= SEQUENCE
+TC-6-11-LoadARawMemoryAtomicDataAreaInANonInterruptableTransactionGeneric
+    {UnsignedInteger-Type, BitMask-Type, DataToLoad-Type} ::= SEQUENCE
 {
 --! memory-ID TMemory-ID, moved to acn
     startAddress UnsignedInteger-Type,
