@@ -24,7 +24,7 @@
 ErrorCodes DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 
-AcceptanceFailureCode ::= ENUMERATED {error1}
+AcceptanceFailureCode ::= ENUMERATED {error1 (1)}
 AcceptanceFailureData ::= CHOICE
 {
     error1 BIT STRING (SIZE(1))
@@ -34,7 +34,7 @@ AcceptanceFailureNotice ::= SEQUENCE
     data AcceptanceFailureData
 }
 
-ExecutionStartFailureCode ::= ENUMERATED {error1}
+ExecutionStartFailureCode ::= ENUMERATED {error1 (1)} 
 ExecutionStartFailureData ::= CHOICE
 {
     error1 BIT STRING (SIZE(1))
@@ -44,7 +44,7 @@ ExecutionStartFailureNotice ::= SEQUENCE
     data ExecutionStartFailureData
 }
 
-ExecutionProgressFailureCode ::= ENUMERATED {error1}
+ExecutionProgressFailureCode ::= ENUMERATED {error1 (1)}
 ExecutionProgressFailureData ::= CHOICE
 {
     error1 BIT STRING (SIZE(1))
@@ -54,7 +54,7 @@ ExecutionProgressFailureNotice::= SEQUENCE
     data ExecutionProgressFailureData
 }
 
-ExecutionCompletionFailureCode ::= ENUMERATED {error1}
+ExecutionCompletionFailureCode ::= ENUMERATED {error1 (1)}
 ExecutionCompletionFailureData ::= CHOICE
 {
     error1 BIT STRING (SIZE(1))
@@ -64,7 +64,7 @@ ExecutionCompletionFailureNotice ::= SEQUENCE
     data ExecutionCompletionFailureData
 }
 
-RoutingFailureCode ::= ENUMERATED {error1}
+RoutingFailureCode ::= ENUMERATED {error1 (1)}
 RoutingFailureData ::= CHOICE
 {
     error1 BIT STRING (SIZE(1))
