@@ -24,10 +24,5 @@
 PUS-1-6 DEFINITIONS ::= BEGIN
 
 TM-1-6-FailedProgressOfExecutionVerificationReport []
-{
-    request-ID [],
-    step-ID [],
-    failureNotice []
-}
 
 END

@@ -23,10 +23,6 @@
 
 PUS-1-1 DEFINITIONS ::= BEGIN
 
-
 TM-1-1-SuccessfulAcceptanceVerificationReport []
-{
-    request-ID []
-}
 
 END

@@ -26,7 +26,8 @@ EXPORTS ALL;
 IMPORTS
     VerificationRequest-ID FROM VerificationRequest;
 
-TM-1-3-SuccessfulStartOfExecutionVerificationReport ::= TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {VerificationRequest-ID}
+TM-1-3-SuccessfulStartOfExecutionVerificationReport
+    ::= TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {VerificationRequest-ID}
 
 TM-1-3-SuccessfulStartOfExecutionVerificationReportGeneric {Request-ID-Type} ::= SEQUENCE
 {

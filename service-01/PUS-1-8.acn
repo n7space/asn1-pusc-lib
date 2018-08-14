@@ -24,9 +24,5 @@
 PUS-1-8 DEFINITIONS ::= BEGIN
 
 TM-1-8-FailedCompletionOfExecutionVerificationReport []
-{
-    request-ID [],
-    failureNotice []
-}
 
 END
