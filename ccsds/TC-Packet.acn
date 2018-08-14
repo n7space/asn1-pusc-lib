@@ -23,7 +23,6 @@
 
 TC-Packet DEFINITIONS ::= BEGIN
 
-
 TC-CCSDS-Packet []
 {
     packetVersionNumber [],
@@ -32,7 +31,6 @@ TC-CCSDS-Packet []
     packetDataLength [],
     packetDataField <packet-ID.secondaryHeaderFlag> []
 }
-
 
 TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 {
@@ -43,8 +41,7 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 TC-DataWithSecondaryHeader []
 {
     secondaryHeader [],
-    data <secondaryHeader.serviceType-ID,
-          secondaryHeader.messageSubtype-ID> [align-to-next byte],
+    data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
     packetErrorContol [align-to-next byte]
 }
