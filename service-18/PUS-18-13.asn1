@@ -28,6 +28,7 @@ IMPORTS
     FilePath FROM FilePath;
 
 TC-18-13-LoadAnOBCPByReference ::= TC-18-13-LoadAnOBCPByReferenceGeneric{OBCP-ID, FilePath}
+                                   (WITH COMPONENTS {filePath PRESENT})
 
 TC-18-13-LoadAnOBCPByReferenceGeneric {OBCP-ID-Type, FilePath-Type} ::= SEQUENCE
 {

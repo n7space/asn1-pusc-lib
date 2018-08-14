@@ -37,6 +37,7 @@ TM-18-9-OBCPExecutionStatusReportGeneric {ExecutionStatus-Type} ::= SEQUENCE
 }
 
 TM-18-9-OBCPExecutionStatus ::= TM-18-9-OBCPExecutionStatusGeneric {OBCP-ID, OBCPExecutionStatus}
+                                (WITH COMPONENTS {obcpChecksum PRESENT})
 TM-18-9-OBCPExecutionStatusGeneric {OBCP-ID-Type, OBCPExecutionStatus-Type} ::= SEQUENCE
 {
     obcp-ID OBCP-ID-Type,

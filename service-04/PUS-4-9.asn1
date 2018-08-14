@@ -31,7 +31,9 @@ IMPORTS
 
 maxTM-4-9-ParameterStatisticCount INTEGER ::= 65535
 
-TM-4-9-ParameterStatisticsDefinitionReport ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval}
+TM-4-9-ParameterStatisticsDefinitionReport
+    ::= TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval}
+        (WITH COMPONENTS {reportingInterval PRESENT})
 
 TM-4-9-ParameterStatisticsDefinitionReportGeneric {ReportingInterval-Type} ::= SEQUENCE
 {

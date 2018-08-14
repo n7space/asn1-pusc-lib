@@ -42,8 +42,10 @@ TM-CCSDS-Packet ::= CCSDS-Packet {TM-Packet-ID, TM-PacketDataField}
 TM-PacketDataField ::= PacketDataField {TM-DataWithSecondaryHeader, TM-DataNoSecondaryHeader}
 
 TM-DataNoSecondaryHeader ::= DataNoSecondaryHeader {TM-NoHeaderPayload}
+    (WITH COMPONENTS {packetErrorContol PRESENT})
 
 TM-DataWithSecondaryHeader ::= DataWithSecondaryHeader {TM-PacketSecondaryHeader, TM-Payload}
+    (WITH COMPONENTS {packetErrorContol PRESENT})
 
 TM-Packet-ID ::= Packet-ID {TM-PacketType}
 

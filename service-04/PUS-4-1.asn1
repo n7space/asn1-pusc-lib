@@ -24,14 +24,15 @@
 PUS-4-1 DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PUSC-BOOL32 FROM BasicTypes;
+    PUSC-BOOL8 FROM BasicTypes;
 
-TC-4-1-ReportTheParameterStatistics ::= TC-4-1-ReportTheParameterStatisticsGeneric {PUSC-BOOL32}
+TC-4-1-ReportTheParameterStatistics
+    ::= TC-4-1-ReportTheParameterStatisticsGeneric {PUSC-BOOL8}
+        (WITH COMPONENTS {resetFlag PRESENT})
 
 TC-4-1-ReportTheParameterStatisticsGeneric {Boolean-Type} ::= SEQUENCE
 {
     resetFlag Boolean-Type OPTIONAL
 }
-
 
 END

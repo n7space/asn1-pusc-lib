@@ -32,6 +32,7 @@ maxTM-4-2-StatisticsCount INTEGER ::= 65535
 TM-4-2-ParameterStatisticsReport ::= TM-4-2-ParameterStatisticsReportGeneric {AbsoluteTime}
 
 Statistics ::= StatisticsGeneric {PUSC-UINT32, ParameterValue, AbsoluteTime, StandardDeviation}
+                (WITH COMPONENTS {standardDeviationValue PRESENT})
 
 TM-4-2-ParameterStatisticsReportGeneric {AbsoluteTime-Type} ::= SEQUENCE
 {

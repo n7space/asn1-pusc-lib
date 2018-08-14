@@ -32,6 +32,7 @@ IMPORTS
 maxTM-6-6-DataDumpCount INTEGER ::= 65535
 
 TM-6-6-DumpedRawMemoryDataReport ::= TM-6-6-DumpedRawMemoryDataReportGeneric {Memory-ID}
+                                     (WITH COMPONENTS {memory-ID PRESENT})
 
 DataDump ::= DataDumpGeneric {BytePointer, MemoryData}
 

@@ -36,6 +36,7 @@ TC-6-21-LoadObjectMemoryDataAreasByReference ::= TC-6-21-LoadObjectMemoryDataAre
 TC-6-21-LoadObjectMemoryDataAreasByReferenceMultipleMemid ::= TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {BaseMultipleMemid, FilePath}
 
 ObjectDataArea ::= ObjectDataAreaGeneric {PUSC-UINT32, PUSC-UINT32, PUSC-UINT32}
+                   (WITH COMPONENTS {checksum PRESENT})
 
 TC-6-21-LoadObjectMemoryDataAreasByReferenceGeneric {Base-Type, FilePath-Type} ::= SEQUENCE
 {

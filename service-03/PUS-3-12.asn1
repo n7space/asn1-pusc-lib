@@ -34,7 +34,13 @@ IMPORTS
 maxTM-3-12-Parameter-ID-Count INTEGER ::= 1073741823
 maxTM-3-12-SuperComutatedParameterSetCount INTEGER ::= 536870911
 
-TM-3-12-DiagnosticParameterReportStructureReport ::= TM-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterReportStructure-ID, PeriodicGenerationActionStatus, CollectionInterval, Parameter-ID}
+TM-3-12-DiagnosticParameterReportStructureReport
+    ::= TM-3-12-DiagnosticParameterReportStructureReportGeneric
+            {DiagnosticParameterReportStructure-ID,
+             PeriodicGenerationActionStatus,
+             CollectionInterval,
+             Parameter-ID}
+         (WITH COMPONENTS {periodicGenerationActionStatus PRESENT})
 
 TM-3-12-DiagnosticParameterReportStructureReportGeneric {DiagnosticParameterReportStructure-ID-Type, PeriodicGenerationActionStatus-Type, CollectionInterval-Type, Parameter-ID-Type} ::= SEQUENCE
 {

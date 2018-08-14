@@ -32,6 +32,7 @@ maxTM-6-10-DataAreaCount INTEGER ::= 65535
 
 TM-6-10-CheckedRawMemoryDartaReport
   ::= TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID, TM-6-10-DataArea}
+      (WITH COMPONENTS {memory-ID PRESENT})
 
 TM-6-10-DataArea ::= TM-6-10-DataAreaGeneric {BytePointer, PUSC-UINT32}
 

@@ -35,7 +35,7 @@ TM-6-4-DumpedObjectMemoryDataReport ::= TM-6-4-DumpedObjectMemoryDataReportGener
 
 TM-6-4-DumpedObjectMemoryDataReportMultipleMemid ::= TM-6-4-DumpedObjectMemoryDataReportGeneric {BaseMultipleMemid}
 
-ObjectData ::= ObjectDataGeneric {PUSC-UINT32, MemoryData}
+ObjectData ::= ObjectDataGeneric {PUSC-UINT32, MemoryData} (WITH COMPONENTS {checksum PRESENT})
 
 TM-6-4-DumpedObjectMemoryDataReportGeneric {Base-Type} ::= SEQUENCE
 {

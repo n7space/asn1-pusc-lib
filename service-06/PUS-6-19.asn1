@@ -32,9 +32,11 @@ IMPORTS
 maxTC-6-19-DataAreaCount INTEGER ::= 65535
 
 TC-6-19-LoadRawMemoryDataAreasByReference
-  ::= TC-6-19-LoadRawMemoryDataAreasByReferenceGeneric {Memory-ID, FilePath, TC-6-19-DataArea}
+    ::= TC-6-19-LoadRawMemoryDataAreasByReferenceGeneric {Memory-ID, FilePath, TC-6-19-DataArea}
+        (WITH COMPONENTS {memory-ID PRESENT})
 
-TC-6-19-DataArea ::= TC-6-19-DataAreaGeneric {BytePointer, PUSC-UINT32, PUSC-UINT32}
+TC-6-19-DataArea
+    ::= TC-6-19-DataAreaGeneric {BytePointer, PUSC-UINT32, PUSC-UINT32}
 
 TC-6-19-LoadRawMemoryDataAreasByReferenceGeneric {Memory-ID-Type, FilePath-Type, DataArea-Type}
   ::= SEQUENCE

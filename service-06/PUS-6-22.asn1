@@ -52,6 +52,4 @@ ObjectMemoryDumpGeneric {UnsignedInteger-Type0, UnsignedInteger-Type1} ::= SEQUE
     length UnsignedInteger-Type1
 }
 
-
-
 END

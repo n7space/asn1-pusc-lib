@@ -31,6 +31,7 @@ IMPORTS
 maxTC-6-5-DataAreaCount INTEGER ::= 65535
 
 TC-6-5-DumpRawMemoryData ::= TC-6-5-DumpRawMemoryDataGeneric {Memory-ID, TC-6-5-DataArea}
+                             (WITH COMPONENTS {memory-ID PRESENT})
 
 TC-6-5-DataArea ::= TC-6-5-DataAreaGeneric {BytePointer, PUSC-UINT32}
 

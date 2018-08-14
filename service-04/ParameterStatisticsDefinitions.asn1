@@ -27,7 +27,9 @@ IMPORTS
     Parameter-ID FROM Parameter
     SamplingInterval FROM Intervals;
 
-ParameterStatisticsDefinition ::= ParameterStatisticsDefinitionGeneric {Parameter-ID, SamplingInterval}
+ParameterStatisticsDefinition
+    ::= ParameterStatisticsDefinitionGeneric {Parameter-ID, SamplingInterval}
+        (WITH COMPONENTS {samplingInterval PRESENT})
 
 ParameterStatisticsDefinitionGeneric {Parameter-ID-Type, SamplingInterval-Type} ::= SEQUENCE
 {

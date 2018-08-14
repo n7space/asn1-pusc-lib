@@ -29,6 +29,7 @@ IMPORTS
     OBCPArgumentValues FROM OBCPArgumentValues;
 
 OBCPActivation ::= OBCPActivationGeneric {OBCPObservabilityLevel, OBCPArgumentValues}
+                   (WITH COMPONENTS {observabilityLevel PRESENT})
 
 OBCPActivationGeneric {ObservabilityLevel-Type, ArgumentValues-Type} ::= SEQUENCE
 {

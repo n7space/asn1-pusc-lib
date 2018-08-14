@@ -61,5 +61,4 @@ DiagnosticParameterStructure-ID-ConfigurationNoSubsampling []
     subsamplingRate []
 }
 
-
 END

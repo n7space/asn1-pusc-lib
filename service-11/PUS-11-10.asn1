@@ -37,13 +37,12 @@ TM-11-10-TimeBasedScheduleDetailReport ::= SEQUENCE
     report SEQUENCE (SIZE(1 .. maxTM-11-10-ReportCount)) OF TM-11-10-Report
 }
 
-TM-11-10-Report ::= TM-11-10-ReportGeneric {SubSchedule-ID, Group-ID, AbsoluteTime, DummyType} (WITH COMPONENTS
-{
-    subschedule-ID PRESENT,
-    group-ID PRESENT
-    --releaseTime,
-   -- request
-})
+TM-11-10-Report ::= TM-11-10-ReportGeneric {SubSchedule-ID, Group-ID, AbsoluteTime, DummyType}
+                    (WITH COMPONENTS
+                    {
+                        subschedule-ID PRESENT,
+                        group-ID PRESENT
+                    })
 
 TM-11-10-ReportGeneric {SubSchedule-ID-Type, Group-ID-Type, AbsoluteTimeType, TC-PacketType} ::= SEQUENCE
 {
