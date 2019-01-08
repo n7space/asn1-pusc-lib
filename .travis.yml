@@ -18,7 +18,7 @@ addons:
 
 install:
   - pushd $HOME
-  - wget "https://drive.google.com/uc?export=download&id=1tzZdsXU4CHbppf4TQMrkNx-6p0zsCuEt" -O asn1scc.7z
+  - wget "https://n7space-my.sharepoint.com/:u:/p/kgrochowski/EZSwzkHV-C1Mn1nppkUqKIcBjFpzsn67G_N_1RMW2Yr7dQ?download=1" -O asn1scc.7z
   - 7z x asn1scc.7z
   - wget https://cmocka.org/files/1.1/cmocka-${CMOCKA_VERSION}.tar.xz
   - tar -xf cmocka-${CMOCKA_VERSION}.tar.xz
