@@ -21,18 +21,25 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #######################################################################
 
-ASN1_MAIN_GENERATED_HEADER = $${ASN1SCC_SRC_DIR}/asn1crt.h
+ASN1SCC_C_MAIN_HEADER = $$clean_path($${ASN1SCC_C_DIR}/asn1crt.h)
+ASN1SCC_ADA_MAIN_HEADER = $$clean_path($${ASN1SCC_ADA_DIR}/adaasn1rtl.ads)
 
 defineReplace(createDependencyOrder) {
   file = $${1}
-  fileName = $${2}
+  dependencyRoot = $${2}
 
-  eval($${file}_custom.target = $${file})
-  eval($${file}_custom.depends = $${ASN1_MAIN_GENERATED_HEADER})
-  eval(export($${file}_custom.target))
-  eval(export($${file}_custom.depends))
+  equals(file, dependencyRoot) {
+     return($$file)
+  }
 
-  QMAKE_EXTRA_TARGETS += $${file}_custom
+  stripedFile = $$replace(file, " ", "")
+
+  eval($${stripedFile}_custom.target = $$relative_path($${file},$${OUT_PWD}))
+  eval($${stripedFile}_custom.depends = $${dependencyRoot})
+  eval(export($${stripedFile}_custom.target))
+  eval(export($${stripedFile}_custom.depends))
+
+  QMAKE_EXTRA_TARGETS += $${stripedFile}_custom
   export(QMAKE_EXTRA_TARGETS)
 
   return($$file)
@@ -61,7 +68,7 @@ defineReplace(createEmptyFiles) {
     for(file, files) {
         write_file($$file, contents)
         unix|macx {
-            system("touch -t 197001020000 $${file}")
+            system("touch -t 197001020000 $$shell_quote($${file})")
         } else {
             touch($$file, $${QMAKE_QMAKE})
         }
@@ -72,27 +79,57 @@ defineReplace(createEmptyFiles) {
 defineReplace(createGeneratedFilesList) {
     sourcesNames = $${1}
     extension = $${2}
+    dependencyRoot = $${3}
+    targetDir = $${4}
 
     for(name, sourcesNames) {
-        source = $$clean_path($${ASN1SCC_SRC_DIR}/$${name}.$${extension})
-        sources += $$createDependencyOrder($$source, $$name)
+        source = $$clean_path($${targetDir}/$${name}.$${extension})
+        sources += $$createDependencyOrder($$source, $$dependencyRoot)
     }
 
     return($$createEmptyFiles($$sources))
 }
 
-names = $$createFileNames($$DISTFILES)
-
-!isEmpty(names) {
-    PERSISTENT_HEADERS = $${ASN1_MAIN_GENERATED_HEADER}
-    PERSISTENT_SOURCES = $${ASN1SCC_SRC_DIR}/asn1crt.c $${ASN1SCC_SRC_DIR}/real.c
-
-    contains(ASN1SCC_GENERATION_OPTIONS, --acn-enc) {
-        PERSISTENT_SOURCES += $${ASN1SCC_SRC_DIR}/acn.c
-    }
+defineReplace(createGeneratedFilesListC) {
+    l = $$createGeneratedFilesList($${1}, $${2}, $${ASN1SCC_C_MAIN_HEADER}, $${ASN1SCC_C_DIR})
+    return($$l)
 }
 
-SOURCES += $$createGeneratedFilesList($$names, "c") $$createEmptyFiles($$PERSISTENT_SOURCES)
-HEADERS += $$createGeneratedFilesList($$names, "h") $$createEmptyFiles($$PERSISTENT_HEADERS)
+defineReplace(createGeneratedFilesListAda) {
+    l = $$createGeneratedFilesList($${1}, $${2}, $${ASN1SCC_ADA_MAIN_HEADER}, $${ASN1SCC_ADA_DIR})
+    return($$l)
+}
 
-INCLUDEPATH += $$ASN1SCC_SRC_DIR
+names = $$createFileNames($$DISTFILES)
+
+generateC {
+    cNames = $$names
+    !isEmpty(names) {
+        cNames += asn1crt real
+
+        contains(ASN1SCC_C_OPTIONS, --acn-enc) {
+            cNames += acn
+        }
+    }
+
+    SOURCES += $$createGeneratedFilesListC($$cNames, "c")
+    HEADERS += $$createGeneratedFilesListC($$cNames, "h")
+    HEADERS += $$createEmptyFiles($${ASN1SCC_C_MAIN_HEADER})
+
+    INCLUDEPATH += $$ASN1SCC_C_DIR
+
+    PRE_TARGETDEPS += $${ASN1SCC_C_MAIN_HEADER}
+}
+
+generateAda {
+    adaNames = $$lower($$names)
+    !isEmpty(names) {
+        adaNames += adaasn1rtl
+    }
+
+    SOURCES += $$createGeneratedFilesListAda($$adaNames, "adb")
+    HEADERS += $$createGeneratedFilesListAda($$adaNames, "ads")
+    HEADERS += $$createEmptyFiles($${ASN1SCC_ADA_MAIN_HEADER})
+
+    PRE_TARGETDEPS += $${ASN1SCC_ADA_MAIN_HEADER}
+}

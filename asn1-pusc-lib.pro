@@ -1,5 +1,6 @@
 TEMPLATE = app
 CONFIG -= qt
+CONFIG += generateC
 
 DISTFILES += \
     ccsds/meta.json \
