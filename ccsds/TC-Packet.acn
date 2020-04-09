@@ -26,7 +26,11 @@ TC-Packet DEFINITIONS ::= BEGIN
 TC-CCSDS-Packet []
 {
     packetVersionNumber [],
-    packet-ID [],
+    packet-ID [] {
+        packetType [],
+        secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+        applicationProcess-ID []
+    },
     packetSequenceControl [],
     packetDataLength [],
     packetDataField <packet-ID.secondaryHeaderFlag> []
@@ -63,7 +67,7 @@ TC-DataNoSecondaryHeader []
 TC-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+--!    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
     applicationProcess-ID []
 }
 
