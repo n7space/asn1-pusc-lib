@@ -55,7 +55,7 @@ TM-PacketSecondaryHeader ::=  SEQUENCE
     spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus,
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN
-    messageTimeCounter INTEGER (0 .. 65535),
+    messageTypeCounter INTEGER (0 .. 65535),
     destination-ID ApplicationProcessUser-ID,
     time AbsoluteTime
 --! spare NULL         defined as align-to-next in acn file
