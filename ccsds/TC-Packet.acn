@@ -40,7 +40,14 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 
 TC-DataWithSecondaryHeader []
 {
-    secondaryHeader [],
+    secondaryHeader [] {
+        tcPacketPusVersionNumber [],
+        acknowledgementFlags [],
+        serviceType-ID MessageType.ServiceType-ID [],
+        messageSubtype-ID MessageType.MessageSubtype-ID [],
+        source-ID []
+ --! spare []
+    },
     data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
     packetErrorContol [align-to-next byte]
@@ -64,8 +71,8 @@ TC-PacketSecondaryHeader []
 {
     tcPacketPusVersionNumber [],
     acknowledgementFlags [],
-    serviceType-ID MessageType.ServiceType-ID [],
-    messageSubtype-ID MessageType.MessageSubtype-ID [],
+--!    serviceType-ID MessageType.ServiceType-ID [],
+--!    messageSubtype-ID MessageType.MessageSubtype-ID [],
     source-ID []
 --! spare []
 }
