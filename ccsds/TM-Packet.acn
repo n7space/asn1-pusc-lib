@@ -40,7 +40,16 @@ TM-PacketDataField <INTEGER:secondaryHeaderFlag> []
 
 TM-DataWithSecondaryHeader []
 {
-    secondaryHeader [],
+    secondaryHeader [] {
+        tmPacketPusVersionNumber [],
+        spacecraftTimeReferenceStatus [],
+        serviceType-ID MessageType.ServiceType-ID [],
+        messageSubtype-ID MessageType.MessageSubtype-ID [],
+        messageTimeCounter [size 16, encoding pos-int, endianness big],
+        destination-ID [],
+        time []
+--! spare NULL
+    },
     data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
     packetErrorContol [align-to-next byte]
@@ -64,12 +73,12 @@ TM-PacketSecondaryHeader []
 {
     tmPacketPusVersionNumber [],
     spacecraftTimeReferenceStatus [],
-    serviceType-ID MessageType.ServiceType-ID [],
-    messageSubtype-ID MessageType.MessageSubtype-ID [],
+--!    serviceType-ID MessageType.ServiceType-ID [],
+--!    messageSubtype-ID MessageType.MessageSubtype-ID [],
     messageTimeCounter [size 16, encoding pos-int, endianness big],
     destination-ID [],
     time []
---! spare NULL         defined as align-to-next in acn file
+--! spare NULL
 }
 
 TM-PacketType [pattern '0'B]
