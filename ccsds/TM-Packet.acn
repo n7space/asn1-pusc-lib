@@ -45,7 +45,7 @@ TM-DataWithSecondaryHeader []
         spacecraftTimeReferenceStatus [],
         serviceType-ID MessageType.ServiceType-ID [],
         messageSubtype-ID MessageType.MessageSubtype-ID [],
-        messageTimeCounter [size 16, encoding pos-int, endianness big],
+        messageTypeCounter [size 16, encoding pos-int, endianness big],
         destination-ID [],
         time []
 --! spare NULL
@@ -75,7 +75,7 @@ TM-PacketSecondaryHeader []
     spacecraftTimeReferenceStatus [],
 --!    serviceType-ID MessageType.ServiceType-ID [],
 --!    messageSubtype-ID MessageType.MessageSubtype-ID [],
-    messageTimeCounter [size 16, encoding pos-int, endianness big],
+    messageTypeCounter [size 16, encoding pos-int, endianness big],
     destination-ID [],
     time []
 --! spare NULL
