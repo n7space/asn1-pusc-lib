@@ -44,6 +44,13 @@ Packet-ID {PacketType-Type} ::= SEQUENCE
     applicationProcess-ID ApplicationProcess-ID
 }
 
+Packet-ID-Reference {PacketType-Type} ::= SEQUENCE
+{
+    packetType PacketType-Type,
+    secondaryHeaderFlag SecondaryHeaderFlag,
+    applicationProcess-ID ApplicationProcess-ID
+}
+
 SecondaryHeaderFlag ::= INTEGER (0 .. 1)
 
 PacketSequenceControl ::= SEQUENCE
