@@ -25,12 +25,12 @@ VerificationRequest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
     PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
-    TC-PacketType FROM TC-Packet;
+    TC-Packet-ID FROM TC-Packet;
 
 VerificationRequest-ID ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID Packet-ID {TC-PacketType},
+    packet-ID TC-Packet-ID,
     packetSequenceControl PacketSequenceControl
 }
 
