@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - CCSDS TC/TM Packets rebuilt to support newer version of ASN1SCC V4
+- TC Packet ID will be defined explicitly in PUS 1 "Verification Request" to mitigate ACN issues
 
 ## [1.1.0] - 2019-04-15
 ### Changed
