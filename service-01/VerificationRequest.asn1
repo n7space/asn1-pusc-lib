@@ -24,13 +24,18 @@
 VerificationRequest DEFINITIONS AUTOMATIC TAGS ::= BEGIN
 EXPORTS ALL;
 IMPORTS
-    PacketVersionNumberValue, PacketSequenceControl, Packet-ID FROM PacketTypes
-    TC-PacketType FROM TC-Packet;
+    PacketVersionNumberValue, PacketSequenceControl, SecondaryHeaderFlag FROM PacketTypes
+    TC-PacketType FROM TC-Packet
+    ApplicationProcess-ID FROM ApplicationProcess;
 
 VerificationRequest-ID ::= SEQUENCE
 {
     packetVersionNumber PacketVersionNumberValue,
-    packet-ID Packet-ID {TC-PacketType},
+    packet-ID SEQUENCE {
+        packetType TC-PacketType,
+        secondaryHeaderFlag SecondaryHeaderFlag,
+        applicationProcess-ID ApplicationProcess-ID
+    },
     packetSequenceControl PacketSequenceControl
 }
 

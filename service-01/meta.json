@@ -16,6 +16,11 @@
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
               "element": "TC Packet"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         }
@@ -35,6 +40,11 @@
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
               "element": "TC Packet"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -62,6 +72,11 @@
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
               "element": "TC Packet"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -77,6 +92,11 @@
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
               "element": "TC Packet"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             }
           ]
         },
@@ -91,6 +111,11 @@
               "module": "Common Types",
               "submodule": "Mission Objects",
               "element": "Execution Step"
+            },
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
             },
             {
               "module": "CCSDS",
@@ -113,6 +138,11 @@
               "element": "Execution Step"
             },
             {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
+            },
+            {
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
               "element": "TC Packet"
@@ -126,6 +156,11 @@
             "VerificationRequest.asn1"
           ],
           "requires": [
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
+            },
             {
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
@@ -141,6 +176,11 @@
             "ErrorCodes.asn1"
           ],
           "requires": [
+            {
+              "module": "Common Types",
+              "submodule": "Mission Objects",
+              "element": "Application Process"
+            },
             {
               "module": "CCSDS",
               "submodule": "CCSDS Packets",
