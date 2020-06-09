@@ -26,7 +26,11 @@ TM-Packet DEFINITIONS ::= BEGIN
 TM-CCSDS-Packet []
 {
     packetVersionNumber [],
-    packet-ID [],
+    packet-ID [] {
+        packetType [],
+        secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+        applicationProcess-ID []
+    },
     packetSequenceControl [],
     packetDataLength [],
     packetDataField <packet-ID.secondaryHeaderFlag> []
@@ -40,7 +44,16 @@ TM-PacketDataField <INTEGER:secondaryHeaderFlag> []
 
 TM-DataWithSecondaryHeader []
 {
-    secondaryHeader [],
+    secondaryHeader [] {
+        tmPacketPusVersionNumber [],
+        spacecraftTimeReferenceStatus [],
+        serviceType-ID MessageType.ServiceType-ID [],
+        messageSubtype-ID MessageType.MessageSubtype-ID [],
+        messageTypeCounter [size 16, encoding pos-int, endianness big],
+        destination-ID [],
+        time []
+--! spare NULL
+    },
     data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
     packetErrorContol [align-to-next byte]
@@ -56,7 +69,7 @@ TM-DataNoSecondaryHeader []
 TM-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+--!    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
     applicationProcess-ID []
 }
 
@@ -64,12 +77,12 @@ TM-PacketSecondaryHeader []
 {
     tmPacketPusVersionNumber [],
     spacecraftTimeReferenceStatus [],
-    serviceType-ID MessageType.ServiceType-ID [],
-    messageSubtype-ID MessageType.MessageSubtype-ID [],
-    messageTimeCounter [size 16, encoding pos-int, endianness big],
+--!    serviceType-ID MessageType.ServiceType-ID [],
+--!    messageSubtype-ID MessageType.MessageSubtype-ID [],
+    messageTypeCounter [size 16, encoding pos-int, endianness big],
     destination-ID [],
     time []
---! spare NULL         defined as align-to-next in acn file
+--! spare NULL
 }
 
 TM-PacketType [pattern '0'B]

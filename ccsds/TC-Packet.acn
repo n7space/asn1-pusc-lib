@@ -26,7 +26,11 @@ TC-Packet DEFINITIONS ::= BEGIN
 TC-CCSDS-Packet []
 {
     packetVersionNumber [],
-    packet-ID [],
+    packet-ID [] {
+        packetType [],
+        secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+        applicationProcess-ID []
+    },
     packetSequenceControl [],
     packetDataLength [],
     packetDataField <packet-ID.secondaryHeaderFlag> []
@@ -40,7 +44,14 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 
 TC-DataWithSecondaryHeader []
 {
-    secondaryHeader [],
+    secondaryHeader [] {
+        tcPacketPusVersionNumber [],
+        acknowledgementFlags [],
+        serviceType-ID MessageType.ServiceType-ID [],
+        messageSubtype-ID MessageType.MessageSubtype-ID [],
+        source-ID []
+ --! spare []
+    },
     data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
     packetErrorContol [align-to-next byte]
@@ -56,7 +67,7 @@ TC-DataNoSecondaryHeader []
 TC-Packet-ID []
 {
     packetType [],
-    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
+--!    secondaryHeaderFlag PacketTypes.SecondaryHeaderFlag [],
     applicationProcess-ID []
 }
 
@@ -64,8 +75,8 @@ TC-PacketSecondaryHeader []
 {
     tcPacketPusVersionNumber [],
     acknowledgementFlags [],
-    serviceType-ID MessageType.ServiceType-ID [],
-    messageSubtype-ID MessageType.MessageSubtype-ID [],
+--!    serviceType-ID MessageType.ServiceType-ID [],
+--!    messageSubtype-ID MessageType.MessageSubtype-ID [],
     source-ID []
 --! spare []
 }
