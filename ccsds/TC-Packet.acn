@@ -54,14 +54,14 @@ TC-DataWithSecondaryHeader []
     },
     data <secondaryHeader.serviceType-ID, secondaryHeader.messageSubtype-ID> [],
 --! spare [],
-    packetErrorContol [align-to-next byte]
+    packetErrorControl [align-to-next byte]
 }
 
 TC-DataNoSecondaryHeader []
 {
     data [],
 --! spare [],
-    packetErrorContol [align-to-next byte]
+    packetErrorControl [align-to-next byte]
 }
 
 TC-Packet-ID []
