@@ -65,14 +65,14 @@ DataWithSecondaryHeader {SecondaryHeaderField-Type, Payload-Type} ::= SEQUENCE
     secondaryHeader SecondaryHeaderField-Type,
     data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl OPTIONAL
+    packetErrorControl PacketErrorControl OPTIONAL
 }
 
 DataNoSecondaryHeader {Payload-Type} ::= SEQUENCE
 {
     data Payload-Type,
 --! spare NULL,    defined as align-to-next acn encoding
-    packetErrorContol PacketErrorControl OPTIONAL
+    packetErrorControl PacketErrorControl OPTIONAL
 }
 
 PacketErrorControl ::= BIT STRING (SIZE(16))
