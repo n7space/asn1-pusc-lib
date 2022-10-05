@@ -131,7 +131,7 @@ CDS-RelativeTime-PFC-2 []
 {
     day [size 16, encoding pos-int, endianness big],
     msOfDay [size 32, encoding pos-int, endianness big],
-    usOfDay [size 16, encoding pos-int, endianness big]
+    usOfMs [size 16, encoding pos-int, endianness big]
 }
 
 CUC-RelativeTime-PFC-3 []
