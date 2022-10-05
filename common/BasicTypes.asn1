@@ -148,7 +148,7 @@ CDS-RelativeTime-PFC-2 ::= SEQUENCE
 {
     day INTEGER (0 .. 65535),
     msOfDay INTEGER (0 .. 4294967295),
-    usOfDay INTEGER (0 .. 65535)
+    usOfMs INTEGER (0 .. 65535)
 }
 
 CUC-RelativeTime-PFC-3 ::= SEQUENCE
