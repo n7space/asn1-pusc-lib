@@ -110,7 +110,7 @@ CUC-AbsoluteTime-PFC-3 []
 CUC-AbsoluteTime-PFC-18 []
 {
     coarseTime [size 4],
-    fineTime [size 4]
+    fineTime [size 3]
 }
 
 CUC-AbsoluteTime-PFC-19 []
@@ -143,7 +143,7 @@ CUC-RelativeTime-PFC-3 []
 CUC-RelativeTime-PFC-18 []
 {
     coarseTime [size 4],
-    fineTime [size 4]
+    fineTime [size 3]
 }
 
 RelativeTime []
