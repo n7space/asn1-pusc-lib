@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2017-2022 N7 Space sp. z o. o.
+** Copyright (C) 2017-2023 N7 Space sp. z o. o.
 ** Contact: http://n7space.com
 **
 ** This file is part of ASN.1/ACN PUS-C Components Library.
