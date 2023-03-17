@@ -51,7 +51,7 @@ TM-Packet-ID ::= Packet-ID {TM-PacketType}
 
 TM-PacketSecondaryHeader ::=  SEQUENCE
 {
-    tmPacketPusVersionNumber NULL,
+--! tmPacketPusVersionNumber NULL,              moved to ACN
     spacecraftTimeReferenceStatus SpacecraftTimeReferenceStatus,
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN

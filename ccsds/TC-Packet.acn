@@ -45,7 +45,7 @@ TC-PacketDataField <INTEGER:secondaryHeaderFlag> []
 TC-DataWithSecondaryHeader []
 {
     secondaryHeader [] {
-        tcPacketPusVersionNumber [],
+        tcPacketPusVersionNumber NULL [pattern '0010'B],
         acknowledgementFlags [],
         serviceType-ID MessageType.ServiceType-ID [],
         messageSubtype-ID MessageType.MessageSubtype-ID [],
@@ -73,7 +73,7 @@ TC-Packet-ID []
 
 TC-PacketSecondaryHeader []
 {
-    tcPacketPusVersionNumber [],
+    tcPacketPusVersionNumber NULL [pattern '0010'B],
     acknowledgementFlags [],
 --!    serviceType-ID MessageType.ServiceType-ID [],
 --!    messageSubtype-ID MessageType.MessageSubtype-ID [],
