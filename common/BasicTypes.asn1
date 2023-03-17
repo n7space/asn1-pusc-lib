@@ -120,7 +120,7 @@ CUC-AbsoluteTime-PFC-3 ::= SEQUENCE
 CUC-AbsoluteTime-PFC-18 ::= SEQUENCE
 {
     coarseTime OCTET STRING (SIZE(4)),
-    fineTime OCTET STRING (SIZE(4))
+    fineTime OCTET STRING (SIZE(3))
 }
 
 CUC-AbsoluteTime-PFC-19 ::= SEQUENCE
@@ -160,7 +160,7 @@ CUC-RelativeTime-PFC-3 ::= SEQUENCE
 CUC-RelativeTime-PFC-18 ::= SEQUENCE
 {
     coarseTime OCTET STRING (SIZE(4)),
-    fineTime OCTET STRING (SIZE(4))
+    fineTime OCTET STRING (SIZE(3))
 }
 
 RelativeTime ::= CDS-RelativeTime-PFC-2
