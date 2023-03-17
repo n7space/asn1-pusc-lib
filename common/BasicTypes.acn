@@ -102,28 +102,12 @@ CDS-AbsoluteTime-PFC-2 []
 }
 
 CUC-AbsoluteTime-PFC-3 []
-{
-    coarseTime [size 1],
-    fineTime [size 1]
-}
 
 CUC-AbsoluteTime-PFC-18 []
-{
-    coarseTime [size 4],
-    fineTime [size 3]
-}
 
 CUC-AbsoluteTime-PFC-19 []
-{
-    coarseTime [size 1],
-    fineTime [size 5]
-}
 
 CUC-AbsoluteTime-PFC-46 []
-{
-    coarseTime [size 4],
-    fineTime [size 8]
-}
 
 AbsoluteTime []
 
@@ -135,16 +119,8 @@ CDS-RelativeTime-PFC-2 []
 }
 
 CUC-RelativeTime-PFC-3 []
-{
-    coarseTime [size 1],
-    fineTime [size 1]
-}
 
 CUC-RelativeTime-PFC-18 []
-{
-    coarseTime [size 4],
-    fineTime [size 3]
-}
 
 RelativeTime []
 

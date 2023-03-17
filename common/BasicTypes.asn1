@@ -126,13 +126,13 @@ CUC-AbsoluteTime-PFC-18 ::= SEQUENCE
 CUC-AbsoluteTime-PFC-19 ::= SEQUENCE
 {
     coarseTime OCTET STRING(SIZE(1)),
-    fineTime OCTET STRING(SIZE(5))
+    fineTime OCTET STRING(SIZE(4))
 }
 
 CUC-AbsoluteTime-PFC-46 ::= SEQUENCE
 {
     coarseTime OCTET STRING(SIZE(4)),
-    fineTime OCTET STRING(SIZE(8))
+    fineTime OCTET STRING(SIZE(10))
 }
 
 AbsoluteTime-PFC-0 {P-Field, T-Field} ::= SEQUENCE --PFC-0
@@ -164,4 +164,5 @@ CUC-RelativeTime-PFC-18 ::= SEQUENCE
 }
 
 RelativeTime ::= CDS-RelativeTime-PFC-2
+
 END
