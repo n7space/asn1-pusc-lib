@@ -89,17 +89,8 @@ PUSC-OCTSTR-VARIABLE-LEN <INTEGER: length> [size length]
 PUSC-CHARSTR-VARIABLE-LEN <INTEGER: length> [size length]
 
 CDS-AbsoluteTime-PFC-1 []
-{
-    day [size 16, encoding pos-int, endianness big],
-    msOfDay [size 32, encoding pos-int, endianness big]
-}
 
 CDS-AbsoluteTime-PFC-2 []
-{
-    day [size 16, encoding pos-int, endianness big],
-    msOfDay [size 32, encoding pos-int, endianness big],
-    usOfDay [size 16, encoding pos-int, endianness big]
-}
 
 CUC-AbsoluteTime-PFC-3 []
 
@@ -107,16 +98,9 @@ CUC-AbsoluteTime-PFC-18 []
 
 CUC-AbsoluteTime-PFC-19 []
 
-CUC-AbsoluteTime-PFC-46 []
-
 AbsoluteTime []
 
 CDS-RelativeTime-PFC-2 []
-{
-    day [size 16, encoding pos-int, endianness big],
-    msOfDay [size 32, encoding pos-int, endianness big],
-    usOfMs [size 16, encoding pos-int, endianness big]
-}
 
 CUC-RelativeTime-PFC-3 []
 

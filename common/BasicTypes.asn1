@@ -100,39 +100,33 @@ PUSC-CHARSTR-VARIABLE-LEN ::= IA5String (SIZE(0 .. 4095)) --PFC-0
 -- PTC-9
 CDS-AbsoluteTime-PFC-1 ::= SEQUENCE --PFC-1
 {
-    day INTEGER (0 .. 65535),
-    msOfDay INTEGER (0 .. 4294967295)
+    day PUSC-UINT16,
+    msOfDay PUSC-UINT32
 }
 
 CDS-AbsoluteTime-PFC-2 ::= SEQUENCE --PFC-2
 {
-    day INTEGER (0 .. 65535),
-    msOfDay INTEGER (0 .. 4294967295),
-    usOfDay INTEGER (0 .. 65535)
+    day PUSC-UINT16,
+    msOfDay PUSC-UINT32,
+    usOfDay PUSC-UINT16
 }
 
 CUC-AbsoluteTime-PFC-3 ::= SEQUENCE
 {
-    coarseTime OCTET STRING (SIZE(1)),
-    fineTime OCTET STRING (SIZE(1))
+    coarseTime PUSC-UINT8,
+    fineTime PUSC-UINT8
 }
 
 CUC-AbsoluteTime-PFC-18 ::= SEQUENCE
 {
-    coarseTime OCTET STRING (SIZE(4)),
-    fineTime OCTET STRING (SIZE(3))
+    coarseTime PUSC-UINT32,
+    fineTime PUSC-UINT24
 }
 
 CUC-AbsoluteTime-PFC-19 ::= SEQUENCE
 {
-    coarseTime OCTET STRING(SIZE(1)),
-    fineTime OCTET STRING(SIZE(4))
-}
-
-CUC-AbsoluteTime-PFC-46 ::= SEQUENCE
-{
-    coarseTime OCTET STRING(SIZE(4)),
-    fineTime OCTET STRING(SIZE(10))
+    coarseTime PUSC-UINT8,
+    fineTime PUSC-UINT32
 }
 
 AbsoluteTime-PFC-0 {P-Field, T-Field} ::= SEQUENCE --PFC-0
@@ -146,21 +140,21 @@ AbsoluteTime ::= CDS-AbsoluteTime-PFC-2
 -- PTC-10
 CDS-RelativeTime-PFC-2 ::= SEQUENCE
 {
-    day INTEGER (0 .. 65535),
-    msOfDay INTEGER (0 .. 4294967295),
-    usOfMs INTEGER (0 .. 65535)
+    day PUSC-INT16,
+    msOfDay PUSC-INT32,
+    usOfMs PUSC-INT16
 }
 
 CUC-RelativeTime-PFC-3 ::= SEQUENCE
 {
-    coarseTime OCTET STRING (SIZE(1)),
-    fineTime OCTET STRING (SIZE(1))
+    coarseTime PUSC-INT8,
+    fineTime PUSC-INT8
 }
 
 CUC-RelativeTime-PFC-18 ::= SEQUENCE
 {
-    coarseTime OCTET STRING (SIZE(4)),
-    fineTime OCTET STRING (SIZE(3))
+    coarseTime PUSC-INT32,
+    fineTime PUSC-INT24
 }
 
 RelativeTime ::= CDS-RelativeTime-PFC-2
