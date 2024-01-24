@@ -30,13 +30,13 @@ IMPORTS
 
 maxTM-6-10-DataAreaCount INTEGER ::= 65535
 
-TM-6-10-CheckedRawMemoryDartaReport
-  ::= TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID, TM-6-10-DataArea}
+TM-6-10-CheckedRawMemoryDataReport
+  ::= TM-6-10-CheckedRawMemoryDataReportGeneric {Memory-ID, TM-6-10-DataArea}
       (WITH COMPONENTS {memory-ID PRESENT})
 
 TM-6-10-DataArea ::= TM-6-10-DataAreaGeneric {BytePointer, PUSC-UINT32}
 
-TM-6-10-CheckedRawMemoryDartaReportGeneric {Memory-ID-Type, DataArea-Type} ::= SEQUENCE
+TM-6-10-CheckedRawMemoryDataReportGeneric {Memory-ID-Type, DataArea-Type} ::= SEQUENCE
 {
     memory-ID Memory-ID-Type OPTIONAL,
 --! n UnsignedInteger-Type, moved to acn

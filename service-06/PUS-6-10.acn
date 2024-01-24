@@ -23,7 +23,7 @@
 
 PUS-6-10 DEFINITIONS ::= BEGIN
 
-TM-6-10-CheckedRawMemoryDartaReport []
+TM-6-10-CheckedRawMemoryDataReport []
 {
     memory-ID [],
     n BasicTypes.PUSC-UINT32 [],
