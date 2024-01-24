@@ -49,7 +49,7 @@ TC-Packet-ID ::= Packet-ID {TC-PacketType}
 
 TC-PacketSecondaryHeader ::=  SEQUENCE
 {
-    tcPacketPusVersionNumber NULL,
+--! tcPacketPusVersionNumber,                   moved to ACN
     acknowledgementFlags AcknowledgementFlags,
 --! serviceType-ID ServiceType-ID,              moved to ACN
 --! messageSubtype-ID MessageSubtype-ID,        moved to ACN

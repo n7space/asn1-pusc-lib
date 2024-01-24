@@ -45,7 +45,7 @@ TM-PacketDataField <INTEGER:secondaryHeaderFlag> []
 TM-DataWithSecondaryHeader []
 {
     secondaryHeader [] {
-        tmPacketPusVersionNumber [],
+        tmPacketPusVersionNumber NULL [pattern '0010'B],
         spacecraftTimeReferenceStatus [],
         serviceType-ID MessageType.ServiceType-ID [],
         messageSubtype-ID MessageType.MessageSubtype-ID [],
@@ -75,7 +75,7 @@ TM-Packet-ID []
 
 TM-PacketSecondaryHeader []
 {
-    tmPacketPusVersionNumber [],
+    tmPacketPusVersionNumber NULL [pattern '0010'B],
     spacecraftTimeReferenceStatus [],
 --!    serviceType-ID MessageType.ServiceType-ID [],
 --!    messageSubtype-ID MessageType.MessageSubtype-ID [],
